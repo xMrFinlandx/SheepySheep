@@ -1,3 +1,4 @@
+using _Scripts.Managers;
 using _Scripts.Utilities;
 using NaughtyAttributes;
 using UnityEngine;
@@ -7,16 +8,15 @@ using Zenject;
 namespace _Scripts.Player
 {
     [RequireComponent(typeof(CircleCollider2D), typeof(Rigidbody2D))]
-    public class PlayerMovement : MonoBehaviour
+    public class PlayerMovement : MonoBehaviour, IPlayerController
     {
         [SerializeField] private float _speed = 10;
         [SerializeField] private Vector2 _startMoveDirection = Vector2.right;
         [Header("Components")]
         [SerializeField] private CircleCollider2D _collider;
         [SerializeField] private Rigidbody2D _rigidbody;
-       
-        private Tilemap _tilemap;
-        private Vector3Int playerCellPosition;
+        
+        private Vector2Int _playerCellPosition;
 
         private Vector2 _moveDirection;
         private int _counter = 0;
@@ -38,10 +38,17 @@ namespace _Scripts.Player
 
             _counter++;
         }
-
-        [Inject]
-        private void Construct(Tilemap tilemap) => _tilemap = tilemap;
-
+        
+        public void SetMoveDirection(Vector2 direction)
+        {
+            _moveDirection = direction.CartesianToIsometric();
+        }
+        
+        private void Start()
+        {
+            SetMoveDirection(_startMoveDirection);
+        }
+        
         private void OnValidate()
         {
             _collider ??= GetComponent<CircleCollider2D>();
@@ -50,12 +57,7 @@ namespace _Scripts.Player
             _rigidbody.gravityScale = 0;
             _rigidbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         }
-
-        private void Start()
-        {
-            _moveDirection = _startMoveDirection.CartesianToIsometric();
-        }
-
+        
         private void FixedUpdate()
         {
             _rigidbody.AddForce(_moveDirection * (_speed * Time.fixedDeltaTime));
@@ -63,18 +65,15 @@ namespace _Scripts.Player
 
         private void Update()
         {
-            playerCellPosition = _tilemap.WorldToCell(transform.position);
+            _playerCellPosition = TilemapManager.Instance.WorldToCell(transform.position);
             
-            if (!_tilemap.HasTile(playerCellPosition))
+            if (!TilemapManager.Instance.IsInTilemap(_playerCellPosition))
             {
                 Debug.Log("Player is not on a tile in the tilemap.");
+                return;
             }
-            /*else
-            {
-                var clicked = _tilemap.GetTile(playerCellPosition);
-                print($"currentTile = {clicked}");
-            }*/
+   
+            TilemapManager.Instance.ActivateModifiers(_playerCellPosition, this);
         }
-
     }
 }
