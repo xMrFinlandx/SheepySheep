@@ -2,6 +2,7 @@ using _Scripts.Utilities;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Zenject;
 
 namespace _Scripts.Player
 {
@@ -13,8 +14,8 @@ namespace _Scripts.Player
         [Header("Components")]
         [SerializeField] private CircleCollider2D _collider;
         [SerializeField] private Rigidbody2D _rigidbody;
-        [SerializeField] private Tilemap _tilemap;
-        
+       
+        private Tilemap _tilemap;
         private Vector3Int playerCellPosition;
 
         private Vector2 _moveDirection;
@@ -37,6 +38,9 @@ namespace _Scripts.Player
 
             _counter++;
         }
+
+        [Inject]
+        private void Construct(Tilemap tilemap) => _tilemap = tilemap;
 
         private void OnValidate()
         {
@@ -65,6 +69,11 @@ namespace _Scripts.Player
             {
                 Debug.Log("Player is not on a tile in the tilemap.");
             }
+            /*else
+            {
+                var clicked = _tilemap.GetTile(playerCellPosition);
+                print($"currentTile = {clicked}");
+            }*/
         }
 
     }
