@@ -1,9 +1,8 @@
 using _Scripts.Managers;
 using _Scripts.Utilities;
+using _Scripts.Utilities.Interfaces;
 using NaughtyAttributes;
 using UnityEngine;
-using UnityEngine.Tilemaps;
-using Zenject;
 
 namespace _Scripts.Player
 {

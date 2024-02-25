@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using _Scripts.Player;
 using _Scripts.Utilities.Interfaces;
 
 namespace _Scripts.Utilities.Classes
@@ -9,8 +8,7 @@ namespace _Scripts.Utilities.Classes
         public bool CanRemoveData => _tileModifiers.Count == 0;
         public bool IsSingleAtTile => _tileModifiers.Exists(modifier => modifier.IsSingleAtTile);
         
-        
-        private List<ITileModifier> _tileModifiers = new();
+        private readonly List<ITileModifier> _tileModifiers = new();
 
         public TileModifiersHandler(ITileModifier modifier) => Add(modifier); 
         
@@ -30,6 +28,45 @@ namespace _Scripts.Utilities.Classes
             {
                 tileModifier.Activate(playerController);
             }
+        }
+
+        public bool TryInteract()
+        {
+            var isInteractionPerfomed = false;
+            
+            foreach (var tileModifier in _tileModifiers)
+            {
+                if (tileModifier is not IMouseInteraction mouseInteraction) 
+                    continue;
+                
+                mouseInteraction.Interact();
+                isInteractionPerfomed = true;
+            }
+
+            return isInteractionPerfomed;
+        }
+
+        public bool TryRemove()
+        {
+            var isAnyRemoved = false;
+            var toRemove = new List<ITileModifier>();
+            
+            foreach (var tileModifier in _tileModifiers)
+            {
+                if (tileModifier is not IMouseInteraction mouseInteraction) 
+                    continue;
+
+                isAnyRemoved = true;
+                toRemove.Add(mouseInteraction);
+                mouseInteraction.Remove();
+            }
+
+            foreach (var modifier in toRemove)
+            {
+                _tileModifiers.Remove(modifier);
+            }
+            
+            return isAnyRemoved;
         }
     }
 }

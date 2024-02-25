@@ -1,5 +1,4 @@
 ﻿using _Scripts.Managers;
-using _Scripts.Player;
 using _Scripts.Utilities.Interfaces;
 using UnityEngine;
 
