@@ -1,6 +1,4 @@
-﻿using _Scripts.Player;
-
-namespace _Scripts.Utilities.Interfaces
+﻿namespace _Scripts.Utilities.Interfaces
 {
     public interface ITileModifier
     {

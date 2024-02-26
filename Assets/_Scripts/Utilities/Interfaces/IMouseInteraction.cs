@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace _Scripts.Utilities.Interfaces
+﻿namespace _Scripts.Utilities.Interfaces
 {
     public interface IMouseInteraction : ITileModifier
     {

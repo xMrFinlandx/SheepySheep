@@ -1,0 +1,4039 @@
+fileFormatVersion: 2
+guid: cfc5736495ae2e94184b35a7defe4ed6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2208080894772612422
+    second: FixedExtendedTiles_0
+  - first:
+      213: 4871214997439015390
+    second: FixedExtendedTiles_1
+  - first:
+      213: -1090778226710115393
+    second: FixedExtendedTiles_2
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 24
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FixedExtendedTiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 952
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d8f38ffdda4ae10800000000000000
+      internalID: 2208080894772612422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 952
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed968ea3b380a9340800000000000000
+      internalID: 4871214997439015390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 952
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb86346bf6ccd0f0800000000000000
+      internalID: -1090778226710115393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 952
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c72b9cc95f1bc4da756fb7b318e1f6
+      internalID: 1992702606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 952
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e91064ae79760a45bbf9d0fdf222179
+      internalID: -1361637037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 952
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770390133eae35b428c2962a800dffcf
+      internalID: -158403510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 952
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487b6b4169d16c148a97cc556e038d04
+      internalID: -538399220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 952
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab397eb4fd4f194e9d38caa6efa93f9
+      internalID: 1732180026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 952
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73318d79cb4620a488c97cdbb0a841d2
+      internalID: 1643880492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 952
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e704654bab6d5478e3af328c0e1c33
+      internalID: -287116858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_10
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 904
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f3f18ad5a4ab449a6e38a2cb02fafa
+      internalID: -160550697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_11
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 904
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0592ad64d9a45854097b29828ad49a50
+      internalID: -143522867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_12
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 904
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8756e5f0fca72044b879fb6f6c2e4a62
+      internalID: 1448216230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_13
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 904
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e8cb862ea30b24c8c9c288b5a4dcef
+      internalID: 439408930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 904
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4e666cbb444874f976503451529f81
+      internalID: -1955740514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_15
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 904
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0800778742c12cf4c809df4a18166aac
+      internalID: -1449218183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_16
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 856
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f86ff3a1fd707004bab1a7c5d330214a
+      internalID: -1108765786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_17
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 856
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ced180b290ff9742b00580de1a6b99d
+      internalID: 636188492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_18
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 856
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd5af7a8dd9f5549a99ca11bfe079ae
+      internalID: 1206431210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 856
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6898f9c9d2f99428414e6afdda4544
+      internalID: -34135307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_20
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 856
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8dd3b378b1d0194f9d129ed7f2cf094
+      internalID: -1847213267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_21
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 856
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a51545c75ddecc49a815cd612a10aca
+      internalID: -1318667907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_22
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 856
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b637e591f83d7248961438d8547398e
+      internalID: -603937100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_23
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 856
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae4ad92113922648bfce25daeb43377
+      internalID: -182464851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_24
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 856
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2664edfb58b2a57429094d64b3edc8b2
+      internalID: 2064819798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 808
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb946088be95094e9059f9470a10713
+      internalID: -336197291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_26
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 808
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a572646f07daf4b982c3c01258effc
+      internalID: -386136082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 808
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608e725f84afb744fbc628538f1e572a
+      internalID: -1719740347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_28
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 808
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3ccace564e64a41b558570a3eeb061
+      internalID: 1960225360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_29
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 808
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49176ffbf76f5b4f93e84b4c3219b2e
+      internalID: 640352398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_30
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 808
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c4b2a3b46e3d644a574e4057fb45a8
+      internalID: -1156655271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_31
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 808
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5197fbef5fe2f44b96cbf9474f456c0
+      internalID: -879164712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_32
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 808
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c9d11f12d75b1418f395157fba9959
+      internalID: -77295700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_33
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 808
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49003bff23f54bb4ab29926dfafd1d3c
+      internalID: -819098341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_34
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 808
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d326e615de854b54e993647d9bab07d2
+      internalID: -1960180341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 760
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b620f3a96eb060c43b80ad56eb802439
+      internalID: -1538008784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_36
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 760
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e48eed780197864893ef111ffdfe147
+      internalID: 879788370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_37
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 760
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4bcec4dcfc902a47b8cb834b30b03fd
+      internalID: 1569546651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_38
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 760
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94eb1048b7380ef4b807bcf6cd433199
+      internalID: 1665198341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_39
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 760
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc067b89b699034b96aa1f169d0d268
+      internalID: 1305423123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_40
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 760
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5797f226cc4cce4fbb9958a0cde261f
+      internalID: 1490960918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_41
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 712
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b98798b388a43a54fac12a6f4d7ede27
+      internalID: 537053472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_42
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 712
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0bb0b8cf73e4a43808718605a15ffc
+      internalID: 1823254431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_43
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 712
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647d94b9d5402644abd2f4f7b4573b4e
+      internalID: -1274026782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_44
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 712
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4a238a74bc5eb42b56ab80446fd331
+      internalID: 786146022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_45
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 712
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1d02ad08a8b1942b199804ff598e77
+      internalID: -646655940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_46
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 712
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af73fa8241680134abb81e3be5e25520
+      internalID: -1038144358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_47
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 712
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ebb8a8f05b95b4a92dd85a88d3d230
+      internalID: -1556332796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_48
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 712
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8eda7e907f6c8a4ba879747cf1b9037
+      internalID: 483746800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_49
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 712
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a7ed2a9dfd5fa4db972084a8d14429
+      internalID: 1324453915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 664
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bfd37d23b986f64790dff1f07d16335
+      internalID: 127516377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_51
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 664
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72239080b28be4f47be579618c026d2d
+      internalID: 530230835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_52
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 664
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7eaa9e8817c5ee42b9f16e6d0acab39
+      internalID: 8532681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_53
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 664
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ed76f44f2bc524f987f95c2974d28f
+      internalID: 1892065693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_54
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 664
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d8de3122f696041ab11342c48a8c31
+      internalID: -653043738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_55
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 664
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8abd575f70c63a45861fb49c84590da
+      internalID: 296476477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_56
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 664
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3c4f494be825e479edd3143dbf6298
+      internalID: -1077923878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_57
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 664
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad53c1a92e368547888529b070fb740
+      internalID: 1035753658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_58
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 664
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bd522b122625a4588f63857bac0bc7
+      internalID: 1903455482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_59
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 664
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4617683cd576ac444ba54ff91e837ea3
+      internalID: 847419116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_60
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 616
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78dfeec0517c804499efb9270e0ddd9d
+      internalID: 223465411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_61
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 616
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d8cd881d3948046a022b600192d6b0
+      internalID: 610227121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_62
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 616
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 545f52a0d89a16b4d9f1f184b3281795
+      internalID: 1703385910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_63
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 616
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a67d60c7949b0246b5c19d7c687b756
+      internalID: -37350398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_64
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 616
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221c256cd24882d438e72c25a5d5b381
+      internalID: 1906903250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_65
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 616
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1e3ee071d1adb45b8b89d2ee510c34
+      internalID: 849593342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_66
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 568
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f9937f4c3a7e34fb2660276cbb4980
+      internalID: -184688712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_67
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 568
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd16181ad29c514c9a0300de3c76269
+      internalID: 2036225611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_68
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 568
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f34113a82e9ce4ebe1568d72b404e8
+      internalID: 1817779278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_69
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 568
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade2bb796fb90e948a0ea95db864be7b
+      internalID: 149050247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_70
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 568
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7831fd6060d6f647bf86a778ad0d4d3
+      internalID: -1272713540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_71
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 568
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab44280a215da2489794a27e324feac
+      internalID: -1879377575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_72
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 568
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad32ac6d9a55a334b99bee9eff2571b2
+      internalID: -2056921621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_73
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 568
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d785bf738b8dbd64e942a3aed4ad0f24
+      internalID: -1830114918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_74
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 568
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a6c216ac62f82c4b9fcda9da3f128a9
+      internalID: -1666555973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 520
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc81619608f06047938fcc60d1ab408
+      internalID: 2021999373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_76
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 520
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7fe549acbc8554bb38494a8f51a085
+      internalID: -700647131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_77
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 520
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e2e0e5fd9f7ea42994e6c710e4d788
+      internalID: 1572147926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_78
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 520
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47583b3f91726804297903fb7297419c
+      internalID: -1624884248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_79
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 520
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aec1db2af164084083fff7745cfcc0c
+      internalID: 20653319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_80
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 520
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0823b16e59924f04da4f9a11d7c08606
+      internalID: -1043769743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_81
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 520
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d44f60730396334a9b57f5cfce9453a
+      internalID: -442862200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_82
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 520
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f031957db987ab1408c89bfa5fbce3b7
+      internalID: -15191571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_83
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 520
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66fb48fb4d8b7f54dbcac5c68d7713aa
+      internalID: -1970533221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_84
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 520
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72cc552d37369248b21bbc786613893
+      internalID: 1525370066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_85
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 472
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9c6b32cc2166e4a9271cb38476a6ab
+      internalID: -1628285842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_86
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 472
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e847ad048be77bb4b96b5f9cfca0d1a6
+      internalID: -952911226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_87
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 472
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcff5aaca6412684c80a24948d4f1517
+      internalID: -428291849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_88
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 472
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03e31c2ba74e9f418b230a112985e12
+      internalID: 1288267518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_89
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 472
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770fc646c27ff9e46b7c137e10370b8e
+      internalID: 307712616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_90
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 472
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d487f9dcd681c0446a07a1d4e7da6e79
+      internalID: -414711276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_91
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 424
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e64f67ac0e0ba694fa7d3e187476186c
+      internalID: -1607439398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_92
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 424
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3920dac6fcc77349b5ebc60f49d6305
+      internalID: 118043712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_93
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 424
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97d7069bf4484a4fa36b7b14039eab6
+      internalID: -1251131329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_94
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 424
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9253bf145ca77334f97ae1ce8660d654
+      internalID: -511908693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_95
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 424
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9103bc9cea23f924592fc5ebed40d2cf
+      internalID: 256690412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_96
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 424
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6894383c300ff3e47b92853a00d28611
+      internalID: -1925688122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_97
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 424
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4965c0c7a21020044a9bcb189b389459
+      internalID: -2111933069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_98
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 424
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d723c371495eea44a1d366a841979a4
+      internalID: -1809738324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_99
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 424
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97df2c4c70df5964eb5c3dce0d5b9706
+      internalID: -1574999964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_100
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 424
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bcb7ca4f3fe83c4f87e32d1c92e2864
+      internalID: 783999303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_101
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 424
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bfce0c76337edb4e8c9dafa109e4ce2
+      internalID: 202591972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_102
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 424
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbad839835bbb00428372b882dc9ce91
+      internalID: -356835182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_103
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 424
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839b7a3da499cdf4dab5be8d931946e8
+      internalID: -1824989534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 376
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 016327ce7d9c52b45aaa7c2b49349e63
+      internalID: 1006030322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_105
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 376
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a09fb2dfce7444d8e29e5df2419e20
+      internalID: -1978261686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_106
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 376
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9684b7163acf2a44996ff36a4009f2b6
+      internalID: -1394595393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_107
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 376
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d47ccd1d8504a848b6168b3bc740275
+      internalID: 1796215422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_108
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 376
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a96dca89c557b047b4ebc2cef416185
+      internalID: -1299921460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_109
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 376
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c6f66c7152c7548bc2b786e44ee21e
+      internalID: 1546472614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_110
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 376
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0832b264a4860b42bf1db3c3afefdc9
+      internalID: -731253798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_111
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 376
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b625b85c6295af46a7c8f3285a66eb6
+      internalID: -53656757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_112
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 376
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 897badde5d94d7644b52b4ad15da7330
+      internalID: 1106650952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_113
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 376
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326e49d99e13a3049ad441144f44379e
+      internalID: 2088271623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_114
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 376
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2db0ce8e3160c43a8ad69ff83f61fa
+      internalID: 1965647576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_115
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 376
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d422250f0a5dd94c8fcbb96ab05a26c
+      internalID: -1143586668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_116
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 376
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2ee657e6290e042bf4768df1ee18b9
+      internalID: 310995545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_117
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 376
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695d38309b7e6934297f682d798c8c85
+      internalID: -36695358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_118
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 328
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca2ecd7b99afe64c95be7fd81c3ed7b
+      internalID: -1845845115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_119
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 328
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ae73741c207a04f81f007f501d4bc0
+      internalID: 1088954408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_120
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 328
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9777bcd81da206458909cf792fbfe60
+      internalID: -147970126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_121
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 328
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc09dc053ce6e948afa86531cbb4459
+      internalID: -1883197073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_122
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 328
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d26675eace10849af22dde462aceb4
+      internalID: 153365507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_123
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 328
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5028ced185a7e914da806561bf529db7
+      internalID: -403292621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_124
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 328
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca195d13777a2a439b8c4a5ae00a0a1
+      internalID: -1644271370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_125
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 328
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a24b295b6404641aefdf1ace214175
+      internalID: -1723002012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_126
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 328
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83fed4a25212cad41957e3535207e8ea
+      internalID: 1863341837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_127
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 328
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148ee6e80876a834cb112433b3bfcf4a
+      internalID: 1180454506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_128
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a08c3b4be8a22d4e8446a3eadd44e57
+      internalID: 645053904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_129
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 280
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15432663dc68b9f4592b6732f1ea1282
+      internalID: 997384542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_130
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 280
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46bfa843b6c92ef4c961d4a9d88e1b1a
+      internalID: -1495218002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_131
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 280
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab650b9a478f5a4aaaeaa527d8c7805
+      internalID: 1889744473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_132
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 280
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa316f93fc0a834b81a4a267f20050a
+      internalID: -463538567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_133
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 280
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f304ed140b4ff47bee7415552f04dc
+      internalID: 104351022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_134
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 280
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4d76ef03d85044cbd0a751d5a508c8
+      internalID: 1545504366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_135
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 280
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4414c969fdc35449ec3701f1eb5962
+      internalID: -860455252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_136
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 280
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0121d1a2cf96a4da6d80bad6582b5e
+      internalID: -503365375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_137
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 280
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474ce74142f02b248913ef936ad69fcf
+      internalID: 414934494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_138
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 280
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10841bef9b008724ebc90be73255b514
+      internalID: 137304177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_139
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 280
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 897efaf8c0aeaf14e81900e141c6696d
+      internalID: -364974666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_140
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 280
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53d2af0d5cfa7ef4fa5ad0be7dd6ad80
+      internalID: -242166760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_141
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 280
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2bfbb62759d84a4cb2f2793b7182ddf
+      internalID: 572941458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_142
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53db927d25197dc43b3168464431ed59
+      internalID: -1958093856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_143
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 232
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5fc4b0dabd412140a370e8e26b1d8d2
+      internalID: 2133588458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_144
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 232
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134700862411abb4c98a8770c421e63a
+      internalID: -1125732561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_145
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 232
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8539d2b8324074846a90b686d3c8e4ad
+      internalID: -1881107496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_146
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 232
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300ff402c47551a489f4fdeb4d9d9aae
+      internalID: 2136855263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_147
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 232
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ecc29615ee665428eebf7b028e1212
+      internalID: -518621267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_148
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 232
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee8d3f72666f034c90e3ed37cec6da7
+      internalID: 1397571856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_149
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 232
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ff50d8e526adb4d80547c6035aaf67
+      internalID: 917730016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_150
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 232
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dee7f43fa8d2b1468aac89711accf3a
+      internalID: 1137413614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_151
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 232
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b356e34d758aa04f8bf5763549cc674
+      internalID: -1875197582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_152
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 232
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346e38f51cc4f6a488bdae299dfea9e0
+      internalID: -1984176649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_153
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 232
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf2d7ff4a24c1e44aeaa71da3965062
+      internalID: 1948947688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_154
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 232
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edebee58322ba3c4ebab9d3f78182b49
+      internalID: -374895724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_155
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 232
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a753ea11d33edf44a032154777145d6
+      internalID: -669348423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_156
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 184
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c954f0e51d004d24ea3d965d9df4564a
+      internalID: 2048547730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_157
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 184
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb823b2b4b3dcb4e907171ad1110550
+      internalID: -1844693755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_158
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 184
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d607ab5aacfa5e148a276365abcb2ce5
+      internalID: -489931847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_159
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 184
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b338bd0e0405645b53f42f18bc2c7e
+      internalID: 802772541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_160
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 184
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c376a44400a68c54c969e2ee8e2eaa57
+      internalID: 152314088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_161
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 184
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b89d371ae23f774988d2260d5224fc1
+      internalID: -436892664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_162
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 184
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e4947593768b9438f86bde85a5878b
+      internalID: 1013812470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_163
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 136
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ec565a841c0ff41abe87b1638e323b
+      internalID: 372215690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_164
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 136
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12ea41786fec2949871a36710b7fa30
+      internalID: 156336920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_165
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 136
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20d7930116870e4782f696799a0be6c
+      internalID: -408297036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_166
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 136
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f5012af2921cc4fa9cfbf21456893c
+      internalID: -1032893247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_167
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 136
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c543f48a07f539a4f96a12c392372812
+      internalID: -1533550914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_168
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 136
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583a8a20153959a44bd4900c728d7b95
+      internalID: -1906011597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_169
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 136
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1083348c18ee0a74e9d48d973c326565
+      internalID: -882839335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_170
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 136
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99cf03cdb88e7f744a8b8844e508b150
+      internalID: 654432756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_171
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 136
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeaf83cf4aebadb4b92008662101f149
+      internalID: -675060605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_172
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 136
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e5e293186526c42b20c404a676cf2b
+      internalID: -28297833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_173
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 136
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc390be19d7502844b788b1c28e890df
+      internalID: -1888500244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_174
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 88
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df5c00c3094c1f4bb50babe9e54685d
+      internalID: -1074613707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_175
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 88
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55b2a8411f4ec4428e6eb9214b955a6
+      internalID: -1414608923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_176
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 40
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82fffafb980b9348ac5d10341823a5f
+      internalID: 1115532445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixedExtendedTiles_177
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 40
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30953c0cc417ca643b9ff9ee465e3699
+      internalID: -1110324408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f69559809fe9727409867a7837fff611
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FixedExtendedTiles_0: 2208080894772612422
+      FixedExtendedTiles_1: 4871214997439015390
+      FixedExtendedTiles_10: -160550697
+      FixedExtendedTiles_100: 783999303
+      FixedExtendedTiles_101: 202591972
+      FixedExtendedTiles_102: -356835182
+      FixedExtendedTiles_103: -1824989534
+      FixedExtendedTiles_104: 1006030322
+      FixedExtendedTiles_105: -1978261686
+      FixedExtendedTiles_106: -1394595393
+      FixedExtendedTiles_107: 1796215422
+      FixedExtendedTiles_108: -1299921460
+      FixedExtendedTiles_109: 1546472614
+      FixedExtendedTiles_11: -143522867
+      FixedExtendedTiles_110: -731253798
+      FixedExtendedTiles_111: -53656757
+      FixedExtendedTiles_112: 1106650952
+      FixedExtendedTiles_113: 2088271623
+      FixedExtendedTiles_114: 1965647576
+      FixedExtendedTiles_115: -1143586668
+      FixedExtendedTiles_116: 310995545
+      FixedExtendedTiles_117: -36695358
+      FixedExtendedTiles_118: -1845845115
+      FixedExtendedTiles_119: 1088954408
+      FixedExtendedTiles_12: 1448216230
+      FixedExtendedTiles_120: -147970126
+      FixedExtendedTiles_121: -1883197073
+      FixedExtendedTiles_122: 153365507
+      FixedExtendedTiles_123: -403292621
+      FixedExtendedTiles_124: -1644271370
+      FixedExtendedTiles_125: -1723002012
+      FixedExtendedTiles_126: 1863341837
+      FixedExtendedTiles_127: 1180454506
+      FixedExtendedTiles_128: 645053904
+      FixedExtendedTiles_129: 997384542
+      FixedExtendedTiles_13: 439408930
+      FixedExtendedTiles_130: -1495218002
+      FixedExtendedTiles_131: 1889744473
+      FixedExtendedTiles_132: -463538567
+      FixedExtendedTiles_133: 104351022
+      FixedExtendedTiles_134: 1545504366
+      FixedExtendedTiles_135: -860455252
+      FixedExtendedTiles_136: -503365375
+      FixedExtendedTiles_137: 414934494
+      FixedExtendedTiles_138: 137304177
+      FixedExtendedTiles_139: -364974666
+      FixedExtendedTiles_14: -1955740514
+      FixedExtendedTiles_140: -242166760
+      FixedExtendedTiles_141: 572941458
+      FixedExtendedTiles_142: -1958093856
+      FixedExtendedTiles_143: 2133588458
+      FixedExtendedTiles_144: -1125732561
+      FixedExtendedTiles_145: -1881107496
+      FixedExtendedTiles_146: 2136855263
+      FixedExtendedTiles_147: -518621267
+      FixedExtendedTiles_148: 1397571856
+      FixedExtendedTiles_149: 917730016
+      FixedExtendedTiles_15: -1449218183
+      FixedExtendedTiles_150: 1137413614
+      FixedExtendedTiles_151: -1875197582
+      FixedExtendedTiles_152: -1984176649
+      FixedExtendedTiles_153: 1948947688
+      FixedExtendedTiles_154: -374895724
+      FixedExtendedTiles_155: -669348423
+      FixedExtendedTiles_156: 2048547730
+      FixedExtendedTiles_157: -1844693755
+      FixedExtendedTiles_158: -489931847
+      FixedExtendedTiles_159: 802772541
+      FixedExtendedTiles_16: -1108765786
+      FixedExtendedTiles_160: 152314088
+      FixedExtendedTiles_161: -436892664
+      FixedExtendedTiles_162: 1013812470
+      FixedExtendedTiles_163: 372215690
+      FixedExtendedTiles_164: 156336920
+      FixedExtendedTiles_165: -408297036
+      FixedExtendedTiles_166: -1032893247
+      FixedExtendedTiles_167: -1533550914
+      FixedExtendedTiles_168: -1906011597
+      FixedExtendedTiles_169: -882839335
+      FixedExtendedTiles_17: 636188492
+      FixedExtendedTiles_170: 654432756
+      FixedExtendedTiles_171: -675060605
+      FixedExtendedTiles_172: -28297833
+      FixedExtendedTiles_173: -1888500244
+      FixedExtendedTiles_174: -1074613707
+      FixedExtendedTiles_175: -1414608923
+      FixedExtendedTiles_176: 1115532445
+      FixedExtendedTiles_177: -1110324408
+      FixedExtendedTiles_18: 1206431210
+      FixedExtendedTiles_19: -34135307
+      FixedExtendedTiles_2: -1090778226710115393
+      FixedExtendedTiles_20: -1847213267
+      FixedExtendedTiles_21: -1318667907
+      FixedExtendedTiles_22: -603937100
+      FixedExtendedTiles_23: -182464851
+      FixedExtendedTiles_24: 2064819798
+      FixedExtendedTiles_25: -336197291
+      FixedExtendedTiles_26: -386136082
+      FixedExtendedTiles_27: -1719740347
+      FixedExtendedTiles_28: 1960225360
+      FixedExtendedTiles_29: 640352398
+      FixedExtendedTiles_3: 1992702606
+      FixedExtendedTiles_30: -1156655271
+      FixedExtendedTiles_31: -879164712
+      FixedExtendedTiles_32: -77295700
+      FixedExtendedTiles_33: -819098341
+      FixedExtendedTiles_34: -1960180341
+      FixedExtendedTiles_35: -1538008784
+      FixedExtendedTiles_36: 879788370
+      FixedExtendedTiles_37: 1569546651
+      FixedExtendedTiles_38: 1665198341
+      FixedExtendedTiles_39: 1305423123
+      FixedExtendedTiles_4: -1361637037
+      FixedExtendedTiles_40: 1490960918
+      FixedExtendedTiles_41: 537053472
+      FixedExtendedTiles_42: 1823254431
+      FixedExtendedTiles_43: -1274026782
+      FixedExtendedTiles_44: 786146022
+      FixedExtendedTiles_45: -646655940
+      FixedExtendedTiles_46: -1038144358
+      FixedExtendedTiles_47: -1556332796
+      FixedExtendedTiles_48: 483746800
+      FixedExtendedTiles_49: 1324453915
+      FixedExtendedTiles_5: -158403510
+      FixedExtendedTiles_50: 127516377
+      FixedExtendedTiles_51: 530230835
+      FixedExtendedTiles_52: 8532681
+      FixedExtendedTiles_53: 1892065693
+      FixedExtendedTiles_54: -653043738
+      FixedExtendedTiles_55: 296476477
+      FixedExtendedTiles_56: -1077923878
+      FixedExtendedTiles_57: 1035753658
+      FixedExtendedTiles_58: 1903455482
+      FixedExtendedTiles_59: 847419116
+      FixedExtendedTiles_6: -538399220
+      FixedExtendedTiles_60: 223465411
+      FixedExtendedTiles_61: 610227121
+      FixedExtendedTiles_62: 1703385910
+      FixedExtendedTiles_63: -37350398
+      FixedExtendedTiles_64: 1906903250
+      FixedExtendedTiles_65: 849593342
+      FixedExtendedTiles_66: -184688712
+      FixedExtendedTiles_67: 2036225611
+      FixedExtendedTiles_68: 1817779278
+      FixedExtendedTiles_69: 149050247
+      FixedExtendedTiles_7: 1732180026
+      FixedExtendedTiles_70: -1272713540
+      FixedExtendedTiles_71: -1879377575
+      FixedExtendedTiles_72: -2056921621
+      FixedExtendedTiles_73: -1830114918
+      FixedExtendedTiles_74: -1666555973
+      FixedExtendedTiles_75: 2021999373
+      FixedExtendedTiles_76: -700647131
+      FixedExtendedTiles_77: 1572147926
+      FixedExtendedTiles_78: -1624884248
+      FixedExtendedTiles_79: 20653319
+      FixedExtendedTiles_8: 1643880492
+      FixedExtendedTiles_80: -1043769743
+      FixedExtendedTiles_81: -442862200
+      FixedExtendedTiles_82: -15191571
+      FixedExtendedTiles_83: -1970533221
+      FixedExtendedTiles_84: 1525370066
+      FixedExtendedTiles_85: -1628285842
+      FixedExtendedTiles_86: -952911226
+      FixedExtendedTiles_87: -428291849
+      FixedExtendedTiles_88: 1288267518
+      FixedExtendedTiles_89: 307712616
+      FixedExtendedTiles_9: -287116858
+      FixedExtendedTiles_90: -414711276
+      FixedExtendedTiles_91: -1607439398
+      FixedExtendedTiles_92: 118043712
+      FixedExtendedTiles_93: -1251131329
+      FixedExtendedTiles_94: -511908693
+      FixedExtendedTiles_95: 256690412
+      FixedExtendedTiles_96: -1925688122
+      FixedExtendedTiles_97: -2111933069
+      FixedExtendedTiles_98: -1809738324
+      FixedExtendedTiles_99: -1574999964
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

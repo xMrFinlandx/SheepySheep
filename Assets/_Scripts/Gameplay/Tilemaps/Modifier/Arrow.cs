@@ -12,7 +12,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         [SerializeField] private SpriteRenderer _spriteRenderer;
 
         private int _counter = 1;
-        private bool _isEnabled = false;
 
         private Vector2 _direction;
         private ArrowConfig _arrowConfig;
@@ -27,14 +26,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         public void Activate(IPlayerController playerController)
         {
-            if (_isEnabled)
-                return;
-
             playerController.SetMoveDirection(_direction);
-
-            _isEnabled = true;
-
-            print("ARROW");
         }
 
         public void Interact()
@@ -51,8 +43,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         public void Remove()
         {
-            print("arrow remove");
-
             Destroy(gameObject);
         }
 
