@@ -31,6 +31,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: af9fb75fa345bad46b1d19bed9f52738, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _FoamSubGraph_df991995a8ee408e8e9a7fc2c05f9837_FoamMaskTexure_2071132572_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamTexture:
+        m_Texture: {fileID: 2800000, guid: cf5401b677fee9f468fcae257c291b48, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _HeightMap:
         m_Texture: {fileID: 2800000, guid: d1f484f58ddfa4341a6e72ce14adc083, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -53,19 +61,34 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _CausticFadeMultiplier: 0.1
+    - _CausticFadeScale: 0.15
     - _CausticMovementAmount: 0.1
     - _CausticMovementScale: 0.2
     - _CausticScale: 0.2
     - _CausticSpeed: 3
     - _FScale: 1
-    - _NoiseScale: 0.3
+    - _FoamFactor: 0.8
+    - _FoamMultiply: 0.56
+    - _FoamOffset: 11.72
+    - _FoamScale: 0.2
+    - _NoiseScale: 1
     - _Pixelization: 24
+    - _Scale: 0.3
+    - _SpecularScale: 3
+    - _SpecularScale1: 3
+    - _SpecularScale2: 3
+    - _SpecularThreshold: 0.015
     - _YSquashAmount: 1.8
     m_Colors:
-    - _CausticColor: {r: 1, g: 1, b: 1, a: 0.09803922}
-    - _CausticHighlightColor: {r: 2.9960785, g: 2.9960785, b: 2.9960785, a: 1}
-    - _CurrentTexturePosition: {r: -23.08, g: -88.43, b: 0, a: 0}
+    - _CausticColor: {r: 1, g: 1, b: 1, a: 0.101960786}
+    - _CausticHighlightColor: {r: 1, g: 1, b: 1, a: 0.59607846}
+    - _CurrentTexturePosition: {r: 0, g: 0, b: 0, a: 0}
+    - _DepthOffset: {r: -2.29, g: -3.04, b: 0, a: 0}
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 0.3254902}
     - _Scale: {r: 0.3, g: 0.3, b: 0, a: 0}
+    - _SpecularColor: {r: 12.125731, g: 12.125731, b: 12.125731, a: 1}
+    - _SpecularSpeed: {r: 0.25, g: 0.125, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &723931435119367563

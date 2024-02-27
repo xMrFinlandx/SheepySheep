@@ -135,8 +135,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd33d7c85a5f07c4abd15ac0b8e73949
-      internalID: -1980363896
+      spriteID: fa0a4a2111403da488583c44a5809dfd
+      internalID: -1332908032
       vertices: []
       indices: 
       edges: []
@@ -156,8 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab86470b3a3084645821a589377d9425
-      internalID: 2047266763
+      spriteID: 4b4d49fdd426684429a552c962b2e574
+      internalID: -654832579
       vertices: []
       indices: 
       edges: []
@@ -177,14 +177,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec63ea46c239a6546a305ac511174de4
-      internalID: -1644201035
+      spriteID: b914b275593d94342a15acaf16dd6e5b
+      internalID: 2058009601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: WaterShaderMask_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 24
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc69ef3cbe0c0bd4a9f58aaef55ffdee
+      internalID: -122817854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterShaderMask_5
       rect:
         serializedVersion: 2
         x: 0
@@ -198,14 +219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 943a015b4a1ab534eb4350799bbc73a3
-      internalID: -1279771330
+      spriteID: 16f015f34099bcb4f85acea2f99a0f29
+      internalID: 1678774029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterShaderMask_5
+      name: WaterShaderMask_6
       rect:
         serializedVersion: 2
         x: 48
@@ -219,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5880e602db7bf694593ed3c8535103b7
-      internalID: 383135536
+      spriteID: b4caaa4093a038b49a14b3e63ae1ff44
+      internalID: 537380168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterShaderMask_6
+      name: WaterShaderMask_7
       rect:
         serializedVersion: 2
         x: 96
@@ -240,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 168115a93a9762d47920f367172994d7
-      internalID: 587880092
+      spriteID: b2c59b69f137ed940afa8437ce83f8df
+      internalID: 841175804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterShaderMask_7
+      name: WaterShaderMask_8
       rect:
         serializedVersion: 2
         x: 144
@@ -261,8 +282,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63b24437d9f591f42adcb90ccd1b0e07
-      internalID: -1766511363
+      spriteID: 6ae179743b00f384f8e4fb1ec6620d82
+      internalID: 1345839314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterShaderMask_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e160cf9bb6c264b4097d95bb3021ce6e
+      internalID: 522304710
       vertices: []
       indices: 
       edges: []
@@ -279,13 +321,15 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       WaterShaderMask_0: -8389938931115659668
-      WaterShaderMask_1: -1980363896
-      WaterShaderMask_2: 2047266763
-      WaterShaderMask_3: -1644201035
-      WaterShaderMask_4: -1279771330
-      WaterShaderMask_5: 383135536
-      WaterShaderMask_6: 587880092
-      WaterShaderMask_7: -1766511363
+      WaterShaderMask_1: -1332908032
+      WaterShaderMask_2: -654832579
+      WaterShaderMask_3: 2058009601
+      WaterShaderMask_4: -122817854
+      WaterShaderMask_5: 1678774029
+      WaterShaderMask_6: 537380168
+      WaterShaderMask_7: 841175804
+      WaterShaderMask_8: 1345839314
+      WaterShaderMask_9: 522304710
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

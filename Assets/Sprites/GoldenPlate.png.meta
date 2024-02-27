@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 771c6676581f272419242d232f466869
+guid: cc3daed4f3cc88c4fbade1486319c600
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1807125615787039003
-    second: tiles_0
+      213: 6889518835039177821
+    second: GoldenPlate_0
+  - first:
+      213: 9025322519984441649
+    second: GoldenPlate_1
+  - first:
+      213: 5176371603585117660
+    second: GoldenPlate_2
+  - first:
+      213: 8195473469029734573
+    second: GoldenPlate_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,6 +93,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -100,101 +122,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tiles_0
+      name: GoldenPlate_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 80
-        width: 64
-        height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6666667}
+        y: 8
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 32, y: 8}
-        - {x: 0, y: 24}
-        - {x: -32, y: 8}
-        - {x: 0, y: -8}
-      tessellationDetail: 0
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: b19de794c23341910800000000000000
-      internalID: 1807125615787039003
+      spriteID: d5c8fd3d0ec7c9f50800000000000000
+      internalID: 6889518835039177821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_1
+      name: GoldenPlate_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 80
-        width: 64
-        height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6666667}
+        x: 48
+        y: 8
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 32, y: 8}
-        - {x: 0, y: 24}
-        - {x: -32, y: 8}
-        - {x: 0, y: -8}
-      tessellationDetail: 0
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: 828f7fb2bd9dfb4439bfba247a091e5a
-      internalID: 1488628723
+      spriteID: 13981038303604d70800000000000000
+      internalID: 9025322519984441649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_2
+      name: GoldenPlate_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 64
-        height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6666667}
+        x: 96
+        y: 8
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 32, y: 8}
-        - {x: 0, y: 24}
-        - {x: -32, y: 8}
-        - {x: 0, y: -8}
-      tessellationDetail: 0
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: 835fa6339f9b2d14e988a3d5807b177d
-      internalID: 1262241183
+      spriteID: cdd2c114c8a26d740800000000000000
+      internalID: 5176371603585117660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_3
+      name: GoldenPlate_3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 64
-        height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6666667}
+        x: 144
+        y: 8
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 32, y: 8}
-        - {x: 0, y: 24}
-        - {x: -32, y: 8}
-        - {x: 0, y: -8}
-      tessellationDetail: 0
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: aa732c6c5e4e9a94785c60cb3a9d61ad
-      internalID: 1690181455
+      spriteID: da8d7a7d2bb2cb170800000000000000
+      internalID: 8195473469029734573
       vertices: []
       indices: 
       edges: []
@@ -202,7 +208,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7f9640d3ffade3b468a9a038515214cb
+    spriteID: aeaf1c8477e53e846b08ea7aae9683fd
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +216,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tiles_0: 1807125615787039003
-      tiles_1: 1488628723
-      tiles_2: 1262241183
-      tiles_3: 1690181455
+      GoldenPlate_0: 6889518835039177821
+      GoldenPlate_1: 9025322519984441649
+      GoldenPlate_2: 5176371603585117660
+      GoldenPlate_3: 8195473469029734573
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

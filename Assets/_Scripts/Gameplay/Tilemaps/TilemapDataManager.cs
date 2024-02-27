@@ -32,7 +32,7 @@ namespace _Scripts.Gameplay.Tilemaps
 
             if (!TilemapManager.Instance.CanAddModifier(gridPos))
             {
-                RotateArrow(gridPos);
+                Interact(gridPos);
                 return;
             }
 
@@ -46,7 +46,7 @@ namespace _Scripts.Gameplay.Tilemaps
             TilemapManager.Instance.TryRemoveInteraction(gridPos);
         }
         
-        private static void RotateArrow(Vector2Int gridPos)
+        private static void Interact(Vector2Int gridPos)
         {
             TilemapManager.Instance.TryInteractInteraction(gridPos);
         }

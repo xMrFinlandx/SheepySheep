@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using _Scripts.Installers;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Interfaces;
@@ -17,6 +18,13 @@ namespace _Scripts.Managers
 
         private Tilemap _tilemap;
         private Vector2Int _previousPos;
+
+#if UNITY_EDITOR
+        [Header("---EDITOR ONLY---")] 
+        [SerializeField] private GameplaySceneInstaller _sceneInstaller;
+
+        private void OnValidate() => _sceneInstaller ??= FindAnyObjectByType<GameplaySceneInstaller>();
+#endif
 
         [Inject]
         private void Construct(Tilemap tilemap) => _tilemap = tilemap;
@@ -100,6 +108,11 @@ namespace _Scripts.Managers
         
         public void SetTransformToCurrentTileCenter(Transform targetTransform)
         {
+            
+#if UNITY_EDITOR
+                _tilemap = _sceneInstaller.Tilemap;
+#endif
+            
             var cellPosition = (Vector3Int) WorldToCell(targetTransform.position);
             
             if (!_tilemap.HasTile(cellPosition)) 
