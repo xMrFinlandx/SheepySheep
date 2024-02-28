@@ -82,7 +82,7 @@ Material:
     - _YSquashAmount: 1.8
     m_Colors:
     - _CausticColor: {r: 1, g: 1, b: 1, a: 0.101960786}
-    - _CausticHighlightColor: {r: 1, g: 1, b: 1, a: 0.59607846}
+    - _CausticHighlightColor: {r: 1, g: 1, b: 1, a: 0.28235295}
     - _CurrentTexturePosition: {r: 0, g: 0, b: 0, a: 0}
     - _DepthOffset: {r: -2.29, g: -3.04, b: 0, a: 0}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 0.3254902}

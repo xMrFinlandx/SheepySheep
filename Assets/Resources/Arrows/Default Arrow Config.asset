@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _arrowDirectionData:
   - _sprite: {fileID: -2938970880757876879, guid: 85aa7c00d141709479cb1b01d73db195, type: 3}
-    _arrowDirection: 3
+    _moveDirection: 3
   - _sprite: {fileID: -2429919002490121231, guid: 85aa7c00d141709479cb1b01d73db195, type: 3}
-    _arrowDirection: 0
+    _moveDirection: 0
   - _sprite: {fileID: 5635105361348811957, guid: 85aa7c00d141709479cb1b01d73db195, type: 3}
-    _arrowDirection: 1
+    _moveDirection: 1
   - _sprite: {fileID: 67926103340967526, guid: 85aa7c00d141709479cb1b01d73db195, type: 3}
-    _arrowDirection: 2
+    _moveDirection: 2

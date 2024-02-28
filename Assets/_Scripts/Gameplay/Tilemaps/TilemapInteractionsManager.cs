@@ -1,17 +1,45 @@
-﻿using _Scripts.Gameplay.Tilemaps.Modifier;
+﻿using System;
+using _Scripts.Gameplay.Tilemaps.Modifier;
 using _Scripts.Managers;
 using _Scripts.Scriptables;
+using _Scripts.Utilities.Interfaces;
+using NaughtyAttributes;
 using UnityEngine;
 
 namespace _Scripts.Gameplay.Tilemaps
 {
-    public class TilemapDataManager : MonoBehaviour
+    public class TilemapInteractionsManager : MonoBehaviour
     {
         [SerializeField] private ArrowConfig _arrowConfig;
         [SerializeField] private Arrow _arrowPrefab;
+
+        public static Action ArrowInstantiatedAction;
         
         private Camera _camera;
-        
+
+#if UNITY_EDITOR
+        [Header("Editor only")]
+        [SerializeField] private TilemapManager _tilemapManager;
+
+        [Button("Move Interactions To Tile Center")]
+        private void MoveToTileCenter()
+        {
+            var allTransforms = FindObjectsByType<Transform>(FindObjectsSortMode.None);
+            
+            foreach (var tr in allTransforms)
+            {
+                var tileModifier = tr.GetComponent<ITileModifier>();
+                
+                tileModifier?.MoveToCurrentTileCenter(_tilemapManager, tr);
+            }
+        }
+
+        private void OnValidate()
+        {
+            _tilemapManager ??= FindAnyObjectByType<TilemapManager>();
+        }
+#endif
+
         private void Start()
         {
             _camera = Camera.main;
@@ -35,7 +63,8 @@ namespace _Scripts.Gameplay.Tilemaps
                 Interact(gridPos);
                 return;
             }
-
+            
+            ArrowInstantiatedAction?.Invoke();
             InstantiateArrow(gridPos);
         }
 

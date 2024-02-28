@@ -8,22 +8,9 @@ namespace _Scripts.Utilities.Classes
     public class ArrowDirectionData
     {
         [SerializeField] private Sprite _sprite;
-        [SerializeField] private ArrowDirectionType _arrowDirection;
+        [SerializeField] private MoveDirectionType _moveDirection;
 
         public Sprite Sprite => _sprite;
-        public Vector2 ArrowDirection
-        {
-            get
-            {
-                return _arrowDirection switch
-                {
-                    ArrowDirectionType.BottomRight => Vector2.down,
-                    ArrowDirectionType.BottomLeft => Vector2.left,
-                    ArrowDirectionType.TopLeft => Vector2.up,
-                    ArrowDirectionType.TopRight => Vector2.right,
-                    _ => Vector2.down
-                };
-            }
-        }
+        public Vector2 ArrowDirection => _moveDirection.GetDirectionVector();
     }
 }

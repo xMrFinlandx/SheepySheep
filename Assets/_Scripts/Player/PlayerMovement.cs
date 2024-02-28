@@ -1,6 +1,8 @@
 using System;
+using _Scripts.Gameplay.Tilemaps;
 using _Scripts.Managers;
 using _Scripts.Utilities;
+using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
 using UnityEngine;
 
@@ -10,12 +12,14 @@ namespace _Scripts.Player
     public class PlayerMovement : MonoBehaviour, IPlayerController
     {
         [SerializeField] private float _speed = 10;
-        [SerializeField] private Vector2 _startMoveDirection = Vector2.right;
+        [SerializeField] private MoveDirectionType _startMoveDirection;
         [Header("Components")]
         [SerializeField] private CircleCollider2D _collider;
         [SerializeField] private Rigidbody2D _rigidbody;
 
         public static Action PlayerInTileCenterAction;
+
+        private bool _canMove = false;
         
         private Vector2Int _playerCellPosition;
         
@@ -39,19 +43,32 @@ namespace _Scripts.Player
         
         private void Start()
         {
-            SetMoveDirection(_startMoveDirection);
+            TilemapInteractionsManager.ArrowInstantiatedAction += OnArrowInstantiated;
+            
+            SetMoveDirection(_startMoveDirection.GetDirectionVector());
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
+        }
+
+        private void OnArrowInstantiated()
+        {
+            _canMove = true;
         }
 
         private void ActivateModifiers() => TilemapManager.Instance.ActivateModifiers(_playerCellPosition, this);
 
         private void FixedUpdate()
         {
+            if (!_canMove)
+                return;
+            
             _rigidbody.AddForce(_moveDirection * (_speed * Time.fixedDeltaTime));
         }
 
         private void Update()
         {
+            if (!_canMove)
+                return;
+            
             _currentPosition = transform.position;
             _playerCellPosition = TilemapManager.Instance.WorldToCell(_currentPosition);
 
@@ -66,6 +83,11 @@ namespace _Scripts.Player
 
             PlayerInTileCenterAction?.Invoke();
             ActivateModifiers();
+        }
+
+        private void OnDestroy()
+        {
+            TilemapInteractionsManager.ArrowInstantiatedAction -= OnArrowInstantiated;
         }
     }
 }

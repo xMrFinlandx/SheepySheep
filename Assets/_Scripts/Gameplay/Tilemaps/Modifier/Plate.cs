@@ -20,17 +20,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         private bool _isEnabled = false;
         
         public bool IsSingleAtTile => _isSingleAtTile;
-
-#if UNITY_EDITOR
-        [Header("---EDITOR ONLY---")] 
-        [SerializeField] private TilemapManager _tilemapManager;
-
-        [Button("Move to tile center")]
-        private void MoveToTileCenter()
-        {
-            _tilemapManager.SetTransformToCurrentTileCenter(transform);
-        }
-#endif
         
         private void OnValidate()
         {
@@ -42,7 +31,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             
 #if UNITY_EDITOR
             _animator.runtimeAnimatorController = _plateConfig.AnimatorController;
-            _tilemapManager ??= FindAnyObjectByType<TilemapManager>();
 #endif
         }
 

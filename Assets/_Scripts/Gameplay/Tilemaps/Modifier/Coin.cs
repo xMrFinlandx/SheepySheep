@@ -21,7 +21,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             
             print("COIN");
         }
-        
+
         private void Start()
         {
             if (!TilemapManager.Instance.TryAddModifiers(transform.position, this))
