@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using _Scripts.Utilities.Classes;
+using _Scripts.Utilities.Enums;
 using UnityEngine;
 
 namespace _Scripts.Scriptables
@@ -10,5 +11,10 @@ namespace _Scripts.Scriptables
         [SerializeField] private List<ArrowDirectionData> _arrowDirectionData = new();
 
         public IReadOnlyList<ArrowDirectionData> ArrowDirectionData => _arrowDirectionData;
+
+        public ArrowDirectionData GetDataByDirection(MoveDirectionType directionType)
+        {
+            return _arrowDirectionData.Find(item => item.MoveDirectionType == directionType);
+        }
     }
 }

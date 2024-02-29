@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 85aa7c00d141709479cb1b01d73db195
+guid: 62569406a41be8a439dc8d422cf714a8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2429919002490121231
-    second: arrows_0
+      213: 8586701078527977398
+    second: Gate-Sheet_0
   - first:
-      213: 67926103340967526
-    second: arrows_1
+      213: 5605787526762859686
+    second: Gate-Sheet_1
   - first:
-      213: -2938970880757876879
-    second: arrows_2
+      213: -305007674784499497
+    second: Gate-Sheet_2
   - first:
-      213: 5635105361348811957
-    second: arrows_3
+      213: 5883236244371838151
+    second: Gate-Sheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -93,7 +93,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Standalone
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -106,11 +106,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,85 +122,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arrows_0
+      name: Gate-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 80
-        width: 64
-        height: 48
+        y: 0
+        width: 48
+        height: 32
       alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f3da9f9a81374ed0800000000000000
-      internalID: -2429919002490121231
+      spriteID: 6b7af1af2271a2770800000000000000
+      internalID: 8586701078527977398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrows_1
+      name: Gate-Sheet_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 80
-        width: 64
-        height: 48
+        x: 48
+        y: 0
+        width: 48
+        height: 32
       alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6666d9c5e6251f000800000000000000
-      internalID: 67926103340967526
+      spriteID: 6ac040b0e02cbcd40800000000000000
+      internalID: 5605787526762859686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrows_2
+      name: Gate-Sheet_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 64
-        height: 48
+        x: 96
+        y: 0
+        width: 48
+        height: 32
       alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 177b5372e8da637d0800000000000000
-      internalID: -2938970880757876879
+      spriteID: 7d8b3b2c22564cbf0800000000000000
+      internalID: -305007674784499497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrows_3
+      name: Gate-Sheet_3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 64
-        height: 48
+        x: 144
+        y: 0
+        width: 48
+        height: 32
       alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bc5817587ae33e40800000000000000
-      internalID: 5635105361348811957
+      spriteID: 7c49c7b813475a150800000000000000
+      internalID: 5883236244371838151
       vertices: []
       indices: 
       edges: []
@@ -208,7 +208,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7f908d0fc48a19346b8fe4c15c5afe75
+    spriteID: 80960d8803abdb541aadaff6df38ca1c
     internalID: 0
     vertices: []
     indices: 
@@ -216,10 +216,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      arrows_0: -2429919002490121231
-      arrows_1: 67926103340967526
-      arrows_2: -2938970880757876879
-      arrows_3: 5635105361348811957
+      Gate-Sheet_0: 8586701078527977398
+      Gate-Sheet_1: 5605787526762859686
+      Gate-Sheet_2: -305007674784499497
+      Gate-Sheet_3: 5883236244371838151
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

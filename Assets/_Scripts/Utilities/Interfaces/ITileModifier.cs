@@ -12,7 +12,10 @@ namespace _Scripts.Utilities.Interfaces
 #if UNITY_EDITOR
         public void MoveToCurrentTileCenter(TilemapManager tilemapManager, Transform transform)
         {
-            tilemapManager.SetTransformToCurrentTileCenter(transform);
+            var cellPos = tilemapManager.WorldToCell(transform.position);
+            var worldPos = tilemapManager.CellToWorld(cellPos);
+            
+            transform.position = worldPos;
         }
 #endif
     }

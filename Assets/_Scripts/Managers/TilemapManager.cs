@@ -29,8 +29,15 @@ namespace _Scripts.Managers
         [Inject]
         private void Construct(Tilemap tilemap) => _tilemap = tilemap;
 
-        public Vector2Int WorldToCell(Vector2 pos) => (Vector2Int) _tilemap.WorldToCell(pos);
-        
+        public Vector2Int WorldToCell(Vector2 pos)
+        {
+#if UNITY_EDITOR
+            _tilemap = _sceneInstaller.Tilemap;
+#endif
+            
+            return (Vector2Int) _tilemap.WorldToCell(pos);
+        }
+
         public Vector2 CellToWorld(Vector2Int pos) => _tilemap.CellToWorld((Vector3Int) pos);
 
         public bool IsInTilemap(Vector2Int pos) => _tilemap.HasTile((Vector3Int) pos);

@@ -25,7 +25,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         private void Start()
         {
             if (!TilemapManager.Instance.TryAddModifiers(transform.position, this))
-                Debug.LogError($"Tile is already occupied. {gameObject.name}");
+                Debug.LogError($"Tile is already occupied {transform.gameObject.name}");
         }
     }
 }

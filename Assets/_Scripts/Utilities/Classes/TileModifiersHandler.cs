@@ -33,12 +33,12 @@ namespace _Scripts.Utilities.Classes
         public bool TryInteract()
         {
             var isInteractionPerfomed = false;
-            
+
             foreach (var tileModifier in _tileModifiers)
             {
-                if (tileModifier is not IMouseInteraction mouseInteraction) 
+                if (tileModifier is not IMouseInteraction mouseInteraction)
                     continue;
-                
+
                 mouseInteraction.Interact();
                 isInteractionPerfomed = true;
             }

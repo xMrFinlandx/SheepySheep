@@ -100,3 +100,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isSingleAtTile: 1
+  _isInteractionsEnabled: 0
+  _spriteRenderer: {fileID: 7611813857609459841}

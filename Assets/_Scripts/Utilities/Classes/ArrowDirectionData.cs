@@ -12,5 +12,6 @@ namespace _Scripts.Utilities.Classes
 
         public Sprite Sprite => _sprite;
         public Vector2 ArrowDirection => _moveDirection.GetDirectionVector();
+        public MoveDirectionType MoveDirectionType => _moveDirection;
     }
 }

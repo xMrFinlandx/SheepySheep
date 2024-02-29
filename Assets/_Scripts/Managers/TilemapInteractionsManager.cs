@@ -1,16 +1,16 @@
 ﻿using System;
 using _Scripts.Gameplay.Tilemaps.Modifier;
-using _Scripts.Managers;
 using _Scripts.Scriptables;
 using _Scripts.Utilities.Interfaces;
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace _Scripts.Gameplay.Tilemaps
+namespace _Scripts.Managers
 {
     public class TilemapInteractionsManager : MonoBehaviour
     {
         [SerializeField] private ArrowConfig _arrowConfig;
+
         [SerializeField] private Arrow _arrowPrefab;
 
         public static Action ArrowInstantiatedAction;
@@ -18,6 +18,7 @@ namespace _Scripts.Gameplay.Tilemaps
         private Camera _camera;
 
 #if UNITY_EDITOR
+        [Space(20)]
         [Header("Editor only")]
         [SerializeField] private TilemapManager _tilemapManager;
 
@@ -26,11 +27,11 @@ namespace _Scripts.Gameplay.Tilemaps
         {
             var allTransforms = FindObjectsByType<Transform>(FindObjectsSortMode.None);
             
-            foreach (var tr in allTransforms)
+            foreach (var item in allTransforms)
             {
-                var tileModifier = tr.GetComponent<ITileModifier>();
+                var tileModifier = item.GetComponent<ITileModifier>();
                 
-                tileModifier?.MoveToCurrentTileCenter(_tilemapManager, tr);
+                tileModifier?.MoveToCurrentTileCenter(_tilemapManager, item);
             }
         }
 
