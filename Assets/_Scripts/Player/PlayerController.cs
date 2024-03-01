@@ -1,6 +1,5 @@
-using System;
-using _Scripts.Gameplay.Tilemaps;
 using _Scripts.Managers;
+using _Scripts.Player.StateMachine;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
@@ -9,7 +8,7 @@ using UnityEngine;
 namespace _Scripts.Player
 {
     [RequireComponent(typeof(CircleCollider2D), typeof(Rigidbody2D))]
-    public class PlayerMovement : MonoBehaviour, IPlayerController
+    public class PlayerController : MonoBehaviour, IPlayerController
     {
         [SerializeField] private float _speed = 10;
         [SerializeField] private MoveDirectionType _startMoveDirection;
@@ -17,21 +16,19 @@ namespace _Scripts.Player
         [SerializeField] private CircleCollider2D _collider;
         [SerializeField] private Rigidbody2D _rigidbody;
 
-        public static Action PlayerInTileCenterAction;
+        private FiniteStateMachine _finiteStateMachine;
 
-        private bool _canMove = false;
-        
-        private Vector2Int _playerCellPosition;
-        
-        private Vector2 _currentPosition;
-        private Vector2 _moveDirection;
+        public Vector2 MoveDirection { get; private set; }
 
+        public float Speed => _speed;
+        public Rigidbody2D Rigidbody => _rigidbody;
+        
         public void SetMoveDirection(Vector2 direction)
         {
-            _moveDirection = direction.CartesianToIsometric();
+            MoveDirection = direction.CartesianToIsometric();
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
         }
-        
+
         private void OnValidate()
         {
             _collider ??= GetComponent<CircleCollider2D>();
@@ -47,43 +44,29 @@ namespace _Scripts.Player
             
             SetMoveDirection(_startMoveDirection.GetDirectionVector());
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
+
+            InitStateMachine();
+            
+            _finiteStateMachine.SetState<FsmIdleState>();
+        }
+
+        private void InitStateMachine()
+        {
+            _finiteStateMachine = new FiniteStateMachine();
+            
+            _finiteStateMachine.AddState(new FsmIdleState(_finiteStateMachine));
+            _finiteStateMachine.AddState(new FsmMoveState(_finiteStateMachine, this));
+            _finiteStateMachine.AddState(new FsmDiedState(_finiteStateMachine));
         }
 
         private void OnArrowInstantiated()
         {
-            _canMove = true;
+           _finiteStateMachine.SetState<FsmMoveState>();
         }
 
-        private void ActivateModifiers() => TilemapManager.Instance.ActivateModifiers(_playerCellPosition, this);
+        private void FixedUpdate() => _finiteStateMachine.FixedUpdate();
 
-        private void FixedUpdate()
-        {
-            if (!_canMove)
-                return;
-            
-            _rigidbody.AddForce(_moveDirection * (_speed * Time.fixedDeltaTime));
-        }
-
-        private void Update()
-        {
-            if (!_canMove)
-                return;
-            
-            _currentPosition = transform.position;
-            _playerCellPosition = TilemapManager.Instance.WorldToCell(_currentPosition);
-
-            if (!TilemapManager.Instance.IsInTilemap(_playerCellPosition))
-            {
-                Debug.Log("Player is not on a tile in the tilemap.");
-                return;
-            }
-
-            if (!TilemapManager.Instance.IsPositionNearTileCenter(_currentPosition))
-                return;
-
-            PlayerInTileCenterAction?.Invoke();
-            ActivateModifiers();
-        }
+        private void Update() => _finiteStateMachine.Update();
 
         private void OnDestroy()
         {
