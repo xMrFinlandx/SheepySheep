@@ -1,4 +1,4 @@
-﻿namespace _Scripts.Player.StateMachine
+﻿namespace _Scripts.Utilities.StateMachine
 {
     public abstract class FsmState
     {

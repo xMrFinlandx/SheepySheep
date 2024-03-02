@@ -1,8 +1,8 @@
 using _Scripts.Managers;
-using _Scripts.Player.StateMachine;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
+using _Scripts.Utilities.StateMachine;
 using UnityEngine;
 
 namespace _Scripts.Player
@@ -18,11 +18,12 @@ namespace _Scripts.Player
 
         private FiniteStateMachine _finiteStateMachine;
 
-        public Vector2 MoveDirection { get; private set; }
-
         public float Speed => _speed;
+        public Vector2 MoveDirection { get; private set; }
         public Rigidbody2D Rigidbody => _rigidbody;
-        
+
+        public void SetState<T>() where T : FsmState => _finiteStateMachine.SetState<T>();
+
         public void SetMoveDirection(Vector2 direction)
         {
             MoveDirection = direction.CartesianToIsometric();
@@ -57,6 +58,7 @@ namespace _Scripts.Player
             _finiteStateMachine.AddState(new FsmIdleState(_finiteStateMachine));
             _finiteStateMachine.AddState(new FsmMoveState(_finiteStateMachine, this));
             _finiteStateMachine.AddState(new FsmDiedState(_finiteStateMachine));
+            _finiteStateMachine.AddState(new FsmPausedState(_finiteStateMachine));
         }
 
         private void OnArrowInstantiated()

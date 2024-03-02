@@ -1,8 +1,9 @@
 ﻿using System;
 using _Scripts.Managers;
+using _Scripts.Player;
 using UnityEngine;
 
-namespace _Scripts.Player.StateMachine
+namespace _Scripts.Utilities.StateMachine
 {
     public class FsmMoveState : FsmState
     {
@@ -34,7 +35,6 @@ namespace _Scripts.Player.StateMachine
 
             if (!TilemapManager.Instance.IsInTilemap(_playerCellPosition))
             {
-                Debug.Log("Player is not on a tile in the tilemap.");
                 FiniteStateMachine.SetState<FsmDiedState>();
                 return;
             }

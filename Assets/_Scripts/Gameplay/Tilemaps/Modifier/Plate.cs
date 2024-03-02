@@ -1,7 +1,6 @@
 ﻿using _Scripts.Managers;
 using _Scripts.Scriptables;
 using _Scripts.Utilities.Interfaces;
-using NaughtyAttributes;
 using UnityEngine;
 
 namespace _Scripts.Gameplay.Tilemaps.Modifier

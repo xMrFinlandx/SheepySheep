@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace _Scripts.Player.StateMachine
+﻿namespace _Scripts.Utilities.StateMachine
 {
     public class FsmIdleState : FsmState
     {
@@ -10,7 +8,6 @@ namespace _Scripts.Player.StateMachine
 
         public override void Exit()
         {
-            Debug.Log("Player Start Move");
         }
     }
 }

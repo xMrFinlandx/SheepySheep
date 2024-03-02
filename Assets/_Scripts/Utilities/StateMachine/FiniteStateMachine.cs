@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _Scripts.Player.StateMachine
+namespace _Scripts.Utilities.StateMachine
 {
     public class FiniteStateMachine
     {

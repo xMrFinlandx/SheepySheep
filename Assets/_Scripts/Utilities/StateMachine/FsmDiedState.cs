@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace _Scripts.Player.StateMachine
+﻿namespace _Scripts.Utilities.StateMachine
 {
     public class FsmDiedState : FsmState
     {
@@ -10,7 +8,6 @@ namespace _Scripts.Player.StateMachine
 
         public override void Enter()
         {
-            Debug.Log("Player Died");
         }
     }
 }
