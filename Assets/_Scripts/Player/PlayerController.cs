@@ -7,14 +7,15 @@ using UnityEngine;
 
 namespace _Scripts.Player
 {
-    [RequireComponent(typeof(CircleCollider2D), typeof(Rigidbody2D))]
+    [RequireComponent(typeof(Animator), typeof(Rigidbody2D), typeof(SpriteRenderer))]
     public class PlayerController : MonoBehaviour, IPlayerController
     {
         [SerializeField] private float _speed = 10;
         [SerializeField] private MoveDirectionType _startMoveDirection;
         [Header("Components")]
-        [SerializeField] private CircleCollider2D _collider;
         [SerializeField] private Rigidbody2D _rigidbody;
+        [SerializeField] private Animator _animator;
+        [SerializeField] private SpriteRenderer _spriteRenderer;
 
         private FiniteStateMachine _finiteStateMachine;
 
@@ -28,11 +29,17 @@ namespace _Scripts.Player
         {
             MoveDirection = direction.CartesianToIsometric();
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
+
+            if (direction == Vector2.down)
+                _spriteRenderer.flipX = false;
+            else if (direction == Vector2.left) 
+                _spriteRenderer.flipX = true;
         }
 
         private void OnValidate()
         {
-            _collider ??= GetComponent<CircleCollider2D>();
+            _spriteRenderer ??= GetComponent<SpriteRenderer>();
+            _animator ??= GetComponent<Animator>();
             _rigidbody ??= GetComponent<Rigidbody2D>();
 
             _rigidbody.gravityScale = 0;
@@ -45,9 +52,10 @@ namespace _Scripts.Player
             
             SetMoveDirection(_startMoveDirection.GetDirectionVector());
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
-
-            InitStateMachine();
             
+            InitStateMachine();
+
+            _animator.enabled = false;
             _finiteStateMachine.SetState<FsmIdleState>();
         }
 
@@ -56,7 +64,7 @@ namespace _Scripts.Player
             _finiteStateMachine = new FiniteStateMachine();
             
             _finiteStateMachine.AddState(new FsmIdleState(_finiteStateMachine));
-            _finiteStateMachine.AddState(new FsmMoveState(_finiteStateMachine, this));
+            _finiteStateMachine.AddState(new FsmMoveState(_finiteStateMachine, this, _animator));
             _finiteStateMachine.AddState(new FsmDiedState(_finiteStateMachine));
             _finiteStateMachine.AddState(new FsmPausedState(_finiteStateMachine));
         }

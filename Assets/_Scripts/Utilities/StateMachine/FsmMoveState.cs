@@ -7,20 +7,30 @@ namespace _Scripts.Utilities.StateMachine
 {
     public class FsmMoveState : FsmState
     {
-        private PlayerController _playerController;
-        private Transform _transform;
-        private Rigidbody2D _rigidbody;
+        private const string _STATE_NAME = "PlayerMove";
+        
+        private readonly PlayerController _playerController;
+        private readonly Transform _transform;
+        private readonly Rigidbody2D _rigidbody;
+        private readonly Animator _animator;
         
         private Vector2 _currentPosition;
         private Vector2Int _playerCellPosition;
         
         public static Action PlayerInTileCenterAction;
 
-        public FsmMoveState(FiniteStateMachine finiteStateMachine, PlayerController playerController) : base(finiteStateMachine)
+        public FsmMoveState(FiniteStateMachine finiteStateMachine, PlayerController playerController, Animator animator) : base(finiteStateMachine)
         {
+            _animator = animator;
             _playerController = playerController;
             _rigidbody = playerController.Rigidbody;
             _transform = playerController.transform;
+        }
+
+        public override void Enter()
+        {
+            _animator.enabled = true;
+            _animator.Play(_STATE_NAME);
         }
 
         public override void FixedUpdate()
