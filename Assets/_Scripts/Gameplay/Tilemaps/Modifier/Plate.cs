@@ -1,5 +1,4 @@
-﻿using _Scripts.Managers;
-using _Scripts.Scriptables;
+﻿using _Scripts.Scriptables;
 using _Scripts.Utilities.Interfaces;
 using UnityEngine;
 
@@ -20,19 +19,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         
         public bool IsSingleAtTile => _isSingleAtTile;
         
-        private void OnValidate()
-        {
-            _animator = GetComponent<Animator>();
-            _spriteRenderer = GetComponent<SpriteRenderer>();
-            
-            _spriteRenderer.sprite = _plateConfig.IdleSprite;
-            _pressAnimationName = _plateConfig.PressAnimationClip.name;
-            
-#if UNITY_EDITOR
-            _animator.runtimeAnimatorController = _plateConfig.AnimatorController;
-#endif
-        }
-
         public void Activate(IPlayerController playerController)
         {
             if (_isEnabled)
@@ -43,12 +29,24 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             _isEnabled = true;
         }
 
+        public Transform GetTransform() => transform;
+        
+        private void OnValidate()
+        {
+            _animator = GetComponent<Animator>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+            
+            _spriteRenderer.sprite = _plateConfig.IdleSprite;
+            _pressAnimationName = _plateConfig.AnimationClipName;
+            
+#if UNITY_EDITOR
+            _animator.runtimeAnimatorController = _plateConfig.AnimatorController;
+#endif
+        }
+
         private void Start()
         {
             _animator.enabled = false;
-            
-            if (!TilemapManager.Instance.TryAddModifiers(transform.position, this))
-                Debug.LogError($"Tile is already occupied {gameObject.name}");
         }
     }
 }

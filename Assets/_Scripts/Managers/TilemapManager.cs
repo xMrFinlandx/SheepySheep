@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using _Scripts.Installers;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Classes;
@@ -127,6 +128,17 @@ namespace _Scripts.Managers
             
             var tileCenter = _tilemap.GetCellCenterWorld(cellPosition);
             targetTransform.position = tileCenter;
+        }
+
+        private void Start()
+        {
+            var modifiers = Extensions.FindObjectsByInterface<ITileModifier>();
+
+            foreach (var modifier in modifiers)
+            {
+                if (!TryAddModifiers(modifier.GetTransform().position, modifier))
+                    Debug.LogError($"Tile is already occupied {transform.gameObject.name}");
+            }
         }
 
         private void OnDrawGizmos()

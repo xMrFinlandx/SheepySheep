@@ -8,14 +8,16 @@ namespace _Scripts.Utilities.Interfaces
         public bool IsSingleAtTile { get; }
 
         public void Activate(IPlayerController playerController);
+
+        public Transform GetTransform();
         
 #if UNITY_EDITOR
-        public void MoveToCurrentTileCenter(TilemapManager tilemapManager, Transform transform)
+        public void MoveToCurrentTileCenter(TilemapManager tilemapManager)
         {
-            var cellPos = tilemapManager.WorldToCell(transform.position);
+            var cellPos = tilemapManager.WorldToCell(GetTransform().position);
             var worldPos = tilemapManager.CellToWorld(cellPos);
             
-            transform.position = worldPos;
+            GetTransform().position = worldPos;
         }
 #endif
     }

@@ -30,6 +30,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         {
             playerController.SetMoveDirection(_direction.GetDirectionVector());
         }
+        
+        public Transform GetTransform() => transform;
 
         private void OnValidate()
         {
@@ -40,9 +42,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         {
             var data = _arrowConfig.GetDataByDirection(_direction);
             _spriteRenderer.sprite = data.Sprite;
-            
-            if (!TilemapManager.Instance.TryAddModifiers(transform.position, this))
-                Debug.LogError($"Tile is already occupied {transform.gameObject.name}");
         }
     }
 }

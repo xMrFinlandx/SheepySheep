@@ -28,6 +28,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         {
             playerController.SetMoveDirection(_direction);
         }
+        
+        public Transform GetTransform() => transform;
 
         public void Interact()
         {

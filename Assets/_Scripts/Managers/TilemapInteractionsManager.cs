@@ -1,6 +1,7 @@
 ﻿using System;
 using _Scripts.Gameplay.Tilemaps.Modifier;
 using _Scripts.Scriptables;
+using _Scripts.Utilities;
 using _Scripts.Utilities.Interfaces;
 using NaughtyAttributes;
 using UnityEngine;
@@ -25,13 +26,13 @@ namespace _Scripts.Managers
         [Button("Move Interactions To Tile Center")]
         private void MoveToTileCenter()
         {
-            var allTransforms = FindObjectsByType<Transform>(FindObjectsSortMode.None);
+            var modifiers = Extensions.FindObjectsByInterface<ITileModifier>();
             
-            foreach (var item in allTransforms)
+            print(modifiers.Count);
+            
+            foreach (var modifier in modifiers)
             {
-                var tileModifier = item.GetComponent<ITileModifier>();
-                
-                tileModifier?.MoveToCurrentTileCenter(_tilemapManager, item);
+                modifier.MoveToCurrentTileCenter(_tilemapManager);
             }
         }
 
