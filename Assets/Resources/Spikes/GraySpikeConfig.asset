@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: GraySpikeConfig
   m_EditorClassIdentifier: 
   _idleSprite: {fileID: -8267202868168639649, guid: 393c44718be201e44b0895cb3f93da07, type: 3}
+  _triggerId: 1
   _animationClip: {fileID: 7400000, guid: 962b6f08e0d4013468a0193670c34042, type: 2}
   _animatorController: {fileID: 9100000, guid: 2e967cd413f7b1a408f71d6408d7bba3, type: 2}

@@ -28,8 +28,6 @@ namespace _Scripts.Managers
         {
             var modifiers = Extensions.FindObjectsByInterface<ITileModifier>();
             
-            print(modifiers.Count);
-            
             foreach (var modifier in modifiers)
             {
                 modifier.MoveToCurrentTileCenter(_tilemapManager);

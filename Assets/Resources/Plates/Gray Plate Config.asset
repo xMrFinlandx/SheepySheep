@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e21f7105b87445d8b1daa563e09ba311, type: 3}
-  m_Name: Golden Plate Config
+  m_Name: Gray Plate Config
   m_EditorClassIdentifier: 
   _idleSprite: {fileID: 6889518835039177821, guid: cc3daed4f3cc88c4fbade1486319c600, type: 3}
-  _callID: 0
+  _callId: 1
   _pressAnimationClip: {fileID: 7400000, guid: dbf7c85066ed1a94b924b8bc8faf7acd, type: 2}
   _animatorController: {fileID: 9100000, guid: bb8bce15bc5683549b44d42d0cb529a2, type: 2}

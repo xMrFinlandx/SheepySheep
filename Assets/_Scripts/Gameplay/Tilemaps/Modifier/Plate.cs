@@ -1,4 +1,5 @@
-﻿using _Scripts.Scriptables;
+﻿using System;
+using _Scripts.Scriptables;
 using _Scripts.Utilities.Interfaces;
 using UnityEngine;
 
@@ -14,9 +15,13 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         [SerializeField] private Animator _animator;
         [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private string _pressAnimationName;
+        [SerializeField] private int _callId;
+
+        public static Action<int> TriggerEnabledAction;
         
         private bool _isEnabled = false;
-        
+
+        public int CallId => _callId;
         public bool IsSingleAtTile => _isSingleAtTile;
         
         public void Activate(IPlayerController playerController)
@@ -27,6 +32,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             _animator.enabled = true;
             _animator.Play(_pressAnimationName);
             _isEnabled = true;
+            TriggerEnabledAction?.Invoke(_callId);
         }
 
         public Transform GetTransform() => transform;
@@ -38,6 +44,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             
             _spriteRenderer.sprite = _plateConfig.IdleSprite;
             _pressAnimationName = _plateConfig.AnimationClipName;
+            _callId = _plateConfig.CallId;
             
 #if UNITY_EDITOR
             _animator.runtimeAnimatorController = _plateConfig.AnimatorController;

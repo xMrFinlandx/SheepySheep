@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using _Scripts.Utilities.Enums;
 using UnityEngine;
 
@@ -24,9 +23,9 @@ namespace _Scripts.Utilities
             return new Vector2(direction.x - direction.y, (direction.x + direction.y) / 2);
         }
         
-        public static List<T> FindObjectsByInterface<T>() where T : class
+        public static T[] FindObjectsByInterface<T>() where T : class
         {
-            return Object.FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None).OfType<T>().ToList();
+            return Object.FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None).OfType<T>().ToArray();
         }
     }
 }

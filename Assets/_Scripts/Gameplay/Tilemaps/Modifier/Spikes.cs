@@ -1,4 +1,5 @@
 ﻿using System;
+using _Scripts.Managers;
 using _Scripts.Scriptables;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
@@ -15,6 +16,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         [SerializeField] private Animator _animator;
         [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private string _animationName;
+        [SerializeField] private int _triggerId;
 
         private bool _isTrapEnabled = true;
         
@@ -40,11 +42,19 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         private void Start()
         {
             _animator.enabled = false;
-            Invoke(nameof(Play), 2f);
+            TriggersManager.AllTriggersActivatedAction += Play;
         }
 
-        private void Play()
+        private void OnDestroy()
         {
+            TriggersManager.AllTriggersActivatedAction -= Play;
+        }
+
+        private void Play(int index)
+        {
+            if (index != _triggerId)
+                return;
+            
             _isTrapEnabled = false;
             _animator.enabled = true;
             _animator.Play(_animationName);
@@ -57,6 +67,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
             _spriteRenderer.sprite = _spikeConfig.IdleSprite;
             _animationName = _spikeConfig.AnimationClipName;
+            _triggerId = _spikeConfig.TriggerId;
             
 #if UNITY_EDITOR
             _animator.runtimeAnimatorController = _spikeConfig.AnimatorController;
