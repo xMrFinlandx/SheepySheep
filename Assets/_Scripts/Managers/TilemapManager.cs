@@ -137,7 +137,7 @@ namespace _Scripts.Managers
             foreach (var modifier in modifiers)
             {
                 if (!TryAddModifiers(modifier.GetTransform().position, modifier))
-                    Debug.LogError($"Tile is already occupied {transform.gameObject.name}");
+                    Debug.LogError($"Tile is already occupied {modifier.GetTransform().gameObject.name}");
             }
         }
 

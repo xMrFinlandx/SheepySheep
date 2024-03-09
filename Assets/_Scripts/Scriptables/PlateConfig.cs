@@ -17,9 +17,11 @@ namespace _Scripts.Scriptables
 
         public AnimatorController AnimatorController => _animatorController;
 #endif
-
-        public int CallId => _callId;
+        
         public Sprite IdleSprite => _idleSprite;
+        
         public string AnimationClipName => _pressAnimationClip.name;
+        
+        public int CallId => _callId;
     }
 }

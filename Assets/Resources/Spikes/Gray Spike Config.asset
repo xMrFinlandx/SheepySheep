@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45bc50d5268f499d9ee7a07caa9f24b9, type: 3}
-  m_Name: GoldenSpikeConfig
+  m_Name: Gray Spike Config
   m_EditorClassIdentifier: 
-  _idleSprite: {fileID: -3337847229795779588, guid: 393c44718be201e44b0895cb3f93da07, type: 3}
-  _animationClip: {fileID: 7400000, guid: 0113c24bb972a0f4d886c07ff4034000, type: 2}
-  _animatorController: {fileID: 9100000, guid: 1a5bc8431764cbf449df39862a51add3, type: 2}
+  _idleSprite: {fileID: -8267202868168639649, guid: 393c44718be201e44b0895cb3f93da07, type: 3}
+  _triggerId: 1
+  _animationClip: {fileID: 7400000, guid: 962b6f08e0d4013468a0193670c34042, type: 2}
+  _animatorController: {fileID: 9100000, guid: 8e5b252c8cbbafc439771db6beef52bf, type: 2}

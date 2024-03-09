@@ -14,6 +14,8 @@ namespace _Scripts.Managers
         private readonly Dictionary<int, int> _counter = new();
         private readonly Dictionary<int, int> _triggers = new();
 
+        public void Restart() => ResetProgress();
+        
         private void Start()
         {
             Plate.TriggerEnabledAction += UpdateCounter;
@@ -53,9 +55,7 @@ namespace _Scripts.Managers
                 }
             }
         }
-
-        public void Restart() => ResetProgress();
-
+        
         private void ResetProgress()
         {
             for (var index = 0; index < _counter.Count; index++)

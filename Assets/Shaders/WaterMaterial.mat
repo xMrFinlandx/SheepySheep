@@ -68,10 +68,14 @@ Material:
     - _CausticScale: 0.2
     - _CausticSpeed: 3
     - _FScale: 1
-    - _FoamFactor: 0.8
+    - _FoamFactor: 1.2
+    - _FoamMovementAmount: 0.2
+    - _FoamMovementScale: 0.2
     - _FoamMultiply: 0.56
     - _FoamOffset: 11.72
+    - _FoamOpacity: 0.5
     - _FoamScale: 0.2
+    - _FoamSpeed: 1
     - _NoiseScale: 1
     - _Pixelization: 24
     - _Scale: 0.3
@@ -82,10 +86,12 @@ Material:
     - _YSquashAmount: 1.8
     m_Colors:
     - _CausticColor: {r: 1, g: 1, b: 1, a: 0.101960786}
-    - _CausticHighlightColor: {r: 1, g: 1, b: 1, a: 0.28235295}
+    - _CausticHighlightColor: {r: 1, g: 1, b: 1, a: 0.4627451}
     - _CurrentTexturePosition: {r: 0, g: 0, b: 0, a: 0}
+    - _DepthColor1: {r: 0.5235849, g: 0.7878305, b: 1, a: 1}
+    - _DepthColor2: {r: 0, g: 0.35189, b: 0.735849, a: 1}
     - _DepthOffset: {r: -2.29, g: -3.04, b: 0, a: 0}
-    - _FoamColor: {r: 1, g: 1, b: 1, a: 0.3254902}
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
     - _Scale: {r: 0.3, g: 0.3, b: 0, a: 0}
     - _SpecularColor: {r: 12.125731, g: 12.125731, b: 12.125731, a: 1}
     - _SpecularSpeed: {r: 0.25, g: 0.125, b: 0, a: 0}

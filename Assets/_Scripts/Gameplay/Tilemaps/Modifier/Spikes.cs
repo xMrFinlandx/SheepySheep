@@ -1,5 +1,4 @@
-﻿using System;
-using _Scripts.Managers;
+﻿using _Scripts.Managers;
 using _Scripts.Scriptables;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
