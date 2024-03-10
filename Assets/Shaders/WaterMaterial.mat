@@ -75,7 +75,7 @@ Material:
     - _FoamOffset: 11.72
     - _FoamOpacity: 0.5
     - _FoamScale: 0.2
-    - _FoamSpeed: 1
+    - _FoamSpeed: 0.8
     - _NoiseScale: 1
     - _Pixelization: 24
     - _Scale: 0.3

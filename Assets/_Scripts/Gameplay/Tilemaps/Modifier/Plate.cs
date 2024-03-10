@@ -1,5 +1,7 @@
 ﻿using System;
+using _Scripts.Managers;
 using _Scripts.Scriptables;
+using _Scripts.Utilities;
 using _Scripts.Utilities.Interfaces;
 using UnityEngine;
 
@@ -30,7 +32,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
                 return;
 
             _animator.enabled = true;
-            _animator.Play(_pressAnimationName);
+            _animator.PlayUnLoopedClip(_pressAnimationName);
             _isEnabled = true;
             TriggerEnabledAction?.Invoke(_callId);
         }
@@ -54,6 +56,19 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         private void Start()
         {
             _animator.enabled = false;
+            ReloadRoomManager.ReloadRoomAction += Restart;
+        }
+
+        private void OnDestroy()
+        {
+            ReloadRoomManager.ReloadRoomAction -= Restart;
+        }
+
+        private void Restart()
+        {
+            _isEnabled = false;
+            _animator.enabled = false;
+            _spriteRenderer.sprite = _plateConfig.IdleSprite;
         }
     }
 }

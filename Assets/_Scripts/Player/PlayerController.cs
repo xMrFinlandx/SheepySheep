@@ -8,7 +8,7 @@ using UnityEngine;
 namespace _Scripts.Player
 {
     [RequireComponent(typeof(Animator), typeof(Rigidbody2D), typeof(SpriteRenderer))]
-    public class PlayerController : MonoBehaviour, IPlayerController
+    public class PlayerController : MonoBehaviour, IPlayerController, IRestartable
     {
         [SerializeField] private float _speed = 10;
         [SerializeField] private MoveDirectionType _startMoveDirection;
@@ -17,6 +17,8 @@ namespace _Scripts.Player
         [SerializeField] private Animator _animator;
         [SerializeField] private SpriteRenderer _spriteRenderer;
 
+        private Vector2 _spawnPosition;
+
         private FiniteStateMachine _finiteStateMachine;
 
         public float Speed => _speed;
@@ -24,6 +26,8 @@ namespace _Scripts.Player
         public Rigidbody2D Rigidbody => _rigidbody;
 
         public void SetState<T>() where T : FsmState => _finiteStateMachine.SetState<T>();
+
+        public void InitSpawnPosition(Vector2 spawnPoint) => _spawnPosition = spawnPoint;
 
         public void SetMoveDirection(Vector2 direction)
         {
@@ -34,6 +38,14 @@ namespace _Scripts.Player
                 _spriteRenderer.flipX = false;
             else if (direction == Vector2.left) 
                 _spriteRenderer.flipX = true;
+        }
+        
+        public void Restart()
+        {
+            _animator.enabled = false;
+            transform.position = _spawnPosition;
+            _finiteStateMachine.SetState<FsmIdleState>();
+            SetMoveDirection(_startMoveDirection.GetDirectionVector());
         }
 
         private void OnValidate()
@@ -49,6 +61,7 @@ namespace _Scripts.Player
         private void Start()
         {
             TilemapInteractionsManager.ArrowInstantiatedAction += OnArrowInstantiated;
+            ReloadRoomManager.ReloadRoomAction += Restart;
             
             SetMoveDirection(_startMoveDirection.GetDirectionVector());
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
@@ -81,6 +94,7 @@ namespace _Scripts.Player
         private void OnDestroy()
         {
             TilemapInteractionsManager.ArrowInstantiatedAction -= OnArrowInstantiated;
+            ReloadRoomManager.ReloadRoomAction -= Restart;
         }
     }
 }

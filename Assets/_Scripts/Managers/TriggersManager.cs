@@ -19,6 +19,7 @@ namespace _Scripts.Managers
         private void Start()
         {
             Plate.TriggerEnabledAction += UpdateCounter;
+            ReloadRoomManager.ReloadRoomAction += Restart;
             
             InitDictionaries();
         }
@@ -26,6 +27,7 @@ namespace _Scripts.Managers
         private void OnDisable()
         {
             Plate.TriggerEnabledAction -= UpdateCounter;
+            ReloadRoomManager.ReloadRoomAction -= Restart;
         }
 
         private void UpdateCounter(int index)

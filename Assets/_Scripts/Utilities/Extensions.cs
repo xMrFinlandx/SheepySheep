@@ -27,5 +27,10 @@ namespace _Scripts.Utilities
         {
             return Object.FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None).OfType<T>().ToArray();
         }
+
+        public static void PlayUnLoopedClip(this Animator animator, string animationName)
+        {
+            animator.Play(animationName, -1, 0);
+        }
     }
 }

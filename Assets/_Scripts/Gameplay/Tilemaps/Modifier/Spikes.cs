@@ -1,5 +1,6 @@
 ﻿using _Scripts.Managers;
 using _Scripts.Scriptables;
+using _Scripts.Utilities;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
 using UnityEngine;
@@ -7,7 +8,7 @@ using UnityEngine;
 namespace _Scripts.Gameplay.Tilemaps.Modifier
 {
     [RequireComponent(typeof(SpriteRenderer), typeof(Animator))]
-    public class Spikes : MonoBehaviour, ITileModifier, IRestartable
+    public class Spikes : MonoBehaviour, ITileModifier
     {
         [SerializeField] private bool _isSingleAtTile = true;
         [SerializeField] private SpikeConfig _spikeConfig;
@@ -17,36 +18,38 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         [SerializeField] private string _animationName;
         [SerializeField] private int _triggerId;
 
-        private bool _isTrapEnabled = true;
+        private bool _enabled = true;
         
         public bool IsSingleAtTile => _isSingleAtTile;
         
         public void Activate(IPlayerController playerController)
         {
-            if (!_isTrapEnabled)
+            if (!_enabled)
                 return;
             
             playerController.SetState<FsmDiedState>();
         }
 
         public Transform GetTransform() => transform;
-        
-        public void Restart()
-        {
-            _isTrapEnabled = true;
-            _animator.enabled = false;
-            _spriteRenderer.sprite = _spikeConfig.IdleSprite;
-        }
 
         private void Start()
         {
             _animator.enabled = false;
             TriggersManager.AllTriggersActivatedAction += Play;
+            ReloadRoomManager.ReloadRoomAction += Restart;
         }
 
         private void OnDestroy()
         {
             TriggersManager.AllTriggersActivatedAction -= Play;
+            ReloadRoomManager.ReloadRoomAction -= Restart;
+        }
+        
+        private void Restart()
+        {
+            _enabled = true;
+            _animator.enabled = false;
+            _spriteRenderer.sprite = _spikeConfig.IdleSprite;
         }
 
         private void Play(int index)
@@ -54,9 +57,9 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             if (index != _triggerId)
                 return;
             
-            _isTrapEnabled = false;
+            _enabled = false;
             _animator.enabled = true;
-            _animator.Play(_animationName);
+            _animator.PlayUnLoopedClip(_animationName);
         }
         
         private void OnValidate()
