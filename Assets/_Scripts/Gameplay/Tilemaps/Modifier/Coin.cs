@@ -1,4 +1,5 @@
-﻿using _Scripts.Scriptables;
+﻿using _Scripts.Managers;
+using _Scripts.Scriptables;
 using _Scripts.Utilities.Interfaces;
 using UnityEngine;
 
@@ -20,7 +21,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         public void Restart()
         {
-            
+            _spriteRenderer.enabled = true;
+            _isEnabled = false;
         }
 
         public void Activate(IPlayerController playerController)
@@ -29,8 +31,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
                 return;
 
             _isEnabled = true;
-            
-            Destroy(gameObject);
+
+            _spriteRenderer.enabled = false;
         }
         
         public Transform GetTransform() => transform;
@@ -38,8 +40,14 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         private void Start()
         {
             _animator.Play(_animationName);
+            ReloadRoomManager.ReloadRoomAction += Restart;
         }
-        
+
+        private void OnDestroy()
+        {
+            ReloadRoomManager.ReloadRoomAction -= Restart;
+        }
+
         private void OnValidate()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();

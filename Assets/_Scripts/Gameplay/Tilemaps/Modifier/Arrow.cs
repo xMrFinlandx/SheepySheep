@@ -1,4 +1,5 @@
-﻿using _Scripts.Scriptables;
+﻿using _Scripts.Managers;
+using _Scripts.Scriptables;
 using _Scripts.Utilities.Interfaces;
 using UnityEngine;
 
@@ -22,6 +23,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         {
             _arrowConfig = arrowConfig;
             Interact();
+            ReloadRoomManager.ReloadRoomAction += Restart;
         }
 
         public void Activate(IPlayerController playerController)
@@ -48,9 +50,20 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             Destroy(gameObject);
         }
 
+        private void Restart()
+        {
+            var key = TilemapManager.Instance.WorldToCell(transform.position);
+            TilemapManager.Instance.TryRemoveInteraction(key);
+        }
+
         private void OnValidate()
         {
             _spriteRenderer ??= GetComponent<SpriteRenderer>();
+        }
+
+        private void OnDestroy()
+        {
+            ReloadRoomManager.ReloadRoomAction -= Restart;
         }
     }
 }

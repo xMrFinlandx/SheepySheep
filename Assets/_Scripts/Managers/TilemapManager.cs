@@ -67,7 +67,17 @@ namespace _Scripts.Managers
 
         public bool TryRemoveInteraction(Vector2Int key)
         {
-            return _tileModifiersData.TryGetValue(key, out var value) && value.TryRemove();
+            var isRemoved = false;
+            
+            if (_tileModifiersData.TryGetValue(key, out var value))
+            {
+                isRemoved = value.TryRemove();
+                
+                if (_tileModifiersData[key].CanRemoveData)
+                    _tileModifiersData.Remove(key);
+            }
+
+            return isRemoved;
         }
 
         public bool TryInteractInteraction(Vector2Int key)

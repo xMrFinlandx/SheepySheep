@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2a82bc7bf2f4fb5b7270985e1c02f44, type: 3}
-  m_Name: Blue Coin Config
+  m_Name: Blue Diamond Config
   m_EditorClassIdentifier: 
-  _idleSprite: {fileID: -8841827871950111001, guid: 96eccfd091df517499eb55b1016e6add, type: 3}
+  _idleSprite: {fileID: 7828207187760574628, guid: 96eccfd091df517499eb55b1016e6add, type: 3}
   _animationClip: {fileID: 7400000, guid: b34de9be074516c48bcf017023f61c1f, type: 2}
   _animatorController: {fileID: 9100000, guid: 70b9d608fe514cd45a893df3ea69dec0, type: 2}
