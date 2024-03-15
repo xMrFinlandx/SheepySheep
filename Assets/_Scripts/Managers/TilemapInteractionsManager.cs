@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using _Scripts.Gameplay.Tilemaps.Modifier;
 using _Scripts.Scriptables;
 using _Scripts.Utilities;
+using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
 using NaughtyAttributes;
 using UnityEngine;
@@ -12,13 +13,13 @@ namespace _Scripts.Managers
     public class TilemapInteractionsManager : Singleton<TilemapInteractionsManager>
     {
         [SerializeField] private ArrowConfig _arrowConfig;
-
         [SerializeField] private Arrow _arrowPrefab;
-
-        public static Action ArrowInstantiatedAction;
-
         [SerializeField] private SpriteRenderer[] _spriteRenderers;
+        
+        public static Action ArrowInstantiatedAction;
         private Camera _camera;
+
+        private bool _canInteract = false;
 
         public IReadOnlyList<SpriteRenderer> SpriteRenderers => (IReadOnlyList<SpriteRenderer>) _spriteRenderers.Shuffle();
 
@@ -53,10 +54,24 @@ namespace _Scripts.Managers
         private void Start()
         {
             _camera = Camera.main;
+            GameStateManager.GameStateChangedAction += OnGameStateChanged;
+        }
+
+        private void OnDestroy()
+        {
+            GameStateManager.GameStateChangedAction -= OnGameStateChanged;
+        }
+
+        private void OnGameStateChanged(GameStateType gameState)
+        {
+            _canInteract = gameState == GameStateType.Gameplay;
         }
 
         private void Update()
         {
+            if (_canInteract == false)
+                return;
+            
             if (Input.GetMouseButtonDown(0)) 
                 ArrowInteract();
 

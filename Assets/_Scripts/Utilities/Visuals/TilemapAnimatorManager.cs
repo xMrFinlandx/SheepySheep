@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using _Scripts.Managers;
+using _Scripts.Utilities.Enums;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -37,6 +38,8 @@ namespace _Scripts.Utilities.Visuals
 
         private async void Start()
         {
+            GameStateManager.SetState(GameStateType.Cutscene);
+            
             await Awaitable.WaitForSecondsAsync(0.1f);
             
             GenerateTiles();
@@ -62,11 +65,12 @@ namespace _Scripts.Utilities.Visuals
             return spriteRenderers.Concat(_spriteRenderers).ToList();
         }
 
-        private void EnableTilemap()
+        private void OnAnimationEnded()
         {
             _tilemap.gameObject.SetActive(true);
             transform.KillChildren();
             _spriteRenderers.Clear();
+            GameStateManager.SetState(GameStateType.Gameplay);
         }
 
         private void Animate()
@@ -82,7 +86,7 @@ namespace _Scripts.Utilities.Visuals
             }
 
             _sequence.SetLink(gameObject);
-            _sequence.OnComplete(EnableTilemap);
+            _sequence.OnComplete(OnAnimationEnded);
         }
 
         private void GenerateTiles()
