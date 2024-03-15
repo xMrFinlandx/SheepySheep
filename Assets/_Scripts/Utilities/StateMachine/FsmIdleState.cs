@@ -5,9 +5,5 @@
         public FsmIdleState(FiniteStateMachine finiteStateMachine) : base(finiteStateMachine)
         {
         }
-
-        public override void Exit()
-        {
-        }
     }
 }

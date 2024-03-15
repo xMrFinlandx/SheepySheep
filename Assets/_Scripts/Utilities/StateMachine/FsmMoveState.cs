@@ -1,5 +1,4 @@
-﻿using System;
-using _Scripts.Managers;
+﻿using _Scripts.Managers;
 using _Scripts.Player;
 using UnityEngine;
 
@@ -7,35 +6,38 @@ namespace _Scripts.Utilities.StateMachine
 {
     public class FsmMoveState : FsmState
     {
-        private const string _STATE_NAME = "PlayerMove";
-        
-        private readonly PlayerController _playerController;
+        private readonly float _speed;
+        private readonly string _animationName;
         private readonly Transform _transform;
-        private readonly Rigidbody2D _rigidbody;
-        private readonly Animator _animator;
         
         private Vector2 _currentPosition;
         private Vector2Int _playerCellPosition;
-        
-        public static Action PlayerInTileCenterAction;
 
-        public FsmMoveState(FiniteStateMachine finiteStateMachine, PlayerController playerController, Animator animator) : base(finiteStateMachine)
+        protected Animator Animator { get; }
+        protected PlayerController PlayerController { get; }
+        protected Rigidbody2D Rigidbody { get; }
+
+        public FsmMoveState(FiniteStateMachine finiteStateMachine, PlayerController playerController, Animator animator, string animationName, float speed) : base(finiteStateMachine)
         {
-            _animator = animator;
-            _playerController = playerController;
-            _rigidbody = playerController.Rigidbody;
+            PlayerController = playerController;
+            Rigidbody = playerController.Rigidbody;
+            Animator = animator;
+
+            _animationName = animationName;
             _transform = playerController.transform;
+            _speed = speed;
         }
 
         public override void Enter()
         {
-            _animator.enabled = true;
-            _animator.Play(_STATE_NAME);
+            Animator.speed = 1;
+            Animator.enabled = true;
+            Animator.Play(_animationName);
         }
 
         public override void FixedUpdate()
         {
-            _rigidbody.AddForce(_playerController.MoveDirection * (_playerController.Speed * Time.fixedDeltaTime));
+            Rigidbody.velocity = PlayerController.MoveDirection * (_speed * Time.fixedDeltaTime);
         }
 
         public override void Update()
@@ -52,10 +54,10 @@ namespace _Scripts.Utilities.StateMachine
             if (!TilemapManager.Instance.IsPositionNearTileCenter(_currentPosition))
                 return;
 
-            PlayerInTileCenterAction?.Invoke();
+            PlayerController.PlayerInTileCenterAction?.Invoke();
             ActivateModifiers();
         }
         
-        private void ActivateModifiers() => TilemapManager.Instance.ActivateModifiers(_playerCellPosition, _playerController);
+        private void ActivateModifiers() => TilemapManager.Instance.ActivateModifiers(_playerCellPosition, PlayerController);
     }
 }

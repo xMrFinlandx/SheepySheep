@@ -1,4 +1,5 @@
 ﻿using _Scripts.Player;
+using _Scripts.Player.Controls;
 using _Scripts.Scriptables;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -8,9 +9,11 @@ namespace _Scripts.Installers
 {
     public class GameplaySceneInstaller : MonoInstaller
     {
+        [SerializeField] private InputReader _inputReader;
+        [Space]
         [SerializeField] private PlayerController _playerController;
         [SerializeField] private Transform _spawnPoint;
-        
+        [Space]
         [SerializeField] private ArrowConfig _arrowConfig;
         [SerializeField] private Tilemap _tilemap;
 
@@ -25,6 +28,7 @@ namespace _Scripts.Installers
             
             Container.Bind<Tilemap>().FromInstance(_tilemap);
             Container.Bind<ArrowConfig>().FromInstance(_arrowConfig);
+            Container.Bind<InputReader>().FromInstance(_inputReader);
         }
     }
 }

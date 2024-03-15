@@ -1,5 +1,6 @@
 ﻿using _Scripts.Managers;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace _Scripts.Player
 {
@@ -18,7 +19,7 @@ namespace _Scripts.Player
 
         private void FixedUpdate()
         {
-            _currentCursorPosition = TilemapManager.Instance.WorldToCell( _camera.ScreenToWorldPoint(Input.mousePosition));
+            _currentCursorPosition = TilemapManager.Instance.WorldToCell( _camera.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
 
             if (TilemapManager.Instance.CanAddModifier(_currentCursorPosition))
                 _selectorTransform.position = TilemapManager.Instance.CellToWorld(_currentCursorPosition);

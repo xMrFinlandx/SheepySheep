@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using _Scripts.Gameplay.Tilemaps.Modifier;
+using _Scripts.Player.Controls;
 using _Scripts.Scriptables;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
 using NaughtyAttributes;
 using UnityEngine;
+using Zenject;
 
 namespace _Scripts.Managers
 {
@@ -18,6 +20,7 @@ namespace _Scripts.Managers
         
         public static Action ArrowInstantiatedAction;
         private Camera _camera;
+        private InputReader _inputReader;
 
         private bool _canInteract = false;
 
@@ -51,15 +54,26 @@ namespace _Scripts.Managers
         }
 #endif
 
+        [Inject]
+        private void Construct(InputReader inputReader)
+        {
+            _inputReader = inputReader;
+        }
+
         private void Start()
         {
             _camera = Camera.main;
+            
             GameStateManager.GameStateChangedAction += OnGameStateChanged;
+            _inputReader.LeftMouseClickEvent += ArrowInteract;
+            _inputReader.RightMouseClickEvent += RemoveArrow;
         }
 
         private void OnDestroy()
         {
             GameStateManager.GameStateChangedAction -= OnGameStateChanged;
+            _inputReader.LeftMouseClickEvent -= ArrowInteract;
+            _inputReader.RightMouseClickEvent -= RemoveArrow;
         }
 
         private void OnGameStateChanged(GameStateType gameState)
@@ -67,21 +81,12 @@ namespace _Scripts.Managers
             _canInteract = gameState == GameStateType.Gameplay;
         }
 
-        private void Update()
+        private void ArrowInteract(Vector2 mousePos)
         {
-            if (_canInteract == false)
+            if (!_canInteract)
                 return;
             
-            if (Input.GetMouseButtonDown(0)) 
-                ArrowInteract();
-
-            if (Input.GetMouseButtonDown(1))
-                RemoveArrow();
-        }
-
-        private void ArrowInteract()
-        {
-            var gridPos = GetGridMousePosition();
+            var gridPos = GetGridMousePosition(mousePos);
 
             if (!TilemapManager.Instance.CanAddModifier(gridPos))
             {
@@ -93,9 +98,12 @@ namespace _Scripts.Managers
             InstantiateArrow(gridPos);
         }
 
-        private void RemoveArrow()
+        private void RemoveArrow(Vector2 mousePos)
         {
-            var gridPos = GetGridMousePosition();
+            if (!_canInteract)
+                return;
+            
+            var gridPos = GetGridMousePosition(mousePos);
 
             TilemapManager.Instance.TryRemoveInteraction(gridPos);
         }
@@ -114,9 +122,8 @@ namespace _Scripts.Managers
             TilemapManager.Instance.TryAddModifiers(gridPos, arrow);
         }
 
-        private Vector2Int GetGridMousePosition()
+        private static Vector2Int GetGridMousePosition(Vector2 mousePos)
         {
-            Vector2 mousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
             var gridPos = TilemapManager.Instance.WorldToCell(mousePos);
             return gridPos;
         }

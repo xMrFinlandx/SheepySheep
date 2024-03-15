@@ -20,7 +20,7 @@ namespace _Scripts.Managers
         private Vector2Int _previousPos;
 
 #if UNITY_EDITOR
-        [Header("---EDITOR ONLY---")] 
+        [Header("--- Editor Only ---")] 
         [SerializeField] private GameplaySceneInstaller _sceneInstaller;
 
         private void OnValidate() => _sceneInstaller ??= FindAnyObjectByType<GameplaySceneInstaller>();

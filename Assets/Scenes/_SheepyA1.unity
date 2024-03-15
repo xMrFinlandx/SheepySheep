@@ -853,7 +853,7 @@ GameObject:
   - component: {fileID: 137638402}
   - component: {fileID: 137638401}
   - component: {fileID: 137638400}
-  - component: {fileID: 137638399}
+  - component: {fileID: 137638403}
   m_Layer: 0
   m_Name: Coin (3)
   m_TagString: Untagged
@@ -861,23 +861,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &137638399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137638398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bddabcf5a114679969483384048833f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collectableConfig: {fileID: 11400000, guid: 51cdd3081eca928409469bfe9e0c86d3, type: 2}
-  _isSingleAtTile: 0
-  _animator: {fileID: 137638400}
-  _spriteRenderer: {fileID: 137638401}
-  _animationName: RedGem
 --- !u!95 &137638400
 Animator:
   serializedVersion: 7
@@ -963,12 +946,30 @@ Transform:
   m_GameObject: {fileID: 137638398}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalPosition: {x: -1, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 325062363}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &137638403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137638398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ca164f4b0e4c348e28e81721f7a5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collectableConfig: {fileID: 11400000, guid: 51cdd3081eca928409469bfe9e0c86d3, type: 2}
+  _isIncreaseSpeed: 1
+  _isSingleAtTile: 0
+  _animator: {fileID: 137638400}
+  _spriteRenderer: {fileID: 137638401}
+  _animationName: RedGem
 --- !u!1 &200887496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,7 +1091,7 @@ Transform:
   m_GameObject: {fileID: 200887496}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: -3, z: 0}
+  m_LocalPosition: {x: -3, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3702,7 +3703,7 @@ GameObject:
   - component: {fileID: 892334981}
   - component: {fileID: 892334980}
   - component: {fileID: 892334979}
-  - component: {fileID: 892334978}
+  - component: {fileID: 892334982}
   m_Layer: 0
   m_Name: Coin (2)
   m_TagString: Untagged
@@ -3710,23 +3711,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &892334978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 892334977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bddabcf5a114679969483384048833f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collectableConfig: {fileID: 11400000, guid: 7e4a120392b742044b0b611f9b9b6b23, type: 2}
-  _isSingleAtTile: 0
-  _animator: {fileID: 892334979}
-  _spriteRenderer: {fileID: 892334980}
-  _animationName: BlueGem
 --- !u!95 &892334979
 Animator:
   serializedVersion: 7
@@ -3812,12 +3796,30 @@ Transform:
   m_GameObject: {fileID: 892334977}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: -2.5, z: 0}
+  m_LocalPosition: {x: 7, y: -5.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 325062363}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &892334982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892334977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ca164f4b0e4c348e28e81721f7a5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collectableConfig: {fileID: 11400000, guid: 7e4a120392b742044b0b611f9b9b6b23, type: 2}
+  _isIncreaseSpeed: 0
+  _isSingleAtTile: 0
+  _animator: {fileID: 892334979}
+  _spriteRenderer: {fileID: 892334980}
+  _animationName: BlueGem
 --- !u!1 &918083679
 GameObject:
   m_ObjectHideFlags: 0
@@ -3939,7 +3941,7 @@ Transform:
   m_GameObject: {fileID: 918083679}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: -3.5, z: 0}
+  m_LocalPosition: {x: 13, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13971,6 +13973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ad2f3620c11428686731e26e7b24e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inputReader: {fileID: 11400000, guid: 06f4aec396e8f8543a755b7b268bdc79, type: 2}
   _playerController: {fileID: 2728097499919781777, guid: b05bcae919ef9b04588e32bf282301b1, type: 3}
   _spawnPoint: {fileID: 42247195}
   _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}

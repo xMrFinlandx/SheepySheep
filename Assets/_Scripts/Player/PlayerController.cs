@@ -1,3 +1,4 @@
+using System;
 using _Scripts.Managers;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Enums;
@@ -11,17 +12,20 @@ namespace _Scripts.Player
     public class PlayerController : MonoBehaviour, IPlayerController, IRestartable
     {
         [SerializeField] private float _speed = 10;
+        [SerializeField] private float _speedModifier = 1.8f;
         [SerializeField] private MoveDirectionType _startMoveDirection;
         [Header("Components")]
         [SerializeField] private Rigidbody2D _rigidbody;
         [SerializeField] private Animator _animator;
         [SerializeField] private SpriteRenderer _spriteRenderer;
 
+        private bool _isStarted = false;
+        
         private Vector2 _spawnPosition;
-
         private FiniteStateMachine _finiteStateMachine;
-
-        public float Speed => _speed;
+        
+        public static Action PlayerInTileCenterAction;
+        
         public Vector2 MoveDirection { get; private set; }
         public Rigidbody2D Rigidbody => _rigidbody;
 
@@ -42,6 +46,7 @@ namespace _Scripts.Player
         
         public void Restart()
         {
+            _isStarted = false;
             _animator.enabled = false;
             transform.position = _spawnPosition;
             _finiteStateMachine.SetState<FsmIdleState>();
@@ -77,13 +82,19 @@ namespace _Scripts.Player
             _finiteStateMachine = new FiniteStateMachine();
             
             _finiteStateMachine.AddState(new FsmIdleState(_finiteStateMachine));
-            _finiteStateMachine.AddState(new FsmMoveState(_finiteStateMachine, this, _animator));
-            _finiteStateMachine.AddState(new FsmDiedState(_finiteStateMachine));
+            _finiteStateMachine.AddState(new FsmMoveState(_finiteStateMachine, this, _animator, "PlayerMove", _speed));
+            _finiteStateMachine.AddState(new FsmRunState(_finiteStateMachine, this, _animator, "PlayerMove", _speed, _speedModifier));
+            _finiteStateMachine.AddState(new FsmDiedState(_finiteStateMachine, _rigidbody));
             _finiteStateMachine.AddState(new FsmPausedState(_finiteStateMachine));
+            
         }
 
         private void OnArrowInstantiated()
         {
+            if (_isStarted)
+                return;
+            
+            _isStarted = true;
            _finiteStateMachine.SetState<FsmMoveState>();
         }
 
