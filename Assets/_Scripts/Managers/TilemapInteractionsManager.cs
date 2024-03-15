@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using _Scripts.Gameplay.Tilemaps.Modifier;
 using _Scripts.Scriptables;
 using _Scripts.Utilities;
@@ -8,19 +9,22 @@ using UnityEngine;
 
 namespace _Scripts.Managers
 {
-    public class TilemapInteractionsManager : MonoBehaviour
+    public class TilemapInteractionsManager : Singleton<TilemapInteractionsManager>
     {
         [SerializeField] private ArrowConfig _arrowConfig;
 
         [SerializeField] private Arrow _arrowPrefab;
 
         public static Action ArrowInstantiatedAction;
-        
+
+        [SerializeField] private SpriteRenderer[] _spriteRenderers;
         private Camera _camera;
+
+        public IReadOnlyList<SpriteRenderer> SpriteRenderers => (IReadOnlyList<SpriteRenderer>) _spriteRenderers.Shuffle();
 
 #if UNITY_EDITOR
         [Space(20)]
-        [Header("Editor only")]
+        [Header("--- Editor only ---")]
         [SerializeField] private TilemapManager _tilemapManager;
 
         [Button("Move Interactions To Tile Center")]
@@ -32,6 +36,12 @@ namespace _Scripts.Managers
             {
                 modifier.MoveToCurrentTileCenter(_tilemapManager);
             }
+        }
+
+        [Button("Get Interactions")]
+        private void FillInteractions()
+        {
+            _spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
         }
 
         private void OnValidate()

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using _Scripts.Utilities.Enums;
 using UnityEngine;
 
@@ -28,9 +29,41 @@ namespace _Scripts.Utilities
             return Object.FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None).OfType<T>().ToArray();
         }
 
+        public static IList<T> Shuffle<T>(this IList<T> list) where T : class
+        {
+            var currentIndex = list.Count;
+
+            while (currentIndex > 1)
+            {
+                currentIndex--;
+                var randomIndex = Random.Range(0, currentIndex);
+                (list[randomIndex], list[currentIndex]) = (list[currentIndex], list[randomIndex]);
+            }
+
+            return list;
+        }
+        
+        public static void KillChildren(this Transform transform)
+        {
+            foreach (Transform child in transform)
+            {
+                Object.Destroy(child.gameObject);
+            }
+        }
+
         public static void PlayUnLoopedClip(this Animator animator, string animationName)
         {
             animator.Play(animationName, -1, 0);
+        }
+
+        public static Vector2 IncreaseVectorValue(this Vector2 vector, float x, float y)
+        {
+            return new Vector2(vector.x + x, vector.y + y);
+        }
+
+        public static Vector3 IncreaseVectorValue(this Vector3 vector, float x, float y, float z = 0)
+        {
+            return new Vector3(vector.x + x, vector.y + y, vector.z + z);
         }
     }
 }

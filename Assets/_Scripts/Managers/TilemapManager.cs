@@ -128,7 +128,7 @@ namespace _Scripts.Managers
         {
             
 #if UNITY_EDITOR
-                _tilemap = _sceneInstaller.Tilemap;
+            _tilemap = _sceneInstaller.Tilemap;
 #endif
             
             var cellPosition = (Vector3Int) WorldToCell(targetTransform.position);
