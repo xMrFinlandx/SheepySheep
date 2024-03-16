@@ -8,7 +8,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 {
     public class SpeedGem : MonoBehaviour, ITileModifier, IRestartable
     {
-        [SerializeField] private CollectableConfig _collectableConfig;
+        [SerializeField] private InteractableConfig _interactableConfig;
         [SerializeField] private bool _isIncreaseSpeed;
         [SerializeField] private bool _isSingleAtTile = false;
         [Space]
@@ -59,11 +59,12 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _animator = GetComponent<Animator>();
 
-            _spriteRenderer.sprite = _collectableConfig.IdleSprite;
-            _animationName = _collectableConfig.AnimationClipName;
+            _spriteRenderer.sprite = _interactableConfig.IdleSprite;
+            _animationName = _interactableConfig.AnimationClipName;
             
 #if UNITY_EDITOR
-            _animator.runtimeAnimatorController = _collectableConfig.AnimatorController;
+            _animator.runtimeAnimatorController = _interactableConfig.AnimatorController;
+            name = _interactableConfig.Name;
 #endif
         }
     }

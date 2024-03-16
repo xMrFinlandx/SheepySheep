@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Golden Spike Config
   m_EditorClassIdentifier: 
   _idleSprite: {fileID: -3337847229795779588, guid: 393c44718be201e44b0895cb3f93da07, type: 3}
-  _triggerId: 0
   _animationClip: {fileID: 7400000, guid: 0113c24bb972a0f4d886c07ff4034000, type: 2}
+  _gameObjectName: Golden Spikes
   _animatorController: {fileID: 9100000, guid: 8e5b252c8cbbafc439771db6beef52bf, type: 2}
+  _triggerId: 0

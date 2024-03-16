@@ -50,6 +50,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             
 #if UNITY_EDITOR
             _animator.runtimeAnimatorController = _plateConfig.AnimatorController;
+            name = _plateConfig.Name;
 #endif
         }
 

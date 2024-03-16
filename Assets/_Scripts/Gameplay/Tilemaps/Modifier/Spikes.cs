@@ -73,6 +73,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             
 #if UNITY_EDITOR
             _animator.runtimeAnimatorController = _spikeConfig.AnimatorController;
+            name = _spikeConfig.Name;
 #endif
         }
     }

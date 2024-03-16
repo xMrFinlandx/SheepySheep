@@ -26,6 +26,8 @@ namespace _Scripts.Installers
             var player = Container.InstantiatePrefabForComponent<PlayerController>(_playerController, _spawnPoint.position, Quaternion.identity, null);
             player.InitSpawnPosition(_spawnPoint.position);
             
+            _inputReader.Init(Camera.main);
+            
             Container.Bind<Tilemap>().FromInstance(_tilemap);
             Container.Bind<ArrowConfig>().FromInstance(_arrowConfig);
             Container.Bind<InputReader>().FromInstance(_inputReader);

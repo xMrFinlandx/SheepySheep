@@ -61,15 +61,20 @@ namespace _Scripts.Player.Controls
         {
             
         }
-        
+
+        public void Init(Camera mainCamera)
+        {
+            _camera = mainCamera;
+        }
+
         private void OnEnable()
         {
-            if (_gameControls != null)
+            if (_gameControls != null && _camera != null)
                 return;
             
-            _camera = Camera.main;
             _gameControls = new GameControls();
-                
+            _camera = Camera.main;    
+            
             _gameControls.Gameplay.SetCallbacks(this);
             _gameControls.UI.SetCallbacks(this);
                 

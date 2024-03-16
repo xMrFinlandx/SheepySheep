@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8120201197876368514}
   - component: {fileID: 7611813857609459841}
   - component: {fileID: 2454315114536276240}
+  - component: {fileID: -6197238826886141055}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -55,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: b9a7c089c71884a459a07f32627f5b11, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,5 +101,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isSingleAtTile: 1
-  _isInteractionsEnabled: 0
   _spriteRenderer: {fileID: 7611813857609459841}
+  _shaderController: {fileID: -6197238826886141055}
+--- !u!114 &-6197238826886141055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8940411440839161070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78f73af6d42b4714a4b15ede2afa47fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _propertyName: _Direction
+  _duration: 3
+  _ease: 0
+  _renderer: {fileID: 7611813857609459841}
+  _value: {x: 0, y: 0, z: 0, w: 0}
