@@ -594,9 +594,9 @@ MonoBehaviour:
   _moveTime: 2
   _colorChangingTime: 1
   _delay: 0.05
-  _foamController: {fileID: 924286698}
   _ySpawnOffset: 10
   _spriteCenterOffset: 0.5
+  _foamController: {fileID: 924286698}
 --- !u!213 &65728639
 Sprite:
   m_ObjectHideFlags: 0
@@ -8971,14 +8971,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 924286694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a27de147867b4181bec0c56acea27d5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bee2f90d1fd40b6a40a7de23bb6fbf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _propertyName: _FoamOpacity
-  _duration: 4
+  _endValue: 0.5
   _ease: 11
   _renderer: {fileID: 924286696}
-  _minMaxValue: {x: 0, y: 0.5}
 --- !u!114 &973425561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13314,7 +13313,6 @@ GameObject:
   - component: {fileID: 1035130206}
   - component: {fileID: 1035130205}
   - component: {fileID: 1035130204}
-  - component: {fileID: 1035130207}
   m_Layer: 0
   m_Name: Prepared Arrow
   m_TagString: Untagged
@@ -13337,7 +13335,11 @@ MonoBehaviour:
   _isSingleAtTile: 1
   _direction: 1
   _spriteRenderer: {fileID: 1035130205}
-  _shaderController: {fileID: 1035130207}
+  _vectorProperty: _Direction
+  _floatProperty: _ShineCoefficient
+  _fadeInDuration: 0.2
+  _fadeOutDuration: 0.4
+  _fadeOutEase: 18
 --- !u!212 &1035130205
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13407,23 +13409,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 325062363}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1035130207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035130203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78f73af6d42b4714a4b15ede2afa47fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _propertyName: _Direction
-  _duration: 3
-  _ease: 0
-  _renderer: {fileID: 1035130205}
-  _value: {x: 0, y: 0, z: 0, w: 0}
 --- !u!213 &1044170434
 Sprite:
   m_ObjectHideFlags: 0
@@ -14831,7 +14816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canShowCenters: 0
-  _distanceThreshold: 0.1
+  _distanceThreshold: 0.2
   _sceneInstaller: {fileID: 1256996536}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

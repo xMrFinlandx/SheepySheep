@@ -18,12 +18,13 @@ namespace _Scripts.Utilities.Visuals
         [SerializeField] private float _moveTime = 2;
         [SerializeField] private float _colorChangingTime = .5f;
         [SerializeField] private float _delay = .1f;
-        [Space]
-        [SerializeField] private FloatPropertyShaderController _foamController;
         [Header("Other")] 
         [SerializeField] private float _ySpawnOffset = 10;
         [SerializeField] private float _spriteCenterOffset = .5f;
+        [SerializeField] private WaterShaderController _foamController;
 
+        private const int _FOAM_DURATION = 4;
+        
         private readonly Color _transparentColor = new(1, 1, 1, 0);
         private List<SpriteRenderer> _spriteRenderers = new();
 
@@ -75,7 +76,7 @@ namespace _Scripts.Utilities.Visuals
 
         private void Animate()
         {
-            _foamController.Play();
+            _foamController.Play(_FOAM_DURATION);
             _sequence = DOTween.Sequence();
             
             foreach (var spriteRenderer in _spriteRenderers)
