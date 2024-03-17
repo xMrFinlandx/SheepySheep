@@ -1,8 +1,8 @@
 # Sheepy Sheep
 **Sheepy Sheep** is a simple isometric puzzle game in which you have to help a sheep to get to the end of the level by pointing with the arrows.
 
-![](https://github.com/xMrFinlandx/SheepySheep/blob/main/Meta/SheepyAnim.gif)
-![](https://github.com/xMrFinlandx/SheepySheep/blob/main/Meta/SheepyDemo.gif)
+![](https://github.com/xMrFinlandx/SheepySheep/blob/main/Assets/Meta/SheepyAnim.gif)
+![](https://github.com/xMrFinlandx/SheepySheep/blob/main/Assets/Meta/SheepyDemo.gif)
 
 ## About
 
