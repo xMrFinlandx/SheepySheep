@@ -58,10 +58,11 @@ Material:
     - _StarsStrength: 20
     - _StarsTolerance: 0.5
     m_Colors:
-    - _Color1: {r: 0.9143041, g: 0.39215684, b: 1, a: 1}
-    - _Color2: {r: 0.1468606, g: 0, b: 1, a: 1}
+    - _Color1: {r: 0.54785985, g: 0, b: 0.764151, a: 1}
+    - _Color2: {r: 0, g: 0.24001949, b: 0.7169812, a: 1}
     - _Direction: {r: -1, g: 0.5, b: 0, a: 0}
-    - _InnerColor: {r: 1.9370662, g: 0, b: 3.5648696, a: 1}
+    - _InnerColor: {r: 0.5053053, g: 0, b: 1, a: 1}
+    - _MainColor: {r: 0.5058824, g: 0, b: 1, a: 1}
     - _OuterColor: {r: 1251.0447, g: 1251.0447, b: 1251.0447, a: 1}
     - _ShineColor: {r: 5.9921565, g: 5.9921565, b: 5.9921565, a: 1}
     - _Speed: {r: -8, g: 4.8, b: 0, a: 0}

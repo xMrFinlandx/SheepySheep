@@ -12,6 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbdb001436cb443eabc97dc5655535ed, type: 3}
   m_Name: Default Arrow Config
   m_EditorClassIdentifier: 
+  _firstColor:
+    _value: {r: 0.54901963, g: 0, b: 0.7647059, a: 1}
+    _propertyName: _Color1
+  _secondColor:
+    _value: {r: 0, g: 0.23921569, b: 0.7176471, a: 1}
+    _propertyName: _Color2
+  _backgroundColor:
+    _value: {r: 0.5053053, g: 0, b: 1, a: 1}
+    _propertyName: _MainColor
+  _starsSpeed:
+    _value: 2
+    _propertyName: _ScrollSpeed
   _arrowDirectionData:
   - _sprite: {fileID: -2938970880757876879, guid: 85aa7c00d141709479cb1b01d73db195, type: 3}
     _moveDirection: 3

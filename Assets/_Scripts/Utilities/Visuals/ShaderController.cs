@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using _Scripts.Scriptables;
+using DG.Tweening;
 using UnityEngine;
 
 namespace _Scripts.Utilities.Visuals
@@ -43,6 +44,9 @@ namespace _Scripts.Utilities.Visuals
         public void SetVectorValue(Vector4 value, int propertyId) => InternalSetVector(value, _propertyIndexes[propertyId]);
         
         public void SetVectorValue(Vector4 value) => InternalSetVector(value, _propertyIndex);
+
+        public void SetColorValue(Color value, int propertyId) => InternalSetColor(value, _propertyIndexes[propertyId]);
+
         
         public Tweener Play(float startValue, float endValue, float duration, int propertyId, Ease ease = Ease.Linear)
         {
@@ -71,5 +75,12 @@ namespace _Scripts.Utilities.Visuals
             _propertyBlock.SetFloat(propertyIndex, value);
             _renderer.SetPropertyBlock(_propertyBlock);
         }
+
+        private void InternalSetColor(Color value, int propertyIndex)
+        {
+            _propertyBlock.SetColor(propertyIndex, value);
+            _renderer.SetPropertyBlock(_propertyBlock);
+        }
+
     }
 }

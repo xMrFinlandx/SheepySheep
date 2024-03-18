@@ -59,8 +59,20 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             var data = _arrowConfig.GetDataByDirection(_direction);
             _spriteRenderer.sprite = data.Sprite;
 
-            _shaderController = new ShaderController(_spriteRenderer, _vectorProperty, _floatProperty);
+            InitializeShader();
+        }
+
+        private void InitializeShader()
+        {
+            _shaderController = new ShaderController(_spriteRenderer, _vectorProperty, _floatProperty,
+                _arrowConfig.StarsSpeed.PropertyName, _arrowConfig.BackgroundColor.PropertyName,
+                _arrowConfig.FirstColor.PropertyName, _arrowConfig.SecondColor.PropertyName);
+            
             _shaderController.SetVectorValue(_direction.GetDirectionVector().CartesianToIsometric(), 0);
+            _shaderController.SetFloatValue(_arrowConfig.StarsSpeed.Value, 2);
+            _shaderController.SetColorValue(_arrowConfig.BackgroundColor.Value, 3);
+            _shaderController.SetColorValue(_arrowConfig.FirstColor.Value, 4);
+            _shaderController.SetColorValue(_arrowConfig.SecondColor.Value, 5);
         }
     }
 }
