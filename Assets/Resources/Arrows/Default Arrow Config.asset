@@ -19,7 +19,7 @@ MonoBehaviour:
     _value: {r: 0, g: 0.23921569, b: 0.7176471, a: 1}
     _propertyName: _Color2
   _backgroundColor:
-    _value: {r: 0.5053053, g: 0, b: 1, a: 1}
+    _value: {r: 0.5058824, g: 0, b: 1, a: 1}
     _propertyName: _MainColor
   _starsSpeed:
     _value: 2

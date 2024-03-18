@@ -3453,7 +3453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _arrowConfig: {fileID: 11400000, guid: f82ceda4406ceaf478da0477ecb06908, type: 2}
-  _arrowPrefab: {fileID: 2454315114536276240, guid: 040d4a4e0862d8f42b56a767aef47e89, type: 3}
+  _dynamicArrowPrefab: {fileID: 2454315114536276240, guid: 040d4a4e0862d8f42b56a767aef47e89, type: 3}
   _spriteRenderers:
   - {fileID: 200887499}
   - {fileID: 1967790448}
@@ -13329,13 +13329,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isSingleAtTile: 1
-  _direction: 1
   _spriteRenderer: {fileID: 1035130205}
   _vectorProperty: _Direction
   _floatProperty: _ShineCoefficient
   _fadeInDuration: 0.2
   _fadeOutDuration: 0.4
   _fadeOutEase: 18
+  _direction: 1
 --- !u!212 &1035130205
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -15,11 +15,10 @@ namespace _Scripts.Managers
     public class TilemapInteractionsManager : Singleton<TilemapInteractionsManager>
     {
         [SerializeField] private ArrowConfig _arrowConfig;
-        [SerializeField] private Arrow _arrowPrefab;
+        [SerializeField] private DynamicArrow _dynamicArrowPrefab;
         [SerializeField] private SpriteRenderer[] _spriteRenderers;
         
         public static Action ArrowInstantiatedAction;
-        private Camera _camera;
         private InputReader _inputReader;
 
         private bool _canInteract = false;
@@ -62,8 +61,6 @@ namespace _Scripts.Managers
 
         private void Start()
         {
-            _camera = Camera.main;
-            
             GameStateManager.GameStateChangedAction += OnGameStateChanged;
             _inputReader.LeftMouseClickEvent += ArrowInteract;
             _inputReader.RightMouseClickEvent += RemoveArrow;
@@ -108,18 +105,18 @@ namespace _Scripts.Managers
             TilemapManager.Instance.TryRemoveInteraction(gridPos);
         }
         
-        private static void Interact(Vector2Int gridPos)
-        {
-            TilemapManager.Instance.TryInteractInteraction(gridPos);
-        }
-
         private void InstantiateArrow(Vector2Int gridPos)
         {
             var modifierPos = TilemapManager.Instance.CellToWorld(gridPos);
-            var arrow = Instantiate(_arrowPrefab, modifierPos, Quaternion.identity);
+            var arrow = Instantiate(_dynamicArrowPrefab, modifierPos, Quaternion.identity);
             arrow.Init(_arrowConfig);
             
             TilemapManager.Instance.TryAddModifiers(gridPos, arrow);
+        }
+        
+        private static void Interact(Vector2Int gridPos)
+        {
+            TilemapManager.Instance.TryInteractInteraction(gridPos);
         }
 
         private static Vector2Int GetGridMousePosition(Vector2 mousePos)
