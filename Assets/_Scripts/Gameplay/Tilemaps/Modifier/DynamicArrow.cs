@@ -19,6 +19,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             _arrowConfig = arrowConfig;
             
             InitializeShader(_arrowConfig);
+            SpawnParticleSystem(_arrowConfig);
             Interact();
 
             ReloadRoomManager.ReloadRoomAction += Restart;

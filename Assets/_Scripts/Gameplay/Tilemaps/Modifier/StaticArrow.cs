@@ -34,6 +34,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             SpriteRenderer.sprite = data.Sprite;
 
             InitializeShader(_arrowConfig);
+            SpawnParticleSystem(_arrowConfig);
+            
             ShaderController.SetVectorValue(_direction.GetDirectionVector().CartesianToIsometric(), 0);
         }
     }

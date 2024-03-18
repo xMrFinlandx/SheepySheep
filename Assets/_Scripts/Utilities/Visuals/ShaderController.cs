@@ -1,5 +1,4 @@
-﻿using _Scripts.Scriptables;
-using DG.Tweening;
+﻿using DG.Tweening;
 using UnityEngine;
 
 namespace _Scripts.Utilities.Visuals
@@ -50,20 +49,24 @@ namespace _Scripts.Utilities.Visuals
         
         public Tweener Play(float startValue, float endValue, float duration, int propertyId, Ease ease = Ease.Linear)
         {
+            _tweener?.Kill();
+            
             _tweener = DOTween.To(() => startValue, x => InternalSetFloat(x, _propertyIndexes[propertyId]), endValue, duration).SetEase(ease);
             _tweener.SetLink(_renderer.gameObject);
             
             return _tweener;
         }
-        
+
         public Tweener Play(float startValue, float endValue, float duration, Ease ease = Ease.Linear)
         {
-           _tweener = DOTween.To(() => startValue, x => InternalSetFloat(x, _propertyIndex), endValue, duration).SetEase(ease);            
-           _tweener.SetLink(_renderer.gameObject);
-           
-           return _tweener;
+            _tweener?.Kill();
+
+            _tweener = DOTween.To(() => startValue, x => InternalSetFloat(x, _propertyIndex), endValue, duration).SetEase(ease);
+            _tweener.SetLink(_renderer.gameObject);
+
+            return _tweener;
         }
-        
+
         private void InternalSetVector(Vector4 value, int propertyIndex)
         {
             _propertyBlock.SetVector(propertyIndex, value);
@@ -71,7 +74,7 @@ namespace _Scripts.Utilities.Visuals
         }
 
         private void InternalSetFloat(float value, int propertyIndex)
-        {
+        { 
             _propertyBlock.SetFloat(propertyIndex, value);
             _renderer.SetPropertyBlock(_propertyBlock);
         }
@@ -81,6 +84,5 @@ namespace _Scripts.Utilities.Visuals
             _propertyBlock.SetColor(propertyIndex, value);
             _renderer.SetPropertyBlock(_propertyBlock);
         }
-
     }
 }

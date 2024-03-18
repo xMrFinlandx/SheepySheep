@@ -1,4 +1,5 @@
 ﻿using _Scripts.Scriptables;
+using _Scripts.Utilities;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.Visuals;
 using DG.Tweening;
@@ -47,6 +48,12 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             ShaderController.SetColorValue(arrowConfig.BackgroundColor.Value, 3);
             ShaderController.SetColorValue(arrowConfig.FirstColor.Value, 4);
             ShaderController.SetColorValue(arrowConfig.SecondColor.Value, 5);
+        }
+
+        protected void SpawnParticleSystem(ArrowConfig arrowConfig)
+        {
+            Instantiate(arrowConfig.ParticleSystemPrefab, transform.position.IncreaseVectorValue(0, .5f),
+                Quaternion.Euler(-90, 0, 0), transform);
         }
 
         protected void PlayShine()
