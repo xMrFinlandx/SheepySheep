@@ -10,7 +10,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
     [RequireComponent(typeof(SpriteRenderer), typeof(Animator))]
     public class Spikes : MonoBehaviour, ITileModifier
     {
-        [SerializeField] private bool _isSingleAtTile = true;
         [SerializeField] private SpikeConfig _spikeConfig;
         [Space]
         [SerializeField] private Animator _animator;
@@ -20,7 +19,9 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         private bool _enabled = true;
         
-        public bool IsSingleAtTile => _isSingleAtTile;
+        public bool IsSingleAtTile => _spikeConfig.IsSingleAtTile;
+        
+        public float YOffset => _spikeConfig.YOffset;
         
         public void Activate(IPlayerController playerController)
         {
@@ -75,6 +76,12 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             _animator.runtimeAnimatorController = _spikeConfig.AnimatorController;
             name = _spikeConfig.Name;
 #endif
+        }
+        
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawSphere(transform.position + new Vector3(0, YOffset), .1f);
         }
     }
 }

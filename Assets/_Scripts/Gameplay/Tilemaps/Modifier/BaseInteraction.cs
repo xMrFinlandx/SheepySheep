@@ -8,7 +8,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
     public abstract class BaseInteraction : MonoBehaviour, IRestartable, ITileModifier
     {
         [SerializeField] private InteractableConfig _interactableConfig;
-        [SerializeField] private bool _isSingleAtTile = false;
         [Space]
         [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private Animator _animator;
@@ -17,7 +16,9 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         private Vector2 _cashedPosition;
         private Sequence _sequence;
         
-        public bool IsSingleAtTile => _isSingleAtTile;
+        public bool IsSingleAtTile => _interactableConfig.IsSingleAtTile;
+        
+        public float YOffset => _interactableConfig.YOffset;
         
         protected bool IsEnabled { get; set; } = false;
         
@@ -55,6 +56,12 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         protected void InitializeSpawnPosition()
         {
             _cashedPosition = transform.position;
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawSphere(transform.position + new Vector3(0, YOffset), .1f);
         }
 
         protected void InitializeComponents()

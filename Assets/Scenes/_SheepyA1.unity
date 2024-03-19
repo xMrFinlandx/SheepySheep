@@ -150,7 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3afb2c7bf11149b88f3a1cdf351ceb3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isSingleAtTile: 1
   _plateConfig: {fileID: 11400000, guid: 324fb7045d866044da55b61d4964d5db, type: 2}
   _animator: {fileID: 29749249}
   _spriteRenderer: {fileID: 29749250}
@@ -946,7 +945,7 @@ Transform:
   m_GameObject: {fileID: 137638398}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: -2.5, z: 0}
+  m_LocalPosition: {x: -3, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -965,7 +964,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactableConfig: {fileID: 11400000, guid: 51cdd3081eca928409469bfe9e0c86d3, type: 2}
-  _isSingleAtTile: 0
   _spriteRenderer: {fileID: 137638401}
   _animator: {fileID: 137638400}
   _animationName: RedGem
@@ -1002,7 +1000,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactableConfig: {fileID: 11400000, guid: 631da09e263048a4391ac6da281341de, type: 2}
-  _isSingleAtTile: 0
   _spriteRenderer: {fileID: 200887499}
   _animator: {fileID: 200887498}
   _animationName: YellowCoin
@@ -1091,7 +1088,7 @@ Transform:
   m_GameObject: {fileID: 200887496}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12, y: 1, z: 0}
+  m_LocalPosition: {x: 13, y: -0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1219,7 +1216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab8fb3163344f9b835f3b65177ea9e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isSingleAtTile: 1
   _spikeConfig: {fileID: 11400000, guid: a4009d9ea30d52b4e9deb467bbda119c, type: 2}
   _animator: {fileID: 247798266}
   _spriteRenderer: {fileID: 247798264}
@@ -1243,7 +1239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &273531673
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1307,7 +1303,7 @@ Transform:
   m_GameObject: {fileID: 273531672}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: -1, z: 0}
+  m_LocalPosition: {x: -2, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1347,7 +1343,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3afb2c7bf11149b88f3a1cdf351ceb3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isSingleAtTile: 1
   _plateConfig: {fileID: 11400000, guid: ee43300cf0c752e47be0ed5ae4b3554f, type: 2}
   _animator: {fileID: 273531675}
   _spriteRenderer: {fileID: 273531673}
@@ -1595,9 +1590,9 @@ Transform:
   m_Children:
   - {fileID: 918083683}
   - {fileID: 200887500}
-  - {fileID: 1967790445}
-  - {fileID: 1279386607}
-  - {fileID: 1518661609}
+  - {fileID: 892868885}
+  - {fileID: 1311675495}
+  - {fileID: 732427259}
   - {fileID: 892334981}
   - {fileID: 137638402}
   - {fileID: 273531674}
@@ -2662,6 +2657,132 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &732427258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 732427259}
+  - component: {fileID: 732427262}
+  - component: {fileID: 732427261}
+  - component: {fileID: 732427260}
+  m_Layer: 0
+  m_Name: Coin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &732427259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732427258}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12, y: 1.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 325062363}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &732427260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732427258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bddabcf5a114679969483384048833f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactableConfig: {fileID: 11400000, guid: 631da09e263048a4391ac6da281341de, type: 2}
+  _spriteRenderer: {fileID: 732427262}
+  _animator: {fileID: 732427261}
+  _animationName: YellowCoin
+--- !u!95 &732427261
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732427258}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 70b9d608fe514cd45a893df3ea69dec0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!212 &732427262
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732427258}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1554583849
+  m_SortingLayer: 1
+  m_SortingOrder: 20
+  m_Sprite: {fileID: -8841827871950111001, guid: 96eccfd091df517499eb55b1016e6add, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.6666667, y: 1.3333334}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!213 &763042141
 Sprite:
   m_ObjectHideFlags: 0
@@ -3102,7 +3223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &776109425
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3166,7 +3287,7 @@ Transform:
   m_GameObject: {fileID: 776109424}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11, y: 1.5, z: 0}
+  m_LocalPosition: {x: 2, y: -0.66999996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3206,7 +3327,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab8fb3163344f9b835f3b65177ea9e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isSingleAtTile: 1
   _spikeConfig: {fileID: 11400000, guid: d0c37b4049e3b4c4486a64e1f00ea9cd, type: 2}
   _animator: {fileID: 776109427}
   _spriteRenderer: {fileID: 776109425}
@@ -3457,12 +3577,14 @@ MonoBehaviour:
   _spriteRenderers:
   - {fileID: 918083682}
   - {fileID: 200887499}
-  - {fileID: 1967790448}
-  - {fileID: 1279386610}
-  - {fileID: 1518661612}
+  - {fileID: 892868888}
+  - {fileID: 1311675498}
+  - {fileID: 732427262}
   - {fileID: 892334980}
   - {fileID: 137638401}
+  - {fileID: 273531673}
   - {fileID: 1035130205}
+  - {fileID: 776109425}
   _tilemapManager: {fileID: 2058085424}
 --- !u!4 &868347994
 Transform:
@@ -3795,7 +3917,7 @@ Transform:
   m_GameObject: {fileID: 892334977}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7, y: -5.5, z: 0}
+  m_LocalPosition: {x: 10, y: -6.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3814,11 +3936,136 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactableConfig: {fileID: 11400000, guid: 7e4a120392b742044b0b611f9b9b6b23, type: 2}
-  _isSingleAtTile: 0
   _spriteRenderer: {fileID: 892334980}
   _animator: {fileID: 892334979}
   _animationName: BlueGem
   _isIncreaseSpeed: 0
+--- !u!1 &892868884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 892868885}
+  - component: {fileID: 892868888}
+  - component: {fileID: 892868887}
+  - component: {fileID: 892868886}
+  m_Layer: 0
+  m_Name: Coin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &892868885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892868884}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14, y: 0.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 325062363}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &892868886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892868884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bddabcf5a114679969483384048833f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactableConfig: {fileID: 11400000, guid: 631da09e263048a4391ac6da281341de, type: 2}
+  _spriteRenderer: {fileID: 892868888}
+  _animator: {fileID: 892868887}
+  _animationName: YellowCoin
+--- !u!95 &892868887
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892868884}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 70b9d608fe514cd45a893df3ea69dec0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!212 &892868888
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892868884}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1554583849
+  m_SortingLayer: 1
+  m_SortingOrder: 20
+  m_Sprite: {fileID: -8841827871950111001, guid: 96eccfd091df517499eb55b1016e6add, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.6666667, y: 1.3333334}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &918083679
 GameObject:
   m_ObjectHideFlags: 0
@@ -3851,7 +4098,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactableConfig: {fileID: 11400000, guid: 848c6ef51fd6b8f4da4288cd37646163, type: 2}
-  _isSingleAtTile: 0
   _spriteRenderer: {fileID: 918083682}
   _animator: {fileID: 918083681}
   _animationName: BlueDiamond
@@ -3940,7 +4186,7 @@ Transform:
   m_GameObject: {fileID: 918083679}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13, y: 0.5, z: 0}
+  m_LocalPosition: {x: 6, y: 1.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13331,7 +13577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24db021702ea4b96aa09ed3983572dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isSingleAtTile: 1
   _spriteRenderer: {fileID: 1035130205}
   _vectorProperty: _Direction
   _floatProperty: _ShineCoefficient
@@ -13339,6 +13584,7 @@ MonoBehaviour:
   _fadeOutDuration: 0.4
   _fadeOutEase: 18
   _direction: 1
+  _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
 --- !u!212 &1035130205
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13402,7 +13648,7 @@ Transform:
   m_GameObject: {fileID: 1035130203}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9, y: 2.5, z: 0}
+  m_LocalPosition: {x: 9, y: 2.375, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13697,7 +13943,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab8fb3163344f9b835f3b65177ea9e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isSingleAtTile: 1
   _spikeConfig: {fileID: 11400000, guid: a4009d9ea30d52b4e9deb467bbda119c, type: 2}
   _animator: {fileID: 1069734105}
   _spriteRenderer: {fileID: 1069734106}
@@ -14193,7 +14438,41 @@ Sprite:
   m_Bones: []
   m_ScriptableObjects: []
   m_SpriteID: 
---- !u!1 &1279386606
+--- !u!114 &1297874757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Sprite: {fileID: 789373907}
+  m_Color: {r: 0.93714184, g: 0.5448764, b: 0.5895757, a: 1}
+  m_Transform:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  m_InstancedGameObject: {fileID: 0}
+  m_Flags: 3
+  m_ColliderType: 1
+--- !u!1 &1311675494
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14201,10 +14480,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1279386607}
-  - component: {fileID: 1279386610}
-  - component: {fileID: 1279386609}
-  - component: {fileID: 1279386608}
+  - component: {fileID: 1311675495}
+  - component: {fileID: 1311675498}
+  - component: {fileID: 1311675497}
+  - component: {fileID: 1311675496}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -14212,46 +14491,45 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1279386607
+--- !u!4 &1311675495
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279386606}
+  m_GameObject: {fileID: 1311675494}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: -3, z: 0}
+  m_LocalPosition: {x: -3, y: -2.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 325062363}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1279386608
+--- !u!114 &1311675496
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279386606}
+  m_GameObject: {fileID: 1311675494}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1bddabcf5a114679969483384048833f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _interactableConfig: {fileID: 11400000, guid: 631da09e263048a4391ac6da281341de, type: 2}
-  _isSingleAtTile: 0
-  _spriteRenderer: {fileID: 1279386610}
-  _animator: {fileID: 1279386609}
+  _spriteRenderer: {fileID: 1311675498}
+  _animator: {fileID: 1311675497}
   _animationName: YellowCoin
---- !u!95 &1279386609
+--- !u!95 &1311675497
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279386606}
+  m_GameObject: {fileID: 1311675494}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 70b9d608fe514cd45a893df3ea69dec0, type: 2}
@@ -14266,13 +14544,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!212 &1279386610
+--- !u!212 &1311675498
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279386606}
+  m_GameObject: {fileID: 1311675494}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -14320,40 +14598,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1297874757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 789373907}
-  m_Color: {r: 0.93714184, g: 0.5448764, b: 0.5895757, a: 1}
-  m_Transform:
-    e00: 1
-    e01: 0
-    e02: 0
-    e03: 0
-    e10: 0
-    e11: 1
-    e12: 0
-    e13: 0
-    e20: 0
-    e21: 0
-    e22: 1
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 1
-  m_InstancedGameObject: {fileID: 0}
-  m_Flags: 3
-  m_ColliderType: 1
 --- !u!114 &1370209393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14419,7 +14663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab8fb3163344f9b835f3b65177ea9e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isSingleAtTile: 1
   _spikeConfig: {fileID: 11400000, guid: d0c37b4049e3b4c4486a64e1f00ea9cd, type: 2}
   _animator: {fileID: 1403049982}
   _spriteRenderer: {fileID: 1403049983}
@@ -14584,133 +14827,6 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
---- !u!1 &1518661608
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1518661609}
-  - component: {fileID: 1518661612}
-  - component: {fileID: 1518661611}
-  - component: {fileID: 1518661610}
-  m_Layer: 0
-  m_Name: Coin
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1518661609
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518661608}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 325062363}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1518661610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518661608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bddabcf5a114679969483384048833f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactableConfig: {fileID: 11400000, guid: 631da09e263048a4391ac6da281341de, type: 2}
-  _isSingleAtTile: 0
-  _spriteRenderer: {fileID: 1518661612}
-  _animator: {fileID: 1518661611}
-  _animationName: YellowCoin
---- !u!95 &1518661611
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518661608}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 70b9d608fe514cd45a893df3ea69dec0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!212 &1518661612
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518661608}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1554583849
-  m_SortingLayer: 1
-  m_SortingOrder: 20
-  m_Sprite: {fileID: -8841827871950111001, guid: 96eccfd091df517499eb55b1016e6add, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.6666667, y: 1.3333334}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!213 &1523103390
 Sprite:
   m_ObjectHideFlags: 0
@@ -15024,133 +15140,6 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
---- !u!1 &1967790444
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1967790445}
-  - component: {fileID: 1967790448}
-  - component: {fileID: 1967790447}
-  - component: {fileID: 1967790446}
-  m_Layer: 0
-  m_Name: Coin
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1967790445
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967790444}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: -3.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 325062363}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1967790446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967790444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bddabcf5a114679969483384048833f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactableConfig: {fileID: 11400000, guid: 631da09e263048a4391ac6da281341de, type: 2}
-  _isSingleAtTile: 0
-  _spriteRenderer: {fileID: 1967790448}
-  _animator: {fileID: 1967790447}
-  _animationName: YellowCoin
---- !u!95 &1967790447
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967790444}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 70b9d608fe514cd45a893df3ea69dec0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!212 &1967790448
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967790444}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1554583849
-  m_SortingLayer: 1
-  m_SortingOrder: 20
-  m_Sprite: {fileID: -8841827871950111001, guid: 96eccfd091df517499eb55b1016e6add, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.6666667, y: 1.3333334}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &2058085421
 GameObject:
   m_ObjectHideFlags: 0

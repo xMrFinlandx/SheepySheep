@@ -9,15 +9,20 @@ using UnityEditor.Animations;
 namespace _Scripts.Scriptables
 {
     [CreateAssetMenu(fileName = "New Interactable Config", menuName = "Gameplay/Interactable Config", order = 0)]
-    public class InteractableConfig : ScriptableObject
+    public class InteractableConfig : TileModifierConfig
     {
         [SerializeField, ShowAssetPreview] private Sprite _idleSprite;
-        
+        [Foldout("Animation")]
         [SerializeField] private float _jumpValue = 1f;
+        [Foldout("Animation")]
         [SerializeField] private float _fallValue = 2f;
+        [Foldout("Animation")]
         [SerializeField] private float _jumpDuration = .25f;
+        [Foldout("Animation")]
         [SerializeField] private float _fallDuration = .5f;
+        [Foldout("Animation")]
         [SerializeField] private Ease _jumpEase = Ease.OutQuad;
+        [Foldout("Animation")]
         [SerializeField] private Ease _fallEase = Ease.InQuad;
         
         [SerializeField] private AnimationClip _animationClip;
@@ -30,7 +35,7 @@ namespace _Scripts.Scriptables
         public string Name => _gameObjectName;
         public AnimatorController AnimatorController => _animatorController;
 #endif
-
+        
         public float JumpValue => _jumpValue;
         public float FallValue => _fallValue;
         public float JumpDuration => _jumpDuration;

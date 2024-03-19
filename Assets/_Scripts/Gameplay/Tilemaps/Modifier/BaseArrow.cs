@@ -10,8 +10,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 {
     public abstract class BaseArrow : MonoBehaviour, ITileModifier
     {
-        [SerializeField] private bool _isSingleAtTile = true;
-        
         [SerializeField] private SpriteRenderer _spriteRenderer;
         
         [Foldout("Shader Settings")]
@@ -27,11 +25,11 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         private const float _START_SHINE_VALUE = 0;
         private const float _END_SHINE_VALUE = 1;
-        
-        public bool IsSingleAtTile => _isSingleAtTile;
+
+        public abstract bool IsSingleAtTile { get; }
+        public abstract float YOffset { get; }
         
         protected SpriteRenderer SpriteRenderer => _spriteRenderer;
-
         protected ShaderController ShaderController { get; private set; }
         
         public Transform GetTransform() => transform;
@@ -63,5 +61,11 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         }
 
         public abstract void Activate(IPlayerController playerController);
+        
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawSphere(transform.position + new Vector3(0, YOffset), .1f);
+        }
     }
 }

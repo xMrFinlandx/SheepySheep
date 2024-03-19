@@ -1,5 +1,4 @@
-﻿using _Scripts.Managers;
-using _Scripts.Utilities.Classes;
+﻿using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
@@ -19,6 +18,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         public WayType ThisPassage => _thisPassage;
         public WayType PassageToSpawn => _passageToSpawn;
         public SceneField SceneToLoad => _sceneToLoad;
+        public float YOffset => 1;
         
         public bool IsSingleAtTile => _isSingleAtTile;
         

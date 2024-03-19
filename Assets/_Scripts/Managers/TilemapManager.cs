@@ -23,6 +23,8 @@ namespace _Scripts.Managers
         [Header("--- Editor Only ---")] 
         [SerializeField] private GameplaySceneInstaller _sceneInstaller;
 
+        public float YCellSize => _tilemap.cellSize.y;
+
         private void OnValidate() => _sceneInstaller ??= FindAnyObjectByType<GameplaySceneInstaller>();
 #endif
 
@@ -50,6 +52,8 @@ namespace _Scripts.Managers
 
         public bool TryAddModifiers(Vector2Int key, ITileModifier modifier)
         {
+            print(key);
+            
             if (_tileModifiersData.TryGetValue(key, out var value))
             {
                 if (value.IsSingleAtTile)
@@ -145,7 +149,7 @@ namespace _Scripts.Managers
 
             foreach (var modifier in modifiers)
             {
-                if (!TryAddModifiers(modifier.GetTransform().position, modifier))
+                if (!TryAddModifiers(modifier.AnchorPosition, modifier))
                     Debug.LogError($"Tile is already occupied {modifier.GetTransform().gameObject.name}");
             }
         }

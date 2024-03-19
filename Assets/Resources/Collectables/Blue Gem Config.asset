@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Blue Gem Config
   m_EditorClassIdentifier: 
   _idleSprite: {fileID: -6103929172131972053, guid: 96eccfd091df517499eb55b1016e6add, type: 3}
+  _yOffset: -0.4
   _jumpValue: 1
   _fallValue: -2
   _jumpDuration: 0.25

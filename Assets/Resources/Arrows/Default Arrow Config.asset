@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbdb001436cb443eabc97dc5655535ed, type: 3}
   m_Name: Default Arrow Config
   m_EditorClassIdentifier: 
+  _isSingleAtTile: 1
+  _yOffset: 0.625
   _minMaxGradient:
     m_Mode: 2
     m_GradientMin:

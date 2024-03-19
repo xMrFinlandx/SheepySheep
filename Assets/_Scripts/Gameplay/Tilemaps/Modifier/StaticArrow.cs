@@ -11,8 +11,10 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
     public class StaticArrow : BaseArrow
     {
         [SerializeField] private MoveDirectionType _direction;
+        [SerializeField] private ArrowConfig _arrowConfig;
         
-        private ArrowConfig _arrowConfig;
+        public override bool IsSingleAtTile => _arrowConfig.IsSingleAtTile;
+        public override float YOffset => _arrowConfig.YOffset;
 
         [Inject]
         private void Construct(ArrowConfig arrowConfig)

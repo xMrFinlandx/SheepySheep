@@ -7,7 +7,7 @@ using UnityEngine;
 namespace _Scripts.Scriptables
 {
     [CreateAssetMenu(fileName = "New Arrow Config", menuName = "Gameplay/Arrow Config", order = 0)]
-    public class ArrowConfig : ScriptableObject
+    public class ArrowConfig : TileModifierConfig
     {
         [SerializeField] private ParticleSystem.MinMaxGradient _minMaxGradient;
         [SerializeField] private ParticleSystem _particleSystemPrefab;

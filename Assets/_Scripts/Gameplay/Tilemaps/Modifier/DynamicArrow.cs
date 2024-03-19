@@ -11,12 +11,18 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
     {
         private int _counter = 1;
 
+        private Vector2Int _key;
         private Vector2 _cartesianDirection;
         private ArrowConfig _arrowConfig;
 
-        public void Init(ArrowConfig arrowConfig)
+        public override bool IsSingleAtTile => _arrowConfig.IsSingleAtTile;
+
+        public override float YOffset => _arrowConfig.YOffset;
+
+        public void Init(ArrowConfig arrowConfig, Vector2Int key)
         {
             _arrowConfig = arrowConfig;
+            _key = key;
             
             InitializeShader(_arrowConfig);
             SpawnParticleSystem(_arrowConfig);
@@ -56,8 +62,9 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         
         private void Restart()
         {
-            var key = TilemapManager.Instance.WorldToCell(transform.position);
-            TilemapManager.Instance.TryRemoveInteraction(key);
+            print(_key);
+            
+            TilemapManager.Instance.TryRemoveInteraction(_key);
         }
 
         private void OnValidate() => GetSpriteRenderer();

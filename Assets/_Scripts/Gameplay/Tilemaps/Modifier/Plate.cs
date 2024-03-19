@@ -10,8 +10,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
     [RequireComponent(typeof(Animator), typeof(SpriteRenderer))]
     public class Plate : MonoBehaviour, ITileModifier
     {
-        [SerializeField] private bool _isSingleAtTile = true;
-        [Space] 
         [SerializeField] private PlateConfig _plateConfig;
         [Space]
         [SerializeField] private Animator _animator;
@@ -24,7 +22,9 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         private bool _isEnabled = false;
 
         public int CallId => _callId;
-        public bool IsSingleAtTile => _isSingleAtTile;
+        public bool IsSingleAtTile => _plateConfig.IsSingleAtTile;
+
+        public float YOffset => _plateConfig.YOffset;
         
         public void Activate(IPlayerController playerController)
         {
@@ -70,6 +70,12 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             _isEnabled = false;
             _animator.enabled = false;
             _spriteRenderer.sprite = _plateConfig.IdleSprite;
+        }
+        
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawSphere(transform.position + new Vector3(0, YOffset), .1f);
         }
     }
 }
