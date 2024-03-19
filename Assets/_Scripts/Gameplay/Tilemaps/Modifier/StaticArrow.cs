@@ -23,7 +23,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         public override void Activate(IPlayerController playerController)
         {
             playerController.SetMoveDirection(_direction.GetDirectionVector());
-            PlayShine();
+            PlayShineAnimation();
         }
         
         private void OnValidate() => GetSpriteRenderer();

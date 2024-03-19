@@ -35,7 +35,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             SpriteRenderer.sprite = arrowDirectionData.Sprite;
             _cartesianDirection = arrowDirectionData.ArrowDirection;
             
-            PlayShine();
+            PlayShineAnimation();
             
             ShaderController.SetVectorValue(_cartesianDirection.CartesianToIsometric(), 0);
             
@@ -51,7 +51,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         {
             playerController.SetMoveDirection(_cartesianDirection);
 
-            PlayShine();
+            PlayShineAnimation();
         }
         
         private void Restart()

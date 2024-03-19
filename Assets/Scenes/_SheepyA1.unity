@@ -860,7 +860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &137638400
 Animator:
   serializedVersion: 7
@@ -946,7 +946,7 @@ Transform:
   m_GameObject: {fileID: 137638398}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: -3.5, z: 0}
+  m_LocalPosition: {x: -1, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -965,11 +965,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactableConfig: {fileID: 11400000, guid: 51cdd3081eca928409469bfe9e0c86d3, type: 2}
-  _isIncreaseSpeed: 1
   _isSingleAtTile: 0
-  _animator: {fileID: 137638400}
   _spriteRenderer: {fileID: 137638401}
+  _animator: {fileID: 137638400}
   _animationName: RedGem
+  _isIncreaseSpeed: 1
 --- !u!1 &200887496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,8 +1003,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactableConfig: {fileID: 11400000, guid: 631da09e263048a4391ac6da281341de, type: 2}
   _isSingleAtTile: 0
-  _animator: {fileID: 200887498}
   _spriteRenderer: {fileID: 200887499}
+  _animator: {fileID: 200887498}
   _animationName: YellowCoin
 --- !u!95 &200887498
 Animator:
@@ -3455,10 +3455,13 @@ MonoBehaviour:
   _arrowConfig: {fileID: 11400000, guid: f82ceda4406ceaf478da0477ecb06908, type: 2}
   _dynamicArrowPrefab: {fileID: 2454315114536276240, guid: 040d4a4e0862d8f42b56a767aef47e89, type: 3}
   _spriteRenderers:
+  - {fileID: 918083682}
   - {fileID: 200887499}
   - {fileID: 1967790448}
   - {fileID: 1279386610}
   - {fileID: 1518661612}
+  - {fileID: 892334980}
+  - {fileID: 137638401}
   - {fileID: 1035130205}
   _tilemapManager: {fileID: 2058085424}
 --- !u!4 &868347994
@@ -3706,7 +3709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &892334979
 Animator:
   serializedVersion: 7
@@ -3811,11 +3814,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactableConfig: {fileID: 11400000, guid: 7e4a120392b742044b0b611f9b9b6b23, type: 2}
-  _isIncreaseSpeed: 0
   _isSingleAtTile: 0
-  _animator: {fileID: 892334979}
   _spriteRenderer: {fileID: 892334980}
+  _animator: {fileID: 892334979}
   _animationName: BlueGem
+  _isIncreaseSpeed: 0
 --- !u!1 &918083679
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,7 +3837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &918083680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3849,8 +3852,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactableConfig: {fileID: 11400000, guid: 848c6ef51fd6b8f4da4288cd37646163, type: 2}
   _isSingleAtTile: 0
-  _animator: {fileID: 918083681}
   _spriteRenderer: {fileID: 918083682}
+  _animator: {fileID: 918083681}
   _animationName: BlueDiamond
 --- !u!95 &918083681
 Animator:
@@ -14238,8 +14241,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactableConfig: {fileID: 11400000, guid: 631da09e263048a4391ac6da281341de, type: 2}
   _isSingleAtTile: 0
-  _animator: {fileID: 1279386609}
   _spriteRenderer: {fileID: 1279386610}
+  _animator: {fileID: 1279386609}
   _animationName: YellowCoin
 --- !u!95 &1279386609
 Animator:
@@ -14629,8 +14632,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactableConfig: {fileID: 11400000, guid: 631da09e263048a4391ac6da281341de, type: 2}
   _isSingleAtTile: 0
-  _animator: {fileID: 1518661611}
   _spriteRenderer: {fileID: 1518661612}
+  _animator: {fileID: 1518661611}
   _animationName: YellowCoin
 --- !u!95 &1518661611
 Animator:
@@ -15069,8 +15072,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactableConfig: {fileID: 11400000, guid: 631da09e263048a4391ac6da281341de, type: 2}
   _isSingleAtTile: 0
-  _animator: {fileID: 1967790447}
   _spriteRenderer: {fileID: 1967790448}
+  _animator: {fileID: 1967790447}
   _animationName: YellowCoin
 --- !u!95 &1967790447
 Animator:

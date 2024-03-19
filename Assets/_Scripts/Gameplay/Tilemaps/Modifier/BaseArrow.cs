@@ -56,7 +56,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
                 Quaternion.Euler(-90, 0, 0), transform);
         }
 
-        protected void PlayShine()
+        protected void PlayShineAnimation()
         {
             ShaderController.Play(_START_SHINE_VALUE, _END_SHINE_VALUE, _fadeInDuration, 1).OnComplete(() =>
                 ShaderController.Play(_END_SHINE_VALUE, _START_SHINE_VALUE, _fadeOutDuration, 1, _fadeOutEase));
