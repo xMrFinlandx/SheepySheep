@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Disabled Arrow Config
   m_EditorClassIdentifier: 
   _isSingleAtTile: 1
-  _yOffset: 0.625
+  _yOffset: 0.635
   _minMaxGradient:
     m_Mode: 2
     m_GradientMin:

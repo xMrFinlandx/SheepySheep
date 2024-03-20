@@ -52,8 +52,6 @@ namespace _Scripts.Managers
 
         public bool TryAddModifiers(Vector2Int key, ITileModifier modifier)
         {
-            print(key);
-            
             if (_tileModifiersData.TryGetValue(key, out var value))
             {
                 if (value.IsSingleAtTile)

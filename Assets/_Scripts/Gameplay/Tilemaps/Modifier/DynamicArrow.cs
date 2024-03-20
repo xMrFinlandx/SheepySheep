@@ -62,8 +62,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         
         private void Restart()
         {
-            print(_key);
-            
             TilemapManager.Instance.TryRemoveInteraction(_key);
         }
 

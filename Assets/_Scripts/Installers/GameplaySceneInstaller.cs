@@ -1,6 +1,7 @@
 ﻿using _Scripts.Player;
 using _Scripts.Player.Controls;
 using _Scripts.Scriptables;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Zenject;

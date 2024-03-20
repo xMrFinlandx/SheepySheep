@@ -18,7 +18,8 @@ namespace _Scripts.Player
         [SerializeField] private Rigidbody2D _rigidbody;
         [SerializeField] private Animator _animator;
         [SerializeField] private SpriteRenderer _spriteRenderer;
-
+        [SerializeField] private CameraFollowObject _cameraFollowObject;
+        
         private bool _isStarted = false;
         
         private Vector2 _spawnPosition;
@@ -70,6 +71,9 @@ namespace _Scripts.Player
             
             SetMoveDirection(_startMoveDirection.GetDirectionVector());
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
+            
+            _cameraFollowObject = CameraFollowObject.Instance;
+            _cameraFollowObject.InitTarget(transform);
             
             InitStateMachine();
 
