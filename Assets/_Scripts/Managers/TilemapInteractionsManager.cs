@@ -108,7 +108,7 @@ namespace _Scripts.Managers
         private void InstantiateArrow(Vector2Int gridPos)
         {
             var key = TilemapManager.Instance.CellToWorld(gridPos);
-            var modifierPos = key - new Vector2(0, _arrowConfig.YOffset) + new Vector2(0, _tilemapManager.YCellSize / 2);
+            var modifierPos = key - new Vector2(0, _arrowConfig.YOffset) + new Vector2(0, TilemapManager.Instance.YCellSize / 2);
             var arrow = Instantiate(_dynamicArrowPrefab, modifierPos, Quaternion.identity);
             
             arrow.Init(_arrowConfig, gridPos);

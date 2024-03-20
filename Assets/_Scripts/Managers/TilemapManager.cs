@@ -19,11 +19,11 @@ namespace _Scripts.Managers
         private Tilemap _tilemap;
         private Vector2Int _previousPos;
 
+        public float YCellSize => _tilemap.cellSize.y;
+        
 #if UNITY_EDITOR
         [Header("--- Editor Only ---")] 
         [SerializeField] private GameplaySceneInstaller _sceneInstaller;
-
-        public float YCellSize => _tilemap.cellSize.y;
 
         private void OnValidate() => _sceneInstaller ??= FindAnyObjectByType<GameplaySceneInstaller>();
 #endif
