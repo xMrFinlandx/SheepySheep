@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace YG
 {
     [System.Serializable]
@@ -16,6 +18,18 @@ namespace YG
         public string newPlayerName = "Hello!";
         public bool[] openLevels = new bool[3];
 
+        public int coins = 0;
+        public int diamonds = 0;
+
+        public Dictionary<string, bool> collectables = new()
+        {
+            {"asdad", true},
+            {"asdadывпып", true},
+            {"asdaрыврырd", false},
+            {"asdвоыаоваad", true},
+            {"asdрфраыраad", false}
+        };
+        
         // Ваши сохранения
 
         // ...

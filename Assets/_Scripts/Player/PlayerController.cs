@@ -1,10 +1,12 @@
 using System;
 using _Scripts.Managers;
 using _Scripts.Utilities;
+using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
 using UnityEngine;
+using YG;
 
 namespace _Scripts.Player
 {
@@ -15,12 +17,14 @@ namespace _Scripts.Player
         [SerializeField] private float _speedModifier = 1.8f;
         [SerializeField] private MoveDirectionType _startMoveDirection;
         [Header("Components")]
-        [SerializeField] private Rigidbody2D _rigidbody;
-        [SerializeField] private Animator _animator;
-        [SerializeField] private SpriteRenderer _spriteRenderer;
-        [SerializeField] private CameraFollowObject _cameraFollowObject;
+        [SerializeField, HideInInspector] private Rigidbody2D _rigidbody;
+        [SerializeField, HideInInspector] private Animator _animator;
+        [SerializeField, HideInInspector] private SpriteRenderer _spriteRenderer;
+        [SerializeField, HideInInspector] private CameraFollowObject _cameraFollowObject;
         
         private bool _isStarted = false;
+
+        private Wallet _coinsWallet;
         
         private Vector2 _spawnPosition;
         private FiniteStateMachine _finiteStateMachine;
@@ -44,14 +48,36 @@ namespace _Scripts.Player
             else if (direction == Vector2.left) 
                 _spriteRenderer.flipX = true;
         }
-        
+
+        public void AddCoins(int value)
+        {
+            _coinsWallet.AddToBuffer(value);
+        }
+
+        public void AddDiamonds(int value)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnLevelCompleted()
+        {
+            print("Level completed");
+            
+            _coinsWallet.ApplyBuffer();
+            YandexGame.savesData.coins = _coinsWallet.Balance;
+            YandexGame.SaveProgress();
+        }
+
         public void Restart()
         {
+            print(_coinsWallet.Buffer);
+            
             _isStarted = false;
             _animator.enabled = false;
             transform.position = _spawnPosition;
             _finiteStateMachine.SetState<FsmIdleState>();
             SetMoveDirection(_startMoveDirection.GetDirectionVector());
+            _coinsWallet.ResetBuffer();
         }
 
         private void OnValidate()
@@ -79,6 +105,14 @@ namespace _Scripts.Player
 
             _animator.enabled = false;
             _finiteStateMachine.SetState<FsmIdleState>();
+
+            LoadSavedData();
+        }
+
+        private void LoadSavedData()
+        {
+            YandexGame.LoadProgress();
+            _coinsWallet = new Wallet(YandexGame.savesData.coins);
         }
 
         private void InitStateMachine()
@@ -90,7 +124,6 @@ namespace _Scripts.Player
             _finiteStateMachine.AddState(new FsmRunState(_finiteStateMachine, this, _animator, "PlayerMove", _speed, _speedModifier));
             _finiteStateMachine.AddState(new FsmDiedState(_finiteStateMachine, _rigidbody));
             _finiteStateMachine.AddState(new FsmPausedState(_finiteStateMachine));
-            
         }
 
         private void OnArrowInstantiated()

@@ -41,8 +41,8 @@ namespace _Scripts.Managers
             }
         }
 
-        [Button("Get Interactions")]
-        private void FillInteractions()
+        [Button("Get Interaction Sprite Renderers")]
+        private void FillInteractionsSpriteRenderers()
         {
             _spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
         }

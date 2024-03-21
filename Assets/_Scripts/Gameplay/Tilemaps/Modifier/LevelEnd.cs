@@ -18,13 +18,14 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         public WayType ThisPassage => _thisPassage;
         public WayType PassageToSpawn => _passageToSpawn;
         public SceneField SceneToLoad => _sceneToLoad;
-        public float YOffset => 1;
+        public float YOffset => 0;
         
         public bool IsSingleAtTile => _isSingleAtTile;
         
         public void Activate(IPlayerController playerController)
         {
             playerController.SetState<FsmPausedState>();
+            playerController.OnLevelCompleted();
         }
 
         public Transform GetTransform() => transform;
