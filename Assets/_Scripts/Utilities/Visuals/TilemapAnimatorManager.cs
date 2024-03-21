@@ -9,7 +9,7 @@ using Zenject;
 
 namespace _Scripts.Utilities.Visuals
 {
-    public class TilemapAnimatorManager : MonoBehaviour
+    public class TilemapAnimatorManager : Singleton<TilemapAnimatorManager>
     {
         [SerializeField] private SpriteRenderer _spriteRendererPrefab;
         [SerializeField] private int _sortingLayerOrder = 100;
@@ -36,8 +36,8 @@ namespace _Scripts.Utilities.Visuals
         {
             _tilemap = tilemap;
         }
-
-        private async void Start()
+        
+        public async void Play()
         {
             GameStateManager.SetState(GameStateType.Cutscene);
             
@@ -52,7 +52,7 @@ namespace _Scripts.Utilities.Visuals
 
         private List<SpriteRenderer> JoinInteractions()
         {
-            var spriteRenderers = TilemapInteractionsManager.Instance.SpriteRenderers;
+            var spriteRenderers = TilemapInteractionsManager.Instance.GetInteractionsSpriteRenderers();
             
             foreach (var spriteRenderer in spriteRenderers)
             {

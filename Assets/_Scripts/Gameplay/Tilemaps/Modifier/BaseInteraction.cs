@@ -26,7 +26,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         
         protected Animator Animator => _animator;
         
-        public void Restart()
+        public virtual void Restart()
         {
             transform.position = _cashedPosition;
             _spriteRenderer.color = Color.white;

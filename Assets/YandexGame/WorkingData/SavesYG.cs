@@ -21,14 +21,7 @@ namespace YG
         public int coins = 0;
         public int diamonds = 0;
 
-        public Dictionary<string, bool> collectables = new()
-        {
-            {"asdad", true},
-            {"asdadывпып", true},
-            {"asdaрыврырd", false},
-            {"asdвоыаоваad", true},
-            {"asdрфраыраad", false}
-        };
+        public Dictionary<string, bool> collectables = new();
         
         // Ваши сохранения
 

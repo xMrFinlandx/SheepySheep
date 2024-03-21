@@ -1,22 +1,7 @@
 {
-  "idSave": 2,
+  "idSave": 23,
   "isFirstSession": false,
   "language": "ru",
   "promptDone": false,
-  "money": 1,
-  "newPlayerName": "Hello!",
-  "openLevels": [
-    false,
-    true,
-    false
-  ],
-  "coins": 10,
-  "diamonds": 0,
-  "_collectables": {
-    "asdad": true,
-    "asdadывпып": true,
-    "asdaрыврырd": false,
-    "asdвоыаоваad": true,
-    "asdрфраыраad": false
-  }
+  "diamonds": 0
 }

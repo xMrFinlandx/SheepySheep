@@ -1,7 +1,10 @@
-﻿using _Scripts.Player;
+﻿using _Scripts.Managers;
+using _Scripts.Player;
 using _Scripts.Player.Controls;
 using _Scripts.Scriptables;
+using _Scripts.Utilities.Visuals;
 using Cinemachine;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Zenject;
@@ -32,6 +35,14 @@ namespace _Scripts.Installers
             Container.Bind<Tilemap>().FromInstance(_tilemap);
             Container.Bind<ArrowConfig>().FromInstance(_arrowConfig);
             Container.Bind<InputReader>().FromInstance(_inputReader);
+        }
+
+        public override void Start()
+        {
+            DataPersistentManager.LoadData();
+
+            TilemapAnimatorManager.Instance.Play();
+            TilemapManager.Instance.Init();
         }
     }
 }

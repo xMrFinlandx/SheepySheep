@@ -1003,6 +1003,7 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 200887499}
   _animator: {fileID: 200887498}
   _animationName: YellowCoin
+  _guid: 065d08cb-96b3-4e2a-9ac2-fb4e40299c46
 --- !u!95 &200887498
 Animator:
   serializedVersion: 7
@@ -1303,7 +1304,7 @@ Transform:
   m_GameObject: {fileID: 273531672}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: -3, z: 0}
+  m_LocalPosition: {x: -1, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2811,6 +2812,7 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 732427262}
   _animator: {fileID: 732427261}
   _animationName: YellowCoin
+  _guid: 0590b0c3-52b9-4663-b3f2-6273359af06c
 --- !u!95 &732427261
 Animator:
   serializedVersion: 7
@@ -3724,17 +3726,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _arrowConfig: {fileID: 11400000, guid: f82ceda4406ceaf478da0477ecb06908, type: 2}
   _dynamicArrowPrefab: {fileID: 2454315114536276240, guid: 040d4a4e0862d8f42b56a767aef47e89, type: 3}
-  _spriteRenderers:
-  - {fileID: 918083682}
-  - {fileID: 200887499}
-  - {fileID: 892868888}
-  - {fileID: 1311675498}
-  - {fileID: 732427262}
-  - {fileID: 892334980}
-  - {fileID: 137638401}
-  - {fileID: 273531673}
-  - {fileID: 1035130205}
-  - {fileID: 776109425}
   _tilemapManager: {fileID: 2058085424}
 --- !u!4 &868347994
 Transform:
@@ -4140,6 +4131,7 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 892868888}
   _animator: {fileID: 892868887}
   _animationName: YellowCoin
+  _guid: 9dbcbf0c-a460-4643-8763-139b7aa54a6f
 --- !u!95 &892868887
 Animator:
   serializedVersion: 7
@@ -4251,6 +4243,7 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 918083682}
   _animator: {fileID: 918083681}
   _animationName: YellowCoin
+  _guid: 3c6b1357-9266-4bf4-a94c-7efedd5df8e0
 --- !u!95 &918083681
 Animator:
   serializedVersion: 7
@@ -14816,6 +14809,7 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 1311675498}
   _animator: {fileID: 1311675497}
   _animationName: YellowCoin
+  _guid: 05ef0525-4e60-4954-a67a-9ca4bdaeabd1
 --- !u!95 &1311675497
 Animator:
   serializedVersion: 7
@@ -15100,7 +15094,7 @@ GameObject:
   m_Layer: 0
   m_Name: Level End
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

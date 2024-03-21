@@ -1,4 +1,5 @@
-﻿using _Scripts.Utilities.Classes;
+﻿using _Scripts.Managers;
+using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
@@ -26,6 +27,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         {
             playerController.SetState<FsmPausedState>();
             playerController.OnLevelCompleted();
+            DataPersistentManager.SaveData();
         }
 
         public Transform GetTransform() => transform;

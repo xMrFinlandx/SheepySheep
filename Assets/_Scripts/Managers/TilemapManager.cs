@@ -30,6 +30,17 @@ namespace _Scripts.Managers
 
         [Inject]
         private void Construct(Tilemap tilemap) => _tilemap = tilemap;
+        
+        public void Init()
+        {
+            var modifiers = Extensions.FindObjectsByInterface<ITileModifier>();
+
+            foreach (var modifier in modifiers)
+            {
+                if (!TryAddModifiers(modifier.AnchorPosition, modifier))
+                    Debug.LogError($"Tile is already occupied {modifier.GetTransform().gameObject.name}");
+            }
+        }
 
         public Vector2Int WorldToCell(Vector2 pos)
         {
@@ -139,17 +150,6 @@ namespace _Scripts.Managers
             
             var tileCenter = _tilemap.GetCellCenterWorld(cellPosition);
             targetTransform.position = tileCenter;
-        }
-
-        private void Start()
-        {
-            var modifiers = Extensions.FindObjectsByInterface<ITileModifier>();
-
-            foreach (var modifier in modifiers)
-            {
-                if (!TryAddModifiers(modifier.AnchorPosition, modifier))
-                    Debug.LogError($"Tile is already occupied {modifier.GetTransform().gameObject.name}");
-            }
         }
 
         private void OnDrawGizmos()

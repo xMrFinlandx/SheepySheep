@@ -11,7 +11,7 @@ using YG;
 namespace _Scripts.Player
 {
     [RequireComponent(typeof(Animator), typeof(Rigidbody2D), typeof(SpriteRenderer))]
-    public class PlayerController : MonoBehaviour, IPlayerController, IRestartable
+    public class PlayerController : MonoBehaviour, IPlayerController, IRestartable, IDataPersistence
     {
         [SerializeField] private float _speed = 10;
         [SerializeField] private float _speedModifier = 1.8f;
@@ -62,10 +62,6 @@ namespace _Scripts.Player
         public void OnLevelCompleted()
         {
             print("Level completed");
-            
-            _coinsWallet.ApplyBuffer();
-            YandexGame.savesData.coins = _coinsWallet.Balance;
-            YandexGame.SaveProgress();
         }
 
         public void Restart()
@@ -105,16 +101,8 @@ namespace _Scripts.Player
 
             _animator.enabled = false;
             _finiteStateMachine.SetState<FsmIdleState>();
-
-            LoadSavedData();
         }
-
-        private void LoadSavedData()
-        {
-            YandexGame.LoadProgress();
-            _coinsWallet = new Wallet(YandexGame.savesData.coins);
-        }
-
+        
         private void InitStateMachine()
         {
             _finiteStateMachine = new FiniteStateMachine();
@@ -143,6 +131,17 @@ namespace _Scripts.Player
         {
             TilemapInteractionsManager.ArrowInstantiatedAction -= OnArrowInstantiated;
             ReloadRoomManager.ReloadRoomAction -= Restart;
+        }
+
+        public void SaveData()
+        {
+            _coinsWallet.ApplyBuffer();
+            YandexGame.savesData.coins = _coinsWallet.Balance;
+        }
+
+        public void LoadData()
+        {
+            _coinsWallet = new Wallet(YandexGame.savesData.coins);
         }
     }
 }

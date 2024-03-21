@@ -16,14 +16,11 @@ namespace _Scripts.Managers
     {
         [SerializeField] private ArrowConfig _arrowConfig;
         [SerializeField] private DynamicArrow _dynamicArrowPrefab;
-        [SerializeField] private SpriteRenderer[] _spriteRenderers;
         
         public static Action ArrowInstantiatedAction;
         private InputReader _inputReader;
 
         private bool _canInteract = false;
-
-        public IReadOnlyList<SpriteRenderer> SpriteRenderers => (IReadOnlyList<SpriteRenderer>) _spriteRenderers.Shuffle();
 
 #if UNITY_EDITOR
         [Space(20)]
@@ -41,12 +38,6 @@ namespace _Scripts.Managers
             }
         }
 
-        [Button("Get Interaction Sprite Renderers")]
-        private void FillInteractionsSpriteRenderers()
-        {
-            _spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
-        }
-
         private void OnValidate()
         {
             _tilemapManager ??= FindAnyObjectByType<TilemapManager>();
@@ -57,6 +48,11 @@ namespace _Scripts.Managers
         private void Construct(InputReader inputReader)
         {
             _inputReader = inputReader;
+        }
+        
+        public IList<SpriteRenderer> GetInteractionsSpriteRenderers()
+        {
+            return GetComponentsInChildren<SpriteRenderer>().Shuffle();
         }
 
         private void Start()

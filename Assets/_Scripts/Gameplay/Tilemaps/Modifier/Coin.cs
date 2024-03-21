@@ -8,14 +8,11 @@ using YG;
 namespace _Scripts.Gameplay.Tilemaps.Modifier
 {
     [RequireComponent(typeof(SpriteRenderer), typeof(Animator))]
-    public class Coin : BaseInteraction, IDictionarySave
+    public class Coin : BaseInteraction, IDataPersistence
     {
         [SerializeField] private string _guid;
 
-        private bool _collected = false;
-        
-        public string Key => _guid;
-        public bool Value => _collected;
+        private bool _isCollected = false;
         
         [Button("New Guid")]
         private void GenerateGUID()
@@ -25,21 +22,35 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         
         public override void Activate(IPlayerController playerController)
         {
-            if (IsEnabled)
+            if (IsEnabled || _isCollected)
                 return;
 
             IsEnabled = true;
+            _isCollected = true;
 
             playerController.AddCoins(1);
             PlayCollectedAnimation();
         }
-        
+
+        public override void Restart()
+        {
+            base.Restart();
+
+            if (!IsEnabled)
+                _isCollected = false;
+        }
+
         private void Start()
         {
             InitializeSpawnPosition();
             
             Animator.Play(AnimationName);
             ReloadRoomManager.ReloadRoomAction += Restart;
+
+            YandexGame.savesData.collectables.TryGetValue(_guid, out bool collected);
+
+            if (collected)
+                Destroy(gameObject);
         }
 
         private void OnDestroy()
@@ -53,6 +64,26 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
                 GenerateGUID();
             
             InitializeComponents();
+        }
+
+        public void SaveData()
+        {
+            if (YandexGame.savesData.collectables.ContainsKey(_guid))
+            {
+                YandexGame.savesData.collectables.Remove(_guid);
+            }
+
+            YandexGame.savesData.collectables.Add(_guid, _isCollected);
+        }
+
+        public void LoadData()
+        {
+            YandexGame.savesData.collectables.TryGetValue(_guid, out _isCollected);
+
+            if (_isCollected)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 }

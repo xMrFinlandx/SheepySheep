@@ -24,9 +24,9 @@ namespace _Scripts.Utilities
             return new Vector2(direction.x - direction.y, (direction.x + direction.y) / 2);
         }
         
-        public static T[] FindObjectsByInterface<T>() where T : class
+        public static IEnumerable<T> FindObjectsByInterface<T>() where T : class
         {
-            return Object.FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None).OfType<T>().ToArray();
+            return Object.FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None).OfType<T>();
         }
 
         public static IList<T> Shuffle<T>(this IList<T> list) where T : class
