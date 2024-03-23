@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using _Scripts.Gameplay.Tilemaps.Modifier;
 using _Scripts.Installers;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Classes;
@@ -37,6 +38,8 @@ namespace _Scripts.Managers
 
             foreach (var modifier in modifiers)
             {
+                print($"{modifier.GetTransform().gameObject.name} has {modifier.AnchorPosition} key");
+                
                 if (!TryAddModifiers(modifier.AnchorPosition, modifier))
                     Debug.LogError($"Tile is already occupied {modifier.GetTransform().gameObject.name}");
             }
@@ -57,6 +60,9 @@ namespace _Scripts.Managers
         
         public bool TryAddModifiers(Vector2 pos, ITileModifier modifier)
         {
+            if (modifier is BaseInteraction interaction)
+                interaction.CashSpawnPosition();
+                    
             var tilemapPos = WorldToCell(pos);
             return TryAddModifiers(tilemapPos, modifier);
         }

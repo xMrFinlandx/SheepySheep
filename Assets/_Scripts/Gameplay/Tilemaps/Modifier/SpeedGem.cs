@@ -31,8 +31,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         private void Start()
         {
-            InitializeSpawnPosition();
-            
             Animator.Play(AnimationName);
             ReloadRoomManager.ReloadRoomAction += Restart;
         }

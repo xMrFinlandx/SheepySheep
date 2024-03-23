@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45bc50d5268f499d9ee7a07caa9f24b9, type: 3}
+  m_Name: Copper Spike
+  m_EditorClassIdentifier: 
+  _isSingleAtTile: 1
+  _yOffset: 0.17
+  _idleSprite: {fileID: -6986619247665696405, guid: 393c44718be201e44b0895cb3f93da07, type: 3}
+  _jumpValue: 1
+  _fallValue: 2
+  _jumpDuration: 0.25
+  _fallDuration: 0.5
+  _jumpEase: 6
+  _fallEase: 5
+  _animationClip: {fileID: 7400000, guid: 69d3eee25a4194943be25b7a23a749ab, type: 2}
+  _gameObjectName: Copper Spike
+  _animatorController: {fileID: 9100000, guid: 10efa916ac2901b4f88fb5d77fd3fa8f, type: 2}
+  _triggerId: 0

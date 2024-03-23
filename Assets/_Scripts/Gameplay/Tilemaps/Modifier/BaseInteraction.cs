@@ -36,6 +36,11 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         public Transform GetTransform() => transform;
 
+        public void CashSpawnPosition()
+        {
+            _cashedPosition = transform.position;
+        }
+
         protected void PlayCollectedAnimation()
         {
             _sequence = DOTween.Sequence();
@@ -51,11 +56,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         private void AppendSequence(float endValue, float duration, Ease ease)
         {
             _sequence.Append(transform.DOLocalMoveY(transform.position.y + endValue, duration).SetEase(ease));
-        }
-
-        protected void InitializeSpawnPosition()
-        {
-            _cashedPosition = transform.position;
         }
 
         private void OnDrawGizmos()
@@ -74,7 +74,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             
 #if UNITY_EDITOR
             _animator.runtimeAnimatorController = _interactableConfig.AnimatorController;
-            name = _interactableConfig.Name;
+           // name = _interactableConfig.Name;
 #endif
         }
         

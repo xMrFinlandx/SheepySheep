@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e21f7105b87445d8b1daa563e09ba311, type: 3}
+  m_Name: Yellow Plate
+  m_EditorClassIdentifier: 
+  _isSingleAtTile: 1
+  _yOffset: 0.165
+  _idleSprite: {fileID: -165933593923475369, guid: b07a04ed458fc2548b339f63f93f4472, type: 3}
+  _jumpValue: 1
+  _fallValue: 2
+  _jumpDuration: 0.25
+  _fallDuration: 0.5
+  _jumpEase: 6
+  _fallEase: 5
+  _animationClip: {fileID: 7400000, guid: bdbdad9363ebc6d4989ae24d50beb47f, type: 2}
+  _gameObjectName: Yellow Plate
+  _animatorController: {fileID: 9100000, guid: b5e50e5cff94cef409145d96497842ce, type: 2}
+  _callId: 5

@@ -14,7 +14,7 @@ namespace _Scripts.Utilities.Interfaces
         public void Activate(IPlayerController playerController);
 
         public Transform GetTransform();
-        
+
 #if UNITY_EDITOR
         public void MoveToCurrentTileCenter(TilemapManager tilemapManager)
         {

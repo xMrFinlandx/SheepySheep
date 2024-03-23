@@ -35,22 +35,15 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         public override void Restart()
         {
             ResetProgress();
-
+            
             if (!IsEnabled)
                 _isCollected = false;
         }
 
         private void Start()
         {
-            InitializeSpawnPosition();
-            
             Animator.Play(AnimationName);
             ReloadRoomManager.ReloadRoomAction += Restart;
-
-            YandexGame.savesData.collectables.TryGetValue(_guid, out bool collected);
-
-            if (collected)
-                Destroy(gameObject);
         }
 
         private void OnDestroy()

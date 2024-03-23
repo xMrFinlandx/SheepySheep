@@ -79,21 +79,16 @@ namespace _Scripts.Managers
             if (!_canInteract)
                 return;
             
-            /*Profiler.BeginSample("Try interact");*/
-            
             var gridPos = GetGridMousePosition(mousePos);
             
             if (!TilemapManager.Instance.CanAddModifier(gridPos))
             {
                 TilemapManager.Instance.TryInteractInteraction(gridPos);
-                /*Profiler.EndSample();*/
                 return;
             }
             
             ArrowInstantiatedAction?.Invoke();
             InstantiateArrow(gridPos);
-            
-            /*Profiler.EndSample();*/
         }
 
         private void RemoveArrow(Vector2 mousePos)

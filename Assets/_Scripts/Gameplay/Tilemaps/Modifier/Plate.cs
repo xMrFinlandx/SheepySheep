@@ -38,7 +38,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         }
 
         public Transform GetTransform() => transform;
-        
+
         private void OnValidate()
         {
             _animator = GetComponent<Animator>();

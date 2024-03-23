@@ -44,6 +44,90 @@ TextureImporter:
   - first:
       213: -5066860800508632100
     second: Spikes-Sheet_13
+  - first:
+      213: 5872242577274433392
+    second: Spikes-Sheet_14
+  - first:
+      213: -3489708200993952365
+    second: Spikes-Sheet_15
+  - first:
+      213: 5198719098016004848
+    second: Spikes-Sheet_16
+  - first:
+      213: 4942903036693846205
+    second: Spikes-Sheet_17
+  - first:
+      213: -5819230171437653823
+    second: Spikes-Sheet_18
+  - first:
+      213: -8552904111923947149
+    second: Spikes-Sheet_19
+  - first:
+      213: 2103552438815496905
+    second: Spikes-Sheet_20
+  - first:
+      213: 3557898363138312969
+    second: Spikes-Sheet_21
+  - first:
+      213: 540825217917327111
+    second: Spikes-Sheet_22
+  - first:
+      213: -3914218891566444670
+    second: Spikes-Sheet_23
+  - first:
+      213: -6165391798712916827
+    second: Spikes-Sheet_24
+  - first:
+      213: 4667401488005618859
+    second: Spikes-Sheet_25
+  - first:
+      213: -7568983080716856447
+    second: Spikes-Sheet_26
+  - first:
+      213: -5714934037403746454
+    second: Spikes-Sheet_27
+  - first:
+      213: 4129997515879508987
+    second: Spikes-Sheet_28
+  - first:
+      213: -6986619247665696405
+    second: Spikes-Sheet_29
+  - first:
+      213: -1104534659602908543
+    second: Spikes-Sheet_30
+  - first:
+      213: 923818882220692138
+    second: Spikes-Sheet_31
+  - first:
+      213: -8265763959103447039
+    second: Spikes-Sheet_32
+  - first:
+      213: 8059834515836045853
+    second: Spikes-Sheet_33
+  - first:
+      213: 8734974263348158907
+    second: Spikes-Sheet_34
+  - first:
+      213: 8390067847312536725
+    second: Spikes-Sheet_35
+  - first:
+      213: -1215866253632209269
+    second: Spikes-Sheet_36
+  - first:
+      213: 6829273159238494501
+    second: Spikes-Sheet_37
+  - first:
+      213: 8376107689202562948
+    second: Spikes-Sheet_38
+  - first:
+      213: -7652047401411289254
+    second: Spikes-Sheet_39
+  - first:
+      213: -4899631478706992206
+    second: Spikes-Sheet_40
+  - first:
+      213: 1489111163602904785
+    second: Spikes-Sheet_41
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -156,6 +240,594 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb308111a59da1d0800000000000000
+      internalID: -3337847229795779588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5bb7bcfacef44d80800000000000000
+      internalID: -8267202868168639649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84858df942df89be0800000000000000
+      internalID: -1470146944594061240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80e6d4e68e3c1c580800000000000000
+      internalID: -8808543993109582328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f83ea869211a1cfe0800000000000000
+      internalID: -1170477326932450417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 640f0d82effef4180800000000000000
+      internalID: -9128814044771192762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab7638d2eb04bde90800000000000000
+      internalID: -6999930010265753670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a6417960db1d5890800000000000000
+      internalID: -7467782025174235484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7002908ce996d5bf0800000000000000
+      internalID: -333994666673758201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bac384cf96fe09e0800000000000000
+      internalID: -1653112847141188941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d6e34d05e20e0800800000000000000
+      internalID: 580404584770692825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8628bf6e3e5ddcc30800000000000000
+      internalID: 4381393187310895720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df129e2f8ce9524e0800000000000000
+      internalID: -2007023473017675267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd3e45382f4eea9b0800000000000000
+      internalID: -5066860800508632100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07fed55f2856e7150800000000000000
+      internalID: 5872242577274433392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39decf561e0129fc0800000000000000
+      internalID: -3489708200993952365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fa7844c97f852840800000000000000
+      internalID: 5198719098016004848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db8165d8f18b89440800000000000000
+      internalID: 4942903036693846205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0293d9df0fd3fa0800000000000000
+      internalID: -5819230171437653823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 32
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3799bc2860bfd4980800000000000000
+      internalID: -8552904111923947149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ca110a4cc1513d10800000000000000
+      internalID: 2103552438815496905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 32
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90b8dc1f5b1306130800000000000000
+      internalID: 3557898363138312969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 32
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70719879ba5618700800000000000000
+      internalID: 540825217917327111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 32
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f0f0318a6eda9c0800000000000000
+      internalID: -3914218891566444670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 32
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a42c9023d0207aa0800000000000000
+      internalID: -6165391798712916827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 32
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac54b4ace0f5c040800000000000000
+      internalID: 4667401488005618859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 32
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1831ee28df195f690800000000000000
+      internalID: -7568983080716856447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 32
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6fb2c1a5c970b0b0800000000000000
+      internalID: -5714934037403746454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 48
         height: 32
@@ -164,16 +836,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1113a8cf25cd20043a09512490d69cde
-      internalID: -3337847229795779588
+      spriteID: bfb6e39ebd2b05930800000000000000
+      internalID: 4129997515879508987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes-Sheet_1
+      name: Spikes-Sheet_29
       rect:
         serializedVersion: 2
         x: 48
@@ -185,16 +857,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b864ce91411901248a189e2f62b731ba
-      internalID: -8267202868168639649
+      spriteID: b61baf99fca8a0f90800000000000000
+      internalID: -6986619247665696405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes-Sheet_2
+      name: Spikes-Sheet_30
       rect:
         serializedVersion: 2
         x: 96
@@ -206,16 +878,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b79f696a4a96f774dbfb48233a8c8532
-      internalID: -1470146944594061240
+      spriteID: 18af2444497eba0f0800000000000000
+      internalID: -1104534659602908543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes-Sheet_3
+      name: Spikes-Sheet_31
       rect:
         serializedVersion: 2
         x: 144
@@ -227,16 +899,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1f01245f5d22c164da28f998a7655f8f
-      internalID: -8808543993109582328
+      spriteID: aa21097f06012dc00800000000000000
+      internalID: 923818882220692138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes-Sheet_4
+      name: Spikes-Sheet_32
       rect:
         serializedVersion: 2
         x: 192
@@ -248,16 +920,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1ace8dacd8b0eff4999c1f2834b92806
-      internalID: -1170477326932450417
+      spriteID: 100a96c197b1a4d80800000000000000
+      internalID: -8265763959103447039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes-Sheet_5
+      name: Spikes-Sheet_33
       rect:
         serializedVersion: 2
         x: 240
@@ -269,16 +941,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 50eb9d3a4bfd0454b8f973d34dca34cb
-      internalID: -9128814044771192762
+      spriteID: d1a07d01ac84adf60800000000000000
+      internalID: 8059834515836045853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes-Sheet_6
+      name: Spikes-Sheet_34
       rect:
         serializedVersion: 2
         x: 288
@@ -290,16 +962,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1ee87f946d029eb458996fea14daf9a0
-      internalID: -6999930010265753670
+      spriteID: bb1eb0900dcd83970800000000000000
+      internalID: 8734974263348158907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes-Sheet_7
+      name: Spikes-Sheet_35
       rect:
         serializedVersion: 2
         x: 336
@@ -311,16 +983,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0fa40980528724749a1db20544a9f047
-      internalID: -7467782025174235484
+      spriteID: 5947d7031428f6470800000000000000
+      internalID: 8390067847312536725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes-Sheet_8
+      name: Spikes-Sheet_36
       rect:
         serializedVersion: 2
         x: 384
@@ -332,16 +1004,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d7245f7418c33434caffa2f76ec37a60
-      internalID: -333994666673758201
+      spriteID: b8efdd19510602fe0800000000000000
+      internalID: -1215866253632209269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes-Sheet_9
+      name: Spikes-Sheet_37
       rect:
         serializedVersion: 2
         x: 432
@@ -353,16 +1025,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a6cea3401d4f9c740a7752af1590fca5
-      internalID: -1653112847141188941
+      spriteID: 529258a51c376ce50800000000000000
+      internalID: 6829273159238494501
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes-Sheet_10
+      name: Spikes-Sheet_38
       rect:
         serializedVersion: 2
         x: 480
@@ -374,16 +1046,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4a13b5e1cd2523f409395a886d2ddea4
-      internalID: 580404584770692825
+      spriteID: 48736579099ed3470800000000000000
+      internalID: 8376107689202562948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes-Sheet_11
+      name: Spikes-Sheet_39
       rect:
         serializedVersion: 2
         x: 528
@@ -395,16 +1067,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8b5b08da913ef174f94766066ffb8f3a
-      internalID: 4381393187310895720
+      spriteID: a5fdd624e677ec590800000000000000
+      internalID: -7652047401411289254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes-Sheet_12
+      name: Spikes-Sheet_40
       rect:
         serializedVersion: 2
         x: 576
@@ -416,16 +1088,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: bfd359346438396489fdd57672e3d758
-      internalID: -2007023473017675267
+      spriteID: 2bb09552123010cb0800000000000000
+      internalID: -4899631478706992206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes-Sheet_13
+      name: Spikes-Sheet_41
       rect:
         serializedVersion: 2
         x: 624
@@ -437,10 +1109,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 07adee35c37743248a76190afada6e42
-      internalID: -5066860800508632100
+      spriteID: 1d6ae91b6b26aa410800000000000000
+      internalID: 1489111163602904785
       vertices: []
       indices: 
       edges: []
@@ -448,7 +1120,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 92f20c42474e9fc42adec55fcb627079
+    spriteID: c023f0e9482952f4d9ef3832d6efd5fe
     internalID: 0
     vertices: []
     indices: 
@@ -462,9 +1134,37 @@ TextureImporter:
       Spikes-Sheet_11: 4381393187310895720
       Spikes-Sheet_12: -2007023473017675267
       Spikes-Sheet_13: -5066860800508632100
+      Spikes-Sheet_14: 5872242577274433392
+      Spikes-Sheet_15: -3489708200993952365
+      Spikes-Sheet_16: 5198719098016004848
+      Spikes-Sheet_17: 4942903036693846205
+      Spikes-Sheet_18: -5819230171437653823
+      Spikes-Sheet_19: -8552904111923947149
       Spikes-Sheet_2: -1470146944594061240
+      Spikes-Sheet_20: 2103552438815496905
+      Spikes-Sheet_21: 3557898363138312969
+      Spikes-Sheet_22: 540825217917327111
+      Spikes-Sheet_23: -3914218891566444670
+      Spikes-Sheet_24: -6165391798712916827
+      Spikes-Sheet_25: 4667401488005618859
+      Spikes-Sheet_26: -7568983080716856447
+      Spikes-Sheet_27: -5714934037403746454
+      Spikes-Sheet_28: 4129997515879508987
+      Spikes-Sheet_29: -6986619247665696405
       Spikes-Sheet_3: -8808543993109582328
+      Spikes-Sheet_30: -1104534659602908543
+      Spikes-Sheet_31: 923818882220692138
+      Spikes-Sheet_32: -8265763959103447039
+      Spikes-Sheet_33: 8059834515836045853
+      Spikes-Sheet_34: 8734974263348158907
+      Spikes-Sheet_35: 8390067847312536725
+      Spikes-Sheet_36: -1215866253632209269
+      Spikes-Sheet_37: 6829273159238494501
+      Spikes-Sheet_38: 8376107689202562948
+      Spikes-Sheet_39: -7652047401411289254
       Spikes-Sheet_4: -1170477326932450417
+      Spikes-Sheet_40: -4899631478706992206
+      Spikes-Sheet_41: 1489111163602904785
       Spikes-Sheet_5: -9128814044771192762
       Spikes-Sheet_6: -6999930010265753670
       Spikes-Sheet_7: -7467782025174235484
