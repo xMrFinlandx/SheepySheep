@@ -5,9 +5,9 @@ using UnityEngine;
 
 namespace _Scripts.Gameplay.Tilemaps.Modifier
 {
-    public abstract class BaseInteraction : MonoBehaviour, IRestartable, ITileModifier
+    public abstract class BaseCollectable : MonoBehaviour, IRestartable, ITileModifier
     {
-        [SerializeField] private InteractableConfig _interactableConfig;
+        [SerializeField] private CollectableConfig _collectableConfig;
         [Space]
         [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private Animator _animator;
@@ -16,9 +16,9 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         private Vector2 _cashedPosition;
         private Sequence _sequence;
         
-        public bool IsSingleAtTile => _interactableConfig.IsSingleAtTile;
+        public bool IsSingleAtTile => _collectableConfig.IsSingleAtTile;
         
-        public float YOffset => _interactableConfig.YOffset;
+        public float YOffset => _collectableConfig.YOffset;
         
         protected bool IsEnabled { get; set; } = false;
         
@@ -45,11 +45,11 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         {
             _sequence = DOTween.Sequence();
 
-            AppendSequence(_interactableConfig.JumpValue, _interactableConfig.JumpDuration, _interactableConfig.JumpEase);
-            AppendSequence(_interactableConfig.FallValue, _interactableConfig.FallDuration, _interactableConfig.FallEase);
+            AppendSequence(_collectableConfig.JumpValue, _collectableConfig.JumpDuration, _collectableConfig.JumpEase);
+            AppendSequence(_collectableConfig.FallValue, _collectableConfig.FallDuration, _collectableConfig.FallEase);
 
             _sequence.Join(_spriteRenderer
-                .DOFade(0f, _interactableConfig.FallDuration + _interactableConfig.JumpDuration)
+                .DOFade(0f, _collectableConfig.FallDuration + _collectableConfig.JumpDuration)
                 .OnComplete(() => _spriteRenderer.enabled = false));
         }
 
@@ -69,12 +69,12 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _animator = GetComponent<Animator>();
 
-            _spriteRenderer.sprite = _interactableConfig.IdleSprite;
-            _animationName = _interactableConfig.AnimationClipName;
+            _spriteRenderer.sprite = _collectableConfig.IdleSprite;
+            _animationName = _collectableConfig.AnimationClipName;
             
 #if UNITY_EDITOR
-            _animator.runtimeAnimatorController = _interactableConfig.AnimatorController;
-           // name = _interactableConfig.Name;
+            _animator.runtimeAnimatorController = _collectableConfig.AnimatorController;
+            name = _collectableConfig.Name;
 #endif
         }
         

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace _Scripts.Gameplay.Tilemaps.Modifier
 {
-    public class SpeedGem : BaseInteraction
+    public class SpeedGem : BaseCollectable
     {
         [SerializeField] private bool _isIncreaseSpeed;
 

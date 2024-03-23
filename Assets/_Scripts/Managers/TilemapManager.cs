@@ -60,7 +60,7 @@ namespace _Scripts.Managers
         
         public bool TryAddModifiers(Vector2 pos, ITileModifier modifier)
         {
-            if (modifier is BaseInteraction interaction)
+            if (modifier is BaseCollectable interaction)
                 interaction.CashSpawnPosition();
                     
             var tilemapPos = WorldToCell(pos);

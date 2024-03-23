@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8909a0f14b14e99bb907c51380edc73, type: 3}
+  m_Name: Red Gem
+  m_EditorClassIdentifier: 
+  _isSingleAtTile: 0
+  _yOffset: -0.4
+  _idleSprite: {fileID: -7950088176838374372, guid: 96eccfd091df517499eb55b1016e6add, type: 3}
+  _animationClip: {fileID: 7400000, guid: 60a52cc461ad3bc4cb24ca1dda3ec2ec, type: 2}
+  _gameObjectName: Speed Up Trigger
+  _animatorController: {fileID: 9100000, guid: 70b9d608fe514cd45a893df3ea69dec0, type: 2}
+  _jumpValue: 1
+  _fallValue: -2
+  _jumpDuration: 0.25
+  _fallDuration: 0.5
+  _jumpEase: 6
+  _fallEase: 5

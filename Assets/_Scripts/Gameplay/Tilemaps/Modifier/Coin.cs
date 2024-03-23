@@ -8,7 +8,7 @@ using YG;
 namespace _Scripts.Gameplay.Tilemaps.Modifier
 {
     [RequireComponent(typeof(SpriteRenderer), typeof(Animator))]
-    public class Coin : BaseInteraction, IDataPersistence
+    public class Coin : BaseCollectable, IDataPersistence
     {
         [SerializeField] private string _guid;
 

@@ -4,6 +4,7 @@ namespace _Scripts.Scriptables
 {
     public abstract class TileModifierConfig : ScriptableObject
     {
+        [Header("Tile Modifier Settings")]
         [SerializeField] private bool _isSingleAtTile;
         [SerializeField] private float _yOffset;
 

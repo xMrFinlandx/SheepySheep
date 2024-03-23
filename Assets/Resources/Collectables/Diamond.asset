@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2a82bc7bf2f4fb5b7270985e1c02f44, type: 3}
-  m_Name: Blue Gem Config
+  m_Script: {fileID: 11500000, guid: c8909a0f14b14e99bb907c51380edc73, type: 3}
+  m_Name: Diamond
   m_EditorClassIdentifier: 
-  _idleSprite: {fileID: -6103929172131972053, guid: 96eccfd091df517499eb55b1016e6add, type: 3}
+  _isSingleAtTile: 0
   _yOffset: -0.4
+  _idleSprite: {fileID: 7828207187760574628, guid: 96eccfd091df517499eb55b1016e6add, type: 3}
+  _animationClip: {fileID: 7400000, guid: b34de9be074516c48bcf017023f61c1f, type: 2}
+  _gameObjectName: Diamond
+  _animatorController: {fileID: 9100000, guid: 70b9d608fe514cd45a893df3ea69dec0, type: 2}
   _jumpValue: 1
   _fallValue: -2
   _jumpDuration: 0.25
   _fallDuration: 0.5
   _jumpEase: 6
   _fallEase: 5
-  _animationClip: {fileID: 7400000, guid: b77a43d1f6e4cb3449420dd7e2b9ff92, type: 2}
-  _gameObjectName: Dafault Speed Geem
-  _animatorController: {fileID: 9100000, guid: 70b9d608fe514cd45a893df3ea69dec0, type: 2}
