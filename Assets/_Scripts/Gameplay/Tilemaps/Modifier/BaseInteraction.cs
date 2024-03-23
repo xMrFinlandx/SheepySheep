@@ -25,8 +25,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         protected string AnimationName => _animationName;
         
         protected Animator Animator => _animator;
-        
-        public virtual void Restart()
+
+        protected void ResetProgress()
         {
             transform.position = _cashedPosition;
             _spriteRenderer.color = Color.white;
@@ -79,5 +79,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         }
         
         public abstract void Activate(IPlayerController playerController);
+
+        public abstract void Restart();
     }
 }

@@ -37,16 +37,15 @@ namespace _Scripts.Utilities.Visuals
             _tilemap = tilemap;
         }
         
-        public async void Play()
+        public void Play()
         {
             GameStateManager.SetState(GameStateType.Cutscene);
             
-            await Awaitable.WaitForSecondsAsync(0.1f);
-            
             GenerateTiles();
+            
             _spriteRenderers = JoinInteractions();
             _tilemap.gameObject.SetActive(false);
-
+            
             Animate();
         }
 

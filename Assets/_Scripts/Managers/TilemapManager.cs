@@ -31,7 +31,7 @@ namespace _Scripts.Managers
         [Inject]
         private void Construct(Tilemap tilemap) => _tilemap = tilemap;
         
-        public void Init()
+        public void CollectTileModifiers()
         {
             var modifiers = Extensions.FindObjectsByInterface<ITileModifier>();
 

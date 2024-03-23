@@ -24,6 +24,11 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             PlayCollectedAnimation();
         }
 
+        public override void Restart()
+        {
+            ResetProgress();
+        }
+
         private void Start()
         {
             InitializeSpawnPosition();

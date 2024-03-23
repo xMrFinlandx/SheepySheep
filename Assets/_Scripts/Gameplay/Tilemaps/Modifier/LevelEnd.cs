@@ -23,11 +23,16 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         
         public bool IsSingleAtTile => _isSingleAtTile;
         
-        public void Activate(IPlayerController playerController)
+        public async void Activate(IPlayerController playerController)
         {
+            GameStateManager.SetState(GameStateType.Cutscene);
             playerController.SetState<FsmPausedState>();
             playerController.OnLevelCompleted();
             DataPersistentManager.SaveData();
+
+            await Awaitable.WaitForSecondsAsync(3f);
+
+            SceneTransitionsManager.Instance.LoadScene(_sceneToLoad);
         }
 
         public Transform GetTransform() => transform;

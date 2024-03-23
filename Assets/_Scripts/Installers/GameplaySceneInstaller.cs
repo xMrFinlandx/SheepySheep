@@ -2,9 +2,9 @@
 using _Scripts.Player;
 using _Scripts.Player.Controls;
 using _Scripts.Scriptables;
+using _Scripts.Utilities;
+using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Visuals;
-using Cinemachine;
-using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Zenject;
@@ -16,6 +16,7 @@ namespace _Scripts.Installers
         [SerializeField] private InputReader _inputReader;
         [Space]
         [SerializeField] private PlayerController _playerController;
+        [SerializeField] private MoveDirectionType _moveDirection;
         [SerializeField] private Transform _spawnPoint;
         [Space]
         [SerializeField] private ArrowConfig _arrowConfig;
@@ -29,6 +30,7 @@ namespace _Scripts.Installers
         {
             var player = Container.InstantiatePrefabForComponent<PlayerController>(_playerController, _spawnPoint.position, Quaternion.identity, null);
             player.InitSpawnPosition(_spawnPoint.position);
+            player.InitDefaultMoveDirection(_moveDirection.GetDirectionVector());
             
             _inputReader.Init(Camera.main);
             
@@ -41,8 +43,8 @@ namespace _Scripts.Installers
         {
             DataPersistentManager.LoadData();
 
+            TilemapManager.Instance.CollectTileModifiers();
             TilemapAnimatorManager.Instance.Play();
-            TilemapManager.Instance.Init();
         }
     }
 }

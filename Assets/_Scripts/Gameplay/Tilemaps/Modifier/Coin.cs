@@ -34,7 +34,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         public override void Restart()
         {
-            base.Restart();
+            ResetProgress();
 
             if (!IsEnabled)
                 _isCollected = false;
@@ -68,10 +68,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         public void SaveData()
         {
-            if (YandexGame.savesData.collectables.ContainsKey(_guid))
-            {
+            if (YandexGame.savesData.collectables.ContainsKey(_guid)) 
                 YandexGame.savesData.collectables.Remove(_guid);
-            }
 
             YandexGame.savesData.collectables.Add(_guid, _isCollected);
         }
@@ -80,10 +78,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         {
             YandexGame.savesData.collectables.TryGetValue(_guid, out _isCollected);
 
-            if (_isCollected)
-            {
+            if (_isCollected) 
                 gameObject.SetActive(false);
-            }
         }
     }
 }

@@ -2,7 +2,6 @@ using System;
 using _Scripts.Managers;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Classes;
-using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
 using UnityEngine;
@@ -15,7 +14,6 @@ namespace _Scripts.Player
     {
         [SerializeField] private float _speed = 10;
         [SerializeField] private float _speedModifier = 1.8f;
-        [SerializeField] private MoveDirectionType _startMoveDirection;
         [Header("Components")]
         [SerializeField, HideInInspector] private Rigidbody2D _rigidbody;
         [SerializeField, HideInInspector] private Animator _animator;
@@ -25,7 +23,8 @@ namespace _Scripts.Player
         private bool _isStarted = false;
 
         private Wallet _coinsWallet;
-        
+
+        private Vector2 _defaultDirection;
         private Vector2 _spawnPosition;
         private FiniteStateMachine _finiteStateMachine;
         
@@ -33,19 +32,21 @@ namespace _Scripts.Player
         
         public Vector2 MoveDirection { get; private set; }
         public Rigidbody2D Rigidbody => _rigidbody;
+        
+        public void InitDefaultMoveDirection(Vector2 cartesianDirection) => _defaultDirection = cartesianDirection;
 
         public void SetState<T>() where T : FsmState => _finiteStateMachine.SetState<T>();
 
         public void InitSpawnPosition(Vector2 spawnPoint) => _spawnPosition = spawnPoint;
 
-        public void SetMoveDirection(Vector2 direction)
+        public void SetMoveDirection(Vector2 cartesianDirection)
         {
-            MoveDirection = direction.CartesianToIsometric();
+            MoveDirection = cartesianDirection.CartesianToIsometric();
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
 
-            if (direction == Vector2.down)
+            if (cartesianDirection == Vector2.down)
                 _spriteRenderer.flipX = false;
-            else if (direction == Vector2.left) 
+            else if (cartesianDirection == Vector2.left) 
                 _spriteRenderer.flipX = true;
         }
 
@@ -66,13 +67,11 @@ namespace _Scripts.Player
 
         public void Restart()
         {
-            print(_coinsWallet.Buffer);
-            
             _isStarted = false;
             _animator.enabled = false;
             transform.position = _spawnPosition;
             _finiteStateMachine.SetState<FsmIdleState>();
-            SetMoveDirection(_startMoveDirection.GetDirectionVector());
+            SetMoveDirection(_defaultDirection);
             _coinsWallet.ResetBuffer();
         }
 
@@ -91,7 +90,7 @@ namespace _Scripts.Player
             TilemapInteractionsManager.ArrowInstantiatedAction += OnArrowInstantiated;
             ReloadRoomManager.ReloadRoomAction += Restart;
             
-            SetMoveDirection(_startMoveDirection.GetDirectionVector());
+            SetMoveDirection(_defaultDirection);
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
             
             _cameraFollowObject = CameraFollowObject.Instance;
@@ -111,7 +110,7 @@ namespace _Scripts.Player
             _finiteStateMachine.AddState(new FsmMoveState(_finiteStateMachine, this, _animator, "PlayerMove", _speed));
             _finiteStateMachine.AddState(new FsmRunState(_finiteStateMachine, this, _animator, "PlayerMove", _speed, _speedModifier));
             _finiteStateMachine.AddState(new FsmDiedState(_finiteStateMachine, _rigidbody));
-            _finiteStateMachine.AddState(new FsmPausedState(_finiteStateMachine));
+            _finiteStateMachine.AddState(new FsmPausedState(_finiteStateMachine, _rigidbody));
         }
 
         private void OnArrowInstantiated()

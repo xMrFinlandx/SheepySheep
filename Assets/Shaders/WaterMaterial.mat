@@ -18,7 +18,8 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -78,6 +79,8 @@ Material:
     - _FoamSpeed: 0.8
     - _NoiseScale: 1
     - _Pixelization: 24
+    - _QueueControl: 0
+    - _QueueOffset: 0
     - _Scale: 0.3
     - _SpecularScale: 3
     - _SpecularScale1: 3

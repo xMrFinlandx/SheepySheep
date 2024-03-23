@@ -125,7 +125,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 100
   _speedModifier: 1.8
-  _startMoveDirection: 1
   _rigidbody: {fileID: 2149283164902871410}
   _animator: {fileID: 5837502729181627333}
   _spriteRenderer: {fileID: 5617570677311534788}
