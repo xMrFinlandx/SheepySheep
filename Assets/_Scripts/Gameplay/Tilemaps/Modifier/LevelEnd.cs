@@ -1,4 +1,5 @@
-﻿using _Scripts.Managers;
+﻿using System;
+using _Scripts.Managers;
 using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
@@ -10,15 +11,9 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
     public class LevelEnd : MonoBehaviour, ITileModifier
     {
         [SerializeField] private bool _isSingleAtTile = true;
-        [Space] 
-        [SerializeField] private WayType _thisPassage;
         [Space]
-        [SerializeField] private WayType _passageToSpawn;
         [SerializeField] private SceneField _sceneToLoad;
-
-        public WayType ThisPassage => _thisPassage;
-        public WayType PassageToSpawn => _passageToSpawn;
-        public SceneField SceneToLoad => _sceneToLoad;
+        
         public float YOffset => 0;
         
         public bool IsSingleAtTile => _isSingleAtTile;
@@ -34,6 +29,13 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
             SceneTransitionsManager.Instance.LoadScene(_sceneToLoad);
         }
+
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            name = $"Level end (to {_sceneToLoad.SceneName})";
+        }
+#endif
 
         public Transform GetTransform() => transform;
     }

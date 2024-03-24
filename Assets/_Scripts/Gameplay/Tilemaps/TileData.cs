@@ -8,9 +8,9 @@ namespace _Scripts.Gameplay.Tilemaps
     public class TileData : ScriptableObject
     {
         [SerializeField] private TileBase[] _tiles;
-        [SerializeField] private float _speed = 10;
+        [SerializeField] private bool _isIgnoredByOutliner = false;
 
         public IEnumerable<TileBase> Tiles => _tiles;
-        public float Speed => _speed;
+        public bool IsIgnoredByOutliner => _isIgnoredByOutliner;
     }
 }

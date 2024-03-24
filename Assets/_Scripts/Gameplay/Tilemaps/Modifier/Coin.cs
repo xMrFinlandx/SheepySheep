@@ -20,6 +20,22 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             _guid = System.Guid.NewGuid().ToString();
         }
         
+        public void SaveData()
+        {
+            if (YandexGame.savesData.collectables.ContainsKey(_guid)) 
+                YandexGame.savesData.collectables.Remove(_guid);
+
+            YandexGame.savesData.collectables.Add(_guid, _isCollected);
+        }
+
+        public void LoadData()
+        {
+            YandexGame.savesData.collectables.TryGetValue(_guid, out _isCollected);
+
+            if (_isCollected) 
+                gameObject.SetActive(false);
+        }
+        
         public override void Activate(IPlayerController playerController)
         {
             if (IsEnabled || _isCollected)
@@ -57,22 +73,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
                 GenerateGUID();
             
             InitializeComponents();
-        }
-
-        public void SaveData()
-        {
-            if (YandexGame.savesData.collectables.ContainsKey(_guid)) 
-                YandexGame.savesData.collectables.Remove(_guid);
-
-            YandexGame.savesData.collectables.Add(_guid, _isCollected);
-        }
-
-        public void LoadData()
-        {
-            YandexGame.savesData.collectables.TryGetValue(_guid, out _isCollected);
-
-            if (_isCollected) 
-                gameObject.SetActive(false);
         }
     }
 }

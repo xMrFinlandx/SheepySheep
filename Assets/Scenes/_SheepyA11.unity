@@ -330,8 +330,8 @@ MonoBehaviour:
   _thisPassage: 0
   _passageToSpawn: 0
   _sceneToLoad:
-    _sceneAsset: {fileID: 102900000, guid: eaf95d7e05b763e459a0210779952a3e, type: 3}
-    _sceneName: _SheepyA7
+    _sceneAsset: {fileID: 102900000, guid: 289f53b9bdb2adc49ba3abd727da126f, type: 3}
+    _sceneName: _SheepyA12
 --- !u!1 &454887019
 GameObject:
   m_ObjectHideFlags: 0

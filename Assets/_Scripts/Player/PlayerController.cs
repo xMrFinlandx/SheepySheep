@@ -21,11 +21,12 @@ namespace _Scripts.Player
         [SerializeField, HideInInspector] private CameraFollowObject _cameraFollowObject;
         
         private bool _isStarted = false;
-
-        private Wallet _coinsWallet;
-
+        
         private Vector2 _defaultDirection;
         private Vector2 _spawnPosition;
+        
+        private Wallet _coinsWallet;
+        private Sprite _defaultSprite;
         private FiniteStateMachine _finiteStateMachine;
         
         public static Action PlayerInTileCenterAction;
@@ -33,15 +34,23 @@ namespace _Scripts.Player
         public Vector2 MoveDirection { get; private set; }
         public Rigidbody2D Rigidbody => _rigidbody;
         
-        public void InitDefaultMoveDirection(Vector2 cartesianDirection) => _defaultDirection = cartesianDirection;
+        public void Initialize(Vector2 spawnPosition, Vector2 cartesianDirection)
+        {
+            _spawnPosition = spawnPosition;
+            _defaultDirection = cartesianDirection;
+            _defaultSprite = _spriteRenderer.sprite;
+        }
 
         public void SetState<T>() where T : FsmState => _finiteStateMachine.SetState<T>();
-
-        public void InitSpawnPosition(Vector2 spawnPoint) => _spawnPosition = spawnPoint;
-
+        
         public void SetMoveDirection(Vector2 cartesianDirection)
         {
-            MoveDirection = cartesianDirection.CartesianToIsometric();
+            var newDirection = cartesianDirection.CartesianToIsometric();
+
+            if (MoveDirection == newDirection)
+                return;
+            
+            MoveDirection = newDirection;
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
 
             if (cartesianDirection == Vector2.down)
@@ -68,11 +77,13 @@ namespace _Scripts.Player
         public void Restart()
         {
             _isStarted = false;
+            _animator.Play("PlayerMove", 0, 0);
             _animator.enabled = false;
+            _spriteRenderer.sprite = _defaultSprite;
             transform.position = _spawnPosition;
-            _finiteStateMachine.SetState<FsmIdleState>();
             SetMoveDirection(_defaultDirection);
             _coinsWallet.ResetBuffer();
+            _finiteStateMachine.SetState<FsmIdleState>();
         }
 
         private void OnValidate()

@@ -29,8 +29,7 @@ namespace _Scripts.Installers
         public override void InstallBindings()
         {
             var player = Container.InstantiatePrefabForComponent<PlayerController>(_playerController, _spawnPoint.position, Quaternion.identity, null);
-            player.InitSpawnPosition(_spawnPoint.position);
-            player.InitDefaultMoveDirection(_moveDirection.GetDirectionVector());
+            player.Initialize(_spawnPoint.position, _moveDirection.GetDirectionVector());
             
             _inputReader.Init(Camera.main);
             

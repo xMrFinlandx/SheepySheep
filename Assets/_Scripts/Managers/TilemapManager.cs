@@ -38,8 +38,6 @@ namespace _Scripts.Managers
 
             foreach (var modifier in modifiers)
             {
-                print($"{modifier.GetTransform().gameObject.name} has {modifier.AnchorPosition} key");
-                
                 if (!TryAddModifiers(modifier.AnchorPosition, modifier))
                     Debug.LogError($"Tile is already occupied {modifier.GetTransform().gameObject.name}");
             }

@@ -25,20 +25,20 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         protected string AnimationName => _animationName;
         
         protected Animator Animator => _animator;
+        
+        public Transform GetTransform() => transform;
 
+        public void CashSpawnPosition()
+        {
+            _cashedPosition = transform.position;
+        }
+        
         protected void ResetProgress()
         {
             transform.position = _cashedPosition;
             _spriteRenderer.color = Color.white;
             _spriteRenderer.enabled = true;
             IsEnabled = false;
-        }
-
-        public Transform GetTransform() => transform;
-
-        public void CashSpawnPosition()
-        {
-            _cashedPosition = transform.position;
         }
 
         protected void PlayCollectedAnimation()
@@ -53,17 +53,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
                 .OnComplete(() => _spriteRenderer.enabled = false));
         }
 
-        private void AppendSequence(float endValue, float duration, Ease ease)
-        {
-            _sequence.Append(transform.DOLocalMoveY(transform.position.y + endValue, duration).SetEase(ease));
-        }
-
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.magenta;
-            Gizmos.DrawSphere(transform.position + new Vector3(0, YOffset), .1f);
-        }
-
         protected void InitializeComponents()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -76,6 +65,17 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             _animator.runtimeAnimatorController = _collectableConfig.AnimatorController;
             name = _collectableConfig.Name;
 #endif
+        }
+        
+        private void AppendSequence(float endValue, float duration, Ease ease)
+        {
+            _sequence.Append(transform.DOLocalMoveY(transform.position.y + endValue, duration).SetEase(ease));
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawSphere(transform.position + new Vector3(0, YOffset), .1f);
         }
         
         public abstract void Activate(IPlayerController playerController);
