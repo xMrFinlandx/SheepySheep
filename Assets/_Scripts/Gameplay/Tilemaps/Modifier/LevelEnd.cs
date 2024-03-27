@@ -27,7 +27,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
             await Awaitable.WaitForSecondsAsync(3f);
 
-            SceneTransitionsManager.Instance.LoadScene(_sceneToLoad);
+            SceneTransitionsManager.LoadScene(_sceneToLoad);
         }
 
 #if UNITY_EDITOR

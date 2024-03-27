@@ -24,7 +24,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             _arrowConfig = arrowConfig;
             _key = key;
             
-            InitializeShader(_arrowConfig);
+            InitializeShaderController(_arrowConfig);
             SpawnParticleSystem(_arrowConfig);
             Interact();
 

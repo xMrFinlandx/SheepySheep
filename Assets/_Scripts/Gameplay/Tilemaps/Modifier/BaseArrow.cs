@@ -36,7 +36,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         protected void GetSpriteRenderer() => _spriteRenderer ??= GetComponent<SpriteRenderer>();
         
-        protected void InitializeShader(ArrowConfig arrowConfig)
+        protected void InitializeShaderController(ArrowConfig arrowConfig)
         {
             ShaderController = new ShaderController(SpriteRenderer, _vectorProperty, _floatProperty,
                 arrowConfig.StarsSpeed.PropertyName, arrowConfig.BackgroundColor.PropertyName,
