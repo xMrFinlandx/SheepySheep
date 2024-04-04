@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Classes;
+using _Scripts.Utilities.Interfaces;
 using YG;
 
 namespace _Scripts.Managers

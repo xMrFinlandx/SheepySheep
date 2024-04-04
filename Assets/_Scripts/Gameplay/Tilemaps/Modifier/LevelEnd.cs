@@ -1,5 +1,5 @@
-﻿using System;
-using _Scripts.Managers;
+﻿using _Scripts.Managers;
+using _Scripts.Scriptables;
 using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
@@ -8,15 +8,18 @@ using UnityEngine;
 
 namespace _Scripts.Gameplay.Tilemaps.Modifier
 {
+    [RequireComponent(typeof(SpriteRenderer))]
     public class LevelEnd : MonoBehaviour, ITileModifier
     {
-        [SerializeField] private bool _isSingleAtTile = true;
+        [SerializeField] private PlateConfig _plateConfig;
         [Space]
         [SerializeField] private SceneField _sceneToLoad;
+        [Space]
+        [SerializeField] private SpriteRenderer _spriteRenderer;
         
-        public float YOffset => 0;
+        public float YOffset => _plateConfig.YOffset;
         
-        public bool IsSingleAtTile => _isSingleAtTile;
+        public bool IsSingleAtTile => _plateConfig.IsSingleAtTile;
         
         public async void Activate(IPlayerController playerController)
         {
@@ -29,10 +32,13 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
             SceneTransitionsManager.LoadScene(_sceneToLoad);
         }
-
-#if UNITY_EDITOR
+        
         private void OnValidate()
         {
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+            _spriteRenderer.sprite = _plateConfig.IdleSprite;
+            
+#if UNITY_EDITOR
             name = $"Level end (to {_sceneToLoad.SceneName})";
         }
 #endif

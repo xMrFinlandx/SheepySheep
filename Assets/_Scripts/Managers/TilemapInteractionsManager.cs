@@ -4,6 +4,7 @@ using _Scripts.Gameplay.Tilemaps.Modifier;
 using _Scripts.Player.Controls;
 using _Scripts.Scriptables;
 using _Scripts.Utilities;
+using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
 using NaughtyAttributes;

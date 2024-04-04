@@ -1,4 +1,4 @@
-﻿namespace _Scripts.Utilities.Classes
+﻿namespace _Scripts.Utilities.Interfaces
 {
     public interface IDataPersistence
     {

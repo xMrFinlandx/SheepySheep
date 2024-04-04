@@ -10,7 +10,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
     [RequireComponent(typeof(Animator), typeof(SpriteRenderer))]
     public class Plate : MonoBehaviour, ITileModifier
     {
-        [SerializeField] private PlateConfig _plateConfig;
+        [SerializeField] private PressPlateConfig _plateConfig;
         [Space]
         [SerializeField] private Animator _animator;
         [SerializeField] private SpriteRenderer _spriteRenderer;

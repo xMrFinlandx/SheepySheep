@@ -18,10 +18,10 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         public override float YOffset => _arrowConfig.YOffset;
 
         private MoveDirectionType _currentDirection;
-
+        
         [Inject]
         private void Construct(ArrowConfig arrowConfig)
-        {
+        {   
             _arrowConfig = arrowConfig;
         }
 

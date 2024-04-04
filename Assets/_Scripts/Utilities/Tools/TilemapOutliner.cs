@@ -10,6 +10,8 @@ namespace _Scripts.Utilities.Tools
 {
     public class TilemapOutliner : MonoBehaviour
     {
+#if UNITY_EDITOR
+        
         [SerializeField] private Tilemap _sourceTilemap;
         [SerializeField] private Tilemap _outline;
         [Space] 
@@ -126,5 +128,7 @@ namespace _Scripts.Utilities.Tools
 
             _outline.SetTile(neighborPosition + _offset, data.Tile);
         }
+        
+#endif
     }
 }

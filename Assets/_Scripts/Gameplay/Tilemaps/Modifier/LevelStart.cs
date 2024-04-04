@@ -1,39 +1,23 @@
-﻿using System;
-using _Scripts.Managers;
-using _Scripts.Scriptables;
+﻿using _Scripts.Scriptables;
 using _Scripts.Utilities.Interfaces;
 using UnityEngine;
 
 namespace _Scripts.Gameplay.Tilemaps.Modifier
 {
     [RequireComponent(typeof(SpriteRenderer))]
-    public class ArrowRotator : MonoBehaviour, ITileModifier, IRestartable
+    public class LevelStart : MonoBehaviour, ITileModifier
     {
         [SerializeField] private PlateConfig _plateConfig;
         [SerializeField] private SpriteRenderer _spriteRenderer;
         
-        private bool _enabled = true;
-
-        public static Action RotateArrowAction;
-        
         public float YOffset => _plateConfig.YOffset;
         public bool IsSingleAtTile => _plateConfig.IsSingleAtTile;
         
-        public Transform GetTransform() => transform;
-        
         public void Activate(IPlayerController playerController)
         {
-            if (!_enabled)
-                return;
+        }
 
-            _enabled = false;
-            RotateArrowAction?.Invoke();
-        }
-        
-        public void Restart()
-        {
-            _enabled = true;
-        }
+        public Transform GetTransform() => transform;
 
         private void OnValidate()
         {
@@ -43,16 +27,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 #if UNITY_EDITOR
             name = _plateConfig.Name;
 #endif
-        }
-
-        private void Start()
-        {
-            ReloadRoomManager.ReloadRoomAction += Restart;
-        }
-
-        private void OnDestroy()
-        {
-            ReloadRoomManager.ReloadRoomAction -= Restart;
         }
         
         private void OnDrawGizmos()
