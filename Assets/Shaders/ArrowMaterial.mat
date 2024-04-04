@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ArrowMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 0522d266a458a79469e056aa7fe8ef65, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 4256b5ba074a21a479d5da708530e15c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -25,14 +25,6 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 85aa7c00d141709479cb1b01d73db195, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainText:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -50,18 +42,33 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Degree: 0
+    - _FresnelPower: 6
+    - _GradienScale: 1
+    - _NoiseScale: 10
     - _Pixelization: 24
-    - _PlasmaIntensity: 6.08
-    - _PlasmaScale: 0.16
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Speed: 2.09
+    - _ScrollSpeed: 2
+    - _ShadowScale: 7
+    - _ShadowSpeedModifier: 0.5
+    - _ShadowStrength: 0.4
+    - _ShineCoefficient: 0
+    - _StarsCount: 0.45
+    - _StarsStrength: 20
+    - _StarsTolerance: 0.5
     m_Colors:
-    - _Color: {r: 0.48584902, g: 0.6526383, b: 1, a: 1}
-    - _Speed: {r: 0.2, g: -0.3, b: 0, a: 0}
+    - _Color1: {r: 0.54785985, g: 0, b: 0.764151, a: 1}
+    - _Color2: {r: 0, g: 0.24001949, b: 0.7169812, a: 1}
+    - _Direction: {r: -1, g: 0.5, b: 0, a: 0}
+    - _InnerColor: {r: 0.5053053, g: 0, b: 1, a: 1}
+    - _MainColor: {r: 0.5058824, g: 0, b: 1, a: 1}
+    - _OuterColor: {r: 1251.0447, g: 1251.0447, b: 1251.0447, a: 1}
+    - _ShineColor: {r: 5.9921565, g: 5.9921565, b: 5.9921565, a: 1}
+    - _Speed: {r: -8, g: 4.8, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &2956877750336111253
+--- !u!114 &6204498434050970129
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

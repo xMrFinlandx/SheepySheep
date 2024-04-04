@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 0bc12371b429af24f9b7a26a74278470, type: 2}
+  _moveDirection: 3
   _spriteRenderer: {fileID: 62406300}
 --- !u!1 &182588136
 GameObject:
@@ -7638,8 +7639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputReader: {fileID: 11400000, guid: 06f4aec396e8f8543a755b7b268bdc79, type: 2}
   _playerController: {fileID: 2728097499919781777, guid: b05bcae919ef9b04588e32bf282301b1, type: 3}
-  _moveDirection: 3
-  _spawnPoint: {fileID: 62406299}
+  _levelStart: {fileID: 62406301}
   _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
   _tilemap: {fileID: 1369917676}
 --- !u!4 &1866376284

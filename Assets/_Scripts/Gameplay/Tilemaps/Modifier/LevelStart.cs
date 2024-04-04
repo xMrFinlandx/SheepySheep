@@ -1,4 +1,6 @@
 ﻿using _Scripts.Scriptables;
+using _Scripts.Utilities;
+using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
 using UnityEngine;
 
@@ -8,7 +10,9 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
     public class LevelStart : MonoBehaviour, ITileModifier
     {
         [SerializeField] private PlateConfig _plateConfig;
-        [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private MoveDirectionType _moveDirection;
+        
+        [SerializeField, HideInInspector] private SpriteRenderer _spriteRenderer;
         
         public float YOffset => _plateConfig.YOffset;
         public bool IsSingleAtTile => _plateConfig.IsSingleAtTile;
@@ -19,6 +23,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         public Transform GetTransform() => transform;
 
+        public Vector2 GetDirection() => _moveDirection.GetDirectionVector();
+        
         private void OnValidate()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();

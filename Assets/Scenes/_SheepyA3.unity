@@ -166,9 +166,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collectableConfig: {fileID: 11400000, guid: 16eb7e5b72b470a4bb8e5cee0d8a20a8, type: 2}
-  _spriteRenderer: {fileID: 58108243}
   _animator: {fileID: 58108242}
   _animationName: YellowCoin
+  _spriteRenderer: {fileID: 58108243}
   _guid: 14a71b65-630d-4ab8-971f-1fd26dd37c37
 --- !u!95 &58108242
 Animator:
@@ -378,9 +378,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spikeConfig: {fileID: 11400000, guid: a4009d9ea30d52b4e9deb467bbda119c, type: 2}
   _animator: {fileID: 340733948}
-  _spriteRenderer: {fileID: 340733949}
   _animationName: GraySpike
   _triggerId: 2
+  _spriteRenderer: {fileID: 340733949}
 --- !u!95 &340733948
 Animator:
   serializedVersion: 7
@@ -5566,9 +5566,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 324fb7045d866044da55b61d4964d5db, type: 2}
   _animator: {fileID: 461332774}
-  _spriteRenderer: {fileID: 461332773}
   _pressAnimationName: GrayPlate
   _callId: 2
+  _spriteRenderer: {fileID: 461332773}
 --- !u!212 &461332773
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5911,9 +5911,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spikeConfig: {fileID: 11400000, guid: d0c37b4049e3b4c4486a64e1f00ea9cd, type: 2}
   _animator: {fileID: 1190312672}
-  _spriteRenderer: {fileID: 1190312673}
   _animationName: GoldenSpike
   _triggerId: 1
+  _spriteRenderer: {fileID: 1190312673}
 --- !u!95 &1190312672
 Animator:
   serializedVersion: 7
@@ -6949,9 +6949,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 324fb7045d866044da55b61d4964d5db, type: 2}
   _animator: {fileID: 1512313644}
-  _spriteRenderer: {fileID: 1512313643}
   _pressAnimationName: GrayPlate
   _callId: 2
+  _spriteRenderer: {fileID: 1512313643}
 --- !u!212 &1512313643
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7076,9 +7076,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: ee43300cf0c752e47be0ed5ae4b3554f, type: 2}
   _animator: {fileID: 1570834263}
-  _spriteRenderer: {fileID: 1570834262}
   _pressAnimationName: GoldenPlate
   _callId: 1
+  _spriteRenderer: {fileID: 1570834262}
 --- !u!212 &1570834262
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7398,6 +7398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 0bc12371b429af24f9b7a26a74278470, type: 2}
+  _moveDirection: 2
   _spriteRenderer: {fileID: 1743270910}
 --- !u!212 &1743270910
 SpriteRenderer:
@@ -7531,8 +7532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputReader: {fileID: 11400000, guid: 06f4aec396e8f8543a755b7b268bdc79, type: 2}
   _playerController: {fileID: 2728097499919781777, guid: b05bcae919ef9b04588e32bf282301b1, type: 3}
-  _moveDirection: 2
-  _spawnPoint: {fileID: 1743270908}
+  _levelStart: {fileID: 1743270909}
   _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
   _tilemap: {fileID: 1369917676}
 --- !u!4 &1866376284
@@ -7676,9 +7676,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spikeConfig: {fileID: 11400000, guid: d0c37b4049e3b4c4486a64e1f00ea9cd, type: 2}
   _animator: {fileID: 1919930566}
-  _spriteRenderer: {fileID: 1919930567}
   _animationName: GoldenSpike
   _triggerId: 1
+  _spriteRenderer: {fileID: 1919930567}
 --- !u!95 &1919930566
 Animator:
   serializedVersion: 7

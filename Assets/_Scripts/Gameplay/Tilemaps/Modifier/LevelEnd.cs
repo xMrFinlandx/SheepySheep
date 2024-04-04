@@ -14,8 +14,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         [SerializeField] private PlateConfig _plateConfig;
         [Space]
         [SerializeField] private SceneField _sceneToLoad;
-        [Space]
-        [SerializeField] private SpriteRenderer _spriteRenderer;
+        
+        [SerializeField, HideInInspector]  private SpriteRenderer _spriteRenderer;
         
         public float YOffset => _plateConfig.YOffset;
         

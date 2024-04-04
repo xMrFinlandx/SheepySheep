@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 0bc12371b429af24f9b7a26a74278470, type: 2}
+  _moveDirection: 1
   _spriteRenderer: {fileID: 62406300}
 --- !u!1 &271639903
 GameObject:
@@ -6659,9 +6660,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collectableConfig: {fileID: 11400000, guid: 16eb7e5b72b470a4bb8e5cee0d8a20a8, type: 2}
-  _spriteRenderer: {fileID: 1590695557}
   _animator: {fileID: 1590695556}
   _animationName: YellowCoin
+  _spriteRenderer: {fileID: 1590695557}
   _guid: acfd09e0-5d6f-44fc-9c68-cf50e36d6a1c
 --- !u!95 &1590695556
 Animator:
@@ -7014,8 +7015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputReader: {fileID: 11400000, guid: 06f4aec396e8f8543a755b7b268bdc79, type: 2}
   _playerController: {fileID: 2728097499919781777, guid: b05bcae919ef9b04588e32bf282301b1, type: 3}
-  _moveDirection: 1
-  _spawnPoint: {fileID: 62406299}
+  _levelStart: {fileID: 62406301}
   _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
   _tilemap: {fileID: 1369917676}
 --- !u!4 &1866376284

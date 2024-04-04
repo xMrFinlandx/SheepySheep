@@ -9,9 +9,10 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
     {
         [SerializeField] private CollectableConfig _collectableConfig;
         [Space]
-        [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private Animator _animator;
         [SerializeField] private string _animationName;
+        
+        [SerializeField, HideInInspector]  private SpriteRenderer _spriteRenderer;
         
         private Vector2 _cashedPosition;
         private Sequence _sequence;

@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 0bc12371b429af24f9b7a26a74278470, type: 2}
+  _moveDirection: 0
   _spriteRenderer: {fileID: 62406300}
 --- !u!1 &142507539
 GameObject:
@@ -10178,7 +10179,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 841d4a6ba88466e4c9c115acad9a3f66, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10356,9 +10357,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 324fb7045d866044da55b61d4964d5db, type: 2}
   _animator: {fileID: 726384709}
-  _spriteRenderer: {fileID: 726384708}
   _pressAnimationName: GrayPlate
   _callId: 2
+  _spriteRenderer: {fileID: 726384708}
 --- !u!212 &726384708
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11718,10 +11719,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.2605469
+    x: 0
     y: 0
-    width: 0.24097224
-    height: 0.24097222
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -11851,9 +11852,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spikeConfig: {fileID: 11400000, guid: a4009d9ea30d52b4e9deb467bbda119c, type: 2}
   _animator: {fileID: 1855515452}
-  _spriteRenderer: {fileID: 1855515453}
   _animationName: GraySpike
   _triggerId: 2
+  _spriteRenderer: {fileID: 1855515453}
 --- !u!95 &1855515452
 Animator:
   serializedVersion: 7
@@ -11962,8 +11963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputReader: {fileID: 11400000, guid: 06f4aec396e8f8543a755b7b268bdc79, type: 2}
   _playerController: {fileID: 2728097499919781777, guid: b05bcae919ef9b04588e32bf282301b1, type: 3}
-  _moveDirection: 0
-  _spawnPoint: {fileID: 62406299}
+  _levelStart: {fileID: 62406301}
   _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
   _tilemap: {fileID: 1369917676}
 --- !u!4 &1866376284

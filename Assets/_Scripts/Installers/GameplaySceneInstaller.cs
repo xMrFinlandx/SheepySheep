@@ -1,10 +1,12 @@
-﻿using _Scripts.Managers;
+﻿using _Scripts.Gameplay.Tilemaps.Modifier;
+using _Scripts.Managers;
 using _Scripts.Player;
 using _Scripts.Player.Controls;
 using _Scripts.Scriptables;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Visuals;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Zenject;
@@ -16,8 +18,7 @@ namespace _Scripts.Installers
         [SerializeField] private InputReader _inputReader;
         [Space]
         [SerializeField] private PlayerController _playerController;
-        [SerializeField] private MoveDirectionType _moveDirection;
-        [SerializeField] private Transform _spawnPoint;
+        [SerializeField] private LevelStart _levelStart;
         [Space]
         [SerializeField] private ArrowConfig _arrowConfig;
         [SerializeField] private Tilemap _tilemap;
@@ -25,11 +26,17 @@ namespace _Scripts.Installers
 #if UNITY_EDITOR
         public Tilemap Tilemap => _tilemap;
 #endif
-        
+
+        [Button]
+        private void GetLevelStart()
+        {
+            _levelStart = FindAnyObjectByType<LevelStart>();
+        }
+
         public override void InstallBindings()
         {
-            var player = Container.InstantiatePrefabForComponent<PlayerController>(_playerController, _spawnPoint.position, Quaternion.identity, null);
-            player.Initialize(_spawnPoint.position, _moveDirection.GetDirectionVector());
+            var player = Container.InstantiatePrefabForComponent<PlayerController>(_playerController, _levelStart.transform.position, Quaternion.identity, null);
+            player.Initialize(_levelStart.transform.position, _levelStart.GetDirection());
             
             _inputReader.Init(Camera.main);
             

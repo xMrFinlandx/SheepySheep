@@ -13,9 +13,10 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         [SerializeField] private SpikeConfig _spikeConfig;
         [Space]
         [SerializeField] private Animator _animator;
-        [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private string _animationName;
         [SerializeField] private int _triggerId;
+        
+        [SerializeField, HideInInspector]  private SpriteRenderer _spriteRenderer;
 
         private bool _enabled = true;
         

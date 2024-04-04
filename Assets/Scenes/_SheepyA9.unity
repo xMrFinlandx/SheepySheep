@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 0bc12371b429af24f9b7a26a74278470, type: 2}
+  _moveDirection: 3
   _spriteRenderer: {fileID: 62406300}
 --- !u!1 &250404472
 GameObject:
@@ -9577,9 +9578,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collectableConfig: {fileID: 11400000, guid: 16eb7e5b72b470a4bb8e5cee0d8a20a8, type: 2}
-  _spriteRenderer: {fileID: 678477253}
   _animator: {fileID: 678477252}
   _animationName: YellowCoin
+  _spriteRenderer: {fileID: 678477253}
   _guid: 92698b12-97d8-4919-a4d3-ce5d50d79817
 --- !u!95 &678477252
 Animator:
@@ -9789,9 +9790,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spikeConfig: {fileID: 11400000, guid: a4009d9ea30d52b4e9deb467bbda119c, type: 2}
   _animator: {fileID: 791159325}
-  _spriteRenderer: {fileID: 791159326}
   _animationName: GraySpike
   _triggerId: 2
+  _spriteRenderer: {fileID: 791159326}
 --- !u!95 &791159325
 Animator:
   serializedVersion: 7
@@ -11311,9 +11312,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 324fb7045d866044da55b61d4964d5db, type: 2}
   _animator: {fileID: 1402094124}
-  _spriteRenderer: {fileID: 1402094123}
   _pressAnimationName: GrayPlate
   _callId: 2
+  _spriteRenderer: {fileID: 1402094123}
 --- !u!212 &1402094123
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12090,8 +12091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputReader: {fileID: 11400000, guid: 06f4aec396e8f8543a755b7b268bdc79, type: 2}
   _playerController: {fileID: 2728097499919781777, guid: b05bcae919ef9b04588e32bf282301b1, type: 3}
-  _moveDirection: 3
-  _spawnPoint: {fileID: 62406299}
+  _levelStart: {fileID: 62406301}
   _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
   _tilemap: {fileID: 1369917676}
 --- !u!4 &1866376284

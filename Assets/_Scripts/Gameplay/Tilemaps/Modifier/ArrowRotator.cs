@@ -10,7 +10,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
     public class ArrowRotator : MonoBehaviour, ITileModifier, IRestartable
     {
         [SerializeField] private PlateConfig _plateConfig;
-        [SerializeField] private SpriteRenderer _spriteRenderer;
+        
+        [SerializeField, HideInInspector] private SpriteRenderer _spriteRenderer;
         
         private bool _enabled = true;
 

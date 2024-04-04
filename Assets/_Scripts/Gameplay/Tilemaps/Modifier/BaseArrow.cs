@@ -10,7 +10,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 {
     public abstract class BaseArrow : MonoBehaviour, ITileModifier
     {
-        [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField, HideInInspector]  private SpriteRenderer _spriteRenderer;
         
         [Foldout("Shader Settings")]
         [SerializeField] private string _vectorProperty = "_Direction";

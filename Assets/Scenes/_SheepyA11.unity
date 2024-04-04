@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 0bc12371b429af24f9b7a26a74278470, type: 2}
+  _moveDirection: 0
   _spriteRenderer: {fileID: 62406300}
 --- !u!1 &224678334
 GameObject:
@@ -8521,9 +8522,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collectableConfig: {fileID: 11400000, guid: 16eb7e5b72b470a4bb8e5cee0d8a20a8, type: 2}
-  _spriteRenderer: {fileID: 866268664}
   _animator: {fileID: 866268663}
   _animationName: YellowCoin
+  _spriteRenderer: {fileID: 866268664}
   _guid: 71d42685-0683-49a9-a0d8-b40519b4fed4
 --- !u!95 &866268663
 Animator:
@@ -8836,9 +8837,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 324fb7045d866044da55b61d4964d5db, type: 2}
   _animator: {fileID: 1132241942}
-  _spriteRenderer: {fileID: 1132241941}
   _pressAnimationName: GrayPlate
   _callId: 2
+  _spriteRenderer: {fileID: 1132241941}
 --- !u!212 &1132241941
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10125,9 +10126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spikeConfig: {fileID: 11400000, guid: a4009d9ea30d52b4e9deb467bbda119c, type: 2}
   _animator: {fileID: 1504298681}
-  _spriteRenderer: {fileID: 1504298680}
   _animationName: GraySpike
   _triggerId: 2
+  _spriteRenderer: {fileID: 1504298680}
 --- !u!212 &1504298680
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10309,9 +10310,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 324fb7045d866044da55b61d4964d5db, type: 2}
   _animator: {fileID: 1527035926}
-  _spriteRenderer: {fileID: 1527035925}
   _pressAnimationName: GrayPlate
   _callId: 2
+  _spriteRenderer: {fileID: 1527035925}
 --- !u!212 &1527035925
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10839,9 +10840,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 324fb7045d866044da55b61d4964d5db, type: 2}
   _animator: {fileID: 1860878529}
-  _spriteRenderer: {fileID: 1860878528}
   _pressAnimationName: GrayPlate
   _callId: 2
+  _spriteRenderer: {fileID: 1860878528}
 --- !u!212 &1860878528
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10950,8 +10951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputReader: {fileID: 11400000, guid: 06f4aec396e8f8543a755b7b268bdc79, type: 2}
   _playerController: {fileID: 2728097499919781777, guid: b05bcae919ef9b04588e32bf282301b1, type: 3}
-  _moveDirection: 0
-  _spawnPoint: {fileID: 62406299}
+  _levelStart: {fileID: 62406301}
   _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
   _tilemap: {fileID: 1369917676}
 --- !u!4 &1866376284

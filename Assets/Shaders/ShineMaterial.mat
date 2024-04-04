@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SpaceShader
-  m_Shader: {fileID: -6465566751694194690, guid: 4256b5ba074a21a479d5da708530e15c, type: 3}
+  m_Name: ShineMaterial
+  m_Shader: {fileID: -6465566751694194690, guid: 516758b378295f6429e068564a462f14, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -18,14 +18,17 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
+  disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShineMask:
+        m_Texture: {fileID: 2800000, guid: 4adaa1a2965fe594c8155135dbc1e2eb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -42,33 +45,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Degree: 0
-    - _FresnelPower: 6
-    - _GradienScale: 1
-    - _NoiseScale: 10
-    - _Pixelization: 24
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    - _ScrollSpeed: 2
-    - _ShadowScale: 7
-    - _ShadowSpeedModifier: 0.5
-    - _ShadowStrength: 0.4
-    - _ShineCoefficient: 0
-    - _StarsCount: 0.45
-    - _StarsStrength: 20
-    - _StarsTolerance: 0.5
+    - _OverrideProgressive: 0.116
+    - _OverrideProgressiveMultiplier: 0.1
+    - _Power: 1
+    - _Progressive: 0.383
+    - _ShineProgressive: 0
     m_Colors:
-    - _Color1: {r: 0.54785985, g: 0, b: 0.764151, a: 1}
-    - _Color2: {r: 0, g: 0.24001949, b: 0.7169812, a: 1}
-    - _Direction: {r: -1, g: 0.5, b: 0, a: 0}
-    - _InnerColor: {r: 0.5053053, g: 0, b: 1, a: 1}
-    - _MainColor: {r: 0.5058824, g: 0, b: 1, a: 1}
-    - _OuterColor: {r: 1251.0447, g: 1251.0447, b: 1251.0447, a: 1}
-    - _ShineColor: {r: 5.9921565, g: 5.9921565, b: 5.9921565, a: 1}
-    - _Speed: {r: -8, g: 4.8, b: 0, a: 0}
+    - _Color: {r: 0.99999994, g: 0.98131824, b: 0.7971698, a: 1}
+    - _OverrideColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShineColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &6204498434050970129
+--- !u!114 &4471155853824202527
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

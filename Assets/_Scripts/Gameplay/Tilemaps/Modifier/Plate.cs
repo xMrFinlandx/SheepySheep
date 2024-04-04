@@ -13,10 +13,11 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         [SerializeField] private PressPlateConfig _plateConfig;
         [Space]
         [SerializeField] private Animator _animator;
-        [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private string _pressAnimationName;
         [SerializeField] private int _callId;
 
+        [SerializeField, HideInInspector]  private SpriteRenderer _spriteRenderer;
+        
         public static Action<int> TriggerEnabledAction;
         
         private bool _isEnabled = false;

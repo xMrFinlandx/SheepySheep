@@ -1,5 +1,5 @@
-﻿using _Scripts.Managers;
-using _Scripts.Utilities.Classes;
+﻿using System;
+using _Scripts.Managers;
 using _Scripts.Utilities.Interfaces;
 using NaughtyAttributes;
 using UnityEngine;
@@ -17,7 +17,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         [Button("New Guid")]
         private void GenerateGUID()
         {
-            _guid = System.Guid.NewGuid().ToString();
+            _guid = Guid.NewGuid().ToString();
         }
         
         public void SaveData()
