@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using _Scripts.Utilities.Enums;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace _Scripts.Utilities
 {
@@ -64,6 +66,18 @@ namespace _Scripts.Utilities
         public static Vector3 IncreaseVectorValue(this Vector3 vector, float x, float y, float z = 0)
         {
             return new Vector3(vector.x + x, vector.y + y, vector.z + z);
+        }
+        
+        public static float3[] ToFloat3Array(this Vector2[] vectors)
+        {
+            float3[] float3Array = new float3[vectors.Length];
+
+            for (int i = 0; i < vectors.Length; i++)
+            {
+                float3Array[i] = new float3(vectors[i].x, vectors[i].y, 0);
+            }
+
+            return float3Array;
         }
     }
 }

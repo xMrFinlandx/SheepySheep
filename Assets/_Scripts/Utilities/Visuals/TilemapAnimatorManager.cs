@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using _Scripts.Managers;
 using _Scripts.Utilities.Classes;
@@ -24,6 +25,8 @@ namespace _Scripts.Utilities.Visuals
         [SerializeField] private float _spriteCenterOffset = .5f;
         [SerializeField] private WaterShaderController _foamController;
 
+        public static Action AnimationEndedAction;
+        
         private const int _FOAM_DURATION = 4;
         
         private readonly Color _transparentColor = new(1, 1, 1, 0);
@@ -72,6 +75,7 @@ namespace _Scripts.Utilities.Visuals
             transform.KillChildren();
             _spriteRenderers.Clear();
             GameStateManager.SetState(GameStateType.Gameplay);
+            AnimationEndedAction?.Invoke();
         }
 
         private void Animate()

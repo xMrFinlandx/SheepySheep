@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102dd34f912e4718a1775646cd3ce030, type: 3}
+  m_Name: SIngle Teleport Config
+  m_EditorClassIdentifier: 
+  _isSingleAtTile: 1
+  _yOffset: 0
+  _idleSprite: {fileID: -3128108189421642463, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
+  _animationClip: {fileID: 0}
+  _gameObjectName: Teleport
+  _animatorController: {fileID: 0}
+  _bezierControlPointHeight: 5
+  _pathFollower: {fileID: 3980368539634230096, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
+  _splineContainer: {fileID: 3531476904846446889, guid: 806e26c032bdb6149a2347e30bfa9d42, type: 3}
+  _speed: 5
