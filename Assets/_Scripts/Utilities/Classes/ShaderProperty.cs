@@ -7,25 +7,27 @@ namespace _Scripts.Utilities.Classes
     [Serializable]
     public class ShaderProperty<T> 
     {
-        [SerializeField] private T _value;
         [SerializeField] private string _propertyName;
-
-        public T Value => _value;
+        [SerializeField] private T[] _values;
+        
         public string PropertyName => _propertyName;
+        public T[] Values => _values;
 
         public ShaderProperty()
         {
         }
 
-        public ShaderProperty(T value)
+        public ShaderProperty(string propertyName)
         {
-            _value = value;
-        }
-
-        public ShaderProperty(T value, string propertyName)
-        {
-            _value = value;
             _propertyName = propertyName;
         }
+
+        public ShaderProperty(string propertyName, params T[] values)
+        {
+            _values = values;
+            _propertyName = propertyName;
+        }
+
+        public static implicit operator string(ShaderProperty<T> shaderProperty) => shaderProperty.PropertyName;
     }
 }

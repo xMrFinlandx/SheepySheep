@@ -25,7 +25,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             _key = key;
             
             InitializeShaderController(_arrowConfig);
-            SpawnParticleSystem(_arrowConfig);
+            SpawnParticleSystem(_arrowConfig.ParticleSystemPrefab);
             Interact();
 
             ReloadRoomManager.ReloadRoomAction += Restart;

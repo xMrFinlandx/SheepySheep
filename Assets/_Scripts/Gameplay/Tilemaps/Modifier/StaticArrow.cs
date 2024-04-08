@@ -48,7 +48,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             _currentDirection = _direction;
             
             InitializeShaderController(_arrowConfig);
-            SpawnParticleSystem(_arrowConfig);
+            SpawnParticleSystem(_arrowConfig.ParticleSystemPrefab);
             
             ApplyData(_direction);
         }

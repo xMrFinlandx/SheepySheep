@@ -88,15 +88,19 @@ MonoBehaviour:
     _moveDirection: 1
   - _sprite: {fileID: 67926103340967526, guid: 85aa7c00d141709479cb1b01d73db195, type: 3}
     _moveDirection: 2
-  _firstColor:
-    _value: {r: 0.54901963, g: 0, b: 0.7647059, a: 1}
-    _propertyName: _Color1
-  _secondColor:
-    _value: {r: 0, g: 0.23921569, b: 0.7176471, a: 1}
-    _propertyName: _Color2
-  _backgroundColor:
-    _value: {r: 0.5058824, g: 0, b: 1, a: 1}
-    _propertyName: _MainColor
   _starsSpeed:
-    _value: 2
     _propertyName: _ScrollSpeed
+    _values:
+    - 2
+  _firstColorProperty:
+    _propertyName: _Color1
+    _values:
+    - {r: 0.54901963, g: 0, b: 0.7647059, a: 1}
+  _secondColorProperty:
+    _propertyName: _Color2
+    _values:
+    - {r: 0, g: 0.23921569, b: 0.7176471, a: 1}
+  _backgroundColorProperty:
+    _propertyName: _MainColor
+    _values:
+    - {r: 0.5058824, g: 0, b: 1, a: 1}

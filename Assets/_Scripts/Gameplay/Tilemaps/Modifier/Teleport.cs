@@ -34,12 +34,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         
         private float _controlPointHeight => _teleportConfig.BezierControlPointHeight;
         
-        public float YOffset => _teleportConfig.YOffset;
-        public bool IsSingleAtTile => _teleportConfig.IsSingleAtTile;
-
-        public bool IsMainTeleport => _isMainTeleport;
-
-        public SplineFollow PlayerSplineFollow
+        private SplineFollow _pairPlayerSplineFollow
         {
             get => _playerSplineFollow;
             set
@@ -49,15 +44,19 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             }
         }
 
-        public bool IsEnabled
+        private bool _isPairEnabled
         {
             get => _isEnabled;
-            private set
+            set
             {
                 _isEnabled = value;
                 _linkedTeleport._isEnabled = value;
             }
         }
+        
+        public float YOffset => _teleportConfig.YOffset;
+        public bool IsSingleAtTile => _teleportConfig.IsSingleAtTile;
+        public bool IsMainTeleport => _isMainTeleport;
         
         [Button]
         private void SetLink()
@@ -72,10 +71,10 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         public void Activate(IPlayerController playerController)
         {
-            if (IsEnabled)
+            if (_isPairEnabled)
                 return;
 
-            IsEnabled = true;
+            _isPairEnabled = true;
 
             playerController.SetState<FsmIdleState>();
             
@@ -86,8 +85,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
                 .OnComplete(() =>
                 {
                     playerController.GetTransform().position = _linkedTeleport.GetTransform().position;
-                    PlayerSplineFollow.InitStartPositionAndSpeed(4, _isMainTeleport);
-                    PlayerSplineFollow.Play();
+                    _pairPlayerSplineFollow.InitStartPositionAndSpeed(4, _isMainTeleport);
+                    _pairPlayerSplineFollow.Play();
 
                     StartCoroutine(Wait(_playerSplineFollow.GetLoopTime(), playerController));
                 }
@@ -98,7 +97,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         public void Restart()
         {
-            IsEnabled = false;
+            _isPairEnabled = false;
         }
 
         private void OnValidate()
@@ -147,9 +146,9 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             _vertexPath = new VertexPath(_bezierPath, transform);
 
             _splineFollow = Instantiate(_teleportConfig.PathFollower, mainTeleportPosition, Quaternion.identity);
-            PlayerSplineFollow = Instantiate(_teleportConfig.PlayerPathFollower, mainTeleportPosition, Quaternion.identity);
+            _pairPlayerSplineFollow = Instantiate(_teleportConfig.PlayerPathFollower, mainTeleportPosition, Quaternion.identity);
             
-            PlayerSplineFollow.Init(_vertexPath);
+            _pairPlayerSplineFollow.Init(_vertexPath);
             
             _splineFollow.Init(_vertexPath);
             _splineFollow.InitStartPositionAndSpeed(_teleportConfig.Speed);

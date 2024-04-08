@@ -3,7 +3,6 @@ using _Scripts.Utilities;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.Visuals;
 using DG.Tweening;
-using NaughtyAttributes;
 using UnityEngine;
 
 namespace _Scripts.Gameplay.Tilemaps.Modifier
@@ -11,20 +10,13 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
     public abstract class BaseArrow : MonoBehaviour, ITileModifier
     {
         [SerializeField, HideInInspector]  private SpriteRenderer _spriteRenderer;
-        
-        [Foldout("Shader Settings")]
-        [SerializeField] private string _vectorProperty = "_Direction";
-        [Foldout("Shader Settings")]
-        [SerializeField] private string _floatProperty = "_ShineCoefficient";
-        [Foldout("Shader Settings")]
-        [SerializeField] private float _fadeInDuration = .2f;
-        [Foldout("Shader Settings")]
-        [SerializeField] private float _fadeOutDuration = .4f;
-        [Foldout("Shader Settings")]
-        [SerializeField] private Ease _fadeOutEase = Ease.OutExpo;
 
         private const float _START_SHINE_VALUE = 0;
         private const float _END_SHINE_VALUE = 1;
+
+        private float _fadeInDuration;
+        private float _fadeOutDuration;
+        private Ease _fadeOutEase;
 
         public abstract bool IsSingleAtTile { get; }
         public abstract float YOffset { get; }
@@ -38,19 +30,24 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         
         protected void InitializeShaderController(ArrowConfig arrowConfig)
         {
-            ShaderController = new ShaderController(SpriteRenderer, _vectorProperty, _floatProperty,
-                arrowConfig.StarsSpeed.PropertyName, arrowConfig.BackgroundColor.PropertyName,
-                arrowConfig.FirstColor.PropertyName, arrowConfig.SecondColor.PropertyName);
+            _fadeInDuration = arrowConfig.ShineFadeInDuration;
+            _fadeOutDuration = arrowConfig.ShineFadeOutDuration;
+            _fadeOutEase = arrowConfig.Ease;
             
-            ShaderController.SetFloatValue(arrowConfig.StarsSpeed.Value, 2);
-            ShaderController.SetColorValue(arrowConfig.BackgroundColor.Value, 3);
-            ShaderController.SetColorValue(arrowConfig.FirstColor.Value, 4);
-            ShaderController.SetColorValue(arrowConfig.SecondColor.Value, 5);
+            ShaderController = new ShaderController(SpriteRenderer, 
+                arrowConfig.VectorProperty, arrowConfig.ShineCoefficientProperty,
+                arrowConfig.StarsSpeed, arrowConfig.BackgroundColor,
+                arrowConfig.FirstColor, arrowConfig.SecondColor);
+            
+            ShaderController.SetFloatValue(arrowConfig.StarsSpeed.Values[0], 2);
+            ShaderController.SetColorValue(arrowConfig.BackgroundColor.Values[0], 3);
+            ShaderController.SetColorValue(arrowConfig.FirstColor.Values[0], 4);
+            ShaderController.SetColorValue(arrowConfig.SecondColor.Values[0], 5);
         }
 
-        protected void SpawnParticleSystem(ArrowConfig arrowConfig)
+        protected void SpawnParticleSystem(ParticleSystem particleSystemPrefab)
         {
-            Instantiate(arrowConfig.ParticleSystemPrefab, transform.position.IncreaseVectorValue(0, .5f),
+            Instantiate(particleSystemPrefab, transform.position.IncreaseVectorValue(0, .5f),
                 Quaternion.Euler(-90, 0, 0), transform);
         }
 
