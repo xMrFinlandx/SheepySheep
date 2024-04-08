@@ -42,6 +42,11 @@ namespace _Scripts.Player
         }
 
         public void SetState<T>() where T : FsmState => _finiteStateMachine.SetState<T>();
+        public void SetSpeed(float speed)
+        {
+        }
+
+        public Transform GetTransform() => transform;
         
         public void SetMoveDirection(Vector2 cartesianDirection)
         {
@@ -64,11 +69,6 @@ namespace _Scripts.Player
             _coinsWallet.AddToBuffer(value);
         }
 
-        public void AddDiamonds(int value)
-        {
-            throw new NotImplementedException();
-        }
-
         public void OnLevelCompleted()
         {
             print("Level completed");
@@ -77,7 +77,7 @@ namespace _Scripts.Player
         public void Restart()
         {
             _isStarted = false;
-            _animator.Play("PlayerMove", 0, 0);
+            _animator.Play("PlayerMove");
             _animator.enabled = false;
             _spriteRenderer.sprite = _defaultSprite;
             transform.position = _spawnPosition;
@@ -117,7 +117,7 @@ namespace _Scripts.Player
         {
             _finiteStateMachine = new FiniteStateMachine();
             
-            _finiteStateMachine.AddState(new FsmIdleState(_finiteStateMachine));
+            _finiteStateMachine.AddState(new FsmIdleState(_finiteStateMachine, _rigidbody));
             _finiteStateMachine.AddState(new FsmMoveState(_finiteStateMachine, this, _animator, "PlayerMove", _speed));
             _finiteStateMachine.AddState(new FsmRunState(_finiteStateMachine, this, _animator, "PlayerMove", _speed, _speedModifier));
             _finiteStateMachine.AddState(new FsmDiedState(_finiteStateMachine, _rigidbody));

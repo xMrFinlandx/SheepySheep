@@ -1,6 +1,5 @@
 ﻿using _Scripts.Utilities.Visuals;
 using UnityEngine;
-using UnityEngine.Splines;
 
 namespace _Scripts.Scriptables
 {
@@ -9,18 +8,16 @@ namespace _Scripts.Scriptables
     {
         [SerializeField] private float _bezierControlPointHeight = 5f;
         [Space]
-        [SerializeField] private VertexPathFollower _pathFollower;
-
-        [SerializeField] private SplineContainer _splineContainer;
-        [SerializeField] private float _speed = 5f;
-
+        [SerializeField] private SplineFollow _pathFollower;
+        [SerializeField] private SplineFollow _playerPathFollower;
+        [Space]
+        [SerializeField] private float _speed = 8f;
 
         public float BezierControlPointHeight => _bezierControlPointHeight;
         public float Speed => _speed;
-
-        public SplineContainer SplineContainer => _splineContainer;
         
-        public VertexPathFollower PathFollower => _pathFollower;
-        /*public EndOfPathInstruction EndOfPathInstruction => _endOfPathInstruction;*/
+        public SplineFollow PathFollower => _pathFollower;
+        
+        public SplineFollow PlayerPathFollower => _playerPathFollower;
     }
 }

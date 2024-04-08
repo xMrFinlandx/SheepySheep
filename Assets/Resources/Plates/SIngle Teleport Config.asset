@@ -15,10 +15,13 @@ MonoBehaviour:
   _isSingleAtTile: 1
   _yOffset: 0
   _idleSprite: {fileID: -3128108189421642463, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
+  _showAnimations: 0
+  _showShader: 0
   _animationClip: {fileID: 0}
-  _gameObjectName: Teleport
   _animatorController: {fileID: 0}
-  _bezierControlPointHeight: 5
-  _pathFollower: {fileID: 3980368539634230096, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
-  _splineContainer: {fileID: 3531476904846446889, guid: 806e26c032bdb6149a2347e30bfa9d42, type: 3}
-  _speed: 5
+  _material: {fileID: 0}
+  _gameObjectName: Teleport
+  _bezierControlPointHeight: 2
+  _pathFollower: {fileID: 3310314905073510763, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
+  _playerPathFollower: {fileID: 5538236202423855745, guid: fc48cf03f88332644a7517d549297878, type: 3}
+  _speed: 8

@@ -1,7 +1,5 @@
 ﻿using System;
 using _Scripts.Utilities.Enums;
-using UnityEngine;
-using UnityEngine.Rendering;
 
 namespace _Scripts.Utilities.Classes
 {
@@ -18,10 +16,6 @@ namespace _Scripts.Utilities.Classes
 
             CurrentGameState = newGameState;
             GameStateChangedAction?.Invoke(CurrentGameState);
-
-            var isGLES2Available = SystemInfo.graphicsDeviceType != GraphicsDeviceType.OpenGLES2;
-            var isGLES3Available = SystemInfo.graphicsDeviceType != GraphicsDeviceType.OpenGLES3;
-            Debug.Log($"is gles2 {isGLES2Available}, is gles3 {isGLES3Available}");
         }
     }
 }
