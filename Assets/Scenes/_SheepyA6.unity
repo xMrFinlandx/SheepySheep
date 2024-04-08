@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 142507542}
   - component: {fileID: 142507541}
   m_Layer: 0
-  m_Name: Single Arrow Rotator
+  m_Name: Single Use Arrow Rotator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -276,7 +276,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 841d4a6ba88466e4c9c115acad9a3f66, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -320,7 +320,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433a58775f4b4b0092e2d38bbac28903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _plateConfig: {fileID: 11400000, guid: 2967618c61bce2440a6f8d05c7bb9855, type: 2}
+  _arrowRotatorConfig: {fileID: 11400000, guid: 9965dfb10c3604c4995563765209d910, type: 2}
+  _shineFloatProperty: _ShineProgressive
+  _overrideFloatProperty: _OverrideProgressiveMultiplier
+  _defaultOverrideProgressiveValue: 0.1
+  _idleShineDuration: 1
+  _onActivateShineDuration: 0.1
+  _onDeactivateShineDuration: 1
   _spriteRenderer: {fileID: 142507541}
 --- !u!1 &271639903
 GameObject:
@@ -10136,7 +10142,7 @@ GameObject:
   - component: {fileID: 671560377}
   - component: {fileID: 671560376}
   m_Layer: 0
-  m_Name: Single Arrow Rotator
+  m_Name: Single Use Arrow Rotator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10223,7 +10229,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433a58775f4b4b0092e2d38bbac28903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _plateConfig: {fileID: 11400000, guid: 2967618c61bce2440a6f8d05c7bb9855, type: 2}
+  _arrowRotatorConfig: {fileID: 11400000, guid: 9965dfb10c3604c4995563765209d910, type: 2}
+  _shineFloatProperty: _ShineProgressive
+  _overrideFloatProperty: _OverrideProgressiveMultiplier
+  _defaultOverrideProgressiveValue: 0.1
+  _idleShineDuration: 1
+  _onActivateShineDuration: 0.1
+  _onDeactivateShineDuration: 1
   _spriteRenderer: {fileID: 671560376}
 --- !u!1 &719988930
 GameObject:

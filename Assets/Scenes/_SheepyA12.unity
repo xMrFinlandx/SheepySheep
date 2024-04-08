@@ -518,7 +518,7 @@ Transform:
   m_GameObject: {fileID: 347417007}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: -3.5, z: 0}
+  m_LocalPosition: {x: 3, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6650,7 +6650,7 @@ Transform:
   m_GameObject: {fileID: 1573332205}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: -1, z: 0}
+  m_LocalPosition: {x: 2, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6938,9 +6938,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.041666668
-    width: 0.25
-    height: 0.25
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -7073,7 +7073,7 @@ Transform:
   m_GameObject: {fileID: 1739497564}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.01, y: -0.99, z: 0}
+  m_LocalPosition: {x: -7, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7615,67 +7615,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1586297023675114014
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 146592395812631948, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 9.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 146592395812631948, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 146592395812631948, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 146592395812631948, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 146592395812631948, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 146592395812631948, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 146592395812631948, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 146592395812631948, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 146592395812631948, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 146592395812631948, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2754453067138456276, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
-      propertyPath: m_Name
-      value: Particle System Vertex Path Follower
-      objectReference: {fileID: 0}
-    - target: {fileID: 2754453067138456276, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -7698,4 +7637,3 @@ SceneRoots:
   - {fileID: 66378404}
   - {fileID: 849293314}
   - {fileID: 2041355826}
-  - {fileID: 1586297023675114014}

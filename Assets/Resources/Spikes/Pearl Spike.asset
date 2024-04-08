@@ -14,13 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isSingleAtTile: 1
   _yOffset: 0.17
+  _showAnimations: 1
+  _showShader: 0
   _idleSprite: {fileID: 5872242577274433392, guid: 393c44718be201e44b0895cb3f93da07, type: 3}
-  _jumpValue: 1
-  _fallValue: 2
-  _jumpDuration: 0.25
-  _fallDuration: 0.5
-  _jumpEase: 6
-  _fallEase: 5
   _animationClip: {fileID: 7400000, guid: d619c5bf9cb5f2841b1a22b0b9141b2a, type: 2}
   _gameObjectName: Pearl Spike
   _animatorController: {fileID: 9100000, guid: 10efa916ac2901b4f88fb5d77fd3fa8f, type: 2}

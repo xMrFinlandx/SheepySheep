@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isSingleAtTile: 0
   _yOffset: -0.4
+  _showAnimations: 1
+  _showShader: 0
   _idleSprite: {fileID: -7950088176838374372, guid: 96eccfd091df517499eb55b1016e6add, type: 3}
   _animationClip: {fileID: 7400000, guid: 60a52cc461ad3bc4cb24ca1dda3ec2ec, type: 2}
   _gameObjectName: Speed Up Trigger

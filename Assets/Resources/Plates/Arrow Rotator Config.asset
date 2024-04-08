@@ -9,12 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd2032cc7472462a8320364169e1632b, type: 3}
+  m_Script: {fileID: 11500000, guid: d48b5cca77844b97a51436f62c6a869c, type: 3}
   m_Name: Arrow Rotator Config
   m_EditorClassIdentifier: 
   _isSingleAtTile: 1
   _yOffset: 0
   _idleSprite: {fileID: 2828449112556969877, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
+  _showAnimations: 0
+  _showShader: 1
   _animationClip: {fileID: 0}
-  _gameObjectName: Single Arrow Rotator
   _animatorController: {fileID: 0}
+  _material: {fileID: 2100000, guid: 841d4a6ba88466e4c9c115acad9a3f66, type: 2}
+  _gameObjectName: Single Use Arrow Rotator

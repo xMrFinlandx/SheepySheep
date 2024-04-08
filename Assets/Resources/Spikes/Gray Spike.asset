@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isSingleAtTile: 1
   _yOffset: 0.17
+  _showAnimations: 1
+  _showShader: 0
   _idleSprite: {fileID: -8267202868168639649, guid: 393c44718be201e44b0895cb3f93da07, type: 3}
   _animationClip: {fileID: 7400000, guid: 2e41d9e5e1dda414a854e13a9d136aae, type: 2}
   _gameObjectName: Gray Spike

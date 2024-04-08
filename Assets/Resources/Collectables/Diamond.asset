@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isSingleAtTile: 0
   _yOffset: -0.4
+  _showAnimations: 1
+  _showShader: 0
   _idleSprite: {fileID: 7828207187760574628, guid: 96eccfd091df517499eb55b1016e6add, type: 3}
   _animationClip: {fileID: 7400000, guid: b34de9be074516c48bcf017023f61c1f, type: 2}
   _gameObjectName: Diamond

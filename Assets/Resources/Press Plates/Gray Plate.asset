@@ -14,13 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isSingleAtTile: 1
   _yOffset: 0.165
+  _showAnimations: 1
+  _showShader: 0
   _idleSprite: {fileID: 3127379611123312200, guid: b07a04ed458fc2548b339f63f93f4472, type: 3}
-  _jumpValue: 1
-  _fallValue: 2
-  _jumpDuration: 0.25
-  _fallDuration: 0.5
-  _jumpEase: 6
-  _fallEase: 5
   _animationClip: {fileID: 7400000, guid: 14fe94d01ae7c0649880ebf9a81eed54, type: 2}
   _gameObjectName: Gray Plate
   _animatorController: {fileID: 9100000, guid: b5e50e5cff94cef409145d96497842ce, type: 2}

@@ -15,7 +15,7 @@ namespace _Scripts.Utilities.Visuals
 
         public void Play(float duration)
         {
-            _shaderController.Play(0, _endValue, duration, _ease);
+            _shaderController.Play(0, _endValue, duration).SetEase(_ease);
         }
         
         private void OnValidate()

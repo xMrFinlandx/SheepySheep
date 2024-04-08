@@ -57,7 +57,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         protected void PlayShineAnimation()
         {
             ShaderController.Play(_START_SHINE_VALUE, _END_SHINE_VALUE, _fadeInDuration, 1).OnComplete(() =>
-                ShaderController.Play(_END_SHINE_VALUE, _START_SHINE_VALUE, _fadeOutDuration, 1, _fadeOutEase));
+                ShaderController.Play(_END_SHINE_VALUE, _START_SHINE_VALUE, _fadeOutDuration, 1).SetEase(_fadeOutEase));
         }
 
         public abstract void Activate(IPlayerController playerController);

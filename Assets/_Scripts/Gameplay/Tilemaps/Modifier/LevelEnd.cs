@@ -40,8 +40,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             
 #if UNITY_EDITOR
             name = $"Level end (to {_sceneToLoad.SceneName})";
-        }
 #endif
+        }
 
         public Transform GetTransform() => transform;
     }

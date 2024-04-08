@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isSingleAtTile: 0
   _yOffset: -0.4
+  _showAnimations: 1
+  _showShader: 0
   _idleSprite: {fileID: -6103929172131972053, guid: 96eccfd091df517499eb55b1016e6add, type: 3}
   _animationClip: {fileID: 7400000, guid: b77a43d1f6e4cb3449420dd7e2b9ff92, type: 2}
   _gameObjectName: Default Speed Trigger
