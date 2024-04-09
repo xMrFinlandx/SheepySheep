@@ -20,13 +20,13 @@ namespace _Scripts.Scriptables
         [SerializeField] private Ease _fadeOutEase = Ease.OutExpo;
         [Header("Shader properties")]
         [SerializeField] private string _vectorProperty = "_Direction";
-        [SerializeField] private string _shineCoefficientProperty = "_ShineCoefficient"; 
-        [Space]
+        [SerializeField] private string _shineCoefficientProperty = "_ShineCoefficient";
+        [Space] 
         [SerializeField] private ShaderProperty<float> _starsSpeed = new("_ScrollSpeed", 2);
-        [SerializeField] private ColorShaderProperty _firstColorProperty = new("_Color1");
-        [SerializeField] private ColorShaderProperty _secondColorProperty = new("_Color2");
-        [SerializeField] private ColorShaderProperty _backgroundColorProperty = new("_MainColor");
-        
+        [SerializeField] private ShaderProperty<Color> _firstColor = new("_Color1");
+        [SerializeField] private ShaderProperty<Color> _secondColor = new("_Color2");
+        [SerializeField] private ShaderProperty<Color> _backgroundColor = new("_MainColor");
+
         public float ShineFadeInDuration => _shineFadeInDuration;
         public float ShineFadeOutDuration => _shineFadeOutDuration;
         
@@ -38,9 +38,9 @@ namespace _Scripts.Scriptables
         public IReadOnlyList<ArrowDirectionData> ArrowDirectionData => _arrowDirectionData;
         
         public ShaderProperty<float> StarsSpeed => _starsSpeed;
-        public ColorShaderProperty BackgroundColor => _backgroundColorProperty;
-        public ColorShaderProperty FirstColor => _firstColorProperty;
-        public ColorShaderProperty SecondColor => _secondColorProperty;
+        public ShaderProperty<Color> BackgroundColor => _backgroundColor;
+        public ShaderProperty<Color> FirstColor => _firstColor;
+        public ShaderProperty<Color> SecondColor => _secondColor;
 
         public ParticleSystem ParticleSystemPrefab
         {
@@ -57,5 +57,6 @@ namespace _Scripts.Scriptables
         {
             return _arrowDirectionData.Find(item => item.MoveDirectionType == directionType);
         }
+        
     }
 }
