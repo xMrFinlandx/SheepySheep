@@ -1,9 +1,6 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
-using UnityEngine.InputSystem.LowLevel;
-using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
 namespace _Scripts.Player.Controls
 {
@@ -38,8 +35,6 @@ namespace _Scripts.Player.Controls
         {
             if (context.phase != InputActionPhase.Performed)
                 return;
-
-            Debug.Log("click");
             
             LeftMouseClickEvent?.Invoke(GetWorldMousePosition(_gameControls.Gameplay.TouchPosition));
         }
@@ -54,22 +49,18 @@ namespace _Scripts.Player.Controls
         
         public void OnPause(InputAction.CallbackContext context)
         {
-
         }
 
         public void OnSkipCutscene(InputAction.CallbackContext context)
         {
-            
         }
 
         public void OnTouchPosition(InputAction.CallbackContext context)
         {
-            
         }
 
         public void OnResume(InputAction.CallbackContext context)
         {
-            
         }
 
         public void Init(Camera mainCamera)
