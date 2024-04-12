@@ -4,7 +4,6 @@ using _Scripts.Scriptables;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.Visuals;
 using DG.Tweening;
-using NaughtyAttributes;
 using UnityEngine;
 
 namespace _Scripts.Gameplay.Tilemaps.Modifier
@@ -13,18 +12,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
     public class ArrowRotator : MonoBehaviour, ITileModifier, IRestartable
     {
         [SerializeField] private ArrowRotatorConfig _arrowRotatorConfig;
-        [Foldout("Shader Settings")]
-        [SerializeField] private string _shineFloatProperty = "_ShineProgressive";
-        [Foldout("Shader Settings")]
-        [SerializeField] private string _overrideFloatProperty = "_OverrideProgressiveMultiplier";
-        [Foldout("Shader Settings")] 
-        [SerializeField] private float _defaultOverrideProgressiveValue = .1f;
-        [Foldout("Shader Settings")] 
-        [SerializeField] private float _idleShineDuration = 1f;
-        [Foldout("Shader Settings")] 
-        [SerializeField] private float _onActivateShineDuration = .1f;
-        [Foldout("Shader Settings")] 
-        [SerializeField] private float _onDeactivateShineDuration = 1f;
         
         [SerializeField, HideInInspector] private SpriteRenderer _spriteRenderer;
 
@@ -46,9 +33,9 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
                 return;
 
             _tweener.Kill();
-            _shaderController.Play(_defaultOverrideProgressiveValue, 1, _onActivateShineDuration, 1);
-            _shaderController.Play(0, 1, _onActivateShineDuration, 0, false).OnComplete(() =>
-                _shaderController.Play(1, 0, _onDeactivateShineDuration, 0, false));
+            _shaderController.Play(_arrowRotatorConfig.ProgressiveMultiplier.Values[0], 1, _arrowRotatorConfig.ActivateShineDuration, 1);
+            _shaderController.Play(0, 1, _arrowRotatorConfig.ActivateShineDuration, 0, false).OnComplete(() =>
+                _shaderController.Play(1, 0, _arrowRotatorConfig.DeactivateShineDuration, 0, false));
             
             _enabled = false;
             RotateArrowAction?.Invoke();
@@ -75,14 +62,14 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         {
             ReloadRoomManager.ReloadRoomAction += Restart;
 
-            _shaderController = new ShaderController(_spriteRenderer, _shineFloatProperty, _overrideFloatProperty);
+            _shaderController = new ShaderController(_spriteRenderer, _arrowRotatorConfig.ShineAmount, _arrowRotatorConfig.ProgressiveMultiplier);
             StartShineAnimation();
         }
 
         private void StartShineAnimation()
         {
-            _shaderController.SetFloatValue(_defaultOverrideProgressiveValue, 1);
-            _tweener = _shaderController.Play(0, 1, _idleShineDuration, 0).SetLoops(-1, LoopType.Yoyo);
+            _shaderController.SetFloatValue(_arrowRotatorConfig.ProgressiveMultiplier.Values[0], 1);
+            _tweener = _shaderController.Play(0, 1, _arrowRotatorConfig.IdleShineDuration, 0).SetLoops(-1, LoopType.Yoyo);
         }
 
         private void OnDestroy()

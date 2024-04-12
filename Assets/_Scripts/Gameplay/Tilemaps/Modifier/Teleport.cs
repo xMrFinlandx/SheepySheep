@@ -44,6 +44,16 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             }
         }
 
+        private SplineFollow _pairSplineFollow
+        {
+            get => _splineFollow;
+            set
+            {
+                _splineFollow = value;
+                _linkedTeleport._splineFollow = value;
+            }
+        }
+
         private bool _isPairEnabled
         {
             get => _isEnabled;
@@ -56,8 +66,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         
         public float YOffset => _teleportConfig.YOffset;
         public bool IsSingleAtTile => _teleportConfig.IsSingleAtTile;
-        public bool IsMainTeleport => _isMainTeleport;
-        
+
         [Button]
         private void SetLink()
         {
@@ -75,11 +84,10 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
                 return;
 
             _isPairEnabled = true;
-
+            _pairSplineFollow.Pause();
+            
             playerController.SetState<FsmIdleState>();
-            
             var playerTransform = playerController.GetTransform();
-            
             playerTransform.DOScaleX(0, .1f)
                 .SetEase(Ease.InOutQuad)
                 .OnComplete(() =>
@@ -98,6 +106,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         public void Restart()
         {
             _isPairEnabled = false;
+            _pairSplineFollow.Play();
         }
 
         private void OnValidate()
@@ -145,7 +154,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             _bezierPath = new BezierPath(_points, false);
             _vertexPath = new VertexPath(_bezierPath, transform);
 
-            _splineFollow = Instantiate(_teleportConfig.PathFollower, mainTeleportPosition, Quaternion.identity);
+            _pairSplineFollow = Instantiate(_teleportConfig.PathFollower, mainTeleportPosition, Quaternion.identity);
             _pairPlayerSplineFollow = Instantiate(_teleportConfig.PlayerPathFollower, mainTeleportPosition, Quaternion.identity);
             
             _pairPlayerSplineFollow.Init(_vertexPath);

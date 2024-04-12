@@ -1,5 +1,4 @@
-﻿using System;
-using PathCreation;
+﻿using PathCreation;
 using UnityEngine;
 
 namespace _Scripts.Utilities.Visuals
@@ -12,6 +11,7 @@ namespace _Scripts.Utilities.Visuals
         
         private bool _isPlaying = false;
         private float _travelledDistance;
+        private float _time;
    
         private VertexPath _vertexPath;
 
@@ -54,7 +54,7 @@ namespace _Scripts.Utilities.Visuals
         {
             if (!_isPlaying)
                 return;
-            
+
             _travelledDistance += _speed * Time.deltaTime;
             transform.position = _vertexPath.GetPointAtDistance(_travelledDistance, _endOfPathInstruction) - _vertexPath.Transform.position;
         }

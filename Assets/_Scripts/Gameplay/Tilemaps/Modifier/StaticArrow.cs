@@ -3,6 +3,7 @@ using _Scripts.Scriptables;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
+using _Scripts.Utilities.Visuals;
 using UnityEngine;
 using Zenject;
 
@@ -41,6 +42,12 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         {
             ArrowRotator.RotateArrowAction += Rotate;
             ReloadRoomManager.ReloadRoomAction += Restart;
+            TilemapAnimatorManager.AnimationEndedAction += SpawnParticles;
+        }
+
+        private void SpawnParticles()
+        {
+            SpawnParticleSystem(_arrowConfig.ParticleSystemPrefab);
         }
 
         private void Start()
@@ -48,12 +55,10 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             _currentDirection = _direction;
             
             InitializeShaderController(_arrowConfig);
-            SpawnParticleSystem(_arrowConfig.ParticleSystemPrefab);
-            
-            ApplyData(_direction);
+            ApplyDirection(_direction);
         }
 
-        private void ApplyData(MoveDirectionType direction)
+        private void ApplyDirection(MoveDirectionType direction)
         {
             var data = _arrowConfig.GetDataByDirection(direction);
             SpriteRenderer.sprite = data.Sprite;
@@ -65,6 +70,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         {
             ArrowRotator.RotateArrowAction -= Rotate;
             ReloadRoomManager.ReloadRoomAction -= Restart;
+            TilemapAnimatorManager.AnimationEndedAction -= SpawnParticles;
         }
 
         private void Rotate()
@@ -74,14 +80,14 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             if ((int) _currentDirection > 3)
                 _currentDirection = 0;
 
-            ApplyData(_currentDirection);
+            ApplyDirection(_currentDirection);
             PlayShineAnimation();
         }
 
         public void Restart()
         {
             _currentDirection = _direction;
-            ApplyData(_direction);
+            ApplyDirection(_direction);
         }
     }
 }

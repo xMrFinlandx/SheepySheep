@@ -1,6 +1,9 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
+using UnityEngine.InputSystem.LowLevel;
+using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
 namespace _Scripts.Player.Controls
 {
@@ -9,7 +12,7 @@ namespace _Scripts.Player.Controls
     {
         private GameControls _gameControls;
         private Camera _camera;
-
+        
         public event Action<Vector2> LeftMouseClickEvent; 
         public event Action<Vector2> RightMouseClickEvent; 
         
@@ -36,7 +39,9 @@ namespace _Scripts.Player.Controls
             if (context.phase != InputActionPhase.Performed)
                 return;
 
-            LeftMouseClickEvent?.Invoke(GetWorldMousePosition());
+            Debug.Log("click");
+            
+            LeftMouseClickEvent?.Invoke(GetWorldMousePosition(_gameControls.Gameplay.TouchPosition));
         }
 
         public void OnRightClick(InputAction.CallbackContext context)
@@ -44,7 +49,7 @@ namespace _Scripts.Player.Controls
             if (context.phase != InputActionPhase.Performed)
                 return;
 
-            RightMouseClickEvent?.Invoke(GetWorldMousePosition());
+            RightMouseClickEvent?.Invoke(GetWorldMousePosition(_gameControls.Gameplay.TouchPosition));
         }
         
         public void OnPause(InputAction.CallbackContext context)
@@ -53,6 +58,11 @@ namespace _Scripts.Player.Controls
         }
 
         public void OnSkipCutscene(InputAction.CallbackContext context)
+        {
+            
+        }
+
+        public void OnTouchPosition(InputAction.CallbackContext context)
         {
             
         }
@@ -81,9 +91,9 @@ namespace _Scripts.Player.Controls
             SetGameplay();
         }
         
-        private Vector3 GetWorldMousePosition()
+        private Vector3 GetWorldMousePosition(InputAction context)
         {
-            return _camera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            return _camera.ScreenToWorldPoint(context.ReadValue<Vector2>());
         }
     }
 }

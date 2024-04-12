@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using PathCreation.Utility;
+﻿using PathCreation.Utility;
 using UnityEngine;
 
 
@@ -38,6 +37,9 @@ namespace PathCreation {
 
         Transform transform;
 
+        public Vector3 StartPoint => localPoints[0];
+        public Vector3 EndPoint => localPoints[NumPoints - 1];
+        
         public Transform Transform => transform;
 
         #endregion
@@ -228,6 +230,8 @@ namespace PathCreation {
             return Quaternion.LookRotation (MathUtility.TransformDirection (direction, transform, space), MathUtility.TransformDirection (normal, transform, space));
         }
 
+        public float GetTime(float dst) => dst / length;
+        
         /// Finds the closest point on the path from any point in the world
         public Vector3 GetClosestPointOnPath (Vector3 worldPoint) {
             TimeOnPathData data = CalculateClosestPointOnPathData (worldPoint);
@@ -293,6 +297,7 @@ namespace PathCreation {
             }
 
             float abPercent = Mathf.InverseLerp (times[prevIndex], times[nextIndex], t);
+            
             return new TimeOnPathData (prevIndex, nextIndex, abPercent);
         }
 
