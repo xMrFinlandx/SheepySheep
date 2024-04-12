@@ -5526,11 +5526,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 482554478}
-  _vectorProperty: _Direction
-  _floatProperty: _ShineCoefficient
-  _fadeInDuration: 0.2
-  _fadeOutDuration: 0.4
-  _fadeOutEase: 18
   _direction: 2
   _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
 --- !u!212 &482554478
@@ -5615,7 +5610,7 @@ Transform:
   m_GameObject: {fileID: 607877189}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 1.335, z: 0}
+  m_LocalPosition: {x: 1, y: 1.835, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5971,11 +5966,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 1084581038}
-  _vectorProperty: _Direction
-  _floatProperty: _ShineCoefficient
-  _fadeInDuration: 0.2
-  _fadeOutDuration: 0.4
-  _fadeOutEase: 18
   _direction: 2
   _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
 --- !u!212 &1084581038
@@ -7418,10 +7408,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.26015624
     y: 0
-    width: 1
-    height: 1
+    width: 0.24097224
+    height: 0.24097222
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34

@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 347417009}
   - component: {fileID: 347417010}
   m_Layer: 0
-  m_Name: Level end (to _SheepyA9)
+  m_Name: Level end (to _SheepyA11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -461,8 +461,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 8fb8db79459aa1347b1d9459d4299387, type: 2}
   _sceneToLoad:
-    _sceneAsset: {fileID: 102900000, guid: da2d8a570582fbe4a84902339f3116f4, type: 3}
-    _sceneName: _SheepyA9
+    _sceneAsset: {fileID: 102900000, guid: 8ed65e05db324584296f583d452499de, type: 3}
+    _sceneName: _SheepyA11
   _spriteRenderer: {fileID: 347417010}
 --- !u!212 &347417010
 SpriteRenderer:
@@ -5535,11 +5535,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 503516084}
-  _vectorProperty: _Direction
-  _floatProperty: _ShineCoefficient
-  _fadeInDuration: 0.2
-  _fadeOutDuration: 0.4
-  _fadeOutEase: 18
   _direction: 1
   _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
 --- !u!212 &503516084
@@ -5642,11 +5637,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 520783529}
-  _vectorProperty: _Direction
-  _floatProperty: _ShineCoefficient
-  _fadeInDuration: 0.2
-  _fadeOutDuration: 0.4
-  _fadeOutEase: 18
   _direction: 1
   _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
 --- !u!212 &520783529
@@ -5940,11 +5930,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 722440451}
-  _vectorProperty: _Direction
-  _floatProperty: _ShineCoefficient
-  _fadeInDuration: 0.2
-  _fadeOutDuration: 0.4
-  _fadeOutEase: 18
   _direction: 2
   _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
 --- !u!212 &722440451
@@ -6133,11 +6118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 1140513061}
-  _vectorProperty: _Direction
-  _floatProperty: _ShineCoefficient
-  _fadeInDuration: 0.2
-  _fadeOutDuration: 0.4
-  _fadeOutEase: 18
   _direction: 0
   _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
 --- !u!212 &1140513061
@@ -6288,11 +6268,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 1156874310}
-  _vectorProperty: _Direction
-  _floatProperty: _ShineCoefficient
-  _fadeInDuration: 0.2
-  _fadeOutDuration: 0.4
-  _fadeOutEase: 18
   _direction: 2
   _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
 --- !u!212 &1156874310
@@ -7446,11 +7421,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 1532092848}
-  _vectorProperty: _Direction
-  _floatProperty: _ShineCoefficient
-  _fadeInDuration: 0.2
-  _fadeOutDuration: 0.4
-  _fadeOutEase: 18
   _direction: 3
   _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
 --- !u!212 &1532092848
@@ -7718,7 +7688,7 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.2605469
+    x: 0.26015624
     y: 0
     width: 0.24097224
     height: 0.24097222
