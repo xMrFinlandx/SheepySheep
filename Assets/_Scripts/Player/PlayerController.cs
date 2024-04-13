@@ -18,7 +18,6 @@ namespace _Scripts.Player
         [SerializeField, HideInInspector] private Rigidbody2D _rigidbody;
         [SerializeField, HideInInspector] private Animator _animator;
         [SerializeField, HideInInspector] private SpriteRenderer _spriteRenderer;
-        [SerializeField, HideInInspector] private CameraFollowObject _cameraFollowObject;
         
         private bool _isStarted = false;
         
@@ -103,9 +102,6 @@ namespace _Scripts.Player
             
             SetMoveDirection(_defaultDirection);
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
-            
-            _cameraFollowObject = CameraFollowObject.Instance;
-            _cameraFollowObject.InitTarget(transform);
             
             InitStateMachine();
 
