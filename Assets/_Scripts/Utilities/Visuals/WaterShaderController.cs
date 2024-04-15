@@ -18,14 +18,14 @@ namespace _Scripts.Utilities.Visuals
             _shaderController.Play(0, _endValue, duration).SetEase(_ease);
         }
         
+        public void Init()
+        {
+            _shaderController = new ShaderController(_renderer, _propertyName);
+        }
+        
         private void OnValidate()
         {
             _renderer = GetComponent<Renderer>();
-        }
-
-        private void Start()
-        {
-            _shaderController = new ShaderController(_renderer, _propertyName);
         }
     }   
 }

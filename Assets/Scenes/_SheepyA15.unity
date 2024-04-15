@@ -10700,7 +10700,7 @@ Transform:
   m_GameObject: {fileID: 1132796978}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -1.53, z: 0}
+  m_LocalPosition: {x: -5, y: -1.5999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14236,7 +14236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canShowCenters: 0
   _distanceThreshold: 0.2
-  _sceneInstaller: {fileID: 1866376283}
+  _editorOnlyMainTilemap: {fileID: 1369917676}
 --- !u!4 &2088432157
 Transform:
   m_ObjectHideFlags: 0

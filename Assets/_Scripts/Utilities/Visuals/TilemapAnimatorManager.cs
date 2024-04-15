@@ -38,6 +38,8 @@ namespace _Scripts.Utilities.Visuals
         [Inject]
         private void Construct(Tilemap tilemap)
         {
+            print("Construct");
+            
             _tilemap = tilemap;
         }
         
@@ -49,6 +51,7 @@ namespace _Scripts.Utilities.Visuals
             
             _spriteRenderers = JoinInteractions();
             _tilemap.gameObject.SetActive(false);
+            _foamController.Init();
             
             Animate();
         }
@@ -96,6 +99,8 @@ namespace _Scripts.Utilities.Visuals
 
         private void GenerateTiles()
         {
+            print(_tilemap == null);
+            
             foreach (var position in _tilemap.cellBounds.allPositionsWithin)
             {
                 if (!_tilemap.HasTile(position)) 

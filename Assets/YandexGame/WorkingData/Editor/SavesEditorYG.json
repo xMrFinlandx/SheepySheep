@@ -1,5 +1,5 @@
 {
-  "idSave": 250,
+  "idSave": 256,
   "isFirstSession": false,
   "language": "ru",
   "promptDone": false,
@@ -10,6 +10,10 @@
     false,
     false
   ],
-  "coins": 16,
-  "diamonds": 0
+  "coins": 18,
+  "diamonds": 0,
+  "collectables": {
+    "4ea4381a-0689-4610-bf0c-487ec4bb6377": true,
+    "30f1a309-a612-413c-a859-d7dd90e20301": true
+  }
 }

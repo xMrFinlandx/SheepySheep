@@ -24,9 +24,7 @@ namespace _Scripts.Managers
         
 #if UNITY_EDITOR
         [Header("--- Editor Only ---")] 
-        [SerializeField] private GameplaySceneInstaller _sceneInstaller;
-
-        private void OnValidate() => _sceneInstaller ??= FindAnyObjectByType<GameplaySceneInstaller>();
+        [SerializeField] private Tilemap _editorOnlyMainTilemap;
 #endif
 
         [Inject]
@@ -46,7 +44,7 @@ namespace _Scripts.Managers
         public Vector2Int WorldToCell(Vector2 pos)
         {
 #if UNITY_EDITOR
-            _tilemap = _sceneInstaller.Tilemap;
+            _tilemap = _editorOnlyMainTilemap;
 #endif
             
             return (Vector2Int) _tilemap.WorldToCell(pos);
@@ -144,7 +142,7 @@ namespace _Scripts.Managers
         {
             
 #if UNITY_EDITOR
-            _tilemap = _sceneInstaller.Tilemap;
+            _tilemap = _editorOnlyMainTilemap;
 #endif
             
             var cellPosition = (Vector3Int) WorldToCell(targetTransform.position);

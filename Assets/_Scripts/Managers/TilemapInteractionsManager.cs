@@ -22,6 +22,7 @@ namespace _Scripts.Managers
         private InputReader _inputReader;
 
         private bool _canInteract = false;
+        private bool _isInputAvailable = false;
 
 #if UNITY_EDITOR
         [Space(20)]
@@ -44,11 +45,12 @@ namespace _Scripts.Managers
             _tilemapManager ??= FindAnyObjectByType<TilemapManager>();
         }
 #endif
-
+        
         [Inject]
-        private void Construct(InputReader inputReader)
+        private void Construct([InjectOptional] InputReader inputReader)
         {
             _inputReader = inputReader;
+            _isInputAvailable = inputReader != null;
         }
         
         public IList<SpriteRenderer> GetInteractionsSpriteRenderers()
@@ -59,6 +61,10 @@ namespace _Scripts.Managers
         private void Start()
         {
             GameStateManager.GameStateChangedAction += OnGameStateChanged;
+
+            if (!_isInputAvailable)
+                return;
+            
             _inputReader.LeftMouseClickEvent += ArrowInteract;
             _inputReader.RightMouseClickEvent += RemoveArrow;
         }
@@ -66,6 +72,10 @@ namespace _Scripts.Managers
         private void OnDestroy()
         {
             GameStateManager.GameStateChangedAction -= OnGameStateChanged;
+            
+            if (!_isInputAvailable)
+                return;
+            
             _inputReader.LeftMouseClickEvent -= ArrowInteract;
             _inputReader.RightMouseClickEvent -= RemoveArrow;
         }

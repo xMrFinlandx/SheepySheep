@@ -3,8 +3,6 @@ using _Scripts.Managers;
 using _Scripts.Player;
 using _Scripts.Player.Controls;
 using _Scripts.Scriptables;
-using _Scripts.Utilities;
-using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Visuals;
 using NaughtyAttributes;
 using UnityEngine;
@@ -35,14 +33,14 @@ namespace _Scripts.Installers
 
         public override void InstallBindings()
         {
-            var player = Container.InstantiatePrefabForComponent<PlayerController>(_playerController, _levelStart.transform.position, Quaternion.identity, null);
-            player.Initialize(_levelStart.transform.position, _levelStart.GetDirection());
-            
             _inputReader.Init(Camera.main);
             
             Container.Bind<Tilemap>().FromInstance(_tilemap);
             Container.Bind<ArrowConfig>().FromInstance(_arrowConfig);
             Container.Bind<InputReader>().FromInstance(_inputReader);
+            
+            var player = Container.InstantiatePrefabForComponent<PlayerController>(_playerController, _levelStart.transform.position, Quaternion.identity, null);
+            player.Initialize(_levelStart.transform.position, _levelStart.GetDirection());
         }
 
         public override void Start()
