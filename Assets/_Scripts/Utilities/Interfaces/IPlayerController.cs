@@ -5,7 +5,11 @@ namespace _Scripts.Utilities.Interfaces
 {
     public interface IPlayerController
     {
+        public Transform Transform { get; }
+        
         public void SetState<T>() where T : FsmState;
+
+        public void ResetVelocityAndSetPosition(Vector2 pos);
 
         public void SetSpeed(float speed);
         
@@ -14,7 +18,5 @@ namespace _Scripts.Utilities.Interfaces
         public void AddCoins(int value);
 
         public void OnLevelCompleted();
-
-        public Transform GetTransform();
     }
 }

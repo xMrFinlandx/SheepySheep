@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using _Scripts.Gameplay.Tilemaps.Modifier;
-using _Scripts.Installers;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Interfaces;

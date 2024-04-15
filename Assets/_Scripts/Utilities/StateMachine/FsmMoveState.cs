@@ -6,11 +6,13 @@ namespace _Scripts.Utilities.StateMachine
 {
     public class FsmMoveState : FsmState
     {
+        private readonly float _stepSize = .1f;
         private readonly float _speed;
         private readonly string _animationName;
         private readonly Transform _transform;
         
         private Vector2 _currentPosition;
+        private Vector2 _previousPosition;
         private Vector2Int _playerCellPosition;
 
         protected Animator Animator { get; }
@@ -38,10 +40,7 @@ namespace _Scripts.Utilities.StateMachine
         public override void FixedUpdate()
         {
             Rigidbody.velocity = PlayerController.MoveDirection * (_speed * Time.fixedDeltaTime);
-        }
-
-        public override void Update()
-        {
+            
             _currentPosition = _transform.position;
             _playerCellPosition = TilemapManager.Instance.WorldToCell(_currentPosition);
 
@@ -50,12 +49,30 @@ namespace _Scripts.Utilities.StateMachine
                 FiniteStateMachine.SetState<FsmDiedState>();
                 return;
             }
+            
+            DetectModifiers();
 
-            if (!TilemapManager.Instance.IsPositionNearTileCenter(_currentPosition))
-                return;
+            _previousPosition = _currentPosition;
+        }
 
-            PlayerController.PlayerInTileCenterAction?.Invoke();
-            ActivateModifiers();
+        private void DetectModifiers()
+        {
+            Vector3 movement = _currentPosition - _previousPosition;
+            var distance = movement.magnitude;
+            var steps = Mathf.CeilToInt(distance / _stepSize);
+            
+            for (int i = 0; i < steps; i++)
+            {
+                var t = (i + 1) / (float)steps; 
+                var stepPosition = Vector3.Lerp(_previousPosition, _currentPosition, t);
+                
+                if (!TilemapManager.Instance.IsPositionNearTileCenter(stepPosition)) 
+                    continue;
+                
+                PlayerController.PlayerInTileCenterAction?.Invoke();
+                ActivateModifiers();
+                break;
+            }
         }
         
         private void ActivateModifiers() => TilemapManager.Instance.ActivateModifiers(_playerCellPosition, PlayerController);

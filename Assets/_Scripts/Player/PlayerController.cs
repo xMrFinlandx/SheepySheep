@@ -33,6 +33,8 @@ namespace _Scripts.Player
         public Vector2 MoveDirection { get; private set; }
         public Rigidbody2D Rigidbody => _rigidbody;
         
+        public Transform Transform => transform;
+        
         public void Initialize(Vector2 spawnPosition, Vector2 cartesianDirection)
         {
             _spawnPosition = spawnPosition;
@@ -45,8 +47,12 @@ namespace _Scripts.Player
         {
         }
 
-        public Transform GetTransform() => transform;
-        
+        public void ResetVelocityAndSetPosition(Vector2 position)
+        {
+            _rigidbody.velocity = Vector2.zero;
+            transform.position = position;
+        }
+
         public void SetMoveDirection(Vector2 cartesianDirection)
         {
             var newDirection = cartesianDirection.CartesianToIsometric();

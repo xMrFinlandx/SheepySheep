@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 347417009}
   - component: {fileID: 347417010}
   m_Layer: 0
-  m_Name: Level end (to _SheepyA14)
+  m_Name: Level end (to _SheepyA16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -346,8 +346,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 8fb8db79459aa1347b1d9459d4299387, type: 2}
   _sceneToLoad:
-    _sceneAsset: {fileID: 0}
-    _sceneName: _SheepyA14
+    _sceneAsset: {fileID: 102900000, guid: c39833eb40bdbb04fb8934a256c922b7, type: 3}
+    _sceneName: _SheepyA16
   _spriteRenderer: {fileID: 347417010}
 --- !u!212 &347417010
 SpriteRenderer:
@@ -2099,7 +2099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputReader: {fileID: 11400000, guid: 06f4aec396e8f8543a755b7b268bdc79, type: 2}
   _playerController: {fileID: 2728097499919781777, guid: b05bcae919ef9b04588e32bf282301b1, type: 3}
-  _levelStart: {fileID: 0}
+  _levelStart: {fileID: 62406301}
   _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
   _tilemap: {fileID: 1369917676}
 --- !u!4 &1866376284

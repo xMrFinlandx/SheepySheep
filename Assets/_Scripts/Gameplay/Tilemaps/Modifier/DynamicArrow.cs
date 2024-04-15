@@ -16,8 +16,9 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         private ArrowConfig _arrowConfig;
 
         public override bool IsSingleAtTile => _arrowConfig.IsSingleAtTile;
-
         public override float YOffset => _arrowConfig.YOffset;
+        
+        private Vector2 OffsetPosition => new(transform.position.x, transform.position.y + YOffset);
 
         public void Init(ArrowConfig arrowConfig, Vector2Int key)
         {
@@ -55,8 +56,9 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         public override void Activate(IPlayerController playerController)
         {
+            playerController.ResetVelocityAndSetPosition(OffsetPosition);
             playerController.SetMoveDirection(_cartesianDirection);
-
+            
             PlayShineAnimation();
         }
         

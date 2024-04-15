@@ -18,6 +18,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         public override bool IsSingleAtTile => _arrowConfig.IsSingleAtTile;
         public override float YOffset => _arrowConfig.YOffset;
 
+        private Vector2 OffsetPosition => new(transform.position.x, transform.position.y + YOffset);
+
         private MoveDirectionType _currentDirection;
         
         [Inject]
@@ -28,6 +30,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         public override void Activate(IPlayerController playerController)
         {
+            playerController.ResetVelocityAndSetPosition(OffsetPosition);
             playerController.SetMoveDirection(_currentDirection.GetDirectionVector());
             PlayShineAnimation();
         }

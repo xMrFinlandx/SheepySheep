@@ -38,8 +38,6 @@ namespace _Scripts.Utilities.Visuals
         [Inject]
         private void Construct(Tilemap tilemap)
         {
-            print("Construct");
-            
             _tilemap = tilemap;
         }
         
@@ -85,6 +83,7 @@ namespace _Scripts.Utilities.Visuals
         {
             _foamController.Play(_FOAM_DURATION);
             _sequence = DOTween.Sequence();
+            _sequence.SetLink(gameObject);
             
             foreach (var spriteRenderer in _spriteRenderers)
             {
@@ -92,8 +91,7 @@ namespace _Scripts.Utilities.Visuals
                 _sequence.Join(spriteRenderer.DOColor(Color.white, _colorChangingTime).SetEase(_ease));
                 _sequence.SetDelay(_delay);
             }
-
-            _sequence.SetLink(gameObject);
+            
             _sequence.OnComplete(OnAnimationEnded);
         }
 

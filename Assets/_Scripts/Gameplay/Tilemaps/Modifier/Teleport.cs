@@ -87,12 +87,12 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             _pairSplineFollow.Pause();
             
             playerController.SetState<FsmIdleState>();
-            var playerTransform = playerController.GetTransform();
+            var playerTransform = playerController.Transform;
             playerTransform.DOScaleX(0, .1f)
                 .SetEase(Ease.InOutQuad)
                 .OnComplete(() =>
                 {
-                    playerController.GetTransform().position = _linkedTeleport.GetTransform().position;
+                    playerController.Transform.position = _linkedTeleport.GetTransform().position;
                     _pairPlayerSplineFollow.InitStartPositionAndSpeed(4, _isMainTeleport);
                     _pairPlayerSplineFollow.Play();
 
@@ -134,7 +134,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             yield return new WaitForSeconds(duration);
             
             _playerSplineFollow.Pause();
-            playerController.GetTransform().DOScaleX(1, .1f);
+            playerController.Transform.DOScaleX(1, .1f);
             playerController.SetState<FsmMoveState>();
         }
         

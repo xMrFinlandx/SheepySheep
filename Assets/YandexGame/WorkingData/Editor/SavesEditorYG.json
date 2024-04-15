@@ -1,10 +1,38 @@
 {
-  "idSave": 265,
+  "idSave": 282,
   "isFirstSession": false,
   "language": "ru",
   "promptDone": false,
-  "NextScene": "_SheepyA1",
-  "Coins": 0,
-  "PassedScenes": {},
-  "Collectables": {}
+  "NextScene": "_SheepyA16",
+  "Coins": 9,
+  "PassedScenes": {
+    "_SheepyA1": true,
+    "_SheepyA2": true,
+    "_SheepyA3": true,
+    "_SheepyA4": true,
+    "_SheepyA5": true,
+    "_SheepyA6": true,
+    "_SheepyA7": true,
+    "_SheepyA8": true,
+    "_SheepyA9": true,
+    "_SheepyA10": true,
+    "_SheepyA11": true,
+    "_SheepyA12": true,
+    "_SheepyA13": true,
+    "_SheepyA14": true,
+    "_SheepyA15": true,
+    "_SheepyA16": true
+  },
+  "Collectables": {
+    "acfd09e0-5d6f-44fc-9c68-cf50e36d6a1c": true,
+    "14a71b65-630d-4ab8-971f-1fd26dd37c37": true,
+    "ad007479-07e4-4a72-813f-9eb2bb763e97": true,
+    "2e1bf2f4-f13c-4bad-8aa5-ad2b083b4676": true,
+    "17a11c82-5a0d-4020-b6fe-35f7d9642972": true,
+    "92698b12-97d8-4919-a4d3-ce5d50d79817": true,
+    "71d42685-0683-49a9-a0d8-b40519b4fed4": true,
+    "6c739c9e-3491-4723-8077-168f8b6333a7": false,
+    "30f1a309-a612-413c-a859-d7dd90e20301": false,
+    "4ea4381a-0689-4610-bf0c-487ec4bb6377": false
+  }
 }
