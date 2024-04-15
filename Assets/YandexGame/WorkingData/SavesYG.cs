@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace YG
 {
@@ -15,23 +14,42 @@ namespace YG
         public bool promptDone;
 
         #endregion
-        #region Examples
 
-        // Тестовые сохранения для демо сцены
-        // Можно удалить этот код, но тогда удалите и демо (папка Example)
-        public int money = 1;                       // Можно задать полям значения по умолчанию
-        public string newPlayerName = "Hello!";
-        public bool[] openLevels = new bool[3];
+        public string NextScene = "_SheepyA1";
+        public int Coins = 0;
+
+        public Dictionary<string, bool> PassedScenes = new();
+
+        public Dictionary<string, bool> Collectables = new();
         
-        #endregion
-        
-        public int coins = 0;
-        public int diamonds = 0;
-
-        public Dictionary<string, bool> collectables = new();
-
         public SavesYG()
         {
+        }
+
+        public void MakeScenePassed(string sceneName) => AddDataToDictionary(PassedScenes, sceneName, true);
+
+        public void AddCollectable(string guid, bool value) => AddDataToDictionary(Collectables, guid, value);
+
+        public void TrySetNextScene(string sceneName)
+        {
+            if (PassedScenes.ContainsKey(sceneName))
+                return;
+
+            NextScene = sceneName;
+        }
+        
+        public bool IsCollectableEnabled(string guid)
+        {
+            Collectables.TryGetValue(guid, out var value);
+            return value;
+        }
+
+        private static void AddDataToDictionary(IDictionary<string, bool> dictionary, string guid, bool value)
+        {
+            if (dictionary.ContainsKey(guid))
+                dictionary.Remove(guid);
+
+            dictionary.Add(guid, value);
         }
     }
 }

@@ -5,11 +5,13 @@ using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using YG;
 
 namespace _Scripts.Gameplay.Tilemaps.Modifier
 {
     [RequireComponent(typeof(SpriteRenderer))]
-    public class LevelEnd : MonoBehaviour, ITileModifier
+    public class LevelEnd : MonoBehaviour, ITileModifier, IDataPersistence
     {
         [SerializeField] private PlateConfig _plateConfig;
         [Space]
@@ -44,5 +46,15 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         }
 
         public Transform GetTransform() => transform;
+        
+        public void SaveData()
+        {
+            YandexGame.savesData.MakeScenePassed(SceneManager.GetActiveScene().name);
+            YandexGame.savesData.TrySetNextScene(_sceneToLoad);
+        }
+
+        public void LoadData()
+        {
+        }
     }
 }

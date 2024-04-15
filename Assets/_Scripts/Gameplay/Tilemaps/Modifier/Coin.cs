@@ -22,16 +22,13 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         
         public void SaveData()
         {
-            if (YandexGame.savesData.collectables.ContainsKey(_guid)) 
-                YandexGame.savesData.collectables.Remove(_guid);
-
-            YandexGame.savesData.collectables.Add(_guid, _isCollected);
+            YandexGame.savesData.AddCollectable(_guid, _isCollected);
         }
 
         public void LoadData()
         {
-            YandexGame.savesData.collectables.TryGetValue(_guid, out _isCollected);
-
+            _isCollected = YandexGame.savesData.IsCollectableEnabled(_guid);
+            
             if (_isCollected) 
                 gameObject.SetActive(false);
         }

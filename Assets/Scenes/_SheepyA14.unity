@@ -872,7 +872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 8fb8db79459aa1347b1d9459d4299387, type: 2}
   _sceneToLoad:
-    _sceneAsset: {fileID: 102900000, guid: c39833eb40bdbb04fb8934a256c922b7, type: 3}
+    _sceneAsset: {fileID: 102900000, guid: bd225766117bb1143bdb68d651ad03c8, type: 3}
     _sceneName: _SheepyA15
   _spriteRenderer: {fileID: 347417010}
 --- !u!212 &347417010
@@ -12388,10 +12388,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.26132813
     y: 0
-    width: 1
-    height: 1
+    width: 0.23819445
+    height: 0.23819445
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34

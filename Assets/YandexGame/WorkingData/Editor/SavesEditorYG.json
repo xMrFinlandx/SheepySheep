@@ -1,19 +1,10 @@
 {
-  "idSave": 256,
+  "idSave": 265,
   "isFirstSession": false,
   "language": "ru",
   "promptDone": false,
-  "money": 1,
-  "newPlayerName": "Hello!",
-  "openLevels": [
-    false,
-    false,
-    false
-  ],
-  "coins": 18,
-  "diamonds": 0,
-  "collectables": {
-    "4ea4381a-0689-4610-bf0c-487ec4bb6377": true,
-    "30f1a309-a612-413c-a859-d7dd90e20301": true
-  }
+  "NextScene": "_SheepyA1",
+  "Coins": 0,
+  "PassedScenes": {},
+  "Collectables": {}
 }

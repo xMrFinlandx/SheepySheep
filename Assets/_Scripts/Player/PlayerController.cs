@@ -142,12 +142,12 @@ namespace _Scripts.Player
         public void SaveData()
         {
             _coinsWallet.ApplyBuffer();
-            YandexGame.savesData.coins = _coinsWallet.Balance;
+            YandexGame.savesData.Coins = _coinsWallet.Balance;
         }
 
         public void LoadData()
         {
-            _coinsWallet = new Wallet(YandexGame.savesData.coins);
+            _coinsWallet = new Wallet(YandexGame.savesData.Coins);
         }
     }
 }
