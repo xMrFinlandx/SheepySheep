@@ -73,7 +73,7 @@ namespace _Scripts.Utilities.Visuals
         private void OnAnimationEnded()
         {
             _tilemap.gameObject.SetActive(true);
-            transform.KillChildren();
+            //transform.KillChildren();
             _spriteRenderers.Clear();
             GameStateManager.SetState(GameStateType.Gameplay);
             AnimationEndedAction?.Invoke();

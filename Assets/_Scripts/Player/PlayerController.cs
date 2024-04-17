@@ -1,5 +1,6 @@
 using System;
 using _Scripts.Managers;
+using _Scripts.Scriptables;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Interfaces;
@@ -14,6 +15,11 @@ namespace _Scripts.Player
     {
         [SerializeField] private float _speed = 10;
         [SerializeField] private float _speedModifier = 1.8f;
+        [Space] 
+        [SerializeField] private float _gravityScale = 2;
+        [SerializeField] private float _fallDuration = .4f;
+        [Space] 
+        [SerializeField] private PlayerAnimationConfig _playerAnimationConfig;
         [Header("Components")]
         [SerializeField, HideInInspector] private Rigidbody2D _rigidbody;
         [SerializeField, HideInInspector] private Animator _animator;
@@ -49,19 +55,16 @@ namespace _Scripts.Player
 
         public void SetMoveDirectionAndArrowPosition(Vector2 cartesianDirection, Vector2 position)
         {
-            var newDirection = cartesianDirection.CartesianToIsometric();
+            var isometricDirection = cartesianDirection.CartesianToIsometric();
 
-            if (MoveDirection == newDirection)
+            if (MoveDirection == isometricDirection)
                 return;
             
             ResetVelocityAndSetPosition(position);
-            MoveDirection = newDirection;
+            MoveDirection = isometricDirection;
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
-
-            if (cartesianDirection == Vector2.down)
-                _spriteRenderer.flipX = false;
-            else if (cartesianDirection == Vector2.left) 
-                _spriteRenderer.flipX = true;
+            
+            _spriteRenderer.flipX = isometricDirection.x < 0;
         }
 
         public void AddCoins(int value)
@@ -77,7 +80,7 @@ namespace _Scripts.Player
         public void Restart()
         {
             _isStarted = false;
-            _animator.Play("PlayerMove");
+            _animator.Play(_playerAnimationConfig.MoveAnimation);
             _animator.enabled = false;
             _spriteRenderer.sprite = _defaultSprite;
             ResetVelocityAndSetPosition(_spawnPosition);
@@ -115,9 +118,9 @@ namespace _Scripts.Player
             _finiteStateMachine = new FiniteStateMachine();
             
             _finiteStateMachine.AddState(new FsmIdleState(_finiteStateMachine, _rigidbody));
-            _finiteStateMachine.AddState(new FsmMoveState(_finiteStateMachine, this, _animator, "PlayerMove", _speed));
-            _finiteStateMachine.AddState(new FsmRunState(_finiteStateMachine, this, _animator, "PlayerMove", _speed, _speedModifier));
-            _finiteStateMachine.AddState(new FsmDiedState(_finiteStateMachine, _rigidbody));
+            _finiteStateMachine.AddState(new FsmMoveState(_finiteStateMachine, this, _animator, _playerAnimationConfig.MoveAnimation, _speed));
+            _finiteStateMachine.AddState(new FsmRunState(_finiteStateMachine, this, _animator, _playerAnimationConfig.MoveAnimation, _speed, _speedModifier));
+            _finiteStateMachine.AddState(new FsmDiedState(_finiteStateMachine, _rigidbody, _animator, _playerAnimationConfig.DeathAnimation, _fallDuration, _gravityScale));
             _finiteStateMachine.AddState(new FsmPausedState(_finiteStateMachine, _rigidbody));
         }
 

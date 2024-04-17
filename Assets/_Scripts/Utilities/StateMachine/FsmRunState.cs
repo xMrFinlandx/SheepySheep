@@ -7,22 +7,22 @@ namespace _Scripts.Utilities.StateMachine
     {
         private readonly float _speed;
         private readonly float _speedModifier;
-        private readonly string _animationName;
+        private readonly int _animationHash;
 
         public FsmRunState(FiniteStateMachine finiteStateMachine, PlayerController playerController, Animator animator,
-            string animationName, float speed, float speedModifier) : base(finiteStateMachine, playerController,
-            animator, animationName, speed)
+            int animationHash, float speed, float speedModifier) : base(finiteStateMachine, playerController,
+            animator, animationHash, speed)
         {
             _speed = speedModifier * speed;
             _speedModifier = speedModifier;
-            _animationName = animationName;
+            _animationHash = animationHash;
         }
 
         public override void Enter()
         {
             Animator.speed = _speedModifier;
             Animator.enabled = true;
-            Animator.Play(_animationName);
+            Animator.Play(_animationHash);
         }
 
         public override void FixedUpdate()

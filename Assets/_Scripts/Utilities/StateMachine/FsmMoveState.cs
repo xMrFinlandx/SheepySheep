@@ -8,7 +8,7 @@ namespace _Scripts.Utilities.StateMachine
     {
         private readonly float _stepSize = .1f;
         private readonly float _speed;
-        private readonly string _animationName;
+        private readonly int _animationHash;
         private readonly Transform _transform;
         
         private Vector2 _currentPosition;
@@ -19,13 +19,13 @@ namespace _Scripts.Utilities.StateMachine
         protected PlayerController PlayerController { get; }
         protected Rigidbody2D Rigidbody { get; }
 
-        public FsmMoveState(FiniteStateMachine finiteStateMachine, PlayerController playerController, Animator animator, string animationName, float speed) : base(finiteStateMachine)
+        public FsmMoveState(FiniteStateMachine finiteStateMachine, PlayerController playerController, Animator animator, int animationHash, float speed) : base(finiteStateMachine)
         {
             PlayerController = playerController;
             Rigidbody = playerController.Rigidbody;
             Animator = animator;
 
-            _animationName = animationName;
+            _animationHash = animationHash;
             _transform = playerController.transform;
             _speed = speed;
         }
@@ -34,7 +34,7 @@ namespace _Scripts.Utilities.StateMachine
         {
             Animator.speed = 1;
             Animator.enabled = true;
-            Animator.Play(_animationName);
+            Animator.Play(_animationHash);
         }
 
         public override void FixedUpdate()

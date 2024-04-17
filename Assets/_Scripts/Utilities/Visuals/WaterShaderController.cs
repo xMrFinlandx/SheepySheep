@@ -18,12 +18,13 @@ namespace _Scripts.Utilities.Visuals
         
         public void Play(float duration)
         {
-            _shaderController.Play(0, _foamProperty.DefaultValue, duration).SetEase(_ease);
+            _shaderController.Play(0, _foamProperty.DefaultValue, duration, 0).SetEase(_ease);
         }
         
         public void Init()
         {
             _shaderController = new ShaderController(_renderer, _foamProperty, _waterOffsetConfig.PropertyName);
+            _shaderController.SetFloatValue(0, 0);
             _shaderController.SetVectorValue(_waterOffsetConfig.RandomOffset, 1);
         }
         
