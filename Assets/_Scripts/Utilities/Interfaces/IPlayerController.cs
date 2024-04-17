@@ -9,11 +9,9 @@ namespace _Scripts.Utilities.Interfaces
         
         public void SetState<T>() where T : FsmState;
 
-        public void ResetVelocityAndSetPosition(Vector2 pos);
-
         public void SetSpeed(float speed);
         
-        public void SetMoveDirection(Vector2 cartesianDirection);
+        public void SetMoveDirectionAndArrowPosition(Vector2 cartesianDirection, Vector2 position);
 
         public void AddCoins(int value);
 

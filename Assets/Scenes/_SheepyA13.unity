@@ -298,7 +298,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3128108189421642463, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
+  m_Sprite: {fileID: 6171481968261811763, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -416,7 +416,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3128108189421642463, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
+  m_Sprite: {fileID: 6171481968261811763, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -519,7 +519,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3128108189421642463, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
+  m_Sprite: {fileID: 6171481968261811763, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -716,7 +716,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3128108189421642463, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
+  m_Sprite: {fileID: 6171481968261811763, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -774,7 +774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 8fb8db79459aa1347b1d9459d4299387, type: 2}
   _sceneToLoad:
-    _sceneAsset: {fileID: 102900000, guid: 696058bdd42d55b43895ddfcb1bc758b, type: 3}
+    _sceneAsset: {fileID: 102900000, guid: 04de2c0f08cb103469a525f1c579ac43, type: 3}
     _sceneName: _SheepyA14
   _spriteRenderer: {fileID: 347417010}
 --- !u!212 &347417010
@@ -877,8 +877,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bee2f90d1fd40b6a40a7de23bb6fbf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _propertyName: _FoamOpacity
-  _endValue: 0.5
+  _foamProperty:
+    _propertyName: _FoamOpacity
+    _values:
+    - 0.5
+  _waterOffsetConfig: {fileID: 11400000, guid: 8ff96a64b4313b3409a0913052e8ba0d, type: 2}
   _ease: 11
   _renderer: {fileID: 454887022}
 --- !u!483693784 &454887022
@@ -14975,7 +14978,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3128108189421642463, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
+  m_Sprite: {fileID: 6171481968261811763, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -16592,7 +16595,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3128108189421642463, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
+  m_Sprite: {fileID: 6171481968261811763, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -16895,7 +16898,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3128108189421642463, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
+  m_Sprite: {fileID: 6171481968261811763, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -17013,7 +17016,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3128108189421642463, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
+  m_Sprite: {fileID: 6171481968261811763, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using _Scripts.Utilities.Enums;
 using UnityEngine;
@@ -19,6 +20,10 @@ namespace _Scripts.Utilities
                 _ => Vector2.down
             };
         }
+
+        public static int GetRandomId<T>(this IEnumerable<T> enumerable) => Random.Range(0, enumerable.Count());
+
+        public static T GetRandomItem<T>(this IList<T> list) => list[list.GetRandomId()];
 
         public static Vector2 CartesianToIsometric(this Vector2 direction)
         {

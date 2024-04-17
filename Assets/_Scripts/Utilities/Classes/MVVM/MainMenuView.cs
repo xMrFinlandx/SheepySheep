@@ -8,6 +8,7 @@ namespace _Scripts.Utilities.Classes.MVVM
         [SerializeField] private Button _continueButton;
         [SerializeField] private Button _selectLevelButton;
         [SerializeField] private Button _selectBonusLevelButton;
+        [SerializeField] private Button _settingsButton;
         [SerializeField] private Button _resetProgressButton;
 
         private MainMenuViewModel ViewModel;
@@ -17,7 +18,7 @@ namespace _Scripts.Utilities.Classes.MVVM
             Init(new MainMenuViewModel(new MainMenuModel()));
         }
 
-        public void Init(MainMenuViewModel viewModel)
+        private void Init(MainMenuViewModel viewModel)
         {
             ViewModel = viewModel;
             
@@ -30,12 +31,10 @@ namespace _Scripts.Utilities.Classes.MVVM
 
         private void OnDropProgressButtonPressed(bool previous, bool current)
         {
-            
         }
 
         private void OnContinueButtonPressed(bool previous, bool current)
         {
-            
         }
     }
 }

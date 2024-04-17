@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isSingleAtTile: 1
   _yOffset: 0
-  _idleSprite: {fileID: -3128108189421642463, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
+  _idleSprite: {fileID: 6171481968261811763, guid: f2ae781074aa9e047854a1bc87b881ea, type: 3}
   _showAnimations: 0
   _showShader: 0
   _animationClip: {fileID: 0}

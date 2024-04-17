@@ -30,8 +30,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         public override void Activate(IPlayerController playerController)
         {
-            playerController.ResetVelocityAndSetPosition(OffsetPosition);
-            playerController.SetMoveDirection(_currentDirection.GetDirectionVector());
+            playerController.SetMoveDirectionAndArrowPosition(_currentDirection.GetDirectionVector(), OffsetPosition);
             PlayShineAnimation();
         }
 

@@ -66,7 +66,7 @@ namespace _Scripts.Managers
         {
             if (_tileModifiersData.TryGetValue(key, out var value))
             {
-                if (value.IsSingleAtTile)
+                if (value.IsSingleAtTile && modifier.IsSingleAtTile)
                     return false;
                 
                 value.Add(modifier);

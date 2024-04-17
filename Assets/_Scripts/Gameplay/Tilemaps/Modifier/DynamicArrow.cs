@@ -56,8 +56,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         public override void Activate(IPlayerController playerController)
         {
-            playerController.ResetVelocityAndSetPosition(OffsetPosition);
-            playerController.SetMoveDirection(_cartesianDirection);
+            playerController.SetMoveDirectionAndArrowPosition(_cartesianDirection, OffsetPosition);
             
             PlayShineAnimation();
         }

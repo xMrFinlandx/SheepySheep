@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/_MainMenu.unity
+    guid: dd9fcb21929e0d94385686058368414c
+  - enabled: 1
     path: Assets/Scenes/_SheepyA1.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
@@ -45,16 +48,16 @@ EditorBuildSettings:
     path: Assets/Scenes/_SheepyA12.unity
     guid: d02d24883059b0641a0fbe9ea3445519
   - enabled: 1
-    path: Assets/Scenes/_SheepyA14.unity
-    guid: a293086a3acd58f448db0dec35cb5077
-  - enabled: 1
-    path: Assets/Scenes/_SheepyA16.unity
-    guid: c39833eb40bdbb04fb8934a256c922b7
-  - enabled: 1
     path: Assets/Scenes/_SheepyA15.unity
-    guid: bd225766117bb1143bdb68d651ad03c8
+    guid: 696058bdd42d55b43895ddfcb1bc758b
   - enabled: 1
     path: Assets/Scenes/_SheepyA17.unity
+    guid: c39833eb40bdbb04fb8934a256c922b7
+  - enabled: 1
+    path: Assets/Scenes/_SheepyA16.unity
+    guid: bd225766117bb1143bdb68d651ad03c8
+  - enabled: 1
+    path: Assets/Scenes/_SheepyA14.unity
     guid: 04de2c0f08cb103469a525f1c579ac43
   - enabled: 1
     path: Assets/Scenes/_SheepyA18.unity

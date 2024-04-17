@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e2719d045354390b3fbf21715e9cbd7, type: 3}
+  m_Name: New Water Offset Config
+  m_EditorClassIdentifier: 
+  _noiseOffset:
+    _propertyName: _CurrentTexturePosition
+    _values:
+    - {x: 0, y: 0}
+    - {x: -40, y: 0}
+    - {x: 0, y: -18}
+    - {x: 0, y: 26}
+    - {x: -30, y: 26}
+    - {x: -70, y: 26}
+    - {x: 90, y: 0}
+    - {x: 90, y: 36}
+    - {x: 90, y: 63}
+    - {x: 28, y: 63}
+    - {x: -18, y: 63}
+    - {x: -47, y: 63}
+    - {x: 47, y: 0}
+    - {x: -100, y: 0}
+    - {x: 16, y: 33}
+    - {x: 52, y: 33}
+    - {x: 100, y: 35}
+    - {x: 100, y: -23}
+    - {x: 57, y: -20}
+    - {x: 20, y: -20}
+    - {x: -67, y: -87}

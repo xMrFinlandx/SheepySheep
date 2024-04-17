@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _endOfPathInstruction: 1
+  _particleSystem: {fileID: 6101608478785849497}
 --- !u!198 &6101608478785849497
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -131,8 +132,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
-      minScalar: 1
+      scalar: 2
+      minScalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:

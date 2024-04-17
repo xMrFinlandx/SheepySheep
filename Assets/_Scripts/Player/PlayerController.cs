@@ -47,19 +47,14 @@ namespace _Scripts.Player
         {
         }
 
-        public void ResetVelocityAndSetPosition(Vector2 position)
-        {
-            _rigidbody.velocity = Vector2.zero;
-            transform.position = position;
-        }
-
-        public void SetMoveDirection(Vector2 cartesianDirection)
+        public void SetMoveDirectionAndArrowPosition(Vector2 cartesianDirection, Vector2 position)
         {
             var newDirection = cartesianDirection.CartesianToIsometric();
 
             if (MoveDirection == newDirection)
                 return;
             
+            ResetVelocityAndSetPosition(position);
             MoveDirection = newDirection;
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
 
@@ -85,8 +80,8 @@ namespace _Scripts.Player
             _animator.Play("PlayerMove");
             _animator.enabled = false;
             _spriteRenderer.sprite = _defaultSprite;
-            transform.position = _spawnPosition;
-            SetMoveDirection(_defaultDirection);
+            ResetVelocityAndSetPosition(_spawnPosition);
+            SetMoveDirectionAndArrowPosition(_defaultDirection, _spawnPosition);
             _coinsWallet.ResetBuffer();
             _finiteStateMachine.SetState<FsmIdleState>();
         }
@@ -106,7 +101,7 @@ namespace _Scripts.Player
             TilemapInteractionsManager.ArrowInstantiatedAction += OnArrowInstantiated;
             ReloadRoomManager.ReloadRoomAction += Restart;
             
-            SetMoveDirection(_defaultDirection);
+            SetMoveDirectionAndArrowPosition(_defaultDirection, _spawnPosition);
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
             
             InitStateMachine();
@@ -133,6 +128,12 @@ namespace _Scripts.Player
             
             _isStarted = true;
            _finiteStateMachine.SetState<FsmMoveState>();
+        }
+        
+        private void ResetVelocityAndSetPosition(Vector2 position)
+        {
+            _rigidbody.velocity = Vector2.zero;
+            transform.position = position;
         }
 
         private void FixedUpdate() => _finiteStateMachine.FixedUpdate();

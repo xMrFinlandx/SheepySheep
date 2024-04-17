@@ -11,7 +11,9 @@ namespace _Scripts.Utilities.Classes
         [SerializeField] private T[] _values;
         
         public string PropertyName => _propertyName;
+        
         public T[] Values => _values;
+        public T DefaultValue => _values[0];
 
         public ShaderProperty()
         {

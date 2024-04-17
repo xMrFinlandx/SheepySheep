@@ -658,8 +658,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bee2f90d1fd40b6a40a7de23bb6fbf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _propertyName: _FoamOpacity
-  _endValue: 0.5
+  _foamProperty:
+    _propertyName: _FoamOpacity
+    _values:
+    - 0.5
+  _waterOffsetConfig: {fileID: 11400000, guid: 8ff96a64b4313b3409a0913052e8ba0d, type: 2}
   _ease: 11
   _renderer: {fileID: 454887022}
 --- !u!483693784 &454887022
