@@ -17,10 +17,10 @@ namespace _Scripts.Managers
         private readonly Dictionary<Vector2Int, TileModifiersHandler> _tileModifiersData = new();
 
         private Tilemap _tilemap;
-        private Vector2Int _previousPos;
+        private Vector2Int _previousPosition;
 
         public float YCellSize => _tilemap.cellSize.y;
-        
+
 #if UNITY_EDITOR
         [Header("--- Editor Only ---")] 
         [SerializeField] private Tilemap _editorOnlyMainTilemap;
@@ -52,7 +52,7 @@ namespace _Scripts.Managers
         public Vector2 CellToWorld(Vector2Int pos) => _tilemap.CellToWorld((Vector3Int) pos);
 
         public bool IsInTilemap(Vector2Int pos) => _tilemap.HasTile((Vector3Int) pos);
-        
+
         public bool TryAddModifiers(Vector2 pos, ITileModifier modifier)
         {
             if (modifier is BaseCollectable interaction)
@@ -120,10 +120,10 @@ namespace _Scripts.Managers
         
         public void ActivateModifiers(Vector2Int key, IPlayerController playerController)
         {
-            if (_previousPos == key)
+            if (_previousPosition == key)
                 return;
 
-            _previousPos = key;
+            _previousPosition = key;
             
             if (_tileModifiersData.TryGetValue(key, out var value))
                 value.Activate(playerController);

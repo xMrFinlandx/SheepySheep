@@ -31,6 +31,7 @@ namespace _Scripts.Utilities.Visuals
         
         private readonly Color _transparentColor = new(1, 1, 1, 0);
         private List<SpriteRenderer> _spriteRenderers = new();
+        private List<SpriteRenderer> _tileRenderers = new();
 
         private Tilemap _tilemap;
         private Sequence _sequence;
@@ -53,6 +54,21 @@ namespace _Scripts.Utilities.Visuals
             
             Animate();
         }
+        
+        public int GetSortingOrder(Vector3Int position)
+        {
+            return _sortingLayerOrder - (position.x * 2 + position.y * 2);
+        }
+
+        public void EnableTiles(bool showTiles)
+        {
+            _tilemap.gameObject.SetActive(!showTiles);
+            
+            foreach (var spriteRenderer in _tileRenderers)
+            {
+                spriteRenderer.gameObject.SetActive(showTiles);
+            }
+        }
 
         private List<SpriteRenderer> JoinInteractions()
         {
@@ -72,8 +88,7 @@ namespace _Scripts.Utilities.Visuals
 
         private void OnAnimationEnded()
         {
-            _tilemap.gameObject.SetActive(true);
-            //transform.KillChildren();
+            EnableTiles(false);
             _spriteRenderers.Clear();
             GameStateManager.SetState(GameStateType.Gameplay);
             AnimationEndedAction?.Invoke();
@@ -97,8 +112,6 @@ namespace _Scripts.Utilities.Visuals
 
         private void GenerateTiles()
         {
-            print(_tilemap == null);
-            
             foreach (var position in _tilemap.cellBounds.allPositionsWithin)
             {
                 if (!_tilemap.HasTile(position)) 
@@ -110,11 +123,12 @@ namespace _Scripts.Utilities.Visuals
                 
                 spriteRenderer.sprite = _tilemap.GetSprite(position);
                 spriteRenderer.color = _transparentColor;
-                spriteRenderer.sortingOrder = _sortingLayerOrder - (position.x * 2 + position.y * 2);
+                spriteRenderer.sortingOrder = GetSortingOrder(position);
 
                 spriteRendererTransform.position = spritePosition.IncreaseVectorValue(0, _ySpawnOffset + _spriteCenterOffset);
                 
                 _spriteRenderers.Add(spriteRenderer);
+                _tileRenderers.Add(spriteRenderer);
             }
             
             _spriteRenderers.Shuffle();

@@ -120,7 +120,7 @@ namespace _Scripts.Player
             _finiteStateMachine.AddState(new FsmIdleState(_finiteStateMachine, _rigidbody));
             _finiteStateMachine.AddState(new FsmMoveState(_finiteStateMachine, this, _animator, _playerAnimationConfig.MoveAnimation, _speed));
             _finiteStateMachine.AddState(new FsmRunState(_finiteStateMachine, this, _animator, _playerAnimationConfig.MoveAnimation, _speed, _speedModifier));
-            _finiteStateMachine.AddState(new FsmDiedState(_finiteStateMachine, _rigidbody, _animator, _playerAnimationConfig.DeathAnimation, _fallDuration, _gravityScale));
+            _finiteStateMachine.AddState(new FsmDiedState(_finiteStateMachine, _rigidbody, _spriteRenderer, _animator, _playerAnimationConfig.DeathAnimation, _fallDuration, _gravityScale));
             _finiteStateMachine.AddState(new FsmPausedState(_finiteStateMachine, _rigidbody));
         }
 
