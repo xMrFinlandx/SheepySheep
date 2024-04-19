@@ -3,6 +3,7 @@ using _Scripts.Managers;
 using _Scripts.Player;
 using _Scripts.Player.Controls;
 using _Scripts.Scriptables;
+using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities.Visuals;
 using NaughtyAttributes;
 using UnityEngine;

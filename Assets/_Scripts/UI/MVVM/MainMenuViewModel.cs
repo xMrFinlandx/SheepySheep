@@ -1,7 +1,8 @@
-﻿using UnityEngine.SceneManagement;
+﻿using _Scripts.Utilities.Classes;
+using UnityEngine.SceneManagement;
 using YG;
 
-namespace _Scripts.Utilities.Classes.MVVM
+namespace _Scripts.UI.MVVM
 {
     public class MainMenuViewModel
     {
@@ -10,11 +11,6 @@ namespace _Scripts.Utilities.Classes.MVVM
         public readonly ReactiveProperty<bool> IsContinueButtonPressed = new(false);
         public readonly ReactiveProperty<bool> IsDropProgressButtonPressed = new(false);
         
-        public ReactiveProperty<bool> ContinueButtonEnabled = new();
-        public ReactiveProperty<bool> AdditionalLevelsButtonEnabled = new();
-        public ReactiveProperty<bool> SelectLevelsButtonEnabled = new();
-        public ReactiveProperty<bool> ResetProgressButtonEnabled = new();
-        
         public MainMenuViewModel(MainMenuModel menuModel)
         {
             MenuModel = menuModel;
@@ -22,8 +18,6 @@ namespace _Scripts.Utilities.Classes.MVVM
 
         public void OnContinueButtonClicked()
         {
-            ContinueButtonEnabled.Value = true;
-
             SceneManager.LoadSceneAsync(MenuModel.GetLastScene());
         }
 
@@ -31,6 +25,11 @@ namespace _Scripts.Utilities.Classes.MVVM
         {
             YandexGame.ResetSaveProgress();
             YandexGame.SaveProgress();
+        }
+
+        public void OnLevelSelected(string sceneName)
+        {
+            SceneManager.LoadSceneAsync(sceneName);
         }
     }
 }

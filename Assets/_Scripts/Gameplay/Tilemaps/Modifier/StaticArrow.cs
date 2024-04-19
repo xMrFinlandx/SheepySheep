@@ -1,5 +1,6 @@
 ﻿using _Scripts.Managers;
 using _Scripts.Scriptables;
+using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;

@@ -1,10 +1,8 @@
 ﻿using NaughtyAttributes;
-using UnityEngine;
-#if UNITY_EDITOR
 using UnityEditor.Animations;
-#endif
+using UnityEngine;
 
-namespace _Scripts.Scriptables
+namespace _Scripts.Scriptables.Gameplay
 {
     public abstract class InteractableConfig : TileModifierConfig
     {

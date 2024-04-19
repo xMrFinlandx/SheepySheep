@@ -1,7 +1,7 @@
 ﻿using _Scripts.Utilities.Classes;
 using UnityEngine;
 
-namespace _Scripts.Scriptables
+namespace _Scripts.Scriptables.Gameplay
 {
     [CreateAssetMenu(fileName = "New Arrow Rotator Config", menuName = "Gameplay/Arrow Rotator Config", order = 0)]
     public class ArrowRotatorConfig : InteractableConfig

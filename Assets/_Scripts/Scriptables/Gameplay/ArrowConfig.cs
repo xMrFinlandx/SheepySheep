@@ -4,7 +4,7 @@ using _Scripts.Utilities.Enums;
 using DG.Tweening;
 using UnityEngine;
 
-namespace _Scripts.Scriptables
+namespace _Scripts.Scriptables.Gameplay
 {
     [CreateAssetMenu(fileName = "New Arrow Config", menuName = "Gameplay/Arrow Config", order = 0)]
     public class ArrowConfig : TileModifierConfig

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace _Scripts.Scriptables
+namespace _Scripts.Scriptables.Gameplay
 {
     [CreateAssetMenu(fileName = "New Spike Config", menuName = "Gameplay/Spike Config", order = 0)]
     public class SpikeConfig : InteractableConfig

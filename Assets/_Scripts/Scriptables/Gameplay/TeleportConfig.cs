@@ -1,7 +1,7 @@
 ﻿using _Scripts.Utilities.Visuals;
 using UnityEngine;
 
-namespace _Scripts.Scriptables
+namespace _Scripts.Scriptables.Gameplay
 {
     [CreateAssetMenu(fileName = "New Teleport Config", menuName = "Gameplay/Teleport Config", order = 0)]
     public class TeleportConfig : PlateConfig

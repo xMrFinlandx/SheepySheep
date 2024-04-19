@@ -30,9 +30,11 @@ namespace YG
 
         public void AddCollectable(string guid, bool value) => AddDataToDictionary(Collectables, guid, value);
 
+        public bool IsScenePassed(string sceneName) => PassedScenes.ContainsKey(sceneName);
+        
         public void TrySetNextScene(string sceneName)
         {
-            if (PassedScenes.ContainsKey(sceneName))
+            if (IsScenePassed(sceneName))
                 return;
 
             NextScene = sceneName;

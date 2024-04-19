@@ -1,4 +1,5 @@
 ﻿using _Scripts.Scriptables;
+using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities.Interfaces;
 using DG.Tweening;
 using UnityEngine;

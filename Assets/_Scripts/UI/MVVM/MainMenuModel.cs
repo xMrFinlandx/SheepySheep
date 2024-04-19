@@ -1,6 +1,6 @@
 ﻿using YG;
 
-namespace _Scripts.Utilities.Classes.MVVM
+namespace _Scripts.UI.MVVM
 {
     public class MainMenuModel
     {

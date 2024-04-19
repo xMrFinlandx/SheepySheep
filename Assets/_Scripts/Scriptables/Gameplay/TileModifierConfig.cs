@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace _Scripts.Scriptables
+namespace _Scripts.Scriptables.Gameplay
 {
     public abstract class TileModifierConfig : ScriptableObject
     {

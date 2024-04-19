@@ -1,7 +1,7 @@
 ﻿using DG.Tweening;
 using UnityEngine;
 
-namespace _Scripts.Scriptables
+namespace _Scripts.Scriptables.Gameplay
 {
     [CreateAssetMenu(fileName = "New Collectable Config", menuName = "Gameplay/Collectable Config", order = 0)]
     public class CollectableConfig : InteractableConfig
