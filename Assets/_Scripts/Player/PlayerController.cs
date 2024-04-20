@@ -17,10 +17,13 @@ namespace _Scripts.Player
         [SerializeField] private float _speedModifier = 1.8f;
         [Space] 
         [SerializeField] private float _gravityScale = 2;
-        [SerializeField] private float _fallDuration = .4f;
+        [SerializeField] private float _deathAwaitDuration = 1f;
+        [SerializeField] private float _fallDeathAwaitDuration = .4f;
         [Space] 
         [SerializeField] private PlayerAnimationConfig _playerAnimationConfig;
-        [Header("Components")]
+
+        [Header("Components")] 
+        [SerializeField, HideInInspector] private ParticleSystem _deathParticleSystem;
         [SerializeField, HideInInspector] private Rigidbody2D _rigidbody;
         [SerializeField, HideInInspector] private Animator _animator;
         [SerializeField, HideInInspector] private SpriteRenderer _spriteRenderer;
@@ -49,9 +52,6 @@ namespace _Scripts.Player
         }
 
         public void SetState<T>() where T : FsmState => _finiteStateMachine.SetState<T>();
-        public void SetSpeed(float speed)
-        {
-        }
 
         public void SetMoveDirectionAndArrowPosition(Vector2 cartesianDirection, Vector2 position)
         {
@@ -72,11 +72,6 @@ namespace _Scripts.Player
             _coinsWallet.AddToBuffer(value);
         }
 
-        public void OnLevelCompleted()
-        {
-            print("Level completed");
-        }
-
         public void Restart()
         {
             _isStarted = false;
@@ -94,6 +89,7 @@ namespace _Scripts.Player
             _spriteRenderer ??= GetComponent<SpriteRenderer>();
             _animator ??= GetComponent<Animator>();
             _rigidbody ??= GetComponent<Rigidbody2D>();
+            _deathParticleSystem ??= GetComponentInChildren<ParticleSystem>();
 
             _rigidbody.gravityScale = 0;
             _rigidbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
@@ -120,7 +116,8 @@ namespace _Scripts.Player
             _finiteStateMachine.AddState(new FsmIdleState(_finiteStateMachine, _rigidbody));
             _finiteStateMachine.AddState(new FsmMoveState(_finiteStateMachine, this, _animator, _playerAnimationConfig.MoveAnimation, _speed));
             _finiteStateMachine.AddState(new FsmRunState(_finiteStateMachine, this, _animator, _playerAnimationConfig.MoveAnimation, _speed, _speedModifier));
-            _finiteStateMachine.AddState(new FsmDiedState(_finiteStateMachine, _rigidbody, _spriteRenderer, _animator, _playerAnimationConfig.DeathAnimation, _fallDuration, _gravityScale));
+            _finiteStateMachine.AddState(new FsmFallState(_finiteStateMachine, _rigidbody, _spriteRenderer, _animator, _playerAnimationConfig.DeathAnimation, _fallDeathAwaitDuration, _gravityScale));
+            _finiteStateMachine.AddState(new FsmDiedState(_finiteStateMachine, _rigidbody, _spriteRenderer, _deathParticleSystem, _deathAwaitDuration));
             _finiteStateMachine.AddState(new FsmPausedState(_finiteStateMachine, _rigidbody));
         }
 

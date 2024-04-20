@@ -1,58 +1,47 @@
 ﻿using System;
-using _Scripts.Managers;
-using _Scripts.Utilities.Visuals;
-using JetBrains.Annotations;
 using UnityEngine;
 
 namespace _Scripts.Utilities.StateMachine
 {
     public class FsmDiedState : FsmState
     {
-        private readonly int _animationHash;
-        private readonly float _fallDuration;
-        private readonly float _gravityScale;
-        private const string _GROUND_LAYER = "Ground";
-        private const string _PLAYER_LAYER = "Player";
-
-        private readonly Rigidbody2D _rigidbody;
-        private readonly Animator _animator;
-        private readonly SpriteRenderer _spriteRenderer;
-        
         public static Action PlayerDiedAction;
+
+        protected readonly float AwaitDuration;
+        protected readonly Rigidbody2D Rigidbody;
+        protected readonly SpriteRenderer SpriteRenderer;
+
+        private readonly ParticleSystem _particleSystem;
         
-        public FsmDiedState([CanBeNull] FiniteStateMachine finiteStateMachine, Rigidbody2D rigidbody, SpriteRenderer spriteRenderer,
-            Animator animator, int deathAnimation, float fallDuration, float gravityScale) : base(finiteStateMachine)
+        public FsmDiedState(FiniteStateMachine finiteStateMachine, Rigidbody2D rigidbody, SpriteRenderer spriteRenderer, float awaitDuration) : base(finiteStateMachine)
         {
-            _spriteRenderer = spriteRenderer;
-            _rigidbody = rigidbody;
-            _animator = animator;
-            _animationHash = deathAnimation;
-            _fallDuration = fallDuration;
-            _gravityScale = gravityScale;
+            SpriteRenderer = spriteRenderer;
+            Rigidbody = rigidbody;
+            AwaitDuration = awaitDuration;
         }
 
+        public FsmDiedState(FiniteStateMachine finiteStateMachine, Rigidbody2D rigidbody, SpriteRenderer spriteRenderer, ParticleSystem particleSystem, float awaitDuration) : base(finiteStateMachine)
+        {
+            SpriteRenderer = spriteRenderer;
+            Rigidbody = rigidbody;
+            AwaitDuration = awaitDuration;
+            _particleSystem = particleSystem;
+        }
+        
         public override async void Enter()
         {
-            var cellPosition = TilemapManager.Instance.WorldToCell(_rigidbody.position);
-            TilemapAnimatorManager.Instance.EnableTiles(true);
-            _spriteRenderer.sortingLayerName = _GROUND_LAYER;
-            _spriteRenderer.sortingOrder = TilemapAnimatorManager.Instance.GetSortingOrder((Vector3Int) cellPosition);
+            Rigidbody.velocity = Vector2.zero;
+            _particleSystem.Play();
+            SpriteRenderer.enabled = false;
             
-            _rigidbody.gravityScale = _gravityScale;
-            _rigidbody.velocity = Vector2.zero;
-            _animator.Play(_animationHash);
-            
-            await Awaitable.WaitForSecondsAsync(_fallDuration);
+            await Awaitable.WaitForSecondsAsync(AwaitDuration);
             
             PlayerDiedAction?.Invoke();
         }
 
         public override void Exit()
         {
-            TilemapAnimatorManager.Instance.EnableTiles(false);
-            _rigidbody.gravityScale = 0f;
-            _spriteRenderer.sortingLayerName = _PLAYER_LAYER;
-            _spriteRenderer.sortingOrder = 10;
+            SpriteRenderer.enabled = true;
         }
     }
 }

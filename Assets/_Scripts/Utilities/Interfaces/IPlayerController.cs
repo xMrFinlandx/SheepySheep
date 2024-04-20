@@ -8,13 +8,9 @@ namespace _Scripts.Utilities.Interfaces
         public Transform Transform { get; }
         
         public void SetState<T>() where T : FsmState;
-
-        public void SetSpeed(float speed);
         
         public void SetMoveDirectionAndArrowPosition(Vector2 cartesianDirection, Vector2 position);
 
         public void AddCoins(int value);
-
-        public void OnLevelCompleted();
     }
 }

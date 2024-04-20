@@ -6,10 +6,11 @@ namespace _Scripts.Utilities.StateMachine
 {
     public class FsmMoveState : FsmState
     {
-        private readonly float _stepSize = .1f;
         private readonly float _speed;
         private readonly int _animationHash;
         private readonly Transform _transform;
+        
+        private const float _STEP_SIZE = .1f;
         
         private Vector2 _currentPosition;
         private Vector2 _previousPosition;
@@ -46,7 +47,7 @@ namespace _Scripts.Utilities.StateMachine
 
             if (!TilemapManager.Instance.IsInTilemap(_playerCellPosition))
             {
-                FiniteStateMachine.SetState<FsmDiedState>();
+                FiniteStateMachine.SetState<FsmFallState>();
                 return;
             }
             
@@ -59,7 +60,7 @@ namespace _Scripts.Utilities.StateMachine
         {
             Vector3 movement = _currentPosition - _previousPosition;
             var distance = movement.magnitude;
-            var steps = Mathf.CeilToInt(distance / _stepSize);
+            var steps = Mathf.CeilToInt(distance / _STEP_SIZE);
             
             for (int i = 0; i < steps; i++)
             {

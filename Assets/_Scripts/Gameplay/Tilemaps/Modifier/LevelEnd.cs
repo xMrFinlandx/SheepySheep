@@ -1,4 +1,5 @@
-﻿using _Scripts.Managers;
+﻿using System.Numerics;
+using _Scripts.Managers;
 using _Scripts.Scriptables;
 using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities.Classes;
@@ -28,7 +29,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         {
             GameStateManager.SetState(GameStateType.Cutscene);
             playerController.SetState<FsmPausedState>();
-            playerController.OnLevelCompleted();
             DataPersistentManager.SaveData();
 
             await Awaitable.WaitForSecondsAsync(3f);

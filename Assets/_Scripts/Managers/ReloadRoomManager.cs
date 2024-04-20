@@ -10,7 +10,7 @@ namespace _Scripts.Managers
         
         private void Start()
         {
-            FsmDiedState.PlayerDiedAction += OnPlayerDied;
+            FsmFallState.PlayerDiedAction += OnPlayerDied;
         }
 
         private void OnPlayerDied()
@@ -20,7 +20,7 @@ namespace _Scripts.Managers
 
         private void OnDestroy()
         {
-            FsmDiedState.PlayerDiedAction -= OnPlayerDied;
+            FsmFallState.PlayerDiedAction -= OnPlayerDied;
         }
     }
 }
