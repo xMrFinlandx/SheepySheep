@@ -1,6 +1,4 @@
-﻿using System.Numerics;
-using _Scripts.Managers;
-using _Scripts.Scriptables;
+﻿using _Scripts.Managers;
 using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Enums;
@@ -10,7 +8,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using YG;
 
-namespace _Scripts.Gameplay.Tilemaps.Modifier
+namespace _Scripts.Gameplay.Tilemaps.Modifiers
 {
     [RequireComponent(typeof(SpriteRenderer))]
     public class LevelEnd : MonoBehaviour, ITileModifier, IDataPersistence

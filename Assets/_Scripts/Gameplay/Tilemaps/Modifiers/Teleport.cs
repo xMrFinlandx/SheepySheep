@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using _Scripts.Managers;
-using _Scripts.Scriptables;
 using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
@@ -10,7 +9,7 @@ using NaughtyAttributes;
 using PathCreation;
 using UnityEngine;
 
-namespace _Scripts.Gameplay.Tilemaps.Modifier
+namespace _Scripts.Gameplay.Tilemaps.Modifiers
 {
     
     [RequireComponent(typeof(SpriteRenderer))]
@@ -25,6 +24,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
         
         [SerializeField, HideInInspector] private SpriteRenderer _spriteRenderer;
 
+        private const float _X_SQUASH_DURATION = .2f;
+        
         private Vector2[] _points;
         private VertexPath _vertexPath;
         private BezierPath _bezierPath;
@@ -89,7 +90,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             
             playerController.SetState<FsmIdleState>();
             var playerTransform = playerController.Transform;
-            playerTransform.DOScaleX(0, .1f)
+            playerTransform.DOScaleX(0, _X_SQUASH_DURATION)
                 .SetEase(Ease.InOutQuad)
                 .OnComplete(() =>
                 {
@@ -135,7 +136,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
             yield return new WaitForSeconds(duration);
             
             _playerSplineFollow.Pause();
-            playerController.Transform.DOScaleX(1, .1f);
+            playerController.Transform.DOScaleX(1, _X_SQUASH_DURATION);
             playerController.SetState<FsmMoveState>();
         }
         

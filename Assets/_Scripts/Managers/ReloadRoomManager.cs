@@ -1,6 +1,6 @@
 ﻿using System;
+using _Scripts.Player;
 using _Scripts.Utilities;
-using _Scripts.Utilities.StateMachine;
 
 namespace _Scripts.Managers
 {
@@ -10,7 +10,7 @@ namespace _Scripts.Managers
         
         private void Start()
         {
-            FsmFallState.PlayerDiedAction += OnPlayerDied;
+            PlayerController.PlayerDiedAction += OnPlayerDied;
         }
 
         private void OnPlayerDied()
@@ -20,7 +20,7 @@ namespace _Scripts.Managers
 
         private void OnDestroy()
         {
-            FsmFallState.PlayerDiedAction -= OnPlayerDied;
+            PlayerController.PlayerDiedAction -= OnPlayerDied;
         }
     }
 }

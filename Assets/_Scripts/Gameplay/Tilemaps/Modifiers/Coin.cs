@@ -5,7 +5,7 @@ using NaughtyAttributes;
 using UnityEngine;
 using YG;
 
-namespace _Scripts.Gameplay.Tilemaps.Modifier
+namespace _Scripts.Gameplay.Tilemaps.Modifiers
 {
     [RequireComponent(typeof(SpriteRenderer), typeof(Animator))]
     public class Coin : BaseCollectable, IDataPersistence

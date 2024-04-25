@@ -36,8 +36,10 @@ namespace _Scripts.Player
         private Wallet _coinsWallet;
         private Sprite _defaultSprite;
         private FiniteStateMachine _finiteStateMachine;
-        
+
+        public static Action<Vector2Int> PlayerInNewTileAction;
         public static Action PlayerInTileCenterAction;
+        public static Action PlayerDiedAction;
         
         public Vector2 MoveDirection { get; private set; }
         public Rigidbody2D Rigidbody => _rigidbody;
@@ -53,11 +55,11 @@ namespace _Scripts.Player
 
         public void SetState<T>() where T : FsmState => _finiteStateMachine.SetState<T>();
 
-        public void SetMoveDirectionAndArrowPosition(Vector2 cartesianDirection, Vector2 position)
+        public void SetMoveDirectionAndPosition(Vector2 cartesianDirection, Vector2 position)
         {
             var isometricDirection = cartesianDirection.CartesianToIsometric();
 
-            if (MoveDirection == isometricDirection)
+            if (MoveDirection == isometricDirection || _finiteStateMachine.IsCurrentStateSame<FsmFallState>())
                 return;
             
             ResetVelocityAndSetPosition(position);
@@ -74,14 +76,15 @@ namespace _Scripts.Player
 
         public void Restart()
         {
+            _finiteStateMachine.SetState<FsmIdleState>();
+            
             _isStarted = false;
             _animator.Play(_playerAnimationConfig.MoveAnimation);
             _animator.enabled = false;
             _spriteRenderer.sprite = _defaultSprite;
             ResetVelocityAndSetPosition(_spawnPosition);
-            SetMoveDirectionAndArrowPosition(_defaultDirection, _spawnPosition);
+            SetMoveDirectionAndPosition(_defaultDirection, _spawnPosition);
             _coinsWallet.ResetBuffer();
-            _finiteStateMachine.SetState<FsmIdleState>();
         }
 
         private void OnValidate()
@@ -100,13 +103,13 @@ namespace _Scripts.Player
             TilemapInteractionsManager.ArrowInstantiatedAction += OnArrowInstantiated;
             ReloadRoomManager.ReloadRoomAction += Restart;
             
-            SetMoveDirectionAndArrowPosition(_defaultDirection, _spawnPosition);
+            InitStateMachine();
+            _finiteStateMachine.SetState<FsmIdleState>();
+            
+            SetMoveDirectionAndPosition(_defaultDirection, _spawnPosition);
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
             
-            InitStateMachine();
-
             _animator.enabled = false;
-            _finiteStateMachine.SetState<FsmIdleState>();
         }
         
         private void InitStateMachine()

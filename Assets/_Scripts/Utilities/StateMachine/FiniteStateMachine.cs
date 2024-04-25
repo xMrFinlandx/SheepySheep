@@ -5,20 +5,25 @@ namespace _Scripts.Utilities.StateMachine
 {
     public class FiniteStateMachine
     {
-        private FsmState CurrentState;
+        public FsmState CurrentState { get; private set; }
 
-        private Dictionary<Type, FsmState> _states = new();
+        private readonly Dictionary<Type, FsmState> _states = new();
 
         public void AddState(FsmState state)
         {
             _states.Add(state.GetType(), state);
         }
 
+        public bool IsCurrentStateSame<T>() where T : FsmState
+        {
+            return CurrentState.GetType() == typeof(T);
+        }
+
         public void SetState<T>() where T : FsmState
         {
             var type = typeof(T);
 
-            if (CurrentState != null && CurrentState.GetType() == type)
+            if (CurrentState != null && IsCurrentStateSame<T>())
                 return;
 
             if (!_states.TryGetValue(type, out var state))

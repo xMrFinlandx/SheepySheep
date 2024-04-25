@@ -1,4 +1,5 @@
 ﻿using _Scripts.Managers;
+using _Scripts.Player;
 using _Scripts.Utilities.Visuals;
 using UnityEngine;
 
@@ -35,7 +36,7 @@ namespace _Scripts.Utilities.StateMachine
             
             await Awaitable.WaitForSecondsAsync(AwaitDuration);
             
-            PlayerDiedAction?.Invoke();
+            PlayerController.PlayerDiedAction?.Invoke();
         }
 
         public override void Exit()

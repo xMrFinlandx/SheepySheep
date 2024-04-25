@@ -1,11 +1,10 @@
-﻿using _Scripts.Scriptables;
-using _Scripts.Scriptables.Gameplay;
+﻿using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
 using UnityEngine;
 
-namespace _Scripts.Gameplay.Tilemaps.Modifier
+namespace _Scripts.Gameplay.Tilemaps.Modifiers
 {
     [RequireComponent(typeof(SpriteRenderer))]
     public class LevelStart : MonoBehaviour, ITileModifier

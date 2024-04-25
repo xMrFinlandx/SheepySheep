@@ -1,13 +1,12 @@
 ﻿using System;
 using _Scripts.Managers;
-using _Scripts.Scriptables;
 using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.Visuals;
 using DG.Tweening;
 using UnityEngine;
 
-namespace _Scripts.Gameplay.Tilemaps.Modifier
+namespace _Scripts.Gameplay.Tilemaps.Modifiers
 {
     [RequireComponent(typeof(SpriteRenderer))]
     public class ArrowRotator : MonoBehaviour, ITileModifier, IRestartable

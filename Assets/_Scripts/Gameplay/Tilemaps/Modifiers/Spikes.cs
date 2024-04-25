@@ -5,7 +5,7 @@ using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
 using UnityEngine;
 
-namespace _Scripts.Gameplay.Tilemaps.Modifier
+namespace _Scripts.Gameplay.Tilemaps.Modifiers
 {
     [RequireComponent(typeof(SpriteRenderer), typeof(Animator))]
     public class Spikes : MonoBehaviour, ITileModifier

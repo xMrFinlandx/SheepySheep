@@ -1,12 +1,11 @@
 ﻿using System;
+using _Scripts.Player;
 using UnityEngine;
 
 namespace _Scripts.Utilities.StateMachine
 {
     public class FsmDiedState : FsmState
     {
-        public static Action PlayerDiedAction;
-
         protected readonly float AwaitDuration;
         protected readonly Rigidbody2D Rigidbody;
         protected readonly SpriteRenderer SpriteRenderer;
@@ -36,7 +35,7 @@ namespace _Scripts.Utilities.StateMachine
             
             await Awaitable.WaitForSecondsAsync(AwaitDuration);
             
-            PlayerDiedAction?.Invoke();
+            PlayerController.PlayerDiedAction?.Invoke();
         }
 
         public override void Exit()

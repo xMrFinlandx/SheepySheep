@@ -1,12 +1,11 @@
 ﻿using System;
 using _Scripts.Managers;
-using _Scripts.Scriptables;
 using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Interfaces;
 using UnityEngine;
 
-namespace _Scripts.Gameplay.Tilemaps.Modifier
+namespace _Scripts.Gameplay.Tilemaps.Modifiers
 {
     [RequireComponent(typeof(Animator), typeof(SpriteRenderer))]
     public class Plate : MonoBehaviour, ITileModifier

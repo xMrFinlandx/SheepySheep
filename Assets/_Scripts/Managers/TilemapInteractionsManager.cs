@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using _Scripts.Gameplay.Tilemaps.Modifier;
+using _Scripts.Gameplay.Tilemaps.Modifiers;
 using _Scripts.Player.Controls;
-using _Scripts.Scriptables;
 using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Classes;

@@ -3,7 +3,7 @@ using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
 using UnityEngine;
 
-namespace _Scripts.Gameplay.Tilemaps.Modifier
+namespace _Scripts.Gameplay.Tilemaps.Modifiers
 {
     public class SpeedGem : BaseCollectable
     {

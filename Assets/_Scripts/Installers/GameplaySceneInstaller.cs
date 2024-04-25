@@ -1,4 +1,4 @@
-﻿using _Scripts.Gameplay.Tilemaps.Modifier;
+﻿using _Scripts.Gameplay.Tilemaps.Modifiers;
 using _Scripts.Managers;
 using _Scripts.Player;
 using _Scripts.Player.Controls;

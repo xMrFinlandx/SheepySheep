@@ -35,6 +35,7 @@ namespace _Scripts.Utilities.Classes
             Balance += value;
         }
 
+        // ReSharper disable Unity.PerformanceAnalysis
         public void AddToBuffer(int value)
         {
             if (value < 1)

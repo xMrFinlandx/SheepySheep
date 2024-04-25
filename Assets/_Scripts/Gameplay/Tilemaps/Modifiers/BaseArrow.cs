@@ -1,12 +1,11 @@
-﻿using _Scripts.Scriptables;
-using _Scripts.Scriptables.Gameplay;
+﻿using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.Visuals;
 using DG.Tweening;
 using UnityEngine;
 
-namespace _Scripts.Gameplay.Tilemaps.Modifier
+namespace _Scripts.Gameplay.Tilemaps.Modifiers
 {
     public abstract class BaseArrow : MonoBehaviour, ITileModifier
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using _Scripts.Gameplay.Tilemaps.Modifier;
+using _Scripts.Gameplay.Tilemaps.Modifiers;
 using _Scripts.Utilities.Interfaces;
 using UnityEngine;
 

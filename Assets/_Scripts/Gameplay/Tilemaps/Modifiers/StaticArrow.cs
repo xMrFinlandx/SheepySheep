@@ -1,5 +1,4 @@
 ﻿using _Scripts.Managers;
-using _Scripts.Scriptables;
 using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Enums;
@@ -8,7 +7,7 @@ using _Scripts.Utilities.Visuals;
 using UnityEngine;
 using Zenject;
 
-namespace _Scripts.Gameplay.Tilemaps.Modifier
+namespace _Scripts.Gameplay.Tilemaps.Modifiers
 {
     [RequireComponent(typeof(SpriteRenderer))]
     public class StaticArrow : BaseArrow, IRestartable
@@ -31,7 +30,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifier
 
         public override void Activate(IPlayerController playerController)
         {
-            playerController.SetMoveDirectionAndArrowPosition(_currentDirection.GetDirectionVector(), OffsetPosition);
+            playerController.SetMoveDirectionAndPosition(_currentDirection.GetDirectionVector(), OffsetPosition);
             PlayShineAnimation();
         }
 

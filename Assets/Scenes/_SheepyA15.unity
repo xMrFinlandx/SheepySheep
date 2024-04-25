@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 347417009}
   - component: {fileID: 347417010}
   m_Layer: 0
-  m_Name: Level end (to _SheepyA15)
+  m_Name: Level end (to _SheepyA16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -670,7 +670,7 @@ MonoBehaviour:
   _plateConfig: {fileID: 11400000, guid: 8fb8db79459aa1347b1d9459d4299387, type: 2}
   _sceneToLoad:
     _sceneAsset: {fileID: 102900000, guid: 74993dff6f3b54f45927f2d0914e415d, type: 3}
-    _sceneName: _SheepyA15
+    _sceneName: _SheepyA16
   _spriteRenderer: {fileID: 347417010}
 --- !u!212 &347417010
 SpriteRenderer:

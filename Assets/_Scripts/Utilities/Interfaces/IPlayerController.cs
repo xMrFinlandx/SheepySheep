@@ -9,7 +9,7 @@ namespace _Scripts.Utilities.Interfaces
         
         public void SetState<T>() where T : FsmState;
         
-        public void SetMoveDirectionAndArrowPosition(Vector2 cartesianDirection, Vector2 position);
+        public void SetMoveDirectionAndPosition(Vector2 cartesianDirection, Vector2 position);
 
         public void AddCoins(int value);
     }

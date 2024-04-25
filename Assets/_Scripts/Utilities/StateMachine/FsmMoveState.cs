@@ -14,7 +14,8 @@ namespace _Scripts.Utilities.StateMachine
         
         private Vector2 _currentPosition;
         private Vector2 _previousPosition;
-        private Vector2Int _playerCellPosition;
+        private Vector2Int _currentCellPosition;
+        private Vector2Int _previousCellPosition;
 
         protected Animator Animator { get; }
         protected PlayerController PlayerController { get; }
@@ -41,19 +42,25 @@ namespace _Scripts.Utilities.StateMachine
         public override void FixedUpdate()
         {
             Rigidbody.velocity = PlayerController.MoveDirection * (_speed * Time.fixedDeltaTime);
-            
-            _currentPosition = _transform.position;
-            _playerCellPosition = TilemapManager.Instance.WorldToCell(_currentPosition);
 
-            if (!TilemapManager.Instance.IsInTilemap(_playerCellPosition))
+            _currentPosition = _transform.position;
+            _currentCellPosition = TilemapManager.Instance.WorldToCell(_currentPosition);
+
+            if (!TilemapManager.Instance.IsInTilemap(_currentCellPosition))
             {
                 FiniteStateMachine.SetState<FsmFallState>();
                 return;
             }
-            
+
             DetectModifiers();
 
             _previousPosition = _currentPosition;
+            
+            if (_previousCellPosition == _currentCellPosition)
+                return;
+
+            PlayerController.PlayerInNewTileAction?.Invoke(_currentCellPosition);
+            _previousCellPosition = _currentCellPosition;
         }
 
         private void DetectModifiers()
@@ -76,6 +83,6 @@ namespace _Scripts.Utilities.StateMachine
             }
         }
         
-        private void ActivateModifiers() => TilemapManager.Instance.ActivateModifiers(_playerCellPosition, PlayerController);
+        private void ActivateModifiers() => TilemapManager.Instance.ActivateModifiers(_currentCellPosition, PlayerController);
     }
 }
