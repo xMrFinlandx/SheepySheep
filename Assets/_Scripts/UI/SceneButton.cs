@@ -14,12 +14,12 @@ namespace _Scripts.UI
         
         private Action<int> _onClickAction;
 
-        public void Init(int id, bool isEnabled, Action<int> onClickAction)
+        public void Init(int id, bool isEnabled, Action<int> onClickAction, string text = "")
         {
             _buttonID = id;
             _button.interactable = isEnabled;
             
-            _textMesh.text = $"{id + 1}";
+            _textMesh.text = text;
             
             if (!isEnabled)
                 return;

@@ -774,7 +774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 8fb8db79459aa1347b1d9459d4299387, type: 2}
   _sceneToLoad:
-    _sceneAsset: {fileID: 102900000, guid: 04de2c0f08cb103469a525f1c579ac43, type: 3}
+    _sceneAsset: {fileID: 102900000, guid: 74d1395d8ea2b694e867f39cee2586c4, type: 3}
     _sceneName: _SheepyA14
   _spriteRenderer: {fileID: 347417010}
 --- !u!212 &347417010

@@ -1,5 +1,7 @@
 ﻿using NaughtyAttributes;
+#if UNITY_EDITOR
 using UnityEditor.Animations;
+#endif
 using UnityEngine;
 
 namespace _Scripts.Scriptables.Gameplay

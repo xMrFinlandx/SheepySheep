@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace _Scripts.UI.MVVM
+namespace _Scripts.UI.MVP
 {
     public class MainMenuView : MonoBehaviour
     {
@@ -16,26 +16,23 @@ namespace _Scripts.UI.MVVM
         [SerializeField] private SceneButtonsBinder _mainLevelsBinder;
         [SerializeField] private SceneButtonsBinder _bonusLevelsBinder;
 
-        private MainMenuViewModel ViewModel;
+        private MainMenuPresenter _presenter;
         
         private void Start()
         {
-            Init(new MainMenuViewModel(new MainMenuModel()));
+            Init(new MainMenuPresenter(new MainMenuModel()));
         }
 
-        private void Init(MainMenuViewModel viewModel)
+        private void Init(MainMenuPresenter presenter)
         {
-            ViewModel = viewModel;
+            _presenter = presenter;
             
-            _continueButton.onClick.AddListener(ViewModel.OnContinueButtonClicked);
-            _resetProgressButton.onClick.AddListener(ViewModel.OnResetProgressButtonClicked);
+            _continueButton.onClick.AddListener(_presenter.OnContinueButtonClicked);
+            _resetProgressButton.onClick.AddListener(_presenter.OnResetProgressButtonClicked);
             _selectLevelButton.onClick.AddListener(ShowLevelSelectionWindow);
             
-            ViewModel.IsContinueButtonPressed.ValueChanged += OnContinueButtonPressed;
-            ViewModel.IsDropProgressButtonPressed.ValueChanged += OnDropProgressButtonPressed;
-            
-            _mainLevelsBinder.LevelSelectedAction += ViewModel.OnLevelSelected;
-            _bonusLevelsBinder.LevelSelectedAction += ViewModel.OnLevelSelected;
+            _mainLevelsBinder.LevelSelectedAction += _presenter.OnLevelSelected;
+            _bonusLevelsBinder.LevelSelectedAction += _presenter.OnLevelSelected;
         }
 
         [Button]
@@ -64,21 +61,8 @@ namespace _Scripts.UI.MVVM
             _selectBonusLevelButton.onClick.RemoveAllListeners();
             _settingsButton.onClick.RemoveAllListeners();
             
-            ViewModel.IsContinueButtonPressed.ValueChanged -= OnContinueButtonPressed;
-            ViewModel.IsDropProgressButtonPressed.ValueChanged -= OnDropProgressButtonPressed;
-            
-            _mainLevelsBinder.LevelSelectedAction -= ViewModel.OnLevelSelected;
-            _bonusLevelsBinder.LevelSelectedAction -= ViewModel.OnLevelSelected;
+            _mainLevelsBinder.LevelSelectedAction -= _presenter.OnLevelSelected;
+            _bonusLevelsBinder.LevelSelectedAction -= _presenter.OnLevelSelected;
         }
-
-        private void OnDropProgressButtonPressed(bool previous, bool current)
-        {
-        }
-
-        private void OnContinueButtonPressed(bool previous, bool current)
-        {
-        }
-        
-        
     }
 }

@@ -21,12 +21,12 @@ namespace _Scripts.UI
             _grid.transform.KillChildren();
             var scenes = scenesHandler.Scenes;
             
-            for (int i = 0; i < scenes.Count; i++)
+            for (int buttonId = 0; buttonId < scenes.Count; buttonId++)
             {
                 var button = Instantiate(_prefab, _grid.transform);
-                var isButtonEnabled = YandexGame.savesData.IsScenePassed(scenes[i]) || scenes[i] == YandexGame.savesData.NextScene;
-                
-                button.Init(i, isButtonEnabled, OnButtonClick);
+                var isButtonEnabled = YandexGame.savesData.IsScenePassed(scenes[buttonId]) || scenes[buttonId] == YandexGame.savesData.NextScene;
+
+                button.Init(buttonId, isButtonEnabled, OnButtonClick, $"{buttonId + 1}");
             }
         }
 
