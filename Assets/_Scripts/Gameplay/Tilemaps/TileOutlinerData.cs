@@ -4,8 +4,8 @@ using UnityEngine.Tilemaps;
 
 namespace _Scripts.Gameplay.Tilemaps
 {
-    [CreateAssetMenu(fileName = "New Tile Data", menuName = "Tilemap/Tile Data", order = 0)]
-    public class TileData : ScriptableObject
+    [CreateAssetMenu(fileName = "New Tile Outliner Data", menuName = "Tilemap/Tile Outliner Data", order = 0)]
+    public class TileOutlinerData : ScriptableObject
     {
         [SerializeField] private TileBase[] _tiles;
         [SerializeField] private bool _isIgnoredByOutliner = false;

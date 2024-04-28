@@ -49,6 +49,8 @@ namespace _Scripts.Managers
             return (Vector2Int) _tilemap.WorldToCell(pos);
         }
 
+        public TileBase GetTileAtCellPosition(Vector3Int position) => _tilemap.GetTile(position);
+        
         public Vector2 CellToWorld(Vector2Int pos) => _tilemap.CellToWorld((Vector3Int) pos);
 
         public bool IsInTilemap(Vector2Int pos) => _tilemap.HasTile((Vector3Int) pos);
@@ -117,7 +119,7 @@ namespace _Scripts.Managers
             var distance = Vector3.Distance(pos, tileCenter);
             return distance <= _distanceThreshold;
         }
-        
+
         public void ActivateModifiers(Vector2Int key, IPlayerController playerController)
         {
             if (_previousPosition == key)

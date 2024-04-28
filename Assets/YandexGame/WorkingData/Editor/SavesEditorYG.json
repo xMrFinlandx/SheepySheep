@@ -1,5 +1,5 @@
 {
-  "idSave": 64,
+  "idSave": 65,
   "isFirstSession": false,
   "language": "ru",
   "promptDone": false,
@@ -24,7 +24,7 @@
     "_SheepyA16": true
   },
   "Collectables": {
-    "acfd09e0-5d6f-44fc-9c68-cf50e36d6a1c": true,
+    "acfd09e0-5d6f-44fc-9c68-cf50e36d6a1c": false,
     "14a71b65-630d-4ab8-971f-1fd26dd37c37": false,
     "ad007479-07e4-4a72-813f-9eb2bb763e97": false,
     "2e1bf2f4-f13c-4bad-8aa5-ad2b083b4676": false,

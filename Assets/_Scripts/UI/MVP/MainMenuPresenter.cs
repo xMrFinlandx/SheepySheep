@@ -1,4 +1,4 @@
-﻿using UnityEngine.SceneManagement;
+﻿using _Scripts.Managers;
 using YG;
 
 namespace _Scripts.UI.MVP
@@ -14,7 +14,7 @@ namespace _Scripts.UI.MVP
 
         public void OnContinueButtonClicked()
         {
-             SceneManager.LoadSceneAsync(YandexGame.savesData.NextScene);
+             SceneTransitionsManager.LoadScene(YandexGame.savesData.NextScene);
         }
 
         public void OnResetProgressButtonClicked()
@@ -25,7 +25,7 @@ namespace _Scripts.UI.MVP
 
         public void OnLevelSelected(string sceneName)
         {
-            SceneManager.LoadSceneAsync(sceneName);
+            SceneTransitionsManager.LoadScene(sceneName);
         }
     }
 }

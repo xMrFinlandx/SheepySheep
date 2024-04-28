@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
+using _Scripts.Gameplay.Tilemaps;
 using NaughtyAttributes;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
-using TileData = _Scripts.Gameplay.Tilemaps.TileData;
 
 namespace _Scripts.Utilities.Tools
 {
@@ -28,9 +28,9 @@ namespace _Scripts.Utilities.Tools
         [Expandable]
         [SerializeField] private TilesContainer _diagonalTilesContainer;
 
-        [Space] [SerializeField] private List<TileData> _tileData = null;
+        [Space] [SerializeField] private List<TileOutlinerData> _tileData = null;
 
-        private Dictionary<TileBase, TileData> _dataFromTiles = new();
+        private Dictionary<TileBase, TileOutlinerData> _dataFromTiles = new();
 
         private Vector2Int[] _tilePositions;
 

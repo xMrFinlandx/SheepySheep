@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d90f6882043d4c9387222b5bd78a1838, type: 3}
+  m_Name: Dirt Sound Tiles
+  m_EditorClassIdentifier: 
+  _tiles:
+  - {fileID: 11400000, guid: b32ef27e4019acf4c8bcdf097ca5a94e, type: 2}
+  - {fileID: 11400000, guid: 8f48a4b847a95b045bea380473a92fbe, type: 2}
+  - {fileID: 11400000, guid: 337a22e875f95dd45b0097af4a6caf98, type: 2}
+  - {fileID: 11400000, guid: c4da528f17ccfa74cb71a3aa30ed3e6b, type: 2}
+  - {fileID: 11400000, guid: d6afbb80a0da2f94dbc3bb3520129287, type: 2}
+  - {fileID: 11400000, guid: d8fbf23fd0057ee42a5ff7ffcc2fab51, type: 2}
+  - {fileID: 11400000, guid: 085bcb56455a6314ab0937a4f0095fc7, type: 2}
+  - {fileID: 11400000, guid: 35ad4c7bdd91e084bbb99039c07b6a2f, type: 2}
+  - {fileID: 11400000, guid: 03db696cf1e4a0945a437fb2b1f045b9, type: 2}
+  _clips:
+  - {fileID: 8300000, guid: 2d649880b41c69c49a120cf6558ee83b, type: 3}
+  - {fileID: 8300000, guid: ceccde671b865f4469074fc19a06cdc5, type: 3}
+  - {fileID: 8300000, guid: 5ca7ab22ea5658347bc08574dbd46005, type: 3}
+  - {fileID: 8300000, guid: 37f92caf41b67b04e8993566c53d877a, type: 3}
+  - {fileID: 8300000, guid: daa94a3f8c57f4b4b9de86be7dbe8de7, type: 3}
+  - {fileID: 8300000, guid: bf6673ef446bae14c8a877f77e52734e, type: 3}
