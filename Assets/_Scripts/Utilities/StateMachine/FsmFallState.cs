@@ -33,6 +33,7 @@ namespace _Scripts.Utilities.StateMachine
             Rigidbody.gravityScale = _gravityScale;
             Rigidbody.velocity = Vector2.zero;
             _animator.Play(_animationHash);
+            FootstepsSoundManager.Instance.Stop();
             
             await Awaitable.WaitForSecondsAsync(AwaitDuration);
             

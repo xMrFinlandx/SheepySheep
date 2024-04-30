@@ -1,4 +1,5 @@
 ﻿using System;
+using _Scripts.Managers;
 using _Scripts.Player;
 using UnityEngine;
 
@@ -32,6 +33,7 @@ namespace _Scripts.Utilities.StateMachine
             Rigidbody.velocity = Vector2.zero;
             _particleSystem.Play();
             SpriteRenderer.enabled = false;
+            FootstepsSoundManager.Instance.Stop();
             
             await Awaitable.WaitForSecondsAsync(AwaitDuration);
             

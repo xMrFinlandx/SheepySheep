@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-8032964868303597123
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: debris_wood_soft_02_{-8032964868303597123}
+  m_AudioClip: {fileID: 8300000, guid: f097eb4abab0e6647bfc06ebbfd80bee, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-5827347741566316906
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: debris_wood_soft_03_{-5827347741566316906}
+  m_AudioClip: {fileID: 8300000, guid: 955af16ba7983b9459d2d8904bd987d8, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-4670233556118554988
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: debris_wood_soft_05_{-4670233556118554988}
+  m_AudioClip: {fileID: 8300000, guid: d278746462f882d458e3c29bc91bcaa9, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-858550692758330422
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: debris_wood_soft_04_{-858550692758330422}
+  m_AudioClip: {fileID: 8300000, guid: 9f0d6e9d173399c4daba356baa87280d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &4335527072610175123
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: debris_wood_soft_06_{4335527072610175123}
+  m_AudioClip: {fileID: 8300000, guid: 06665d3f03158e344b9f3b10299fdcfc, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Wood Footsteps
+  m_Volume: -5
+  m_Pitch: 687
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: 0, y: 666.2687}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: 8830658293164994328}
+  - {fileID: -8032964868303597123}
+  - {fileID: -5827347741566316906}
+  - {fileID: -858550692758330422}
+  - {fileID: -4670233556118554988}
+  - {fileID: 4335527072610175123}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 2
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &8830658293164994328
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: debris_wood_soft_01_{8830658293164994328}
+  m_AudioClip: {fileID: 8300000, guid: d01022d3b6511224091ce2b6eb03f06b, type: 3}
+  m_Volume: 0
+  m_Enabled: 1

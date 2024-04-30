@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using _Scripts.Utilities;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Tilemaps;
 
 namespace _Scripts.Gameplay.Tilemaps
@@ -9,10 +10,10 @@ namespace _Scripts.Gameplay.Tilemaps
     public class TileSoundData : ScriptableObject
     {
         [SerializeField] private TileBase[] _tiles;
-        [SerializeField] private AudioClip[] _clips;
+        [SerializeField] private AudioResource _audioResource;
         
-        public IReadOnlyList<TileBase> Tiles => _tiles;
-        
-        public AudioClip GetRandomClip() => _clips.GetRandomItem();
+        public IEnumerable<TileBase> Tiles => _tiles;
+
+        public AudioResource AudioResource => _audioResource;
     }
 }

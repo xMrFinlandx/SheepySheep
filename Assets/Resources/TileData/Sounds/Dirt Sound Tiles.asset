@@ -22,10 +22,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 085bcb56455a6314ab0937a4f0095fc7, type: 2}
   - {fileID: 11400000, guid: 35ad4c7bdd91e084bbb99039c07b6a2f, type: 2}
   - {fileID: 11400000, guid: 03db696cf1e4a0945a437fb2b1f045b9, type: 2}
-  _clips:
-  - {fileID: 8300000, guid: 2d649880b41c69c49a120cf6558ee83b, type: 3}
-  - {fileID: 8300000, guid: ceccde671b865f4469074fc19a06cdc5, type: 3}
-  - {fileID: 8300000, guid: 5ca7ab22ea5658347bc08574dbd46005, type: 3}
-  - {fileID: 8300000, guid: 37f92caf41b67b04e8993566c53d877a, type: 3}
-  - {fileID: 8300000, guid: daa94a3f8c57f4b4b9de86be7dbe8de7, type: 3}
-  - {fileID: 8300000, guid: bf6673ef446bae14c8a877f77e52734e, type: 3}
+  _audioResource: {fileID: 6418180475301049370, guid: d443d0839bcf6574887bae2f1bfb3ba8, type: 2}

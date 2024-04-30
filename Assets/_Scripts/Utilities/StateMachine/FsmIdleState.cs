@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+﻿using _Scripts.Managers;
+using UnityEngine;
 
 namespace _Scripts.Utilities.StateMachine
 {
     public class FsmIdleState : FsmState
     {
-        private Rigidbody2D _rigidbody;
+        private readonly Rigidbody2D _rigidbody;
         
         public FsmIdleState(FiniteStateMachine finiteStateMachine, Rigidbody2D rigidbody) : base(finiteStateMachine)
         {
@@ -14,6 +15,7 @@ namespace _Scripts.Utilities.StateMachine
         public override void Enter()
         {
             _rigidbody.velocity = Vector2.zero;
+            FootstepsSoundManager.Instance.Stop();
         }
     }
 }

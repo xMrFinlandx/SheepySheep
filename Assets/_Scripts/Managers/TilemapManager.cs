@@ -82,15 +82,13 @@ namespace _Scripts.Managers
 
         public bool TryRemoveInteraction(Vector2Int key)
         {
-            var isRemoved = false;
+            if (!_tileModifiersData.TryGetValue(key, out var value))
+                return false;
             
-            if (_tileModifiersData.TryGetValue(key, out var value))
-            {
-                isRemoved = value.TryRemove();
+            var isRemoved = value.TryRemove();
                 
-                if (_tileModifiersData[key].CanRemoveData)
-                    _tileModifiersData.Remove(key);
-            }
+            if (_tileModifiersData[key].CanRemoveData)
+                _tileModifiersData.Remove(key);
 
             return isRemoved;
         }

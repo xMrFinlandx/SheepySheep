@@ -15,10 +15,4 @@ MonoBehaviour:
   _tiles:
   - {fileID: 11400000, guid: 2ae4d20eeac8c3747a493f326e1bc0ee, type: 2}
   - {fileID: 11400000, guid: c872507ee7f2d8840b17b2b9b662129a, type: 2}
-  _clips:
-  - {fileID: 8300000, guid: d01022d3b6511224091ce2b6eb03f06b, type: 3}
-  - {fileID: 8300000, guid: f097eb4abab0e6647bfc06ebbfd80bee, type: 3}
-  - {fileID: 8300000, guid: 955af16ba7983b9459d2d8904bd987d8, type: 3}
-  - {fileID: 8300000, guid: 9f0d6e9d173399c4daba356baa87280d, type: 3}
-  - {fileID: 8300000, guid: d278746462f882d458e3c29bc91bcaa9, type: 3}
-  - {fileID: 8300000, guid: 06665d3f03158e344b9f3b10299fdcfc, type: 3}
+  _audioResource: {fileID: 6418180475301049370, guid: ad87f82acc0abf94591b4afba70d7c32, type: 2}

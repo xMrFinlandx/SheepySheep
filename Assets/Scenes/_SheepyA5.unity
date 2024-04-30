@@ -9442,7 +9442,7 @@ MonoBehaviour:
   _animator: {fileID: 520273247}
   _animationName: YellowCoin
   _spriteRenderer: {fileID: 520273248}
-  _guid: 2e1bf2f4-f13c-4bad-8aa5-ad2b083b4676
+  _guid: 763713c5-23d3-4432-823c-c74f8e57820a
 --- !u!95 &520273247
 Animator:
   serializedVersion: 7
@@ -11410,10 +11410,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.26132813
+    x: 0
     y: 0
-    width: 0.23819445
-    height: 0.23819445
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
