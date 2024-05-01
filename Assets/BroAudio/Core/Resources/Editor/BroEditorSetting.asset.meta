@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ce47fcff8a4631f4981db0036dcfa0a2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 257362
+  packageName: Bro Audio
+  packageVersion: 1.0
+  assetPath: Assets/BroAudio/Core/Resources/Editor/BroEditorSetting.asset
+  uploadId: 658640

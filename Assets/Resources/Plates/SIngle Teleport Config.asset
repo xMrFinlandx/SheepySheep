@@ -25,3 +25,12 @@ MonoBehaviour:
   _pathFollower: {fileID: 3310314905073510763, guid: 9b4c6bce14211b846a90b6e1ec0fab57, type: 3}
   _playerPathFollower: {fileID: 5538236202423855745, guid: fc48cf03f88332644a7517d549297878, type: 3}
   _speed: 8
+  _entry:
+    ID: 1073741826
+    _sourceAsset: {fileID: 11400000, guid: 5fabd6e51aa6b2846874711bdb2715a2, type: 2}
+  _loop:
+    ID: 1073741827
+    _sourceAsset: {fileID: 11400000, guid: 5fabd6e51aa6b2846874711bdb2715a2, type: 2}
+  _exit:
+    ID: 1073741828
+    _sourceAsset: {fileID: 11400000, guid: 5fabd6e51aa6b2846874711bdb2715a2, type: 2}

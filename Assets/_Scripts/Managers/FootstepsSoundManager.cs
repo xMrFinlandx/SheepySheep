@@ -2,6 +2,7 @@
 using _Scripts.Gameplay.Tilemaps;
 using _Scripts.Player;
 using _Scripts.Utilities;
+using Ami.BroAudio;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Tilemaps;
@@ -16,6 +17,7 @@ namespace _Scripts.Managers
         private readonly Dictionary<TileBase, TileSoundData> _dataFromTiles = new();
 
         private AudioResource _audioResource;
+        private SoundID _soundID;
         
         private float _delayCounter;
         private bool _canPlay;
@@ -23,7 +25,6 @@ namespace _Scripts.Managers
         private void Start()
         {
             PlayerController.PlayerInNewTileAction += ChangeFootstepSound;
-            /*PlayerController.PlayerDiedAction += OnPlayerDied;*/
 
             foreach (var soundData in _soundData)
             {
@@ -43,15 +44,14 @@ namespace _Scripts.Managers
         private void ChangeFootstepSound(Vector2Int position)
         {
             var tile = TilemapManager.Instance.GetTileAtCellPosition((Vector3Int) position);
-
-            _audioResource = _dataFromTiles[tile].AudioResource;
+            
+            _soundID = _dataFromTiles[tile].SoundID;
             _canPlay = true;
         }
 
         private void OnDestroy()
         {
             PlayerController.PlayerInNewTileAction -= ChangeFootstepSound;
-            /*PlayerController.PlayerDiedAction -= OnPlayerDied;*/
         }
 
         private void FixedUpdate()
@@ -63,8 +63,9 @@ namespace _Scripts.Managers
 
             if (_delayCounter > 0)
                 return;
-
-            AudioManager.Instance.PlaySFX(_audioResource);
+            
+            BroAudio.Play(_soundID);
+            
             _delayCounter = _playSoundDelay;
         }
     }

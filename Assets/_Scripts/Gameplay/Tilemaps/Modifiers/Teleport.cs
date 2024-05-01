@@ -4,6 +4,7 @@ using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
 using _Scripts.Utilities.Visuals;
+using Ami.BroAudio;
 using DG.Tweening;
 using NaughtyAttributes;
 using PathCreation;
@@ -88,6 +89,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
             _isPairEnabled = true;
             _pairSplineFollow.Pause();
             
+            BroAudio.Play(_teleportConfig.Entry);
+            
             playerController.SetState<FsmIdleState>();
             var playerTransform = playerController.Transform;
             playerTransform.DOScaleX(0, _X_SQUASH_DURATION)
@@ -133,7 +136,12 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
 
         private IEnumerator Wait(float duration, IPlayerController playerController)
         {
+            BroAudio.Play(_teleportConfig.Loop);
+            
             yield return new WaitForSeconds(duration);
+            
+            BroAudio.Stop(_teleportConfig.Loop);
+            BroAudio.Play(_teleportConfig.Exit);
             
             _playerSplineFollow.Pause();
             playerController.Transform.DOScaleX(1, _X_SQUASH_DURATION);

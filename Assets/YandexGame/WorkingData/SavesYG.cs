@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace YG
 {
@@ -35,7 +36,10 @@ namespace YG
         public void TrySetNextScene(string sceneName)
         {
             if (IsScenePassed(sceneName))
+            {
+                Debug.Log($"Next scene is {sceneName}");
                 return;
+            }
 
             NextScene = sceneName;
         }

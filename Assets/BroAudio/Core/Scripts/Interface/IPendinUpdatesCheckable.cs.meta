@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 961ffef34f5bc2e498ab03719d6521e2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 257362
+  packageName: Bro Audio
+  packageVersion: 1.0
+  assetPath: Assets/BroAudio/Core/Scripts/Interface/IPendinUpdatesCheckable.cs
+  uploadId: 658640

@@ -837,7 +837,7 @@ GameObject:
   - component: {fileID: 347417009}
   - component: {fileID: 347417010}
   m_Layer: 0
-  m_Name: Level end (to _SheepyA18)
+  m_Name: Level end (to _SheepyA19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -873,7 +873,7 @@ MonoBehaviour:
   _plateConfig: {fileID: 11400000, guid: 8fb8db79459aa1347b1d9459d4299387, type: 2}
   _sceneToLoad:
     _sceneAsset: {fileID: 102900000, guid: bd225766117bb1143bdb68d651ad03c8, type: 3}
-    _sceneName: _SheepyA18
+    _sceneName: _SheepyA19
   _spriteRenderer: {fileID: 347417010}
 --- !u!212 &347417010
 SpriteRenderer:
@@ -12401,10 +12401,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.26132813
+    x: 0
     y: 0
-    width: 0.23819445
-    height: 0.23819445
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34

@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d90f6882043d4c9387222b5bd78a1838, type: 3}
   m_Name: Dirt Sound Tiles
   m_EditorClassIdentifier: 
+  _soundID:
+    ID: 1073741825
+    _sourceAsset: {fileID: 11400000, guid: 3c80bbf5e9bca0b4783514a43baac52c, type: 2}
   _tiles:
   - {fileID: 11400000, guid: b32ef27e4019acf4c8bcdf097ca5a94e, type: 2}
   - {fileID: 11400000, guid: 8f48a4b847a95b045bea380473a92fbe, type: 2}

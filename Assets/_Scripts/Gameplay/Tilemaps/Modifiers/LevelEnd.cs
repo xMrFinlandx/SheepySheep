@@ -31,7 +31,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
 
             await Awaitable.WaitForSecondsAsync(3f);
 
-            SceneTransitionsManager.LoadScene(_sceneToLoad);
+            SceneManager.LoadScene(_sceneToLoad);
         }
         
         private void OnValidate()
@@ -48,8 +48,10 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         
         public void SaveData()
         {
+            YandexGame.savesData.TrySetNextScene(_sceneToLoad.SceneName);
             YandexGame.savesData.MakeScenePassed(SceneManager.GetActiveScene().name);
-            YandexGame.savesData.TrySetNextScene(_sceneToLoad);
+            
+            print($"{_sceneToLoad.SceneName}");
         }
 
         public void LoadData()

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ca6449d89da4efc459adee010c3d3efc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 257362
+  packageName: Bro Audio
+  packageVersion: 1.0
+  assetPath: Assets/BroAudio/Core/Scripts/Interface/IChangesTrackable.cs
+  uploadId: 658640

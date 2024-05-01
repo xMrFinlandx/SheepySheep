@@ -1,4 +1,5 @@
 ﻿using _Scripts.Utilities.Visuals;
+using Ami.BroAudio;
 using UnityEngine;
 
 namespace _Scripts.Scriptables.Gameplay
@@ -12,6 +13,10 @@ namespace _Scripts.Scriptables.Gameplay
         [SerializeField] private SplineFollow _playerPathFollower;
         [Space]
         [SerializeField] private float _speed = 8f;
+        [Header("Sounds")] 
+        [SerializeField] private SoundID _entry;
+        [SerializeField] private SoundID _loop;
+        [SerializeField] private SoundID _exit;
 
         public float BezierControlPointHeight => _bezierControlPointHeight;
         public float Speed => _speed;
@@ -19,5 +24,9 @@ namespace _Scripts.Scriptables.Gameplay
         public SplineFollow PathFollower => _pathFollower;
         
         public SplineFollow PlayerPathFollower => _playerPathFollower;
+
+        public SoundID Entry => _entry;
+        public SoundID Loop => _loop;
+        public SoundID Exit => _exit;
     }
 }

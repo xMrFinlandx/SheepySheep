@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d90f6882043d4c9387222b5bd78a1838, type: 3}
   m_Name: Wood Sound Tiles
   m_EditorClassIdentifier: 
+  _soundID:
+    ID: 1073741824
+    _sourceAsset: {fileID: 11400000, guid: 3c80bbf5e9bca0b4783514a43baac52c, type: 2}
   _tiles:
   - {fileID: 11400000, guid: 2ae4d20eeac8c3747a493f326e1bc0ee, type: 2}
   - {fileID: 11400000, guid: c872507ee7f2d8840b17b2b9b662129a, type: 2}
