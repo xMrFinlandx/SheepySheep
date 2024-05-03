@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using Ami.BroAudio;
+using DG.Tweening;
 using UnityEngine;
 
 namespace _Scripts.Scriptables.Gameplay
@@ -6,6 +7,8 @@ namespace _Scripts.Scriptables.Gameplay
     [CreateAssetMenu(fileName = "New Collectable Config", menuName = "Gameplay/Collectable Config", order = 0)]
     public class CollectableConfig : InteractableConfig
     {
+        [Header("Sounds")] 
+        [SerializeField] private SoundID _collectedSound;
         [Header("Collect Animation Settings")]
         [SerializeField] private float _jumpValue = 1f;
         [SerializeField] private float _fallValue = 2f;
@@ -22,6 +25,7 @@ namespace _Scripts.Scriptables.Gameplay
         
         public Ease JumpEase => _jumpEase;
         public Ease FallEase => _fallEase;
-        
+
+        public SoundID CollectedSound => _collectedSound;
     }
 }

@@ -2,6 +2,7 @@
 using _Scripts.Utilities;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
+using Ami.BroAudio;
 using UnityEngine;
 
 namespace _Scripts.Gameplay.Tilemaps.Modifiers
@@ -16,6 +17,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         
         public float YOffset => _plateConfig.YOffset;
         public bool IsSingleAtTile => _plateConfig.IsSingleAtTile;
+        
+        public SoundID FootstepsSound => _plateConfig.FootstepsSound;
         
         public void Activate(IPlayerController playerController)
         {

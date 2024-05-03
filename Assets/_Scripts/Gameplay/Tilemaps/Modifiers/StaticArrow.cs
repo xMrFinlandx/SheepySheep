@@ -4,8 +4,8 @@ using _Scripts.Utilities;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.Visuals;
+using Ami.BroAudio;
 using UnityEngine;
-using Zenject;
 
 namespace _Scripts.Gameplay.Tilemaps.Modifiers
 {
@@ -17,19 +17,16 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         
         public override bool IsSingleAtTile => _arrowConfig.IsSingleAtTile;
         public override float YOffset => _arrowConfig.YOffset;
+        
+        public override SoundID FootstepsSound => _arrowConfig.FootstepsSound;
 
         private Vector2 OffsetPosition => new(transform.position.x, transform.position.y + YOffset);
 
         private MoveDirectionType _currentDirection;
-        
-        [Inject]
-        private void Construct(ArrowConfig arrowConfig)
-        {   
-            _arrowConfig = arrowConfig;
-        }
 
         public override void Activate(IPlayerController playerController)
         {
+            BroAudio.Play(_arrowConfig.ContactSound);
             playerController.SetMoveDirectionAndPosition(_currentDirection.GetDirectionVector(), OffsetPosition);
             PlayShineAnimation();
         }
@@ -77,9 +74,9 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
 
         private void Rotate()
         {
-            _currentDirection++;
+            _currentDirection += _arrowConfig.RotationDirection;
 
-            if ((int) _currentDirection > 3)
+            if ((int) _currentDirection > 3 || (int) _currentDirection < 0)
                 _currentDirection = 0;
 
             ApplyDirection(_currentDirection);

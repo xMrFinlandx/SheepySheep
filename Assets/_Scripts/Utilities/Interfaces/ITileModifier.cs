@@ -1,4 +1,5 @@
 ﻿using _Scripts.Managers;
+using Ami.BroAudio;
 using UnityEngine;
 
 namespace _Scripts.Utilities.Interfaces
@@ -10,6 +11,8 @@ namespace _Scripts.Utilities.Interfaces
         public float YOffset { get;}
 
         public bool IsSingleAtTile { get; }
+
+        public SoundID FootstepsSound { get; }
 
         public void Activate(IPlayerController playerController);
 

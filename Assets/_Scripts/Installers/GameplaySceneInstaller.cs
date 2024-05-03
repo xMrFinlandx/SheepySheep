@@ -19,7 +19,6 @@ namespace _Scripts.Installers
         [SerializeField] private PlayerController _playerController;
         [SerializeField] private LevelStart _levelStart;
         [Space]
-        [SerializeField] private ArrowConfig _arrowConfig;
         [SerializeField] private Tilemap _tilemap;
 
 #if UNITY_EDITOR
@@ -37,7 +36,6 @@ namespace _Scripts.Installers
             _inputReader.Init(Camera.main);
             
             Container.Bind<Tilemap>().FromInstance(_tilemap);
-            Container.Bind<ArrowConfig>().FromInstance(_arrowConfig);
             Container.Bind<InputReader>().FromInstance(_inputReader);
             
             var player = Container.InstantiatePrefabForComponent<PlayerController>(_playerController, _levelStart.transform.position, Quaternion.identity, null);

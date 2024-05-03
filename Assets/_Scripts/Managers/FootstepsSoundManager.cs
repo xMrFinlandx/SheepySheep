@@ -21,6 +21,7 @@ namespace _Scripts.Managers
         
         private float _delayCounter;
         private bool _canPlay;
+        private bool _isTileModifierContainsSound; 
 
         private void Start()
         {
@@ -43,9 +44,16 @@ namespace _Scripts.Managers
 
         private void ChangeFootstepSound(Vector2Int position)
         {
-            var tile = TilemapManager.Instance.GetTileAtCellPosition((Vector3Int) position);
+            if (TilemapManager.Instance.TryGetTileModifier(position, out var value) && value.FootstepsSound.ID != 0)
+            {
+                _soundID = value.FootstepsSound;
+            }
+            else
+            {
+                var tile = TilemapManager.Instance.GetTileAtCellPosition((Vector3Int) position);
+                _soundID = _dataFromTiles[tile].SoundID;
+            }
             
-            _soundID = _dataFromTiles[tile].SoundID;
             _canPlay = true;
         }
 

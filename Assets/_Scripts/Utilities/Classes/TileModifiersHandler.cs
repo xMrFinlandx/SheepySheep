@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using _Scripts.Utilities.Interfaces;
+using Ami.BroAudio;
 
 namespace _Scripts.Utilities.Classes
 {
@@ -7,9 +9,18 @@ namespace _Scripts.Utilities.Classes
     {
         public bool CanRemoveData => _tileModifiers.Count == 0;
         public bool IsSingleAtTile => _tileModifiers.Exists(modifier => modifier.IsSingleAtTile);
-        
-        private readonly List<ITileModifier> _tileModifiers = new();
 
+        public SoundID FootstepsSound
+        {
+            get
+            {
+               var modifier = _tileModifiers.FirstOrDefault(modifier => modifier.IsSingleAtTile);
+               return modifier?.FootstepsSound ?? _tileModifiers[0].FootstepsSound;
+            }
+        }
+
+        private readonly List<ITileModifier> _tileModifiers = new();
+        
         public TileModifiersHandler(ITileModifier modifier) => Add(modifier); 
         
         public void Add(ITileModifier modifier)

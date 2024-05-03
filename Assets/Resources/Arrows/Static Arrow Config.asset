@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbdb001436cb443eabc97dc5655535ed, type: 3}
-  m_Name: Default Arrow Config
+  m_Name: Static Arrow Config
   m_EditorClassIdentifier: 
   _isSingleAtTile: 1
   _yOffset: 0.635
@@ -21,8 +21,8 @@ MonoBehaviour:
     ID: 1073741834
     _sourceAsset: {fileID: 11400000, guid: 5fabd6e51aa6b2846874711bdb2715a2, type: 2}
   _rotationSound:
-    ID: 1073741833
-    _sourceAsset: {fileID: 11400000, guid: 5fabd6e51aa6b2846874711bdb2715a2, type: 2}
+    ID: 0
+    _sourceAsset: {fileID: 0}
   _isDirectionReversed: 0
   _minMaxGradient:
     m_Mode: 2
@@ -86,8 +86,8 @@ MonoBehaviour:
       m_ColorSpace: -1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    m_ColorMin: {r: 0.9980683, g: 0.7971698, b: 1, a: 1}
-    m_ColorMax: {r: 0.34864157, g: 0, b: 0.6901961, a: 1}
+    m_ColorMin: {r: 0.5235849, g: 0.71760017, b: 1, a: 1}
+    m_ColorMax: {r: 0.8349056, g: 1, b: 0.8766765, a: 1}
   _particleSystemPrefab: {fileID: 728503379065411275, guid: 3e37d9ace4a32854b890a24b3533135c, type: 3}
   _arrowDirectionData:
   - _sprite: {fileID: -2938970880757876879, guid: 85aa7c00d141709479cb1b01d73db195, type: 3}
@@ -106,16 +106,16 @@ MonoBehaviour:
   _starsSpeed:
     _propertyName: _ScrollSpeed
     _values:
-    - 2
+    - 0.5
   _firstColor:
     _propertyName: _Color1
     _values:
-    - {r: 0.54901963, g: 0, b: 0.7647059, a: 1}
+    - {r: 0, g: 1, b: 0.16078432, a: 1}
   _secondColor:
     _propertyName: _Color2
     _values:
-    - {r: 0, g: 0.23921569, b: 0.7176471, a: 1}
+    - {r: 0, g: 0.33333334, b: 1, a: 1}
   _backgroundColor:
     _propertyName: _MainColor
     _values:
-    - {r: 0.5058824, g: 0, b: 1, a: 1}
+    - {r: 0.6117647, g: 0.6117647, b: 0.6117647, a: 1}

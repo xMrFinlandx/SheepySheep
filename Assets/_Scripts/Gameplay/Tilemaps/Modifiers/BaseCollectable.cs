@@ -1,5 +1,6 @@
 ﻿using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities.Interfaces;
+using Ami.BroAudio;
 using DG.Tweening;
 using UnityEngine;
 
@@ -18,8 +19,11 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         private Sequence _sequence;
         
         public bool IsSingleAtTile => _collectableConfig.IsSingleAtTile;
-        
         public float YOffset => _collectableConfig.YOffset;
+        
+        public SoundID FootstepsSound => _collectableConfig.FootstepsSound;
+
+        protected CollectableConfig Config => _collectableConfig;
         
         protected bool IsEnabled { get; set; } = false;
         

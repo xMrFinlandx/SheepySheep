@@ -4,6 +4,7 @@ using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
+using Ami.BroAudio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using YG;
@@ -20,8 +21,9 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         [SerializeField, HideInInspector]  private SpriteRenderer _spriteRenderer;
         
         public float YOffset => _plateConfig.YOffset;
-        
         public bool IsSingleAtTile => _plateConfig.IsSingleAtTile;
+        
+        public SoundID FootstepsSound => _plateConfig.FootstepsSound;
         
         public async void Activate(IPlayerController playerController)
         {

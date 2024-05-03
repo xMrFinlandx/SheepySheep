@@ -49,6 +49,18 @@ namespace _Scripts.Managers
             return (Vector2Int) _tilemap.WorldToCell(pos);
         }
 
+        public bool TryGetTileModifier(Vector2Int key, out TileModifiersHandler modifier)
+        {
+            if (_tileModifiersData.TryGetValue(key, out var value))
+            {
+                modifier = value;
+                return true;
+            }
+
+            modifier = null;
+            return false;
+        }
+
         public TileBase GetTileAtCellPosition(Vector3Int position) => _tilemap.GetTile(position);
         
         public Vector2 CellToWorld(Vector2Int pos) => _tilemap.CellToWorld((Vector3Int) pos);
@@ -66,7 +78,7 @@ namespace _Scripts.Managers
 
         public bool TryAddModifiers(Vector2Int key, ITileModifier modifier)
         {
-            if (_tileModifiersData.TryGetValue(key, out var value))
+            if (TryGetTileModifier(key, out var value))
             {
                 if (value.IsSingleAtTile && modifier.IsSingleAtTile)
                     return false;
@@ -82,7 +94,7 @@ namespace _Scripts.Managers
 
         public bool TryRemoveInteraction(Vector2Int key)
         {
-            if (!_tileModifiersData.TryGetValue(key, out var value))
+            if (!TryGetTileModifier(key, out var value))
                 return false;
             
             var isRemoved = value.TryRemove();
@@ -95,7 +107,7 @@ namespace _Scripts.Managers
 
         public bool TryInteractInteraction(Vector2Int key)
         {
-            return _tileModifiersData.TryGetValue(key, out var value) && value.TryInteract();
+            return TryGetTileModifier(key, out var value) && value.TryInteract();
         } 
         
         public bool CanAddModifier(Vector2Int key)
@@ -103,7 +115,7 @@ namespace _Scripts.Managers
             if (!_tilemap.HasTile((Vector3Int) key))
                 return false;
             
-            if (_tileModifiersData.TryGetValue(key, out var value))
+            if (TryGetTileModifier(key, out var value))
                 return !value.IsSingleAtTile;
 
             return true;
@@ -125,7 +137,7 @@ namespace _Scripts.Managers
 
             _previousPosition = key;
             
-            if (_tileModifiersData.TryGetValue(key, out var value))
+            if (TryGetTileModifier(key, out var value))
                 value.Activate(playerController);
         }
         

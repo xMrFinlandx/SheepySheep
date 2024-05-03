@@ -14,12 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isSingleAtTile: 0
   _yOffset: -0.4
+  _footstepsSound:
+    ID: 0
+    _sourceAsset: {fileID: 0}
+  _idleSprite: {fileID: -8841827871950111001, guid: 96eccfd091df517499eb55b1016e6add, type: 3}
   _showAnimations: 1
   _showShader: 0
-  _idleSprite: {fileID: -8841827871950111001, guid: 96eccfd091df517499eb55b1016e6add, type: 3}
   _animationClip: {fileID: 7400000, guid: 0ed8108a2e3d04b40b27daf6d793a9af, type: 2}
-  _gameObjectName: Coin
   _animatorController: {fileID: 9100000, guid: 70b9d608fe514cd45a893df3ea69dec0, type: 2}
+  _material: {fileID: 0}
+  _gameObjectName: Coin
+  _collectedSound:
+    ID: 1073741831
+    _sourceAsset: {fileID: 11400000, guid: 5fabd6e51aa6b2846874711bdb2715a2, type: 2}
   _jumpValue: 1
   _fallValue: -2
   _jumpDuration: 0.25

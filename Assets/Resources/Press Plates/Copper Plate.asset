@@ -14,10 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isSingleAtTile: 1
   _yOffset: 0.165
+  _footstepsSound:
+    ID: 1073741830
+    _sourceAsset: {fileID: 11400000, guid: 3c80bbf5e9bca0b4783514a43baac52c, type: 2}
+  _idleSprite: {fileID: 7538968983173380509, guid: b07a04ed458fc2548b339f63f93f4472, type: 3}
   _showAnimations: 1
   _showShader: 0
-  _idleSprite: {fileID: 7538968983173380509, guid: b07a04ed458fc2548b339f63f93f4472, type: 3}
   _animationClip: {fileID: 7400000, guid: aa18bdb94d215904fa0e6ceda66cfb60, type: 2}
-  _gameObjectName: Copper Plate
   _animatorController: {fileID: 9100000, guid: b5e50e5cff94cef409145d96497842ce, type: 2}
+  _material: {fileID: 0}
+  _gameObjectName: Copper Plate
+  _pressSound:
+    ID: 1073741829
+    _sourceAsset: {fileID: 11400000, guid: 5fabd6e51aa6b2846874711bdb2715a2, type: 2}
   _callId: 0

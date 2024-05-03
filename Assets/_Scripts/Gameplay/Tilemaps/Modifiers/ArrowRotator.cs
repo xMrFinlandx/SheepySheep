@@ -3,6 +3,7 @@ using _Scripts.Managers;
 using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.Visuals;
+using Ami.BroAudio;
 using DG.Tweening;
 using UnityEngine;
 
@@ -25,6 +26,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         public float YOffset => _arrowRotatorConfig.YOffset;
         public bool IsSingleAtTile => _arrowRotatorConfig.IsSingleAtTile;
         
+        public SoundID FootstepsSound => _arrowRotatorConfig.FootstepsSound;
+        
         public Transform GetTransform() => transform;
         
         public void Activate(IPlayerController playerController)
@@ -32,6 +35,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
             if (!_enabled)
                 return;
 
+            BroAudio.Play(_arrowRotatorConfig.ActivationSound);
             _tweener.Kill();
             _shaderController.Play(_arrowRotatorConfig.ProgressiveMultiplier.Values[0], 1, _arrowRotatorConfig.ActivateShineDuration, 1);
             _shaderController.Play(0, 1, _arrowRotatorConfig.ActivateShineDuration, 0, false).OnComplete(() =>

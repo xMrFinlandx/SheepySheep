@@ -7,6 +7,7 @@ using _Scripts.Utilities;
 using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
+using Ami.BroAudio;
 using NaughtyAttributes;
 using UnityEngine;
 using Zenject;
@@ -94,7 +95,9 @@ namespace _Scripts.Managers
             
             if (!TilemapManager.Instance.CanAddModifier(gridPos))
             {
-                TilemapManager.Instance.TryInteractInteraction(gridPos);
+                if (TilemapManager.Instance.TryInteractInteraction(gridPos))
+                    BroAudio.Play(_arrowConfig.RotationSound);
+                 
                 return;
             }
             
@@ -120,6 +123,7 @@ namespace _Scripts.Managers
             
             arrow.Init(_arrowConfig, gridPos);
             
+            BroAudio.Play(_arrowConfig.RotationSound);
             TilemapManager.Instance.TryAddModifiers(gridPos, arrow);
         }
 

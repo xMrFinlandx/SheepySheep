@@ -3,6 +3,7 @@ using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
+using Ami.BroAudio;
 using UnityEngine;
 
 namespace _Scripts.Gameplay.Tilemaps.Modifiers
@@ -21,8 +22,9 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         private bool _enabled = true;
         
         public bool IsSingleAtTile => _spikeConfig.IsSingleAtTile;
-        
         public float YOffset => _spikeConfig.YOffset;
+        
+        public SoundID FootstepsSound => _spikeConfig.FootstepsSound;
         
         public void Activate(IPlayerController playerController)
         {

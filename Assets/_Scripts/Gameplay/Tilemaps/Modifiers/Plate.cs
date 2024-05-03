@@ -3,6 +3,7 @@ using _Scripts.Managers;
 using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Interfaces;
+using Ami.BroAudio;
 using UnityEngine;
 
 namespace _Scripts.Gameplay.Tilemaps.Modifiers
@@ -24,6 +25,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
 
         public int CallId => _callId;
         public bool IsSingleAtTile => _plateConfig.IsSingleAtTile;
+        
+        public SoundID FootstepsSound => _plateConfig.FootstepsSound;
 
         public float YOffset => _plateConfig.YOffset;
         
@@ -32,6 +35,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
             if (_isEnabled)
                 return;
 
+            BroAudio.Play(_plateConfig.PressSound);
             _animator.enabled = true;
             _animator.PlayUnLoopedClip(_pressAnimationName);
             _isEnabled = true;

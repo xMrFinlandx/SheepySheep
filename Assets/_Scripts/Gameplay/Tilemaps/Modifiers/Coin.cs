@@ -1,6 +1,7 @@
 ﻿using System;
 using _Scripts.Managers;
 using _Scripts.Utilities.Interfaces;
+using Ami.BroAudio;
 using NaughtyAttributes;
 using UnityEngine;
 using YG;
@@ -40,6 +41,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
 
             IsEnabled = true;
             _isCollected = true;
+            BroAudio.Play(Config.CollectedSound);
+            print(Config.CollectedSound.ID);
 
             playerController.AddCoins(1);
             PlayCollectedAnimation();

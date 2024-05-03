@@ -35,6 +35,11 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
 
         private bool _isEnabled = false;
         
+        public float YOffset => _teleportConfig.YOffset;
+        public bool IsSingleAtTile => _teleportConfig.IsSingleAtTile;
+
+        public SoundID FootstepsSound => _teleportConfig.FootstepsSound;
+        
         private float _controlPointHeight => _teleportConfig.BezierControlPointHeight;
         
         private SplineFollow _pairPlayerSplineFollow
@@ -67,9 +72,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
             }
         }
         
-        public float YOffset => _teleportConfig.YOffset;
-        public bool IsSingleAtTile => _teleportConfig.IsSingleAtTile;
-
         [Button]
         private void SetLink()
         {

@@ -2,6 +2,7 @@
 using _Scripts.Utilities;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.Visuals;
+using Ami.BroAudio;
 using DG.Tweening;
 using UnityEngine;
 
@@ -21,6 +22,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         public abstract bool IsSingleAtTile { get; }
         public abstract float YOffset { get; }
         
+        public abstract SoundID FootstepsSound { get; }
+
         protected SpriteRenderer SpriteRenderer => _spriteRenderer;
         protected ShaderController ShaderController { get; private set; }
         

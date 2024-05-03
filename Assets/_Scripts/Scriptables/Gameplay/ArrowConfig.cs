@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Enums;
+using Ami.BroAudio;
 using DG.Tweening;
 using UnityEngine;
 
@@ -9,6 +10,11 @@ namespace _Scripts.Scriptables.Gameplay
     [CreateAssetMenu(fileName = "New Arrow Config", menuName = "Gameplay/Arrow Config", order = 0)]
     public class ArrowConfig : TileModifierConfig
     {
+        [SerializeField] private SoundID _contactSound;
+        [SerializeField] private SoundID _rotationSound;
+        
+        [SerializeField] private bool _isDirectionReversed = false;
+        [Space]
         [SerializeField] private ParticleSystem.MinMaxGradient _minMaxGradient;
         [SerializeField] private ParticleSystem _particleSystemPrefab;
         [Space]
@@ -35,6 +41,9 @@ namespace _Scripts.Scriptables.Gameplay
 
         public Ease Ease => _fadeOutEase;
         
+        public SoundID RotationSound => _rotationSound;
+        public SoundID ContactSound => _contactSound;
+        
         public IReadOnlyList<ArrowDirectionData> ArrowDirectionData => _arrowDirectionData;
         
         public ShaderProperty<float> StarsSpeed => _starsSpeed;
@@ -53,10 +62,11 @@ namespace _Scripts.Scriptables.Gameplay
             }
         }
 
+        public int RotationDirection => _isDirectionReversed ? -1 : 1;
+
         public ArrowDirectionData GetDataByDirection(MoveDirectionType directionType)
         {
             return _arrowDirectionData.Find(item => item.MoveDirectionType == directionType);
         }
-        
     }
 }

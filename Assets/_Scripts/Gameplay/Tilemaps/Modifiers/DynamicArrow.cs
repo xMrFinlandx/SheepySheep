@@ -3,6 +3,7 @@ using _Scripts.Player;
 using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Interfaces;
+using Ami.BroAudio;
 using UnityEngine;
 
 namespace _Scripts.Gameplay.Tilemaps.Modifiers
@@ -22,6 +23,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
 
         public override bool IsSingleAtTile => _arrowConfig.IsSingleAtTile;
         public override float YOffset => _arrowConfig.YOffset;
+        public override SoundID FootstepsSound => _arrowConfig.FootstepsSound;
         
         private Vector2 OffsetPosition => new(transform.position.x, transform.position.y + YOffset);
 
@@ -76,6 +78,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         {
             _playerController = playerController;
             playerController.SetMoveDirectionAndPosition(_cartesianDirection, OffsetPosition);
+            
+            BroAudio.Play(_arrowConfig.ContactSound);
             
             PlayShineAnimation();
         }

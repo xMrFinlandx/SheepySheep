@@ -14,10 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isSingleAtTile: 1
   _yOffset: 0.17
+  _footstepsSound:
+    ID: 1073741830
+    _sourceAsset: {fileID: 11400000, guid: 3c80bbf5e9bca0b4783514a43baac52c, type: 2}
+  _idleSprite: {fileID: 4129997515879508987, guid: 393c44718be201e44b0895cb3f93da07, type: 3}
   _showAnimations: 1
   _showShader: 0
-  _idleSprite: {fileID: 4129997515879508987, guid: 393c44718be201e44b0895cb3f93da07, type: 3}
   _animationClip: {fileID: 7400000, guid: 525762a4e2e4b364787815f0a22272a7, type: 2}
-  _gameObjectName: Iron Spike
   _animatorController: {fileID: 9100000, guid: 10efa916ac2901b4f88fb5d77fd3fa8f, type: 2}
+  _material: {fileID: 0}
+  _gameObjectName: Iron Spike
   _triggerId: 3
