@@ -11,7 +11,10 @@ namespace _Scripts.Player.Controls
         private Camera _camera;
         
         public event Action<Vector2> LeftMouseClickEvent; 
-        public event Action<Vector2> RightMouseClickEvent; 
+        public event Action<Vector2> RightMouseClickEvent;
+
+        public event Action PauseClickEvent;
+        public event Action ResumeClickEvent;
         
         public void Disable()
         {
@@ -49,6 +52,18 @@ namespace _Scripts.Player.Controls
         
         public void OnPause(InputAction.CallbackContext context)
         {
+            if (context.phase != InputActionPhase.Performed)
+                return;
+            
+            PauseClickEvent?.Invoke();
+        }
+        
+        public void OnResume(InputAction.CallbackContext context)
+        {
+            if (context.phase != InputActionPhase.Performed)
+                return;
+            
+            ResumeClickEvent?.Invoke();
         }
 
         public void OnSkipCutscene(InputAction.CallbackContext context)
@@ -56,10 +71,6 @@ namespace _Scripts.Player.Controls
         }
 
         public void OnTouchPosition(InputAction.CallbackContext context)
-        {
-        }
-
-        public void OnResume(InputAction.CallbackContext context)
         {
         }
 

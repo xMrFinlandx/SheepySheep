@@ -12,7 +12,6 @@ using UnityEngine;
 
 namespace _Scripts.Gameplay.Tilemaps.Modifiers
 {
-    
     [RequireComponent(typeof(SpriteRenderer))]
     public class Teleport : MonoBehaviour, ITileModifier, IRestartable
     {
