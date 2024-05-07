@@ -4,6 +4,7 @@ using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
+using _Scripts.Utilities.StateMachine.Player;
 using Ami.BroAudio;
 using UnityEngine;
 using UnityEngine.SceneManagement;

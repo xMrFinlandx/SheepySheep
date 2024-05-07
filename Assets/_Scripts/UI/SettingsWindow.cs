@@ -2,6 +2,7 @@
 using Ami.BroAudio;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 namespace _Scripts.UI
 {
@@ -9,22 +10,31 @@ namespace _Scripts.UI
     {
         [SerializeField] private Slider _sfxSlider;
         [SerializeField] private Slider _musicSlider;
-        [SerializeField] private Slider _masterSlider;
 
         public Action<float, BroAudioType> VolumeSliderChangedAction;
-        
+
+        public void Save()
+        {
+            YandexGame.savesData.SFXVolume = _sfxSlider.value;
+            YandexGame.savesData.MusicVolume = _musicSlider.value;
+        }
+
+        public void Load()
+        {
+            _sfxSlider.value = YandexGame.savesData.SFXVolume;
+            _musicSlider.value = YandexGame.savesData.MusicVolume;
+        }
+
         private void Start()
         {
             _sfxSlider.onValueChanged.AddListener(val => VolumeSliderChangedAction?.Invoke(val, BroAudioType.SFX));
             _musicSlider.onValueChanged.AddListener(val => VolumeSliderChangedAction?.Invoke(val, BroAudioType.Music));
-            _masterSlider.onValueChanged.AddListener(val => VolumeSliderChangedAction?.Invoke(val, BroAudioType.All));
         }
 
         private void OnDestroy()
         {
             _sfxSlider.onValueChanged.RemoveAllListeners();
             _musicSlider.onValueChanged.RemoveAllListeners();
-            _masterSlider.onValueChanged.RemoveAllListeners();
         }
     }
 }

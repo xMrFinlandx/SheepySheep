@@ -1,6 +1,7 @@
 ﻿using _Scripts.Managers;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
+using _Scripts.Utilities.StateMachine.Player;
 using UnityEngine;
 
 namespace _Scripts.Gameplay.Tilemaps.Modifiers

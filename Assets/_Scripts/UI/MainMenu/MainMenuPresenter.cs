@@ -16,8 +16,8 @@ namespace _Scripts.UI.MainMenu
 
         public void OnContinueButtonClicked()
         {
-             SceneManager.LoadScene(YandexGame.savesData.NextScene);
-             SetPlayerActions(true);
+            SceneManager.LoadScene(YandexGame.savesData.NextScene);
+            SetPlayerActions(true);
         }
 
         public void OnResetProgressButtonClicked()
@@ -47,6 +47,12 @@ namespace _Scripts.UI.MainMenu
         public void OnVolumeChanged(float volume, BroAudioType type)
         {
             BroAudio.SetVolume(type, volume);
+        }
+
+        public void LoadGameSettings()
+        {
+            BroAudio.SetVolume(BroAudioType.SFX, YandexGame.savesData.SFXVolume);
+            BroAudio.SetVolume(BroAudioType.Music, YandexGame.savesData.MusicVolume);
         }
     }
 }

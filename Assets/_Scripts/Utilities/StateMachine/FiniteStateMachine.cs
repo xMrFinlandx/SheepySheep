@@ -14,7 +14,7 @@ namespace _Scripts.Utilities.StateMachine
             _states.Add(state.GetType(), state);
         }
 
-        public bool IsCurrentStateSame<T>() where T : FsmState
+        public bool IsEqualsCurrentState<T>() where T : FsmState
         {
             return CurrentState.GetType() == typeof(T);
         }
@@ -23,7 +23,7 @@ namespace _Scripts.Utilities.StateMachine
         {
             var type = typeof(T);
 
-            if (CurrentState != null && IsCurrentStateSame<T>())
+            if (CurrentState != null && IsEqualsCurrentState<T>())
                 return;
 
             if (!_states.TryGetValue(type, out var state))

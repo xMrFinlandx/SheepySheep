@@ -1,8 +1,11 @@
 ﻿using _Scripts.Player.Controls;
+using _Scripts.Utilities.StateMachine;
+using _Scripts.Utilities.StateMachine.Menu;
 using Ami.BroAudio;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 using Zenject;
 
 namespace _Scripts.UI.MainMenu
@@ -25,6 +28,12 @@ namespace _Scripts.UI.MainMenu
 
         private MainMenuPresenter _presenter;
         private InputReader _inputReader;
+        private IntFiniteStateMachine _finiteStateMachine = new();
+
+        private const int _SETTINGS_WINDOW_INDEX = 0;
+        private const int _MAIN_LEVELS_WINDOW_INDEX = 1;
+        private const int _BONUS_LEVELS_WINDOW_INDEX = 2;
+        private const int _NAVIGATION_WINDOW_INDEX = 3;
         
         [Inject]
         private void Construct(InputReader inputReader)
@@ -36,6 +45,7 @@ namespace _Scripts.UI.MainMenu
         {
             _presenter = new MainMenuPresenter(_inputReader);
             _presenter.SetPlayerActions(false);
+            _presenter.LoadGameSettings();
             
             _inputReader.ResumeClickEvent += InputReaderOnResumeClickEvent;
             
@@ -48,8 +58,22 @@ namespace _Scripts.UI.MainMenu
             _mainLevelsBinder.LevelSelectedAction += _presenter.OnLevelSelected;
             _bonusLevelsBinder.LevelSelectedAction += _presenter.OnLevelSelected;
             _settingsWindow.VolumeSliderChangedAction += _presenter.OnVolumeChanged;
+            
+            InitStateMachine();
 
             InvokeRepeating(nameof(test_call), 5, 1f);
+        }
+
+        private void InitStateMachine()
+        {
+            _finiteStateMachine.Clear();
+            
+            _finiteStateMachine.AddState(new FsmSettingsWindow(_finiteStateMachine, _settingsWindow));
+            _finiteStateMachine.AddState(new FsmSceneButtonsWindow(_finiteStateMachine, _mainLevelsBinder));
+            _finiteStateMachine.AddState(new FsmSceneButtonsWindow(_finiteStateMachine, _bonusLevelsBinder));
+            _finiteStateMachine.AddState(new FsmUIWindow(_finiteStateMachine, _mainMenuButtons));
+            
+            _finiteStateMachine.SetState(_NAVIGATION_WINDOW_INDEX);
         }
 
         private void test_call()
@@ -58,41 +82,26 @@ namespace _Scripts.UI.MainMenu
         }
 
         [Button]
-        private void ShowSettingsWindow()
-        {
-            _settingsWindow.gameObject.SetActive(true);
-            
-            _mainMenuButtons.gameObject.SetActive(false);
-            _mainLevelsBinder.gameObject.SetActive(false);
-            _bonusLevelsBinder.gameObject.SetActive(false);
-        }
+        private void ShowSettingsWindow() => SetState(_SETTINGS_WINDOW_INDEX);
 
         [Button]
-        private void ShowBonusSelectionWindow()
-        {
-            
-        }
+        private void ShowBonusSelectionWindow() => SetState(_BONUS_LEVELS_WINDOW_INDEX);
 
         [Button]
-        private void ShowNavigationButtonsWindow()
-        {
-            _mainMenuButtons.gameObject.SetActive(true);
-            
-            _mainLevelsBinder.gameObject.SetActive(false);
-            _bonusLevelsBinder.gameObject.SetActive(false);
-            _settingsWindow.gameObject.SetActive(false);
-        }
+        private void ShowNavigationButtonsWindow() => SetState(_NAVIGATION_WINDOW_INDEX);
 
         [Button]
-        private void ShowLevelSelectionWindow()
-        {
-            _mainLevelsBinder.gameObject.SetActive(true);
-            
-            _mainMenuButtons.gameObject.SetActive(false);
-            _bonusLevelsBinder.gameObject.SetActive(false);
-            _settingsWindow.gameObject.SetActive(false);
-        }
+        private void ShowLevelSelectionWindow() => SetState(_MAIN_LEVELS_WINDOW_INDEX);
 
+        private void SetState(int index)
+        {
+#if UNITY_EDITOR
+            InitStateMachine();
+#endif
+            
+            _finiteStateMachine.SetState(index);
+        }
+        
         private void InputReaderOnResumeClickEvent()
         {
             ShowNavigationButtonsWindow();
@@ -111,6 +120,8 @@ namespace _Scripts.UI.MainMenu
             _mainLevelsBinder.LevelSelectedAction -= _presenter.OnLevelSelected;
             _bonusLevelsBinder.LevelSelectedAction -= _presenter.OnLevelSelected;
             _settingsWindow.VolumeSliderChangedAction -= _presenter.OnVolumeChanged;
+            
+            YandexGame.SaveProgress();
         }
     }
 }

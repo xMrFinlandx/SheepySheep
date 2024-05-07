@@ -15,7 +15,14 @@ namespace YG
         public bool promptDone;
 
         #endregion
+        
+        #region Settings
+        
+        public float SFXVolume = 1;
+        public float MusicVolume = 1;
 
+        #endregion
+        
         public string NextScene = "_SheepyA1";
         public int Coins = 0;
 
@@ -36,10 +43,7 @@ namespace YG
         public void TrySetNextScene(string sceneName)
         {
             if (IsScenePassed(sceneName))
-            {
-                Debug.Log($"Next scene is {sceneName}");
                 return;
-            }
 
             NextScene = sceneName;
         }

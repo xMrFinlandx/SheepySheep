@@ -3,7 +3,7 @@ using _Scripts.Player;
 using _Scripts.Utilities.Visuals;
 using UnityEngine;
 
-namespace _Scripts.Utilities.StateMachine
+namespace _Scripts.Utilities.StateMachine.Player
 {
     public class FsmFallState : FsmDiedState
     {

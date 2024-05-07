@@ -5,6 +5,7 @@ using _Scripts.Utilities;
 using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
+using _Scripts.Utilities.StateMachine.Player;
 using UnityEngine;
 using YG;
 
@@ -59,7 +60,7 @@ namespace _Scripts.Player
         {
             var isometricDirection = cartesianDirection.CartesianToIsometric();
 
-            if (MoveDirection == isometricDirection || _finiteStateMachine.IsCurrentStateSame<FsmFallState>())
+            if (MoveDirection == isometricDirection || _finiteStateMachine.IsEqualsCurrentState<FsmFallState>())
                 return;
             
             ResetVelocityAndSetPosition(position);

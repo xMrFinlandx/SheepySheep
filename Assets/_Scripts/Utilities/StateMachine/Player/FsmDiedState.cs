@@ -1,9 +1,8 @@
-﻿using System;
-using _Scripts.Managers;
+﻿using _Scripts.Managers;
 using _Scripts.Player;
 using UnityEngine;
 
-namespace _Scripts.Utilities.StateMachine
+namespace _Scripts.Utilities.StateMachine.Player
 {
     public class FsmDiedState : FsmState
     {

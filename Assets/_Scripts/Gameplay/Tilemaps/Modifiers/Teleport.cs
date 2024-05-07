@@ -3,6 +3,7 @@ using _Scripts.Managers;
 using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
+using _Scripts.Utilities.StateMachine.Player;
 using _Scripts.Utilities.Visuals;
 using Ami.BroAudio;
 using DG.Tweening;

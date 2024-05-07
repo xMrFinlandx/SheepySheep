@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace _Scripts.Utilities.StateMachine
+namespace _Scripts.Utilities.StateMachine.Player
 {
     public class FsmPausedState : FsmState
     {
