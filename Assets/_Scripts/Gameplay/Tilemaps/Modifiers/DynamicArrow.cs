@@ -11,7 +11,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
     [RequireComponent(typeof(SpriteRenderer))]
     public class DynamicArrow : BaseArrow, IMouseInteraction
     {
-        private const int _MAX_ROTATIONS_COUNT = 1;
+        private const int _MAX_ROTATIONS_COUNT = 4;
         
         private int _direction = 1;
         private int _rotationsCounter;
@@ -61,7 +61,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
             PlayShineAnimation();
             ShaderController.SetVectorValue(_cartesianDirection.CartesianToIsometric(), 0);
 
-            if (_rotationsCounter > _MAX_ROTATIONS_COUNT || _playerController == null ||
+            if (_rotationsCounter >= _MAX_ROTATIONS_COUNT || _playerController == null ||
                 Vector2.Distance(transform.position, _playerController.Transform.position) > 100)
                 return;
 

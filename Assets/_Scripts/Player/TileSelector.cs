@@ -22,7 +22,14 @@ namespace _Scripts.Player
             _currentCursorPosition = TilemapManager.Instance.WorldToCell( _camera.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
 
             if (TilemapManager.Instance.CanAddModifier(_currentCursorPosition))
+            {
+                _selectorTransform.gameObject.SetActive(true);
                 _selectorTransform.position = TilemapManager.Instance.CellToWorld(_currentCursorPosition);
+            }
+            else
+            {
+                _selectorTransform.gameObject.SetActive(false);
+            }
         }
     }
 }

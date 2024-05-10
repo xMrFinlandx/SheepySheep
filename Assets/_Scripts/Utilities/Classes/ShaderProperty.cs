@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace _Scripts.Utilities.Classes
 {
-
     [Serializable]
     public class ShaderProperty<T> 
     {
