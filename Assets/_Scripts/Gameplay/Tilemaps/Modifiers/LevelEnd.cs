@@ -29,7 +29,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         public async void Activate(IPlayerController playerController)
         {
             GameStateManager.SetState(GameStateType.Cutscene);
-            playerController.SetState<FsmPausedState>();
+            playerController.SetState<FsmCutsceneState>();
             DataPersistentManager.SaveData();
 
             await Awaitable.WaitForSecondsAsync(3f);

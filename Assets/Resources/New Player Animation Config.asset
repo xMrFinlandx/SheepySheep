@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: New Player Animation Config
   m_EditorClassIdentifier: 
   _animatorController: {fileID: 9100000, guid: 33bfec2d723d4c442a105f5b7b55e3ce, type: 2}
+  _idleAnimation: {fileID: 7400000, guid: 967bf4e74675f6f44ab4bddbc06cd4ac, type: 2}
   _moveAnimation: {fileID: 7400000, guid: 36134de513aafe849a41fb289c266018, type: 2}
   _deathAnimation: {fileID: 7400000, guid: a4f6ced4056847c46b78347ca048adca, type: 2}

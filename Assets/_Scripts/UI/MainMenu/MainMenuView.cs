@@ -1,7 +1,6 @@
 ﻿using _Scripts.Player.Controls;
 using _Scripts.Utilities.StateMachine;
 using _Scripts.Utilities.StateMachine.Menu;
-using Ami.BroAudio;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,9 +21,6 @@ namespace _Scripts.UI.MainMenu
         [SerializeField] private SceneButtonsBinder _mainLevelsBinder;
         [SerializeField] private SceneButtonsBinder _bonusLevelsBinder;
         [SerializeField] private SettingsWindow _settingsWindow;
-
-        [Header("Test")] 
-        [SerializeField] private SoundID _soundID;
 
         private MainMenuPresenter _presenter;
         private InputReader _inputReader;
@@ -60,8 +56,6 @@ namespace _Scripts.UI.MainMenu
             _settingsWindow.VolumeSliderChangedAction += _presenter.OnVolumeChanged;
             
             InitStateMachine();
-
-            InvokeRepeating(nameof(test_call), 5, 1f);
         }
 
         private void InitStateMachine()
@@ -75,12 +69,7 @@ namespace _Scripts.UI.MainMenu
             
             _finiteStateMachine.SetState(_NAVIGATION_WINDOW_INDEX);
         }
-
-        private void test_call()
-        {
-            BroAudio.Play(_soundID);
-        }
-
+        
         [Button]
         private void ShowSettingsWindow() => SetState(_SETTINGS_WINDOW_INDEX);
 

@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: zemleroyka
   productName: SheepySheep
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -44,8 +44,8 @@ PlayerSettings:
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
   defaultScreenHeight: 1080
-  defaultScreenWidthWeb: 960
-  defaultScreenHeightWeb: 600
+  defaultScreenWidthWeb: 16
+  defaultScreenHeightWeb: 9
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 1
   unsupportedMSAAFallback: 0
@@ -300,7 +300,28 @@ PlayerSettings:
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
   m_TemplateCustomTags:
+    CHOOSE_LOADING_TYPE: 2
+    CONFIGURE_SHADOWS_AROUND_CANVAS: 
+    CONNECT_PLUGIN: YG1.6.1
+    CUSTOMIZE_BARS_BACKGROUND: backgroundImage = "linear-gradient(#005ABC, #86C9FF)"
+    CUSTOMIZE_LOADING_SCREEN_BACKGROUND: 
+    CUSTOMIZE_LOGO: backgroundImage = "url('logo_256.png')"
+    CUSTOM_EVENT_IN_CSS: 
+    CUSTOM_EVENT_IN_HTML: 
+    CUSTOM_EVENT_IN_JS: 
+    DISABLE_CONSOLE_MESSAGES: 
+    GP_GAMEREADY_AUTOCALL_DELAY: 
+    GP_PROJECT_ID: 
+    GP_SHOW_PRELOADER_AD: 
+    GP_TOKEN: 
+    IGB_GAME_DISTRIBUTION_GAME_ID: 
+    IGB_VK_PLAY_GAME_ID: 
+    LOCK_ASPECT_RATIO: all
     PRODUCT_DESCRIPTION: 
+    YG_BANNER_DYNAMIC_1: 
+    YG_BANNER_DYNAMIC_2: 
+    YG_BANNER_STATIC_1: 
+    YG_BANNER_STATIC_2: 
   mobileMTRendering:
     Android: 1
     iPhone: 1
@@ -554,7 +575,7 @@ PlayerSettings:
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
   webGLModulesDirectory: 
-  webGLTemplate: PROJECT:PluginYG
+  webGLTemplate: PROJECT:AT2.1.0
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
   webGLCompressionFormat: 0

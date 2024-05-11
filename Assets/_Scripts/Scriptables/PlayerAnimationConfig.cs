@@ -1,7 +1,8 @@
-﻿#if UNITY_EDITOR
+﻿using UnityEngine;
+
+#if UNITY_EDITOR
 using UnityEditor.Animations;
 #endif
-using UnityEngine;
 
 namespace _Scripts.Scriptables
 {
@@ -11,13 +12,16 @@ namespace _Scripts.Scriptables
 #if UNITY_EDITOR
         [SerializeField] private AnimatorController _animatorController;
 #endif
+        [SerializeField] private AnimationClip _idleAnimation;
         [SerializeField] private AnimationClip _moveAnimation;
         [SerializeField] private AnimationClip _deathAnimation;
 
 #if UNITY_EDITOR
         public AnimatorController AnimatorController => _animatorController;
 #endif
-        public int MoveAnimation => Animator.StringToHash(_moveAnimation.name); 
+            public int IdleAnimation => Animator.StringToHash(_idleAnimation.name);
+        public int MoveAnimation => Animator.StringToHash(_moveAnimation.name);
         public int DeathAnimation => Animator.StringToHash(_deathAnimation.name);
+
     }
 }

@@ -6,6 +6,7 @@ using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
 using _Scripts.Utilities.StateMachine.Player;
+using _Scripts.Utilities.Visuals;
 using UnityEngine;
 using YG;
 
@@ -35,7 +36,6 @@ namespace _Scripts.Player
         private Vector2 _spawnPosition;
         
         private Wallet _coinsWallet;
-        private Sprite _defaultSprite;
         private FiniteStateMachine _finiteStateMachine;
 
         public static Action<Vector2Int> PlayerInNewTileAction;
@@ -51,7 +51,6 @@ namespace _Scripts.Player
         {
             _spawnPosition = spawnPosition;
             _defaultDirection = cartesianDirection;
-            _defaultSprite = _spriteRenderer.sprite;
         }
 
         public void SetState<T>() where T : FsmState => _finiteStateMachine.SetState<T>();
@@ -80,9 +79,6 @@ namespace _Scripts.Player
             _finiteStateMachine.SetState<FsmIdleState>();
             
             _isStarted = false;
-            _animator.Play(_playerAnimationConfig.MoveAnimation);
-            _animator.enabled = false;
-            _spriteRenderer.sprite = _defaultSprite;
             ResetVelocityAndSetPosition(_spawnPosition);
             SetMoveDirectionAndPosition(_defaultDirection, _spawnPosition);
             _coinsWallet.ResetBuffer();
@@ -103,26 +99,34 @@ namespace _Scripts.Player
         {
             TilemapInteractionsManager.ArrowInstantiatedAction += OnArrowInstantiated;
             ReloadRoomManager.ReloadRoomAction += Restart;
+            TilemapAnimatorManager.AnimationEndedAction += Show;
             
             InitStateMachine();
-            _finiteStateMachine.SetState<FsmIdleState>();
+            _finiteStateMachine.SetState<FsmInvisibleState>();
             
             SetMoveDirectionAndPosition(_defaultDirection, _spawnPosition);
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
             
             _animator.enabled = false;
         }
-        
+
+        private void Show()
+        {
+            _finiteStateMachine.SetState<FsmIdleState>();
+        }
+
         private void InitStateMachine()
         {
             _finiteStateMachine = new FiniteStateMachine();
             
-            _finiteStateMachine.AddState(new FsmIdleState(_finiteStateMachine, _rigidbody));
+            _finiteStateMachine.AddState(new FsmInvisibleState(_finiteStateMachine, _rigidbody, _spriteRenderer));
+            _finiteStateMachine.AddState(new FsmIdleState(_finiteStateMachine, _rigidbody, _spriteRenderer, _animator, _playerAnimationConfig.IdleAnimation));
             _finiteStateMachine.AddState(new FsmMoveState(_finiteStateMachine, this, _animator, _playerAnimationConfig.MoveAnimation, _speed));
             _finiteStateMachine.AddState(new FsmRunState(_finiteStateMachine, this, _animator, _playerAnimationConfig.MoveAnimation, _speed, _speedModifier));
-            _finiteStateMachine.AddState(new FsmFallState(_finiteStateMachine, _rigidbody, _spriteRenderer, _animator, _playerAnimationConfig.DeathAnimation, _fallDeathAwaitDuration, _gravityScale));
+            _finiteStateMachine.AddState(new FsmCutsceneState(_finiteStateMachine, this, _animator, _playerAnimationConfig.MoveAnimation, _speed));
             _finiteStateMachine.AddState(new FsmDiedState(_finiteStateMachine, _rigidbody, _spriteRenderer, _deathParticleSystem, _deathAwaitDuration));
-            _finiteStateMachine.AddState(new FsmPausedState(_finiteStateMachine, _rigidbody));
+            _finiteStateMachine.AddState(new FsmFallState(_finiteStateMachine, _rigidbody, _spriteRenderer, _animator, _playerAnimationConfig.DeathAnimation, _fallDeathAwaitDuration, _gravityScale));
+            _finiteStateMachine.AddState(new FsmPausedState(_finiteStateMachine, _rigidbody, _animator));
         }
 
         private void OnArrowInstantiated()
@@ -148,6 +152,7 @@ namespace _Scripts.Player
         {
             TilemapInteractionsManager.ArrowInstantiatedAction -= OnArrowInstantiated;
             ReloadRoomManager.ReloadRoomAction -= Restart;
+            TilemapAnimatorManager.AnimationEndedAction -= Show;
         }
 
         public void SaveData()
