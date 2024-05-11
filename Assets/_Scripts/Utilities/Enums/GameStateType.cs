@@ -2,8 +2,9 @@
 {
     public enum GameStateType
     {
+        Unset,
         Gameplay,
         Paused,
-        Cutscene
+        Cutscene,
     }
 }

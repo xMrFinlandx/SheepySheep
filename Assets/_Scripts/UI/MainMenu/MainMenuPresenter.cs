@@ -1,4 +1,6 @@
 ﻿using _Scripts.Player.Controls;
+using _Scripts.Utilities.Classes;
+using _Scripts.Utilities.Enums;
 using Ami.BroAudio;
 using UnityEngine.SceneManagement;
 using YG;
@@ -12,6 +14,7 @@ namespace _Scripts.UI.MainMenu
         public MainMenuPresenter(InputReader inputReader)
         {
             _inputReader = inputReader;
+            GameStateManager.SetState(GameStateType.Unset);
         }
 
         public void OnContinueButtonClicked()

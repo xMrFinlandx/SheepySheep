@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
 
 namespace YG
 {
-    [System.Serializable]
+    [Serializable]
     public class SavesYG
     {
         #region Technical Saves
@@ -18,8 +18,10 @@ namespace YG
         
         #region Settings
         
-        public float SFXVolume = 1;
-        public float MusicVolume = 1;
+        public float SFXVolume = .5f;
+        public float MusicVolume = .5f;
+        public float CompletionTime = 0;
+        public int DeathsCount = 0;
 
         #endregion
         

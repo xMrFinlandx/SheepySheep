@@ -1,14 +1,14 @@
 {
-  "idSave": 201,
+  "idSave": 248,
   "isFirstSession": false,
-  "language": "en",
+  "language": "ru",
   "promptDone": false,
-  "SFXVolume": 0.993146539,
-  "MusicVolume": 0.283786416,
-  "NextScene": "_SheepyA2",
+  "SFXVolume": 0.5,
+  "MusicVolume": 0.5,
+  "CompletionTime": 0.0599999763,
+  "DeathsCount": 0,
+  "NextScene": "_SheepyA1",
   "Coins": 0,
-  "PassedScenes": {
-    "_SheepyA1": true
-  },
+  "PassedScenes": {},
   "Collectables": {}
 }

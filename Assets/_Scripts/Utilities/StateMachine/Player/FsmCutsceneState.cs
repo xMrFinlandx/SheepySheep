@@ -1,5 +1,7 @@
 ﻿using _Scripts.Managers;
 using _Scripts.Player;
+using _Scripts.Utilities.Classes;
+using _Scripts.Utilities.Enums;
 using UnityEngine;
 
 namespace _Scripts.Utilities.StateMachine.Player
@@ -31,6 +33,7 @@ namespace _Scripts.Utilities.StateMachine.Player
             _animator.speed = 1;
             _animator.enabled = true;
             _animator.Play(_animationHash);
+            GameStateManager.SetState(GameStateType.Cutscene);
         }
 
         public override void FixedUpdate()
@@ -38,7 +41,7 @@ namespace _Scripts.Utilities.StateMachine.Player
             _rigidbody.velocity = _playerController.MoveDirection * (_speed * Time.fixedDeltaTime);
             _currentCellPosition = TilemapManager.Instance.WorldToCell(_transform.position);
             
-            if (_previousCellPosition == _currentCellPosition)
+            if (!TilemapManager.Instance.IsInTilemap(_currentCellPosition) || _previousCellPosition == _currentCellPosition)
                 return;
 
             PlayerController.PlayerInNewTileAction?.Invoke(_currentCellPosition);
