@@ -29,7 +29,7 @@ namespace _Scripts.Managers
                 return;
             
             YandexGame.savesData.CompletionTime += Time.fixedDeltaTime;
-            _textMesh.text = $"{YandexGame.savesData.CompletionTime}";
+            _textMesh.text = $"Time: {YandexGame.savesData.CompletionTime}";
         }
 
         private void OnDestroy()

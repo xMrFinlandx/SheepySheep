@@ -1,9 +1,9 @@
 ﻿using _Scripts.Managers;
 using _Scripts.Scriptables.Gameplay;
+using _Scripts.UI;
 using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
-using _Scripts.Utilities.StateMachine;
 using _Scripts.Utilities.StateMachine.Player;
 using Ami.BroAudio;
 using UnityEngine;
@@ -32,9 +32,12 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
             playerController.SetState<FsmCutsceneState>();
             DataPersistentManager.SaveData();
 
-            await Awaitable.WaitForSecondsAsync(3f);
+            await Awaitable.WaitForSecondsAsync(1f);
 
-            SceneManager.LoadScene(_sceneToLoad);
+            Fader.Instance.Show(() =>
+            {
+                SceneManager.LoadScene(_sceneToLoad);
+            }, () => !YandexGame.TryFullscreenShow());
         }
         
         private void OnValidate()

@@ -13,6 +13,7 @@ namespace _Scripts.Utilities.Visuals
 {
     public class TilemapAnimatorManager : Singleton<TilemapAnimatorManager>
     {
+        [SerializeField] private bool _canSetGameState = true;
         [SerializeField] private SpriteRenderer _spriteRendererPrefab;
         [SerializeField] private int _sortingLayerOrder = 100;
         [Header("Animation")]
@@ -24,7 +25,7 @@ namespace _Scripts.Utilities.Visuals
         [SerializeField] private float _ySpawnOffset = 10;
         [SerializeField] private float _spriteCenterOffset = .5f;
         [SerializeField] private WaterShaderController _foamController;
-
+        
         public static Action AnimationEndedAction;
         
         private const int _FOAM_DURATION = 4;
@@ -90,7 +91,10 @@ namespace _Scripts.Utilities.Visuals
         {
             EnableTiles(false);
             _spriteRenderers.Clear();
-            GameStateManager.SetState(GameStateType.Gameplay);
+            
+            if (_canSetGameState)
+                GameStateManager.SetState(GameStateType.Gameplay);
+            
             AnimationEndedAction?.Invoke();
         }
 

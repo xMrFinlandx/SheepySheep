@@ -81,7 +81,7 @@ public class TimerBeforeAdsYG : MonoBehaviour
 
             if (objSecCounter == secondObjects.Length)
             {
-                YandexGame.FullscreenShow();
+                YandexGame.TryFullscreenShow();
                 StartCoroutine(BackupTimerClosure());
 
                 while (!YandexGame.nowFullAd)

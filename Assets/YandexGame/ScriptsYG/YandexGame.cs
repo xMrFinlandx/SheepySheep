@@ -108,7 +108,7 @@ namespace YG
         private void Start()
         {
             if (infoYG.AdWhenLoadingScene)
-                FullscreenShow();
+                TryFullscreenShow();
 
             if (!_SDKEnabled)
             {
@@ -150,7 +150,7 @@ namespace YG
             if (firstSceneLoad)
                 firstSceneLoad = false;
             else if (infoYG.AdWhenLoadingScene)
-                _FullscreenShow();
+                _TryFullscreenShow();
         }  
 
         #region For ECS
@@ -214,9 +214,11 @@ namespace YG
         [DllImport("__Internal")]
         private static extern void FullAdShow();
 
-        public void _FullscreenShow()
+        public bool CanShowFullscreen() => !nowAdsShow && timerShowAd >= infoYG.fullscreenAdInterval;
+        
+        public bool _TryFullscreenShow()
         {
-            if (!nowAdsShow && timerShowAd >= infoYG.fullscreenAdInterval)
+            if (CanShowFullscreen())
             {
                 timerShowAd = 0;
                 onAdNotification?.Invoke();
@@ -226,14 +228,15 @@ namespace YG
                 Message("Fullscren Ad");
                 FullAdInEditor();
 #endif
+
+                return true;
             }
-            else
-            {
-                Message($"До запроса к показу рекламы в середине игры {(infoYG.fullscreenAdInterval - timerShowAd).ToString("00.0")} сек.");
-            }
+
+            Message($"До запроса к показу рекламы в середине игры {(infoYG.fullscreenAdInterval - timerShowAd).ToString("00.0")} сек.");
+            return false;
         }
 
-        public static void FullscreenShow() => Instance._FullscreenShow();
+        public static bool TryFullscreenShow() => Instance._TryFullscreenShow();
 
 #if UNITY_EDITOR
         private void FullAdInEditor()

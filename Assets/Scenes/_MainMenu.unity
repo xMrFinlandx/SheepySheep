@@ -11446,6 +11446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 013946dc63d24dbe8b4a19d8b09771a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canSetGameState: 0
   _spriteRendererPrefab: {fileID: 7955546480334535955, guid: 986fb38e78c20d64fac9297a017e2579, type: 3}
   _sortingLayerOrder: 100
   _ease: 13
@@ -13883,9 +13884,6 @@ MonoBehaviour:
   _mainLevelsBinder: {fileID: 1161803123}
   _bonusLevelsBinder: {fileID: 571942598}
   _settingsWindow: {fileID: 1270408254}
-  _soundID:
-    ID: 1073741831
-    _sourceAsset: {fileID: 11400000, guid: 5fabd6e51aa6b2846874711bdb2715a2, type: 2}
 --- !u!4 &1974344126
 Transform:
   m_ObjectHideFlags: 0
