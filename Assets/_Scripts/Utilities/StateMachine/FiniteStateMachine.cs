@@ -30,10 +30,12 @@ namespace _Scripts.Utilities.StateMachine
             if (!_states.TryGetValue(type, out var state))
                 return;
             
-            PreviousState = CurrentState;
-            CurrentState?.Exit();
-            CurrentState = state;
-            CurrentState.Enter();
+            SetState(state);
+        }
+
+        public void SetPreviousState()
+        {
+            SetState(PreviousState);
         }
 
         public void FixedUpdate()
@@ -44,6 +46,14 @@ namespace _Scripts.Utilities.StateMachine
         public void Update()
         {
             CurrentState.Update();
+        }
+
+        private void SetState(FsmState state)
+        {
+            PreviousState = CurrentState;
+            CurrentState?.Exit();
+            CurrentState = state;
+            CurrentState.Enter();
         }
     }
 }

@@ -22,9 +22,10 @@ namespace _Scripts.UI.MainMenu
         [SerializeField] private SceneButtonsBinder _bonusLevelsBinder;
         [SerializeField] private SettingsWindow _settingsWindow;
 
+        private readonly IntFiniteStateMachine _finiteStateMachine = new();
+        
         private MainMenuPresenter _presenter;
         private InputReader _inputReader;
-        private IntFiniteStateMachine _finiteStateMachine = new();
 
         private const int _SETTINGS_WINDOW_INDEX = 0;
         private const int _MAIN_LEVELS_WINDOW_INDEX = 1;

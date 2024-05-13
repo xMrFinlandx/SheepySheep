@@ -7,7 +7,7 @@ using Zenject;
 
 namespace _Scripts.Installers
 {
-    public class MainMenuSceneInstaller : MonoInstaller
+    public class MainMenuSceneInstaller : MonoInstaller<MainMenuSceneInstaller>
     {
         [SerializeField] private Tilemap _tilemap;
         [SerializeField] private InputReader _inputReader;
@@ -17,6 +17,11 @@ namespace _Scripts.Installers
             _inputReader.Init(Camera.main);
             
             Container.Bind<Tilemap>().FromInstance(_tilemap);
+            Container.Bind<InputReader>().FromInstance(_inputReader);
+        }
+
+        private void Awake()
+        {
             Container.Bind<InputReader>().FromInstance(_inputReader);
         }
 

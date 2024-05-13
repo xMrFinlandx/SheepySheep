@@ -1,5 +1,6 @@
 ﻿using System;
 using _Scripts.Utilities.Enums;
+using UnityEngine;
 
 namespace _Scripts.Utilities.Classes
 {
@@ -14,6 +15,8 @@ namespace _Scripts.Utilities.Classes
             if (newGameState == CurrentGameState)
                 return;
 
+            Debug.Log(CurrentGameState);
+            
             CurrentGameState = newGameState;
             GameStateChangedAction?.Invoke(CurrentGameState);
         }

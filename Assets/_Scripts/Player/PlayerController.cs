@@ -3,6 +3,7 @@ using _Scripts.Managers;
 using _Scripts.Scriptables;
 using _Scripts.Utilities;
 using _Scripts.Utilities.Classes;
+using _Scripts.Utilities.Enums;
 using _Scripts.Utilities.Interfaces;
 using _Scripts.Utilities.StateMachine;
 using _Scripts.Utilities.StateMachine.Player;
@@ -100,6 +101,7 @@ namespace _Scripts.Player
             TilemapInteractionsManager.ArrowInstantiatedAction += OnArrowInstantiated;
             ReloadRoomManager.ReloadRoomAction += Restart;
             TilemapAnimatorManager.AnimationEndedAction += Show;
+            GameStateManager.GameStateChangedAction += OnGameStateChanged;
             
             InitStateMachine();
             _finiteStateMachine.SetState<FsmInvisibleState>();
@@ -108,6 +110,18 @@ namespace _Scripts.Player
             TilemapManager.Instance.SetTransformToCurrentTileCenter(transform);
             
             _animator.enabled = false;
+        }
+
+        private void OnGameStateChanged(GameStateType state)
+        {
+            if (state == GameStateType.Paused)
+            {
+                _finiteStateMachine.SetState<FsmPausedState>();
+            }
+            else if(_finiteStateMachine.IsEqualsCurrentState<FsmPausedState>())
+            {
+                _finiteStateMachine.SetPreviousState();
+            }
         }
 
         private void Show()
@@ -153,6 +167,7 @@ namespace _Scripts.Player
             TilemapInteractionsManager.ArrowInstantiatedAction -= OnArrowInstantiated;
             ReloadRoomManager.ReloadRoomAction -= Restart;
             TilemapAnimatorManager.AnimationEndedAction -= Show;
+            GameStateManager.GameStateChangedAction -= OnGameStateChanged;
         }
 
         public void SaveData()

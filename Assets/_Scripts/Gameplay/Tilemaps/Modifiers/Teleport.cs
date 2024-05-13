@@ -1,8 +1,7 @@
-﻿using System.Collections;
+﻿using System;
 using _Scripts.Managers;
 using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities.Interfaces;
-using _Scripts.Utilities.StateMachine;
 using _Scripts.Utilities.StateMachine.Player;
 using _Scripts.Utilities.Visuals;
 using Ami.BroAudio;
@@ -25,6 +24,8 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         
         [SerializeField, HideInInspector] private SpriteRenderer _spriteRenderer;
 
+        public static Action<bool> TeleportEnabledAction;
+        
         private const float _X_SQUASH_DURATION = .2f;
         
         private Vector2[] _points;
@@ -32,7 +33,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         private BezierPath _bezierPath;
         private SplineFollow _splineFollow;
         private SplineFollow _playerSplineFollow;
-
+        
         private bool _isEnabled = false;
         
         public float YOffset => _teleportConfig.YOffset;
@@ -71,7 +72,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
                 _linkedTeleport._isEnabled = value;
             }
         }
-        
+
         [Button]
         private void SetLink()
         {
@@ -87,10 +88,12 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         {
             if (_isPairEnabled)
                 return;
+            
+            TeleportEnabledAction?.Invoke(true);
 
             _isPairEnabled = true;
             _pairSplineFollow.Pause();
-            
+
             BroAudio.Play(_teleportConfig.Entry);
             
             playerController.SetState<FsmIdleState>();
@@ -103,7 +106,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
                     _pairPlayerSplineFollow.InitStartPositionAndSpeed(4, _isMainTeleport);
                     _pairPlayerSplineFollow.Play();
 
-                    StartCoroutine(Wait(_playerSplineFollow.GetLoopTime(), playerController));
+                    Wait(_playerSplineFollow.GetLoopTime(), playerController);
                 }
             );
         }
@@ -135,19 +138,21 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
             TilemapAnimatorManager.AnimationEndedAction += OnTilemapAnimated;
             ReloadRoomManager.ReloadRoomAction += Restart;
         }
-
-        private IEnumerator Wait(float duration, IPlayerController playerController)
+        
+        private void Wait(float duration, IPlayerController playerController)
         {
             BroAudio.Play(_teleportConfig.Loop);
             
-            yield return new WaitForSeconds(duration);
-            
-            BroAudio.Stop(_teleportConfig.Loop);
-            BroAudio.Play(_teleportConfig.Exit);
-            
-            _playerSplineFollow.Pause();
-            playerController.Transform.DOScaleX(1, _X_SQUASH_DURATION);
-            playerController.SetState<FsmMoveState>();
+            DOVirtual.DelayedCall(duration, () =>
+            {
+                BroAudio.Stop(_teleportConfig.Loop);
+                BroAudio.Play(_teleportConfig.Exit);
+
+                _playerSplineFollow.Pause();
+                playerController.Transform.DOScaleX(1, _X_SQUASH_DURATION);
+                playerController.SetState<FsmMoveState>();
+                TeleportEnabledAction?.Invoke(false);
+            });
         }
         
         private void OnTilemapAnimated()

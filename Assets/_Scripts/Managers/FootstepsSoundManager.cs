@@ -2,6 +2,8 @@
 using _Scripts.Gameplay.Tilemaps;
 using _Scripts.Player;
 using _Scripts.Utilities;
+using _Scripts.Utilities.Classes;
+using _Scripts.Utilities.Enums;
 using Ami.BroAudio;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -20,12 +22,15 @@ namespace _Scripts.Managers
         private SoundID _soundID;
         
         private float _delayCounter;
+
+        private bool _isPaused;
         private bool _canPlay;
         private bool _isTileModifierContainsSound; 
 
         private void Start()
         {
             PlayerController.PlayerInNewTileAction += ChangeFootstepSound;
+            GameStateManager.GameStateChangedAction += OnGameStateChanged;
 
             foreach (var soundData in _soundData)
             {
@@ -33,6 +38,23 @@ namespace _Scripts.Managers
                 {
                     _dataFromTiles.Add(tile, soundData);
                 }
+            }
+        }
+
+        private void OnGameStateChanged(GameStateType state)
+        {
+            if (_soundID == 0)
+                return;
+            
+            _isPaused = state == GameStateType.Paused;
+            
+            if (_isPaused)
+            {
+                BroAudio.Pause(_soundID);
+            }
+            else
+            {
+                BroAudio.Play(_soundID);
             }
         }
 
@@ -60,11 +82,12 @@ namespace _Scripts.Managers
         private void OnDestroy()
         {
             PlayerController.PlayerInNewTileAction -= ChangeFootstepSound;
+            GameStateManager.GameStateChangedAction -= OnGameStateChanged;
         }
 
         private void FixedUpdate()
         {
-            if (!_canPlay)
+            if (!_canPlay || _isPaused)
                 return;
 
             _delayCounter -= Time.fixedDeltaTime;
