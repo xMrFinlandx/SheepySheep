@@ -10,6 +10,9 @@ namespace _Scripts.UI
     {
         [SerializeField] private Slider _sfxSlider;
         [SerializeField] private Slider _musicSlider;
+        [Space] 
+        [SerializeField] private Button _ruButton;
+        [SerializeField] private Button _enButton;
 
         public Action<float, BroAudioType> VolumeSliderChangedAction;
 
@@ -29,12 +32,21 @@ namespace _Scripts.UI
         {
             _sfxSlider.onValueChanged.AddListener(val => VolumeSliderChangedAction?.Invoke(val, BroAudioType.SFX));
             _musicSlider.onValueChanged.AddListener(val => VolumeSliderChangedAction?.Invoke(val, BroAudioType.Music));
+            _ruButton.onClick.AddListener( () => ChangeLanguage("ru"));
+            _enButton.onClick.AddListener( () => ChangeLanguage("en"));
+        }
+
+        private void ChangeLanguage(string language)
+        {
+            YandexGame.SwitchLanguage(language);
         }
 
         private void OnDestroy()
         {
             _sfxSlider.onValueChanged.RemoveAllListeners();
             _musicSlider.onValueChanged.RemoveAllListeners();
+            _ruButton.onClick.RemoveAllListeners();
+            _enButton.onClick.RemoveAllListeners();
         }
     }
 }

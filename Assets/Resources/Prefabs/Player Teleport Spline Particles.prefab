@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 0
   _endOfPathInstruction: 0
+  _particleSystem: {fileID: 6101608478785849497}
 --- !u!198 &6101608478785849497
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4821,9 +4822,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingLayerID: 1554583849
+  m_SortingLayer: 1
+  m_SortingOrder: 22
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0

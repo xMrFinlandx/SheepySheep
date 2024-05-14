@@ -120,7 +120,10 @@ namespace YG
         {
             Message("Reset Save Progress");
             int idSave = savesData.idSave;
-            savesData = new SavesYG { idSave = idSave, isFirstSession = false };
+            string lan = savesData.language;
+            float sfx = savesData.SFXVolume;
+            float music = savesData.MusicVolume;
+            savesData = new SavesYG {idSave = idSave, isFirstSession = false, language = lan, SFXVolume = sfx, MusicVolume = music};
             onResetProgress?.Invoke();
             GetDataInvoke();
         }

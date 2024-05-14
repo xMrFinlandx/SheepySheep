@@ -114,8 +114,14 @@ namespace YG
 
         public void SwitchLanguage()
         {
+            if (YandexGame.Instance == null)
+            {
+                Debug.Log("NULL");
+                return;
+            }
+
             if (YandexGame.LangEnable())
-                SwitchLanguage(YandexGame.lang);
+                SwitchLanguage(YandexGame.savesData.language);
         }
 
         void AssignTranslate(string translation)
