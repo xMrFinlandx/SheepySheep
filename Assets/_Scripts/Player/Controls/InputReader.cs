@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using YG;
 
 namespace _Scripts.Player.Controls
 {
@@ -9,6 +10,10 @@ namespace _Scripts.Player.Controls
     {
         private GameControls _gameControls;
         private Camera _camera;
+
+        private bool _isAdditiveMode = true;
+
+        private bool _isDesktop => YandexGame.EnvironmentData.isDesktop;
         
         public event Action<Vector2> LeftMouseClickEvent; 
         public event Action<Vector2> RightMouseClickEvent;
@@ -39,12 +44,26 @@ namespace _Scripts.Player.Controls
             if (context.phase != InputActionPhase.Performed)
                 return;
             
-            LeftMouseClickEvent?.Invoke(GetWorldMousePosition(_gameControls.Gameplay.TouchPosition));
+            if (_isDesktop)
+            {
+                LeftMouseClickEvent?.Invoke(GetWorldMousePosition(_gameControls.Gameplay.TouchPosition));
+            }
+            else
+            {
+                if (_isAdditiveMode)
+                {
+                    LeftMouseClickEvent?.Invoke(GetWorldMousePosition(_gameControls.Gameplay.TouchPosition));
+                }
+                else
+                {
+                    RightMouseClickEvent?.Invoke(GetWorldMousePosition(_gameControls.Gameplay.TouchPosition));
+                }
+            }
         }
 
         public void OnRightClick(InputAction.CallbackContext context)
         {
-            if (context.phase != InputActionPhase.Performed)
+            if (context.phase != InputActionPhase.Performed || !_isDesktop)
                 return;
 
             RightMouseClickEvent?.Invoke(GetWorldMousePosition(_gameControls.Gameplay.TouchPosition));
@@ -72,6 +91,22 @@ namespace _Scripts.Player.Controls
 
         public void OnTouchPosition(InputAction.CallbackContext context)
         {
+        }
+
+        public void OnSetAdditiveMode(InputAction.CallbackContext context)
+        {
+            if (context.phase != InputActionPhase.Performed || _isDesktop)
+                return;
+
+            _isAdditiveMode = true;
+        }
+
+        public void OnSetRemoveMode(InputAction.CallbackContext context)
+        {
+            if (context.phase != InputActionPhase.Performed || _isDesktop)
+                return;
+
+            _isAdditiveMode = false;
         }
 
         public void Init(Camera mainCamera)

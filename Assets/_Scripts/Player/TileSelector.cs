@@ -1,6 +1,7 @@
 ﻿using _Scripts.Managers;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using YG;
 
 namespace _Scripts.Player
 {
@@ -11,9 +12,10 @@ namespace _Scripts.Player
         private Vector2Int _currentCursorPosition;
         
         private Camera _camera;
-        
+
         private void Start()
         {
+            enabled = YandexGame.EnvironmentData.isDesktop;
             _camera = Camera.main;
         }
 

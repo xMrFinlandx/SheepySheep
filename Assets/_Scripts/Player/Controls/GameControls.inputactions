@@ -49,6 +49,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "SetAdditiveMode",
+                    "type": "Button",
+                    "id": "d54c0102-fff0-48a0-8c1c-617a2be5f710",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SetRemoveMode",
+                    "type": "Button",
+                    "id": "bc410ad4-7a7f-44b6-9d15-66a7faf7c8fc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -126,6 +144,28 @@
                     "processors": "",
                     "groups": "PC",
                     "action": "TouchPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "49a05193-4093-4c0c-8375-faf6186f583b",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "SetAdditiveMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d8d306c4-7839-4964-95e4-f8d398d2d7c7",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "SetRemoveMode",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1,12 +1,12 @@
 {
-  "idSave": 865,
+  "idSave": 880,
   "isFirstSession": false,
   "language": "en",
   "promptDone": false,
   "SFXVolume": 0.8917178,
   "MusicVolume": 0.5,
-  "CompletionTime": 955.950256,
-  "DeathsCount": 10,
+  "CompletionTime": 1025.83838,
+  "DeathsCount": 12,
   "NextScene": "_SheepyA17",
   "Coins": 7,
   "PassedScenes": {
@@ -28,7 +28,7 @@
     "_SheepyA16": true
   },
   "Collectables": {
-    "acfd09e0-5d6f-44fc-9c68-cf50e36d6a1c": true,
+    "acfd09e0-5d6f-44fc-9c68-cf50e36d6a1c": false,
     "14a71b65-630d-4ab8-971f-1fd26dd37c37": false,
     "ad007479-07e4-4a72-813f-9eb2bb763e97": false,
     "2e1bf2f4-f13c-4bad-8aa5-ad2b083b4676": true,

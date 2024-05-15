@@ -71,6 +71,24 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""SetAdditiveMode"",
+                    ""type"": ""Button"",
+                    ""id"": ""d54c0102-fff0-48a0-8c1c-617a2be5f710"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SetRemoveMode"",
+                    ""type"": ""Button"",
+                    ""id"": ""bc410ad4-7a7f-44b6-9d15-66a7faf7c8fc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -150,6 +168,28 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
                     ""action"": ""TouchPosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""49a05193-4093-4c0c-8375-faf6186f583b"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mobile"",
+                    ""action"": ""SetAdditiveMode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d8d306c4-7839-4964-95e4-f8d398d2d7c7"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mobile"",
+                    ""action"": ""SetRemoveMode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -214,6 +254,8 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
         m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
         m_Gameplay_SkipCutscene = m_Gameplay.FindAction("SkipCutscene", throwIfNotFound: true);
         m_Gameplay_TouchPosition = m_Gameplay.FindAction("TouchPosition", throwIfNotFound: true);
+        m_Gameplay_SetAdditiveMode = m_Gameplay.FindAction("SetAdditiveMode", throwIfNotFound: true);
+        m_Gameplay_SetRemoveMode = m_Gameplay.FindAction("SetRemoveMode", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Resume = m_UI.FindAction("Resume", throwIfNotFound: true);
@@ -283,6 +325,8 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Pause;
     private readonly InputAction m_Gameplay_SkipCutscene;
     private readonly InputAction m_Gameplay_TouchPosition;
+    private readonly InputAction m_Gameplay_SetAdditiveMode;
+    private readonly InputAction m_Gameplay_SetRemoveMode;
     public struct GameplayActions
     {
         private @GameControls m_Wrapper;
@@ -292,6 +336,8 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
         public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
         public InputAction @SkipCutscene => m_Wrapper.m_Gameplay_SkipCutscene;
         public InputAction @TouchPosition => m_Wrapper.m_Gameplay_TouchPosition;
+        public InputAction @SetAdditiveMode => m_Wrapper.m_Gameplay_SetAdditiveMode;
+        public InputAction @SetRemoveMode => m_Wrapper.m_Gameplay_SetRemoveMode;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -316,6 +362,12 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
             @TouchPosition.started += instance.OnTouchPosition;
             @TouchPosition.performed += instance.OnTouchPosition;
             @TouchPosition.canceled += instance.OnTouchPosition;
+            @SetAdditiveMode.started += instance.OnSetAdditiveMode;
+            @SetAdditiveMode.performed += instance.OnSetAdditiveMode;
+            @SetAdditiveMode.canceled += instance.OnSetAdditiveMode;
+            @SetRemoveMode.started += instance.OnSetRemoveMode;
+            @SetRemoveMode.performed += instance.OnSetRemoveMode;
+            @SetRemoveMode.canceled += instance.OnSetRemoveMode;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -335,6 +387,12 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
             @TouchPosition.started -= instance.OnTouchPosition;
             @TouchPosition.performed -= instance.OnTouchPosition;
             @TouchPosition.canceled -= instance.OnTouchPosition;
+            @SetAdditiveMode.started -= instance.OnSetAdditiveMode;
+            @SetAdditiveMode.performed -= instance.OnSetAdditiveMode;
+            @SetAdditiveMode.canceled -= instance.OnSetAdditiveMode;
+            @SetRemoveMode.started -= instance.OnSetRemoveMode;
+            @SetRemoveMode.performed -= instance.OnSetRemoveMode;
+            @SetRemoveMode.canceled -= instance.OnSetRemoveMode;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -423,6 +481,8 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
         void OnPause(InputAction.CallbackContext context);
         void OnSkipCutscene(InputAction.CallbackContext context);
         void OnTouchPosition(InputAction.CallbackContext context);
+        void OnSetAdditiveMode(InputAction.CallbackContext context);
+        void OnSetRemoveMode(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

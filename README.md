@@ -1,13 +1,24 @@
 # Sheepy Sheep
-**Sheepy Sheep** is a simple isometric puzzle game in which you have to help a sheep to get to the end of the level by pointing with the arrows.
+
+**Sheepy Sheep** это простая изометрическая игра-головоломка, в которой вы должны помочь овечке добраться до конца уровня, направляя ее стрелками.
 
 <img src="https://github.com/xMrFinlandx/SheepySheep/blob/main/Assets/Meta/SheepyAnim.gif" width="830" height="465">
 <img src="https://github.com/xMrFinlandx/SheepySheep/blob/main/Assets/Meta/SheepyDemo.gif" width="830" height="465">
 
-## About
+## Об игре
 
-The basic mechanics of the game is the arrangement of arrows, which set the direction of movement of the sheep. You have to collect coins, activate pressure plates to open new passages and make sure the sheep doesn't lose its way and drown.
+Основная механика игры заключается в расстановке стрелок, которые задают направление движения овцы. Вам нужно собирать монеты, активировать нажимные пластины, чтобы открывать новые проходы, и следить за тем, чтобы овца не сбилась с пути и не утонула.
 
-## Planned Content
+## Готовые механики
 
-The game is planned to feature several different locations, each of which will offer the player new mechanics and challenges.
+- Динамичные стрелки — стрелки которые игрок может добавить, повернуть или удалить
+- Шипы — преграждают путь персонажу
+- Нажимные плиты — при активации убирают шипы того же цвета
+- Статичные стрелки — стрелки которые нельзя повернуть или удалить
+- Вращатель стрелок — поворачивает все статичные стрелки на уровне
+- Телепорт — перемещает игрока из одной точки в другую, сохраняя направление движения
+
+## Планируемый контент
+
+Планируется, что в игре будет представлено несколько различных локаций, каждая из которых предложит игроку новые механики и испытания.
+

@@ -1,5 +1,4 @@
-﻿using System;
-using _Scripts.Utilities.Tools;
+﻿using _Scripts.Utilities.Tools;
 using UnityEngine;
 
 namespace _Scripts.Utilities.Tools
