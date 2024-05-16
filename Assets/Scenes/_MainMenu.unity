@@ -15028,7 +15028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactable: 1
-  _endAlpha: 1
+  _endAlpha: 0
   _startAlpha: 1
   _fadeInTime: 0.1
   _fadeOutTime: 0.1
@@ -15042,7 +15042,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588132541}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

@@ -14,6 +14,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         [SerializeField] private string _guid;
 
         private bool _isCollected = false;
+        private bool _isSaved;
         
         [Button("New Guid")]
         private void GenerateGUID()
@@ -23,12 +24,17 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         
         public void SaveData()
         {
+            if (_isSaved)
+                return;
+            
             YandexGame.savesData.AddCollectable(_guid, _isCollected);
         }
 
         public void LoadData()
         {
             _isCollected = YandexGame.savesData.IsCollectableEnabled(_guid);
+            _isSaved = _isCollected;
+            print(_isCollected);
             
             if (_isCollected) 
                 gameObject.SetActive(false);

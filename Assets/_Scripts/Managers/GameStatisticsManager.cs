@@ -2,7 +2,6 @@
 using _Scripts.Utilities;
 using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Enums;
-using TMPro;
 using UnityEngine;
 using YG;
 
@@ -10,8 +9,6 @@ namespace _Scripts.Managers
 {
     public class GameStatisticsManager : Singleton<GameStatisticsManager>
     {
-        [SerializeField] private TextMeshProUGUI _textMesh;
-        
         private void Start()
         {
             PlayerController.PlayerDiedAction += OnPlayerDied;
@@ -29,7 +26,6 @@ namespace _Scripts.Managers
                 return;
             
             YandexGame.savesData.CompletionTime += Time.fixedDeltaTime;
-            _textMesh.text = $"Time: {YandexGame.savesData.CompletionTime}";
         }
 
         private void OnDestroy()

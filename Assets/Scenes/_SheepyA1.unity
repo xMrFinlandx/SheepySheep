@@ -332,9 +332,9 @@ MonoBehaviour:
   text: 
   ru: "\u041F\u043E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 <b><color=#bb00ff>\u0421\u0442\u0440\u0435\u043B\u043A\u0443</color></b>
     \u043D\u0430 \u0432\u044B\u0434\u0435\u043B\u0435\u043D\u043D\u043E\u0439 <b><color=#ffbb00>\u041A\u043B\u0435\u0442\u043A\u0435</color></b>
-    \u0438 \u043D\u0430\u0436\u043C\u0438\u0442\u0435 \u043F\u043E \u043D\u0435\u0439,
+    \u0438 \u043D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u043D\u0435\u0435,
     \u0447\u0442\u043E\u0431\u044B \u043F\u043E\u0432\u0435\u0440\u043D\u0443\u0442\u044C"
-  en: Place <b><color=#bb00ff>Arrow</color></b> on the selected <b><color=#ffbb00>Tile</color></b>
+  en: Place an <b><color=#bb00ff>Arrow</color></b> on the selected <b><color=#ffbb00>Tile</color></b>
     and click on it to rotate
   tr: 
   az: 
@@ -391,7 +391,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u041F\u043E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 <b><color=#bb00ff>\u0421\u0442\u0440\u0435\u043B\u043A\u0443</color></b>
     \u043D\u0430 \u0432\u044B\u0434\u0435\u043B\u0435\u043D\u043D\u043E\u0439 <b><color=#ffbb00>\u041A\u043B\u0435\u0442\u043A\u0435</color></b>
-    \u0438 \u043D\u0430\u0436\u043C\u0438\u0442\u0435 \u043F\u043E \u043D\u0435\u0439,
+    \u0438 \u043D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u043D\u0435\u0435,
     \u0447\u0442\u043E\u0431\u044B \u043F\u043E\u0432\u0435\u0440\u043D\u0443\u0442\u044C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13005,9 +13005,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _plateConfig: {fileID: 11400000, guid: 8fb8db79459aa1347b1d9459d4299387, type: 2}
+  _canLoadScene: 1
   _sceneToLoad:
     _sceneAsset: {fileID: 102900000, guid: 55213dcfcb2ec3b44a74387fb6c5c54c, type: 3}
     _sceneName: _SheepyA2
+  _sceneCompletedAction:
+    m_PersistentCalls:
+      m_Calls: []
   _spriteRenderer: {fileID: 1440755769}
 --- !u!212 &1440755769
 SpriteRenderer:

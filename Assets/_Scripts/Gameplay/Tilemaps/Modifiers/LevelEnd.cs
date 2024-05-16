@@ -17,10 +17,13 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
     public class LevelEnd : MonoBehaviour, ITileModifier, IDataPersistence
     {
         [SerializeField] private PlateConfig _plateConfig;
-        [Space]
+        [Space] 
+        [SerializeField] private bool _canLoadScene = true;
         [SerializeField] private SceneField _sceneToLoad;
         
         [SerializeField, HideInInspector]  private SpriteRenderer _spriteRenderer;
+
+        public static Action SceneCompletedAction;
         
         public float YOffset => _plateConfig.YOffset;
         public bool IsSingleAtTile => _plateConfig.IsSingleAtTile;
@@ -31,10 +34,10 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         
         public void SaveData()
         {
-            YandexGame.savesData.TrySetNextScene(_sceneToLoad.SceneName);
-            YandexGame.savesData.MakeScenePassed(SceneManager.GetActiveScene().name);
+            if (_canLoadScene)
+                YandexGame.savesData.TrySetNextScene(_sceneToLoad.SceneName);
             
-            print($"{_sceneToLoad.SceneName}");
+            YandexGame.savesData.MakeScenePassed(SceneManager.GetActiveScene().name);
         }
 
         public void LoadData()
@@ -50,6 +53,11 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
 
             await Awaitable.WaitForSecondsAsync(1f);
 
+            SceneCompletedAction?.Invoke();
+            
+            if (!_canLoadScene)
+                return;
+            
             Fader.Instance.Show(() =>
             {
                 SceneManager.LoadScene(_sceneToLoad);
