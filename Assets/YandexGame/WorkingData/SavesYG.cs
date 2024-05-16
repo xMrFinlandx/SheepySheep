@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace YG
 {
@@ -26,7 +27,6 @@ namespace YG
         #endregion
         
         public string NextScene = "_SheepyA1";
-        public int Coins = 0;
 
         public Dictionary<string, bool> PassedScenes = new();
 
@@ -34,6 +34,11 @@ namespace YG
         
         public SavesYG()
         {
+        }
+
+        public int GetCollectedCoinsCount()
+        {
+            return Collectables.Count(x => x.Value == true);
         }
 
         public void MakeScenePassed(string sceneName) => AddDataToDictionary(PassedScenes, sceneName, true);

@@ -9,7 +9,6 @@ namespace _Scripts.UI
     public class SettingsWindow : MonoBehaviour
     {
         [SerializeField] private Slider _sfxSlider;
-        [SerializeField] private Slider _musicSlider;
         [Space] 
         [SerializeField] private Button _ruButton;
         [SerializeField] private Button _enButton;
@@ -18,20 +17,20 @@ namespace _Scripts.UI
 
         public void Save()
         {
+            print("SAVE SFX");
             YandexGame.savesData.SFXVolume = _sfxSlider.value;
-            YandexGame.savesData.MusicVolume = _musicSlider.value;
+            YandexGame.SaveProgress();
         }
 
         public void Load()
         {
+            print(YandexGame.savesData.SFXVolume);
             _sfxSlider.value = YandexGame.savesData.SFXVolume;
-            _musicSlider.value = YandexGame.savesData.MusicVolume;
         }
 
-        private void Start()
+        private void OnEnable()
         {
             _sfxSlider.onValueChanged.AddListener(val => VolumeSliderChangedAction?.Invoke(val, BroAudioType.SFX));
-            _musicSlider.onValueChanged.AddListener(val => VolumeSliderChangedAction?.Invoke(val, BroAudioType.Music));
             _ruButton.onClick.AddListener( () => ChangeLanguage("ru"));
             _enButton.onClick.AddListener( () => ChangeLanguage("en"));
         }
@@ -41,10 +40,9 @@ namespace _Scripts.UI
             YandexGame.SwitchLanguage(language);
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
             _sfxSlider.onValueChanged.RemoveAllListeners();
-            _musicSlider.onValueChanged.RemoveAllListeners();
             _ruButton.onClick.RemoveAllListeners();
             _enButton.onClick.RemoveAllListeners();
         }

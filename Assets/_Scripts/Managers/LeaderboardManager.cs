@@ -30,6 +30,9 @@ namespace _Scripts.Managers
 
         private static void OnGetLB(LBData data)
         {
+            if (data.entries == "no data")
+                return;
+            
             _score = data.thisPlayer.score;
         }
     }

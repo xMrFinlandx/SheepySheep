@@ -1,2 +1,2 @@
-Build path: C:/Users/Ванечка/Desktop/PreReleaseYandexSheepy
-Build number: 44
+Build path: C:/Users/Ванечка/Desktop/Pamyat Sheep 2
+Build number: 48

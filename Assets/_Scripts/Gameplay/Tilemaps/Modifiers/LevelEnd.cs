@@ -1,4 +1,5 @@
-﻿using _Scripts.Managers;
+﻿using System;
+using _Scripts.Managers;
 using _Scripts.Scriptables.Gameplay;
 using _Scripts.UI;
 using _Scripts.Utilities.Classes;
@@ -26,11 +27,26 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         
         public SoundID FootstepsSound => _plateConfig.FootstepsSound;
         
+        public Transform GetTransform() => transform;
+        
+        public void SaveData()
+        {
+            YandexGame.savesData.TrySetNextScene(_sceneToLoad.SceneName);
+            YandexGame.savesData.MakeScenePassed(SceneManager.GetActiveScene().name);
+            
+            print($"{_sceneToLoad.SceneName}");
+        }
+
+        public void LoadData()
+        {
+        }
+
         public async void Activate(IPlayerController playerController)
         {
             GameStateManager.SetState(GameStateType.Cutscene);
             playerController.SetState<FsmCutsceneState>();
             DataPersistentManager.SaveData();
+            LeaderboardManager.Update(YandexGame.savesData.GetCollectedCoinsCount());
 
             await Awaitable.WaitForSecondsAsync(1f);
 
@@ -49,19 +65,15 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
             name = $"Level end (to {_sceneToLoad.SceneName})";
 #endif
         }
-
-        public Transform GetTransform() => transform;
         
-        public void SaveData()
+        private void Start()
         {
-            YandexGame.savesData.TrySetNextScene(_sceneToLoad.SceneName);
-            YandexGame.savesData.MakeScenePassed(SceneManager.GetActiveScene().name);
-            
-            print($"{_sceneToLoad.SceneName}");
+            LeaderboardManager.Init();
         }
 
-        public void LoadData()
+        private void OnDestroy()
         {
+            LeaderboardManager.Dispose();
         }
     }
 }

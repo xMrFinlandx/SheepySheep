@@ -21,7 +21,6 @@ namespace _Scripts.Utilities.StateMachine.Menu
         public override void Exit()
         {
             _settingsWindow.Save();
-            YandexGame.SaveProgress();
             Close();
         }
     }

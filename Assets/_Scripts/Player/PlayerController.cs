@@ -9,12 +9,11 @@ using _Scripts.Utilities.StateMachine;
 using _Scripts.Utilities.StateMachine.Player;
 using _Scripts.Utilities.Visuals;
 using UnityEngine;
-using YG;
 
 namespace _Scripts.Player
 {
     [RequireComponent(typeof(Animator), typeof(Rigidbody2D), typeof(SpriteRenderer))]
-    public class PlayerController : MonoBehaviour, IPlayerController, IRestartable, IDataPersistence
+    public class PlayerController : MonoBehaviour, IPlayerController, IRestartable
     {
         [SerializeField] private float _speed = 10;
         [SerializeField] private float _speedModifier = 1.8f;
@@ -36,7 +35,6 @@ namespace _Scripts.Player
         private Vector2 _defaultDirection;
         private Vector2 _spawnPosition;
         
-        private Wallet _coinsWallet;
         private FiniteStateMachine _finiteStateMachine;
 
         public static Action<Vector2Int> PlayerInNewTileAction;
@@ -70,11 +68,6 @@ namespace _Scripts.Player
             _spriteRenderer.flipX = isometricDirection.x < 0;
         }
 
-        public void AddCoins(int value)
-        {
-            _coinsWallet.AddToBuffer(value);
-        }
-
         public void Restart()
         {
             _finiteStateMachine.SetState<FsmIdleState>();
@@ -82,7 +75,6 @@ namespace _Scripts.Player
             _isStarted = false;
             ResetVelocityAndSetPosition(_spawnPosition);
             SetMoveDirectionAndPosition(_defaultDirection, _spawnPosition);
-            _coinsWallet.ResetBuffer();
         }
 
         private void OnValidate()
@@ -168,17 +160,6 @@ namespace _Scripts.Player
             ReloadRoomManager.ReloadRoomAction -= Restart;
             TilemapAnimatorManager.AnimationEndedAction -= Show;
             GameStateManager.GameStateChangedAction -= OnGameStateChanged;
-        }
-
-        public void SaveData()
-        {
-            _coinsWallet.ApplyBuffer();
-            YandexGame.savesData.Coins = _coinsWallet.Balance;
-        }
-
-        public void LoadData()
-        {
-            _coinsWallet = new Wallet(YandexGame.savesData.Coins);
         }
     }
 }

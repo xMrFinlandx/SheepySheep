@@ -35,7 +35,7 @@ namespace _Scripts.UI
             LevelSelectedAction?.Invoke(_scenesHandler.Scenes[id]);
         }
 
-        private void Start()
+        private void OnEnable()
         {
             CreateButtons(_scenesHandler);
         }

@@ -1,6 +1,7 @@
 ﻿using _Scripts.Player.Controls;
 using _Scripts.Utilities.Classes;
 using _Scripts.Utilities.Enums;
+using Ami.BroAudio;
 
 namespace _Scripts.UI.PauseMenu
 {
@@ -25,6 +26,11 @@ namespace _Scripts.UI.PauseMenu
         {
             _inputReader.SetUI();
             GameStateManager.SetState(GameStateType.Paused);
+        }
+
+        public void OnVolumeChanged(float volume, BroAudioType type)
+        {
+            BroAudio.SetVolume(type, volume);
         }
     }
 }

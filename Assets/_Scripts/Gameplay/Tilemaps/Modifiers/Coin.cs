@@ -42,8 +42,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
             IsEnabled = true;
             _isCollected = true;
             BroAudio.Play(Config.CollectedSound);
-
-            playerController.AddCoins(1);
+            
             PlayCollectedAnimation();
         }
 

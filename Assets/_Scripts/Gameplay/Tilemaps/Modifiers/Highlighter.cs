@@ -1,4 +1,5 @@
-﻿using _Scripts.Utilities.Interfaces;
+﻿using System;
+using _Scripts.Utilities.Interfaces;
 using Ami.BroAudio;
 using DG.Tweening;
 using DG.Tweening.Core;
@@ -37,7 +38,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
 
             _tweener = _spriteRenderer.DOFade(1, _fadeTime)
                 .OnComplete(() => _sequence = _spriteRenderer.DOGradientColor(_evaluateGradient, _evaluateTime)
-                    .SetLoops(-1, LoopType.Yoyo));
+                    .SetLoops(-1, LoopType.Yoyo).SetLink(gameObject)).SetLink(gameObject);
         }
 
         public void Hide(float time = 0)

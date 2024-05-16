@@ -435,7 +435,7 @@ Transform:
   m_GameObject: {fileID: 347417007}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17, y: -4, z: 0}
+  m_LocalPosition: {x: 15, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6344,6 +6344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 013946dc63d24dbe8b4a19d8b09771a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canSetGameState: 1
   _spriteRendererPrefab: {fileID: 7955546480334535955, guid: 986fb38e78c20d64fac9297a017e2579, type: 3}
   _sortingLayerOrder: 100
   _ease: 13
@@ -7577,10 +7578,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.26132813
+    x: 0
     y: 0
-    width: 0.23819445
-    height: 0.23819445
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -7695,7 +7696,6 @@ MonoBehaviour:
   _inputReader: {fileID: 11400000, guid: 06f4aec396e8f8543a755b7b268bdc79, type: 2}
   _playerController: {fileID: 2728097499919781777, guid: b05bcae919ef9b04588e32bf282301b1, type: 3}
   _levelStart: {fileID: 62406301}
-  _arrowConfig: {fileID: 11400000, guid: 88ef9331716eed44383e24a588c06024, type: 2}
   _tilemap: {fileID: 1369917676}
 --- !u!4 &1866376284
 Transform:
