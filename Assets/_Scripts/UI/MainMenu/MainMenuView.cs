@@ -16,6 +16,8 @@ namespace _Scripts.UI.MainMenu
         [SerializeField] private Button _selectBonusLevelButton;
         [SerializeField] private Button _settingsButton;
         [SerializeField] private Button _resetProgressButton;
+        [SerializeField] private PopupController _popupController;
+        
         [Space] 
         [SerializeField] private GameObject _mainMenuButtons;
         [SerializeField] private SceneButtonsBinder _mainLevelsBinder;
@@ -49,10 +51,11 @@ namespace _Scripts.UI.MainMenu
             _inputReader.ResumeClickEvent += InputReaderOnResumeClickEvent;
             
             _continueButton.onClick.AddListener(_presenter.OnContinueButtonClicked);
-            _resetProgressButton.onClick.AddListener(_presenter.OnResetProgressButtonClicked);
+            _resetProgressButton.onClick.AddListener(ShowPopup);
             _selectLevelButton.onClick.AddListener(ShowLevelSelectionWindow);
             _selectBonusLevelButton.onClick.AddListener(ShowBonusSelectionWindow);
             _settingsButton.onClick.AddListener(ShowSettingsWindow);
+            _popupController.Hide();
             
             _mainLevelsBinder.LevelSelectedAction += _presenter.OnLevelSelected;
             _bonusLevelsBinder.LevelSelectedAction += _presenter.OnLevelSelected;
@@ -84,6 +87,28 @@ namespace _Scripts.UI.MainMenu
 
         [Button]
         private void ShowLevelSelectionWindow() => SetState(_MAIN_LEVELS_WINDOW_INDEX);
+
+        private void ShowPopup()
+        {
+            _continueButton.enabled = false;
+            _selectLevelButton.enabled = false;
+            _selectBonusLevelButton.enabled = false;
+            _settingsButton.enabled = false;
+            _resetProgressButton.enabled = false;
+
+            _popupController.Show(_presenter.OnResetProgressButtonClicked, OnPopupCancelled, OnPopupCancelled);
+        }
+
+        private void OnPopupCancelled()
+        {
+            _popupController.Hide();
+            
+            _continueButton.enabled = true;
+            _selectLevelButton.enabled = true;
+            _selectBonusLevelButton.enabled = true;
+            _settingsButton.enabled = true;
+            _resetProgressButton.enabled = true;
+        }
 
         private void SetState(int index)
         {
