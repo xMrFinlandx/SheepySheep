@@ -31,6 +31,8 @@ namespace _Scripts.UI.PauseMenu
                                     GameStateManager.CurrentGameState == GameStateType.Unset ||
                                     _isTeleportEnabled;
 
+        public void _ShowNavigationButtons() => ShowNavigationButtons();
+        
         private void Start()
         {
             _presenter = new PauseMenuPresenter(_inputReader);
@@ -51,12 +53,12 @@ namespace _Scripts.UI.PauseMenu
             _settingsWindow.gameObject.SetActive(false);
             CloseNavigationButtons();
         }
-
+        
         private void OpenMainMenu()
         {
             BroAudio.Stop(BroAudioType.All);
             FootstepsSoundManager.Instance.Stop();
-            CloseSettings();
+            OnResume();
             SceneManager.LoadScene(_mainMenuScene);
         }
 
@@ -118,11 +120,12 @@ namespace _Scripts.UI.PauseMenu
             _inputReader.PauseClickEvent -= OnPause;
             _inputReader.ResumeClickEvent -= OnResume;
             
+            if (_settingsWindow != null && _presenter != null)
+                _settingsWindow.VolumeSliderChangedAction -= _presenter.OnVolumeChanged;
+            
             _settingsButton.onClick.RemoveAllListeners();
             _menuButton.onClick.RemoveAllListeners();
             _continueButton.onClick.RemoveAllListeners();
-            
-            _settingsWindow.VolumeSliderChangedAction -= _presenter.OnVolumeChanged;
 
             Teleport.TeleportEnabledAction -= OnTeleportEnabled;
         }

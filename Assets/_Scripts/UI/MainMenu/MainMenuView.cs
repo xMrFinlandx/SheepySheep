@@ -37,6 +37,8 @@ namespace _Scripts.UI.MainMenu
         {
             _inputReader = inputReader;
         }
+
+        public void _ShowNavigationButtons() => ShowNavigationButtonsWindow();
         
         private void Start()
         {

@@ -6533,6 +6533,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 8
+      m_TileSpriteIndex: 8
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 1, y: 0, z: 0}
     second:
       serializedVersion: 2
@@ -9591,7 +9601,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 689a854218fd65047bcffa83a253f2a5, type: 2}
   - m_RefCount: 38
     m_Data: {fileID: 11400000, guid: 05323dcd1b99fed418b2caa4c633ac24, type: 2}
-  - m_RefCount: 647
+  - m_RefCount: 648
     m_Data: {fileID: 11400000, guid: d26d16a17beba574da8b31781ac0e683, type: 2}
   - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: 1c37f042cb62258408c3bd719fcc3ad2, type: 2}
@@ -9620,7 +9630,7 @@ Tilemap:
     m_Data: {fileID: -1332908032, guid: 9df01ea0f92c18249b07a6ed3d630182, type: 3}
   - m_RefCount: 38
     m_Data: {fileID: 841175804, guid: 9df01ea0f92c18249b07a6ed3d630182, type: 3}
-  - m_RefCount: 647
+  - m_RefCount: 648
     m_Data: {fileID: 1678774029, guid: 9df01ea0f92c18249b07a6ed3d630182, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: -122817854, guid: 9df01ea0f92c18249b07a6ed3d630182, type: 3}
@@ -9633,7 +9643,7 @@ Tilemap:
   - m_RefCount: 7
     m_Data: {fileID: 522304710, guid: 9df01ea0f92c18249b07a6ed3d630182, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 840
+  - m_RefCount: 841
     m_Data:
       e00: 1
       e01: 0
@@ -9652,7 +9662,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 840
+  - m_RefCount: 841
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -12464,10 +12474,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.27929688
     y: 0
-    width: 1
-    height: 1
+    width: 0.23819445
+    height: 0.23819445
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34

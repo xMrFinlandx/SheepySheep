@@ -14,6 +14,8 @@ namespace _Scripts.Player.Controls
         private bool _isAdditiveMode = true;
 
         private bool _isDesktop => YandexGame.EnvironmentData.isDesktop;
+
+        public event Action<bool> SetAdditiveModeEvent; 
         
         public event Action<Vector2> LeftMouseClickEvent; 
         public event Action<Vector2> RightMouseClickEvent;
@@ -38,7 +40,16 @@ namespace _Scripts.Player.Controls
             _gameControls.Gameplay.Disable();
             _gameControls.UI.Enable();
         }
-        
+
+        public void SetAdditive()
+        {
+            if (_isDesktop)
+                return;
+            
+            SetAdditiveModeEvent?.Invoke(true);
+            _isAdditiveMode = true;
+        }
+
         public void OnLeftClick(InputAction.CallbackContext context)
         {
             if (context.phase != InputActionPhase.Performed)
@@ -98,7 +109,7 @@ namespace _Scripts.Player.Controls
             if (context.phase != InputActionPhase.Performed || _isDesktop)
                 return;
 
-            _isAdditiveMode = true;
+            SetAdditive();
         }
 
         public void OnSetRemoveMode(InputAction.CallbackContext context)
@@ -106,6 +117,7 @@ namespace _Scripts.Player.Controls
             if (context.phase != InputActionPhase.Performed || _isDesktop)
                 return;
 
+            SetAdditiveModeEvent?.Invoke(false);
             _isAdditiveMode = false;
         }
 
