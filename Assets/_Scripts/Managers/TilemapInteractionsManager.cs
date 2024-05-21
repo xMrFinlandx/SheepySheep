@@ -91,7 +91,7 @@ namespace _Scripts.Managers
             if (!_canInteract)
                 return;
             
-            var gridPos = GetGridMousePosition(mousePos);
+            var gridPos = GetGridClickPosition(mousePos);
             
             if (!TilemapManager.Instance.CanAddModifier(gridPos))
             {
@@ -110,7 +110,7 @@ namespace _Scripts.Managers
             if (!_canInteract)
                 return;
             
-            var gridPos = GetGridMousePosition(mousePos);
+            var gridPos = GetGridClickPosition(mousePos);
 
             TilemapManager.Instance.TryRemoveInteraction(gridPos);
         }
@@ -127,7 +127,7 @@ namespace _Scripts.Managers
             TilemapManager.Instance.TryAddModifiers(gridPos, arrow);
         }
 
-        private static Vector2Int GetGridMousePosition(Vector2 mousePos)
+        private static Vector2Int GetGridClickPosition(Vector2 mousePos)
         {
             var gridPos = TilemapManager.Instance.WorldToCell(mousePos);
             return gridPos;

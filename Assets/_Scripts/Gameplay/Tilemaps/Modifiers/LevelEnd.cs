@@ -61,6 +61,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
             Fader.Instance.Show(() =>
             {
                 SceneManager.LoadScene(_sceneToLoad);
+                YandexGame.TryFullscreenShow();
             }, () => !YandexGame.TryFullscreenShow());
         }
         

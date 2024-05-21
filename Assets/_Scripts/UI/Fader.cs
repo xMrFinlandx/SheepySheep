@@ -16,6 +16,12 @@ namespace _Scripts.UI
         [SerializeField] private float _showTime = .3f;
         [SerializeField] private float _hideTime = 1f;
 
+#if UNITY_EDITOR
+        private const float _FADE_END_VALUE = .9f;
+#else
+        private const float _FADE_END_VALUE = 1f;
+#endif
+        
         private bool _isShowed = false;
         
         private Coroutine _coroutine;
@@ -27,7 +33,7 @@ namespace _Scripts.UI
         public void Show(Action onCompleteAction, Func<bool> hideCondition, float delay = 0)
         {
             _isShowed = true;
-            _image.DOFade(1f, _showTime)
+            _image.DOFade(_FADE_END_VALUE, _showTime)
                 .OnComplete(() =>
                 {
                     DOVirtual.DelayedCall(delay, () =>

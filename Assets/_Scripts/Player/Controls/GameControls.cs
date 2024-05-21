@@ -139,8 +139,8 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""70bc7cdc-5ebd-46dc-af5c-8915638c0227"",
-                    ""path"": ""<Touchscreen>/primaryTouch/press"",
-                    ""interactions"": ""Press"",
+                    ""path"": ""<Touchscreen>/primaryTouch/tap"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mobile"",
                     ""action"": ""LeftClick"",

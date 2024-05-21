@@ -13,7 +13,7 @@ namespace _Scripts.Player.Controls
 
         private bool _isAdditiveMode = true;
 
-        private bool _isDesktop => YandexGame.EnvironmentData.isDesktop;
+        private static bool _isDesktop => YandexGame.EnvironmentData.isDesktop;
 
         public event Action<bool> SetAdditiveModeEvent; 
         

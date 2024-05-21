@@ -23,12 +23,19 @@ namespace _Scripts.UI
         private void Awake()
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
+            YandexGame.GetDataEvent += OnDataEvent;
+        }
+
+        private void OnDataEvent()
+        {
+            _isDesktop = YandexGame.EnvironmentData.isDesktop;
+            SetActive();
         }
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode _)
         {
             _isMenu = _mainMenuScene == scene.name;
-            _isDesktop = YandexGame.EnvironmentData.isDesktop;
+            _isDesktop = YandexGame.SDKEnabled && YandexGame.EnvironmentData.isDesktop;
             MenuSceneOpenedAction?.Invoke(_isMenu);
             
             SetActive();
@@ -60,6 +67,7 @@ namespace _Scripts.UI
         private void OnDisable()
         {
             SceneManager.sceneLoaded -= OnSceneLoaded;
+            YandexGame.GetDataEvent -= OnDataEvent;
         }
     }
 }
