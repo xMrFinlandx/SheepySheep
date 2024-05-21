@@ -28,6 +28,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 777fe654bf4e27542a66a45325efcd75, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _CausticSubGraph_c44c52f3a5c94fddb8b0dcc64e79cfe8_NoiseTexture_2577226409_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 2b187ef6ef1bbd046a52d4e8313db411, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _CausticTexture:
         m_Texture: {fileID: 2800000, guid: af9fb75fa345bad46b1d19bed9f52738, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -48,6 +52,22 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ModifyUVSubGraph_2eb26abf59e049fd9beaa47a65d5da3e_Noise_2517901172_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 2b187ef6ef1bbd046a52d4e8313db411, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ModifyUVSubGraph_7e897556ade046f8a3fc7d3b175d38b4_Noise_2517901172_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 2b187ef6ef1bbd046a52d4e8313db411, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTexture:
+        m_Texture: {fileID: 2800000, guid: 2b187ef6ef1bbd046a52d4e8313db411, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecularSubGraph_c1c0c755770c4046bce8828075a8f7e3_NoiseTexure_3449334889_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 2b187ef6ef1bbd046a52d4e8313db411, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -62,37 +82,38 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _CausticFadeMultiplier: 0.1
-    - _CausticFadeScale: 0.15
+    - _CausticFadeMultiplier: 0.2
+    - _CausticFadeScale: 0.01
     - _CausticMovementAmount: 0.1
-    - _CausticMovementScale: 0.2
+    - _CausticMovementScale: 0.01
     - _CausticScale: 0.2
     - _CausticSpeed: 3
     - _FScale: 1
+    - _Float: 0.03
     - _FoamFactor: 1.2
     - _FoamMovementAmount: 0.2
-    - _FoamMovementScale: 0.2
+    - _FoamMovementScale: 0.1
     - _FoamMultiply: 0.56
     - _FoamOffset: 11.72
     - _FoamOpacity: 0.5
-    - _FoamScale: 0.2
-    - _FoamSpeed: 0.8
+    - _FoamScale: 0.25
+    - _FoamSpeed: 0.2
     - _NoiseScale: 1
     - _Pixelization: 24
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Scale: 0.3
-    - _SpecularScale: 3
-    - _SpecularScale1: 3
+    - _Scale: 0.01
+    - _SpecularScale: 0.2
+    - _SpecularScale1: 0.2
     - _SpecularScale2: 3
-    - _SpecularThreshold: 0.015
+    - _SpecularThreshold: 0.005
     - _YSquashAmount: 1.8
     m_Colors:
     - _CausticColor: {r: 1, g: 1, b: 1, a: 0.101960786}
     - _CausticHighlightColor: {r: 1, g: 1, b: 1, a: 0.4627451}
     - _CurrentTexturePosition: {r: 0, g: 0, b: 0, a: 0}
-    - _DepthColor1: {r: 0.5235849, g: 0.7878305, b: 1, a: 1}
-    - _DepthColor2: {r: 0, g: 0.35189, b: 0.735849, a: 1}
+    - _DepthColor1: {r: 0.3443396, g: 0.68461895, b: 1, a: 1}
+    - _DepthColor2: {r: 0, g: 0.32426417, b: 0.9245283, a: 1}
     - _DepthOffset: {r: -2.29, g: -3.04, b: 0, a: 0}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
     - _Scale: {r: 0.3, g: 0.3, b: 0, a: 0}
