@@ -17,7 +17,7 @@ namespace _Scripts.Utilities.StateMachine.Player
         public override void Enter()
         {
             _spriteRenderer.enabled = false;
-            _rigidbody.velocity = Vector2.zero;
+            _rigidbody.linearVelocity = Vector2.zero;
             FootstepsSoundManager.Instance.Stop();
         }
     }

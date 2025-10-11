@@ -34,7 +34,7 @@ namespace _Scripts.Utilities.StateMachine.Player
 
         public override async void Enter()
         {
-            Rigidbody.velocity = Vector2.zero;
+            Rigidbody.linearVelocity = Vector2.zero;
             _particleSystem.Play();
             SpriteRenderer.enabled = false;
             FootstepsSoundManager.Instance.Stop();

@@ -15,7 +15,7 @@ namespace _Scripts.Utilities.StateMachine.Player
 
         public override void Enter()
         {
-            _rigidbody.velocity = Vector2.zero;
+            _rigidbody.linearVelocity = Vector2.zero;
             _animator.speed = 0;
             _animator.enabled = false;
         }

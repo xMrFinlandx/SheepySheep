@@ -146,7 +146,7 @@ namespace _Scripts.Player
         
         private void ResetVelocityAndSetPosition(Vector2 position)
         {
-            _rigidbody.velocity = Vector2.zero;
+            _rigidbody.linearVelocity = Vector2.zero;
             transform.position = position;
         }
 

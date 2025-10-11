@@ -33,7 +33,7 @@ namespace _Scripts.Utilities.StateMachine.Player
             GameStateManager.SetState(GameStateType.Cutscene);
             
             Rigidbody.gravityScale = _gravityScale;
-            Rigidbody.velocity = Vector2.zero;
+            Rigidbody.linearVelocity = Vector2.zero;
             _animator.Play(_animationHash);
             FootstepsSoundManager.Instance.Stop();
 

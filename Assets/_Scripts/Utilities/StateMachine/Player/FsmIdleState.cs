@@ -23,7 +23,7 @@ namespace _Scripts.Utilities.StateMachine.Player
             _spriteRenderer.enabled = true;
             _animator.enabled = true;
             _animator.speed = 1;
-            _rigidbody.velocity = Vector2.zero;
+            _rigidbody.linearVelocity = Vector2.zero;
             
             FootstepsSoundManager.Instance.Stop();
             _animator.Play(_idleAnimation);

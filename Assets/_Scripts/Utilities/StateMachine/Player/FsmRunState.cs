@@ -27,7 +27,7 @@ namespace _Scripts.Utilities.StateMachine.Player
 
         public override void FixedUpdate()
         {
-            Rigidbody.velocity = PlayerController.MoveDirection * (_speed * Time.fixedDeltaTime);
+            Rigidbody.linearVelocity = PlayerController.MoveDirection * (_speed * Time.fixedDeltaTime);
         }
     }
 }

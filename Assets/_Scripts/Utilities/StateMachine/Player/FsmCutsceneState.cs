@@ -38,7 +38,7 @@ namespace _Scripts.Utilities.StateMachine.Player
 
         public override void FixedUpdate()
         {
-            _rigidbody.velocity = _playerController.MoveDirection * (_speed * Time.fixedDeltaTime);
+            _rigidbody.linearVelocity = _playerController.MoveDirection * (_speed * Time.fixedDeltaTime);
             _currentCellPosition = TilemapManager.Instance.WorldToCell(_transform.position);
             
             if (!TilemapManager.Instance.IsInTilemap(_currentCellPosition) || _previousCellPosition == _currentCellPosition)
