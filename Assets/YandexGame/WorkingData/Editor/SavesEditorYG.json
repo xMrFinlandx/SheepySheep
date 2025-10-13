@@ -1,11 +1,11 @@
 {
-    "idSave": 1436,
+    "idSave": 1470,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
     "SFXVolume": 0.891717791557312,
     "MusicVolume": 0.5,
-    "CompletionTime": 20.540279388427736,
-    "DeathsCount": 0,
-    "NextScene": "_SheepyA2"
+    "CompletionTime": 942.7974243164063,
+    "DeathsCount": 21,
+    "NextScene": "_SheepyA14"
 }

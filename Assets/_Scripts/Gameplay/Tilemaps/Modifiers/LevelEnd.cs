@@ -49,7 +49,7 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
             GameStateManager.SetState(GameStateType.Cutscene);
             playerController.SetState<FsmCutsceneState>();
             DataPersistentManager.SaveData();
-            LeaderboardManager.Update(YandexGame.savesData.GetCollectedCoinsCount());
+            //LeaderboardManager.Update(YandexGame.savesData.GetCollectedCoinsCount());
 
             await Awaitable.WaitForSecondsAsync(1f);
 
@@ -58,11 +58,13 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
             if (!_canLoadScene)
                 return;
             
-            Fader.Instance.Show(() =>
+            SceneManager.LoadScene(_sceneToLoad);
+            
+            /*Fader.Instance.Show(() =>
             {
-                SceneManager.LoadScene(_sceneToLoad);
+
                 YandexGame.TryFullscreenShow();
-            }, () => !YandexGame.TryFullscreenShow());
+            }, () => !YandexGame.TryFullscreenShow());*/
         }
         
         private void OnValidate()

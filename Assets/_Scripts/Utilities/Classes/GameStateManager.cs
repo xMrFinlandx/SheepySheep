@@ -14,8 +14,6 @@ namespace _Scripts.Utilities.Classes
         {
             if (newGameState == CurrentGameState)
                 return;
-
-            Debug.Log(CurrentGameState);
             
             CurrentGameState = newGameState;
             GameStateChangedAction?.Invoke(CurrentGameState);

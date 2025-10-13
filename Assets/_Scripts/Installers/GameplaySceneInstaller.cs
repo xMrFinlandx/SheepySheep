@@ -2,8 +2,6 @@
 using _Scripts.Managers;
 using _Scripts.Player;
 using _Scripts.Player.Controls;
-using _Scripts.Scriptables;
-using _Scripts.Scriptables.Gameplay;
 using _Scripts.Utilities.Visuals;
 using NaughtyAttributes;
 using UnityEngine;
@@ -37,13 +35,13 @@ namespace _Scripts.Installers
             
             Container.Bind<Tilemap>().FromInstance(_tilemap);
             Container.Bind<InputReader>().FromInstance(_inputReader);
-            
-            var player = Container.InstantiatePrefabForComponent<PlayerController>(_playerController, _levelStart.transform.position, Quaternion.identity, null);
-            player.Initialize(_levelStart.transform.position, _levelStart.GetDirection());
         }
 
         public override void Start()
         {
+            var player = Container.InstantiatePrefabForComponent<PlayerController>(_playerController, _levelStart.transform.position, Quaternion.identity, null);
+            player.Initialize(_levelStart.transform.position, _levelStart.GetDirection());
+            
             DataPersistentManager.LoadData();
 
             TilemapManager.Instance.CollectTileModifiers();

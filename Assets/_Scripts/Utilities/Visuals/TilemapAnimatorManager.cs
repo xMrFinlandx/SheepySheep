@@ -41,12 +41,12 @@ namespace _Scripts.Utilities.Visuals
         private void Construct(Tilemap tilemap)
         {
             _tilemap = tilemap;
+            DOTween.SetTweensCapacity(750, 50);
         }
         
         public void Play()
         {
             GameStateManager.SetState(GameStateType.Cutscene);
-            
             GenerateTiles();
             
             _spriteRenderers = JoinInteractions();

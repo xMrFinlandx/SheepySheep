@@ -34,7 +34,6 @@ namespace _Scripts.Gameplay.Tilemaps.Modifiers
         {
             _isCollected = YandexGame.savesData.IsCollectableEnabled(_guid);
             _isSaved = _isCollected;
-            print(_isCollected);
             
             if (_isCollected) 
                 gameObject.SetActive(false);
