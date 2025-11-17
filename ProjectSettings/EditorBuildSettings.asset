@@ -68,5 +68,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/_SheepyA20.unity
     guid: c39833eb40bdbb04fb8934a256c922b7
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: d7333fde4bf4d7f46995ddd8a2f00f83, type: 3}
   m_UseUCBPForAssetBundles: 0

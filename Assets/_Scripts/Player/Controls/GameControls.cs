@@ -96,7 +96,7 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
                     ""name"": ""LeftClick"",
                     ""type"": ""Button"",
                     ""id"": ""125c20b8-8298-40af-bafd-07cc16f6097c"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
